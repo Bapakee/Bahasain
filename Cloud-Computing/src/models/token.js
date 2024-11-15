@@ -1,0 +1,41 @@
+'use strict';
+const { Model } = require('sequelize');
+
+module.exports = (sequelize, DataTypes) => {
+  class Token extends Model {
+    static associate(models) {
+      // Relasi dengan User
+      Token.belongsTo(models.User, {
+        foreignKey: 'userId',
+        as: 'user',
+      });
+    }
+  }
+
+  Token.init(
+    {
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      type: {
+        type: DataTypes.ENUM('refresh', 'reset'),
+        allowNull: false,
+      },
+      token: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      expiresAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
+    },
+    {
+      sequelize,
+      modelName: 'Token',
+    }
+  );
+
+  return Token;
+};
