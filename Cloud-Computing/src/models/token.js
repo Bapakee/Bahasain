@@ -5,10 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   class Token extends Model {
     static associate(models) {
       // Relasi dengan User
-      Token.belongsTo(models.User, {
-        foreignKey: 'userId',
-        as: 'user',
-      });
+      Token.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
     }
   }
 
