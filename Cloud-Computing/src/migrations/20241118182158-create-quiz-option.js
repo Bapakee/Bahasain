@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('QuizOptions', {
+    await queryInterface.createTable('quiz_options', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -32,6 +32,8 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('QuizOptions');
+    await queryInterface.removeConstraint('quizoptions', 'quizoptions_ibfk_1');
+    await queryInterface.dropTable('quizoptions');
+    await queryInterface.dropTable('quizzes');
   }
 };

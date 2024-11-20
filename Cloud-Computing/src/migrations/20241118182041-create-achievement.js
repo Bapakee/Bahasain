@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Achievements', {
+    await queryInterface.createTable('achievements', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -29,6 +29,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Achievements');
+    await queryInterface.removeConstraint('userachievements', 'userachievements_ibfk_2');
+    await queryInterface.dropTable('achievements');
   }
 };
