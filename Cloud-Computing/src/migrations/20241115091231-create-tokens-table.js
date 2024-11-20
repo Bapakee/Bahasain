@@ -8,7 +8,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      userId: {
+      user_id: {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
@@ -29,11 +29,11 @@ module.exports = {
         type: Sequelize.DATE, // Waktu kedaluwarsa token
         allowNull: false,
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },

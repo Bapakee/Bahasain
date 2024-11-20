@@ -11,12 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Module.hasMany(models.Level, { foreignKey: 'module_id', as: 'levels' });
+      Module.hasMany(models.Level, { foreignKey: 'module_id' });
     }
   }
   Module.init({
-    name: DataTypes.STRING,
-    level: DataTypes.INTEGER
+    name: {
+      type : DataTypes.STRING,
+      field : 'name'
+    },
+    level: {
+      type : DataTypes.INTEGER,
+      field : 'level'
+    }
   }, {
     sequelize,
     modelName: 'Module',

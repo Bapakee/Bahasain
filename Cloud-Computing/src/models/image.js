@@ -10,20 +10,59 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Relasi dengan Content
-      Image.belongsTo(models.Content, { foreignKey: 'content_id', as: 'content' });
-
-      // Relasi dengan Quiz
-      Image.belongsTo(models.Quiz, { foreignKey: 'quiz_id', as: 'quiz' });
+      Image.belongsTo(models.Content, {
+        foreignKey: 'entity_id',
+        constraints: false,
+        as: 'content',
+      });
+      Image.belongsTo(models.Quiz, {
+        foreignKey: 'entity_id',
+        constraints: false,
+        as: 'quiz',
+      });
+      Image.belongsTo(models.Kalcer, {
+        foreignKey: 'entity_id',
+        constraints: false,
+        as: 'kalcer',
+      });
+      
+    }
+    static getEntityType(type) {
+      const types = {
+        content: 'Content',
+        quiz: 'Quiz',
+        kalcer: 'Kalcer',
+      };
+      return types[type];
     }
   }
+  
   Image.init({
-    content_id: DataTypes.INTEGER,
-    quiz_id: DataTypes.INTEGER,
-    file_name: DataTypes.STRING
+    entityType: {
+      type: DataTypes.ENUM('quiz', 'content', 'kalcer'),
+      field: 'entity_type'
+    },
+    entityId: {
+      type: DataTypes.INTEGER,
+      field: 'entity_id'
+    },
+    fileName: {
+      type: DataTypes.STRING,
+      field: 'file_name'
+    }
   }, {
     sequelize,
     modelName: 'Image',
+    hooks: {
+      beforeSave: async (image) => {
+        const model = Image.getEntityType(image.entityType);  // Menggunakan camelCase di kode
+        const isEntityExists = await sequelize.models[model].findByPk(image.entityId); // Menggunakan camelCase di kode
+        if (!isEntityExists) {
+          throw new Error(`${model} with ID ${image.entityId} does not exist`);
+        }
+      },
+    },
   });
+  
   return Image;
 };

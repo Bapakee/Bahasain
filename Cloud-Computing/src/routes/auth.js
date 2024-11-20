@@ -17,7 +17,7 @@ const { validateBody } = require('../middleware/validateBody');
  *   post:
  *     summary: Register a new user
  *     tags: [Auth]
- *     description: This endpoint allows a user to register with username, email, and password.
+ *     description: This endpoint allows a user to register with name, email, and password.
  *     requestBody:
  *       required: true
  *       content:
@@ -25,9 +25,9 @@ const { validateBody } = require('../middleware/validateBody');
  *           schema:
  *             type: object
  *             properties:
- *               username:
+ *               name:
  *                 type: string
- *                 description: The user's username
+ *                 description: The user's name
  *                 example: johndoe
  *               email:
  *                 type: string
@@ -43,7 +43,7 @@ const { validateBody } = require('../middleware/validateBody');
  *       400:
  *         description: Bad request
  */
-router.post('/register', validateBody(['username', 'email', 'password','confirmPassword']), register);
+router.post('/register', validateBody(['name', 'email', 'password','confirmPassword']), register);
 
 /**
  * @swagger

@@ -10,13 +10,31 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING,
+        allowNull: false,
+        references: {
+          model: 'Users', // Nama tabel Users
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       module_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Modules',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
       },
       level_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Levels',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
       },
       completed: {
         type: Sequelize.BOOLEAN
@@ -27,11 +45,11 @@ module.exports = {
       score: {
         type: Sequelize.INTEGER
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

@@ -10,7 +10,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       level_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Levels',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
+      },
+      type :{
+        type : Sequelize.ENUM('essay','option'),
+        allowNull : false,
       },
       question: {
         type: Sequelize.STRING
@@ -18,11 +28,11 @@ module.exports = {
       answer: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

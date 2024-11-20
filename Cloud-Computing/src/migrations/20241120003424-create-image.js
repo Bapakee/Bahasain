@@ -9,22 +9,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      content_id: {
-        type: Sequelize.INTEGER
+      entity_type: {
+        type: Sequelize.ENUM('quiz','content','kalcer')
       },
-      quiz_id: {
+      entity_id: {
         type: Sequelize.INTEGER
       },
       file_name: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW'),
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW'),
       }
     });
   },

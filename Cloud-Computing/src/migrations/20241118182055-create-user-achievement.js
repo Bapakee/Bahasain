@@ -10,19 +10,34 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING,
+        allowNull: false,
+        references: {
+          model: 'Users', // Nama tabel Users
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       achievement_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Achievements',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
+      },
+      progress : {
+        type : Sequelize.INTEGER
       },
       achieved_at: {
         type: Sequelize.DATE
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

@@ -10,16 +10,22 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       quiz_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Quizzes',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
       },
       option: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

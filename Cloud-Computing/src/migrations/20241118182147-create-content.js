@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       level_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull :false,
+        references : {
+          model : 'Levels',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
       },
       content_en: {
         type: Sequelize.TEXT
@@ -27,11 +33,11 @@ module.exports = {
       category: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

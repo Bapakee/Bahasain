@@ -11,22 +11,40 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Relasi dengan User
-      UserProgress.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+      UserProgress.belongsTo(models.User, { foreignKey: 'user_id' });
 
       // Relasi dengan Module
-      UserProgress.belongsTo(models.Module, { foreignKey: 'module_id', as: 'module' });
+      UserProgress.belongsTo(models.Module, { foreignKey: 'module_id' });
 
       // Relasi dengan Level
-      UserProgress.belongsTo(models.Level, { foreignKey: 'level_id', as: 'level' });
+      UserProgress.belongsTo(models.Level, { foreignKey: 'level_id' });
     }
   }
   UserProgress.init({
-    user_id: DataTypes.INTEGER,
-    module_id: DataTypes.INTEGER,
-    level_id: DataTypes.INTEGER,
-    completed: DataTypes.BOOLEAN,
-    last_accessed: DataTypes.DATE,
-    score: DataTypes.INTEGER
+    userId: {
+      type: DataTypes.STRING,
+      field: 'user_id'
+    },
+    moduleId: {
+      type: DataTypes.INTEGER,
+      field: 'module_id'
+    },
+    levelId: {
+      type: DataTypes.INTEGER,
+      field: 'level_id'
+    },
+    completed: {
+      type: DataTypes.BOOLEAN,
+      field: 'completed'
+    },
+    lastAccessed: {
+      type: DataTypes.DATE,
+      field: 'last_accessed'
+    },
+    score: {
+      type: DataTypes.INTEGER,
+      field: 'score'
+    }
   }, {
     sequelize,
     modelName: 'UserProgress',

@@ -19,8 +19,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Achievement.init({
-    name: DataTypes.STRING,
-    description: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      field: 'name'
+    },
+    description: {
+      type: DataTypes.STRING,
+      field: 'description'
+    }
   }, {
     sequelize,
     modelName: 'Achievement',

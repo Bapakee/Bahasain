@@ -11,18 +11,24 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Relasi dengan Module
-      Level.belongsTo(models.Module, { foreignKey: 'module_id', as: 'module' });
+      Level.belongsTo(models.Module, { foreignKey: 'module_id'});
 
       // Relasi dengan Content
-      Level.hasMany(models.Content, { foreignKey: 'level_id', as: 'contents' });
+      Level.hasMany(models.Content, { foreignKey: 'level_id' });
 
       // Relasi dengan Quiz
-      Level.hasMany(models.Quiz, { foreignKey: 'level_id', as: 'quizzes' });
+      Level.hasMany(models.Quiz, { foreignKey: 'level_id' });
     }
   }
   Level.init({
-    module_id: DataTypes.INTEGER,
-    title: DataTypes.STRING
+    moduleId: {
+      type: DataTypes.INTEGER,
+      field: 'module_id'
+    },
+    title: {
+      type: DataTypes.STRING,
+      field: 'title'
+    }
   }, {
     sequelize,
     modelName: 'Level',

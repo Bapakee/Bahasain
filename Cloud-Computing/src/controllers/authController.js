@@ -11,7 +11,7 @@ const { error } = require('console');
 
 const register = async (req, res) => {
   try {
-    const { username, email, password, confirmPassword } = req.body;
+    const { name, email, password, confirmPassword } = req.body;
 
     const error = validatePassword(password,confirmPassword)
 
@@ -23,7 +23,7 @@ const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Buat pengguna baru
-    const user = await User.create({ username, email, password: hashedPassword });
+    const user = await User.create({ name, email, password: hashedPassword });
 
     // Hilangkan password dari respons
     const { password: _, ...userResponse } = user.toJSON();
@@ -62,9 +62,9 @@ const refresh = async (req, res) => {
       const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET);
       const userId = await validateToken(refreshToken,'refresh');
       if (!userId) {
-        return res.status(403).json({error:"Invalid refresh Token"});
+        return res.status(403).json({error:"Invalid refresh Token1"});
       } 
-      const newAccessToken = generateAccessToken({ id: decoded.id, username: decoded.username });
+      const newAccessToken = generateAccessToken({ id: decoded.id, name: decoded.name });
       res.json({ accessToken: newAccessToken });
     } catch (err) {
       if (err.name === 'TokenExpiredError') {
@@ -72,7 +72,7 @@ const refresh = async (req, res) => {
         return res.status(403).json({error:"Refresh token expired"});
       }
       console.error('JWT Verification Error:', err.message);
-      return res.status(403).json({error:"Invalid refresh Token"});
+      return res.status(403).json({error:"Invalid refresh Token2"});
     }
   };
 

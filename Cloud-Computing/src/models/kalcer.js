@@ -3,48 +3,52 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Quiz extends Model {
+  class Kalcer extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Relasi dengan Level
-      Quiz.belongsTo(models.Level, { foreignKey: 'level_id' });
-
-      // Relasi dengan QuizOptions
-      Quiz.hasMany(models.Image, {
+      Kalcer.hasMany(models.Image, {
         foreignKey: 'entity_id',
         constraints: false,
         scope: {
-          entity_type: 'quiz',
+          entity_type: 'kalcer',
         },
         as: 'images',
       });
-
     }
   }
-  Quiz.init({
-    levelId: {
-      type: DataTypes.INTEGER,
-      field: 'level_id'
+  Kalcer.init({
+    title: {
+      type: DataTypes.STRING,
+      field: 'title'
+    },
+    content: {
+      type: DataTypes.TEXT,
+      field: 'content'
     },
     type: {
-      type: DataTypes.ENUM('essay', 'option'),
+      type: DataTypes.STRING,
       field: 'type'
     },
-    question: {
+    link: {
       type: DataTypes.STRING,
-      field: 'question'
+      field: 'link'
     },
-    answer: {
-      type: DataTypes.STRING,
-      field: 'answer'
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'created_at'
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'updated_at'
     }
   }, {
     sequelize,
-    modelName: 'Quiz',
+    modelName: 'Kalcer',
   });
-  return Quiz;
+  ;
+  return Kalcer;
 };
