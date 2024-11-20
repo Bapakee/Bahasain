@@ -6,7 +6,7 @@ const {getModules,getLevel} = require('../controllers/learnController')
 
 /**
  * @swagger
- * /:
+ * /module/:
  *   get:
  *     summary: Retrieve all modules
  *     description: Get a list of all modules along with their levels and completion status.
@@ -56,12 +56,12 @@ router.get('/', auth, getModules);
 
 /**
  * @swagger
- * /{moduleId}/level/{levelId}:
+ * /module/{moduleId}/level/{levelId}:
  *   get:
  *     summary: Retrieve details of a specific level
  *     description: Get details of a specific level, including its content and quizzes.
  *     tags:
- *       - Levels
+ *       - Modules
  *     security:
  *       - BearerAuth: []
  *     parameters:
