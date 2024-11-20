@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   
   Image.init({
-    entity_type: DataTypes.ENUM,
+    entity_type: DataTypes.ENUM('quiz','content','kalcer'),
     entity_id: DataTypes.INTEGER,
     file_name: DataTypes.STRING
   }, {

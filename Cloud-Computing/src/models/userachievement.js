@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserAchievement.init({
-    user_id: DataTypes.INTEGER,
+    user_id: DataTypes.STRING,
     achievement_id: DataTypes.INTEGER,
     achieved_at: DataTypes.DATE
   }, {
