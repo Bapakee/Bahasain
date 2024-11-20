@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       // Relasi dengan Level
       Quiz.belongsTo(models.Level, { foreignKey: 'level_id' });
 
+      Quiz.hasMany(models.QuizOption, {
+        foreignKey: 'quiz_id' 
+      });
+
       // Relasi dengan QuizOptions
       Quiz.hasMany(models.Image, {
         foreignKey: 'entity_id',

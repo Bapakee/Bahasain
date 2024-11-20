@@ -6,7 +6,7 @@ const { json } = require('body-parser');
 require('dotenv').config();
 
 const generateAccessToken = (user) => {
-  return jwt.sign({ id: user.id, name: user.name }, process.env.JWT_SECRET, { expiresIn: '15m' });
+  return jwt.sign({ id: user.id, name: user.name }, process.env.JWT_SECRET, { expiresIn: '30m' });
 };
 
 const generateRefreshToken = async (user) => {

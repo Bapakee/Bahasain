@@ -32,8 +32,8 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.removeConstraint('userprogresses', 'userprogresses_ibfk_1');
-    await queryInterface.removeConstraint('userachievements', 'userachievements_ibfk_1');
+    // await queryInterface.removeConstraint('user_progresses', 'user_progresses_ibfk_1');
+    // await queryInterface.removeConstraint('user_achievements', 'user_achievements_ibfk_1');
     await queryInterface.dropTable('users');
   }
 };

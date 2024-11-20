@@ -16,7 +16,7 @@ app.use('/api/auth', authRoutes);
 app.get('/reset-password/:token', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/public/reset-password.html'));
   });
-  app.use('/api/learn', learnRoutes);
+  app.use('/api/module', learnRoutes);
 
 
 

@@ -32,7 +32,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeConstraint('userprogresses', 'userprogresses_ibfk_3');
+    // await queryInterface.removeConstraint('userprogresses', 'userprogresses_ibfk_3');
     await queryInterface.dropTable('levels');
   }
 };

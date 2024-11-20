@@ -39,7 +39,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeConstraint('quizoptions', 'quizoptions_ibfk_1');
+    // await queryInterface.removeConstraint('quizoptions', 'quiz_options_ibfk_1');
     await queryInterface.dropTable('quiz_options');
     await queryInterface.dropTable('quizzes');
   }

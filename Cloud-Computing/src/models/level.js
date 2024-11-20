@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
 
       // Relasi dengan Quiz
       Level.hasMany(models.Quiz, { foreignKey: 'level_id'});
+      Level.hasMany(models.UserProgress, {
+        foreignKey: 'level_id' // This is the reverse of the belongsTo association
+      });
     }
   }
   Level.init({

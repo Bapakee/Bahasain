@@ -29,7 +29,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeConstraint('userachievements', 'userachievements_ibfk_2');
+    // await queryInterface.removeConstraint('userachievements', 'userachievements_ibfk_2');
     await queryInterface.dropTable('achievements');
   }
 };
