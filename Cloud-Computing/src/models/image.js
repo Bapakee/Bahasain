@@ -38,22 +38,31 @@ module.exports = (sequelize, DataTypes) => {
   }
   
   Image.init({
-    entity_type: DataTypes.ENUM('quiz','content','kalcer'),
-    entity_id: DataTypes.INTEGER,
-    file_name: DataTypes.STRING
+    entityType: {
+      type: DataTypes.ENUM('quiz', 'content', 'kalcer'),
+      field: 'entity_type'
+    },
+    entityId: {
+      type: DataTypes.INTEGER,
+      field: 'entity_id'
+    },
+    fileName: {
+      type: DataTypes.STRING,
+      field: 'file_name'
+    }
   }, {
     sequelize,
     modelName: 'Image',
     hooks: {
-      // Hook untuk validasi entity_type dan entity_id
       beforeSave: async (image) => {
-        const model = Image.getEntityType(image.entity_type);
-        const isEntityExists = await sequelize.models[model].findByPk(image.entity_id);
+        const model = Image.getEntityType(image.entityType);  // Menggunakan camelCase di kode
+        const isEntityExists = await sequelize.models[model].findByPk(image.entityId); // Menggunakan camelCase di kode
         if (!isEntityExists) {
-          throw new Error(`${model} with ID ${image.entity_id} does not exist`);
+          throw new Error(`${model} with ID ${image.entityId} does not exist`);
         }
       },
     },
   });
+  
   return Image;
 };

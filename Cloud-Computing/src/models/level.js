@@ -21,8 +21,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Level.init({
-    module_id: DataTypes.INTEGER,
-    title: DataTypes.STRING
+    moduleId: {
+      type: DataTypes.INTEGER,
+      field: 'module_id'
+    },
+    title: {
+      type: DataTypes.STRING,
+      field: 'title'
+    }
   }, {
     sequelize,
     modelName: 'Level',

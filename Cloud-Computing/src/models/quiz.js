@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Relasi dengan Level
-      Quiz.belongsTo(models.Level, { foreignKey: 'level_id', as: 'level' });
+      Quiz.belongsTo(models.Level, { foreignKey: 'level_id' });
 
       // Relasi dengan QuizOptions
       Quiz.hasMany(models.Image, {
@@ -22,14 +22,26 @@ module.exports = (sequelize, DataTypes) => {
         },
         as: 'images',
       });
-    
+
     }
   }
   Quiz.init({
-    level_id: DataTypes.INTEGER,
-    type: DataTypes.ENUM('essay','option'),
-    question: DataTypes.STRING,
-    answer: DataTypes.STRING
+    levelId: {
+      type: DataTypes.INTEGER,
+      field: 'level_id'
+    },
+    type: {
+      type: DataTypes.ENUM('essay', 'option'),
+      field: 'type'
+    },
+    question: {
+      type: DataTypes.STRING,
+      field: 'question'
+    },
+    answer: {
+      type: DataTypes.STRING,
+      field: 'answer'
+    }
   }, {
     sequelize,
     modelName: 'Quiz',

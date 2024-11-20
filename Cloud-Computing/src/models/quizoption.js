@@ -11,12 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Relasi dengan Quiz
-      QuizOption.belongsTo(models.Quiz, { foreignKey: 'quiz_id', as: 'quiz' });
+      QuizOption.belongsTo(models.Quiz, { foreignKey: 'quiz_id' });
     }
   }
   QuizOption.init({
-    quiz_id: DataTypes.INTEGER,
-    option: DataTypes.STRING
+    quizId: {
+      type: DataTypes.INTEGER,
+      field: 'quiz_id'
+    },
+    option: {
+      type: DataTypes.STRING,
+      field: 'option'
+    }
   }, {
     sequelize,
     modelName: 'QuizOption',

@@ -21,12 +21,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserProgress.init({
-    user_id: DataTypes.STRING,
-    module_id: DataTypes.INTEGER,
-    level_id: DataTypes.INTEGER,
-    completed: DataTypes.BOOLEAN,
-    last_accessed: DataTypes.DATE,
-    score: DataTypes.INTEGER
+    userId: {
+      type: DataTypes.STRING,
+      field: 'user_id'
+    },
+    moduleId: {
+      type: DataTypes.INTEGER,
+      field: 'module_id'
+    },
+    levelId: {
+      type: DataTypes.INTEGER,
+      field: 'level_id'
+    },
+    completed: {
+      type: DataTypes.BOOLEAN,
+      field: 'completed'
+    },
+    lastAccessed: {
+      type: DataTypes.DATE,
+      field: 'last_accessed'
+    },
+    score: {
+      type: DataTypes.INTEGER,
+      field: 'score'
+    }
   }, {
     sequelize,
     modelName: 'UserProgress',

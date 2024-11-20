@@ -15,12 +15,12 @@ const generateRefreshToken = async (user) => {
   });
   await Token.destroy({
     where: {
-      user_id: user.id,
+      userId: user.id,
       type: 'refresh',
     },
   });
   await Token.create({
-    user_id:user.id,
+    userId:user.id,
     type: 'refresh',
     token,
     expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 7 hari
@@ -29,17 +29,17 @@ const generateRefreshToken = async (user) => {
   return token;
 };
 const generateResetToken = async (user) => {
-  const user_id=user.id
+  const userId=user.id
   const token = crypto.randomBytes(10).toString('hex');
 
   await Token.destroy({
     where: {
-      user_id,
+      userId,
       type: 'reset',
     },
   });
   await Token.create({
-    user_id,
+    userId,
     type: 'reset',
     token,
     expiresAt: new Date(Date.now() + 3600000), // 1 jam
@@ -57,7 +57,7 @@ const validateToken = async (token, type) => {
     },
   });
 
-  return storedToken ? storedToken.user_id : null;
+  return storedToken ? storedToken.userId : null;
 };
   
 

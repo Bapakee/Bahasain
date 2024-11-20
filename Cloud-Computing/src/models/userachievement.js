@@ -18,9 +18,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserAchievement.init({
-    user_id: DataTypes.STRING,
-    achievement_id: DataTypes.INTEGER,
-    achieved_at: DataTypes.DATE
+    userId: {
+      type: DataTypes.STRING,
+      field: 'user_id'
+    },
+    achievementId: {
+      type: DataTypes.INTEGER,
+      field: 'achieved_id'
+    },
+    achievedAt: {
+      type: DataTypes.DATE,
+      field: 'achived_at'
+    }
   }, {
     sequelize,
     modelName: 'UserAchievement',
