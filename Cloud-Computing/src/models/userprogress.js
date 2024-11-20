@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserProgress.init({
-    user_id: DataTypes.INTEGER,
+    user_id: DataTypes.STRING,
     module_id: DataTypes.INTEGER,
     level_id: DataTypes.INTEGER,
     completed: DataTypes.BOOLEAN,

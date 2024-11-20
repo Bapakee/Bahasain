@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Streak.init({
-    user_id: DataTypes.INTEGER,
+    user_id: DataTypes.STRING,
     streak: DataTypes.INTEGER,
     last_activity: DataTypes.DATE
   }, {
