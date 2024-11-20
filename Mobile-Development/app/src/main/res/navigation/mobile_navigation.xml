@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.dicoding.bahasain.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_learn"
+        android:name="com.dicoding.bahasain.ui.learn.LearnFragment"
+        android:label="@string/title_learn"
+        tools:layout="@layout/fragment_learn" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.dicoding.bahasain.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_cultural"
+        android:name="com.dicoding.bahasain.ui.cultural.CulturalFragment"
+        android:label="@string/title_cultural"
+        tools:layout="@layout/fragment_cultural" />
 </navigation>
