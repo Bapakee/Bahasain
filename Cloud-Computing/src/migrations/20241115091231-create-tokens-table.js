@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      expiresAt: {
+      expires_at: {
         type: Sequelize.DATE, // Waktu kedaluwarsa token
         allowNull: false,
       },
