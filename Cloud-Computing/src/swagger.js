@@ -14,8 +14,22 @@ const swaggerOptions = {
         description: 'Local development server',
       },
     ],
+    components: {
+      securitySchemes: {
+        BearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT', // Menjelaskan bahwa formatnya adalah JWT
+        },
+      },
+    },
+    security: [
+      {
+        BearerAuth: [], // Terapkan BearerAuth secara global
+      },
+    ],
   },
-  apis: ['./src/routes/*.js'],
+  apis: ['./src/routes/*.js'], // Path ke file dengan anotasi Swagger
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
