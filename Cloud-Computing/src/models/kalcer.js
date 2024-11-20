@@ -21,15 +21,34 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Kalcer.init({
-    title: DataTypes.STRING,
-    content: DataTypes.TEXT,
-    type: DataTypes.STRING,
-    link: DataTypes.STRING,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
+    title: {
+      type: DataTypes.STRING,
+      field: 'title'
+    },
+    content: {
+      type: DataTypes.TEXT,
+      field: 'content'
+    },
+    type: {
+      type: DataTypes.STRING,
+      field: 'type'
+    },
+    link: {
+      type: DataTypes.STRING,
+      field: 'link'
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'created_at'
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'updated_at'
+    }
   }, {
     sequelize,
     modelName: 'Kalcer',
   });
+  ;
   return Kalcer;
 };

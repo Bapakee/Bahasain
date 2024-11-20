@@ -33,23 +33,28 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         primaryKey: true,
         defaultValue: () => nanoid(10),
+        field: 'id'
       },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'name'
       },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
+        field: 'email'
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'password'
       },
-      user_level: {
+      userLevel: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
+        field: 'user_level'
       }
     },
     {

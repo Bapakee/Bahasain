@@ -11,13 +11,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Streak.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+      Streak.belongsTo(models.User, { foreignKey: 'user_id' });
     }
   }
   Streak.init({
-    user_id: DataTypes.STRING,
-    streak: DataTypes.INTEGER,
-    last_activity: DataTypes.DATE
+    userId: {
+      type: DataTypes.STRING,
+      field: 'user_id'
+    },
+    streak: {
+      type: DataTypes.INTEGER,
+      field: 'streak'
+    },
+    lastActivity: {
+      type: DataTypes.DATE,
+      field: 'last_activity'
+    }
   }, {
     sequelize,
     modelName: 'Streak',
