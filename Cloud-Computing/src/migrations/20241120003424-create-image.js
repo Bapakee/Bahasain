@@ -9,10 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      content_id: {
-        type: Sequelize.INTEGER
+      entity_type: {
+        type: Sequelize.ENUM
       },
-      quiz_id: {
+      entity_id: {
         type: Sequelize.INTEGER
       },
       file_name: {
@@ -20,11 +20,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW'),
       }
     });
   },

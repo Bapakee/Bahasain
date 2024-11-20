@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       Content.belongsTo(models.Level, { foreignKey: 'level_id', as: 'level' });
 
       // Relasi dengan Images
-      Content.hasMany(models.Image, { foreignKey: 'content_id', as: 'images' });
+      Content.hasMany(models.Image, {
+        foreignKey: 'entity_id',
+        constraints: false,
+        scope: {
+          entity_type: 'content',
+        },
+        as: 'images',
+      });
     }
   }
   Content.init({
