@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/validateBody')
+const auth = require('../middleware/auth')
 const {getModules} = require('../controllers/learnController')
 
-router.get('/learn', auth, getModules);
+router.get('/', auth, getModules);
 
 module.exports = router;

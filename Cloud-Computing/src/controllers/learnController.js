@@ -2,7 +2,8 @@ const { UserProgress, Module, Level, Sequelize } = require('../models');
 
 // Fungsi untuk mendapatkan modul dengan level dan status penyelesaian
 const getModules = async (req, res) => {
-  const userId = req.userId; // ID pengguna dari token
+  const user = req.user;
+  const userId= user.id // ID pengguna dari token
 
   try {
     // Ambil progress terakhir dari user berdasarkan user_id

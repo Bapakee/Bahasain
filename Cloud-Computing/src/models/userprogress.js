@@ -11,13 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Relasi dengan User
-      UserProgress.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+      UserProgress.belongsTo(models.User, { foreignKey: 'user_id' });
 
       // Relasi dengan Module
-      UserProgress.belongsTo(models.Module, { foreignKey: 'module_id', as: 'module' });
+      UserProgress.belongsTo(models.Module, { foreignKey: 'module_id' });
 
       // Relasi dengan Level
-      UserProgress.belongsTo(models.Level, { foreignKey: 'level_id', as: 'level' });
+      UserProgress.belongsTo(models.Level, { foreignKey: 'level_id' });
     }
   }
   UserProgress.init({

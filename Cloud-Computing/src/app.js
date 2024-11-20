@@ -5,7 +5,8 @@ const path = require('path');
 require('dotenv').config();
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
-const auth = require('../middleware/validateBody')
+const learnRoutes = require('./routes/learn');
+const auth = require('./middleware/auth')
 
 const app = express();
 app.use(bodyParser.json());
@@ -15,10 +16,9 @@ app.use('/api/auth', authRoutes);
 app.get('/reset-password/:token', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/public/reset-password.html'));
   });
+  app.use('/api/learn', learnRoutes);
 
-app.get('protected',auth,(req,res)=>{
-  res.status(200).json({message:'berhasil'})
-})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
