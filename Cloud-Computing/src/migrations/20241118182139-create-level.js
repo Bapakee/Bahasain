@@ -32,6 +32,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('user_progresses');
     await queryInterface.dropTable('Levels');
   }
 };
