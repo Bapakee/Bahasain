@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   Token.init(
     {
       userId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       type: {

@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Quiz.init({
     level_id: DataTypes.INTEGER,
+    type: DataTypes.ENUM('essay','option'),
     question: DataTypes.STRING,
     answer: DataTypes.STRING
   }, {

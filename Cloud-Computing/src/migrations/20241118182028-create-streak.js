@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING,
+        allowNull: false,
+        references: {
+          model: 'Users', // Nama tabel Users
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       streak: {
         type: Sequelize.INTEGER

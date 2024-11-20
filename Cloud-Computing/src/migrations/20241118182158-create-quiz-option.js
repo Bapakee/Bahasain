@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       quiz_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
+        references : {
+          model : 'Quizzes',
+          key : 'id'
+        },
+        onDelete : 'CASCADE'
       },
       option: {
         type: Sequelize.STRING
