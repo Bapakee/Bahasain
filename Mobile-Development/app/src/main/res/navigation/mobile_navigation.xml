@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dicoding.bahasain.ui.home.HomeFragment"
+        android:name="com.bahasain.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_learn"
-        android:name="com.dicoding.bahasain.ui.learn.LearnFragment"
+        android:name="com.bahasain.ui.learn.LearnFragment"
         android:label="@string/title_learn"
         tools:layout="@layout/fragment_learn" />
 
     <fragment
         android:id="@+id/navigation_cultural"
-        android:name="com.dicoding.bahasain.ui.cultural.CulturalFragment"
+        android:name="com.bahasain.ui.cultural.CulturalFragment"
         android:label="@string/title_cultural"
         tools:layout="@layout/fragment_cultural" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.dicoding.bahasain.ui.profile.ProfileFragment"
+        android:name="com.bahasain.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

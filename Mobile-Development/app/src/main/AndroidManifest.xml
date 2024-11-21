@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Bahasain"
         tools:targetApi="31">
         <activity
-            android:name=".ui.onboarding.OnBoardingActivity"
+            android:name="com.bahasain.ui.onboarding.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name="com.bahasain.ui.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.bahasain.ui.MainActivity"
             android:exported="true" />
     </application>
 
