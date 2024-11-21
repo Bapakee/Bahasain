@@ -1,4 +1,4 @@
-const { UserProgress, Module, Level, Quiz, Content, QuizOption, Sequelize, User } = require('../models');
+const { UserProgress, Module, Level, Quiz, QuizOption, Sequelize, User } = require('../models');
 const { Op, where } = require('sequelize');
 const quiz = require('../models/quiz');
 const quizoption = require('../models/quizoption');
@@ -69,10 +69,6 @@ const getLevel = async (req, res) => {
             },
             include : [
                 {
-                    model : Content,
-
-                },
-                {
                     model: Quiz,
                     include: [
                         {
@@ -88,14 +84,6 @@ const getLevel = async (req, res) => {
         const response = levels.map(level=>({
             id:level.id,
             title:level.title,
-            contents:level.Contents.map(content=>({
-                id:content.id,
-                contentEn : content.contentEn,
-                contentId : content.contentId,
-                sequence : content.sequence,
-                transliteration : content.transliteration,
-                category : content.category
-            })),
             quizzes : level.Quizzes.map(quiz=>({
                 id : quiz.id,
                 type : quiz.type,

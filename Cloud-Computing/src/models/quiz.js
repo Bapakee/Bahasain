@@ -42,6 +42,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       field: 'question'
     },
+    explanation:{
+      type : DataTypes.JSON,
+      field : 'explanation'
+    },
     answer: {
       type: DataTypes.STRING,
       field: 'answer'

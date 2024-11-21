@@ -21,10 +21,10 @@ module.exports = {
       });
     }
 
-    await queryInterface.bulkInsert('Streaks', streaks, {});
+    await queryInterface.bulkInsert('streaks', streaks, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Streaks', null, {});
+    await queryInterface.bulkDelete('streaks', null, {});
   }
 };

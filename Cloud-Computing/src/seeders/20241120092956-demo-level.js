@@ -15,10 +15,10 @@ module.exports = {
       });
     }
 
-    await queryInterface.bulkInsert('Levels', levels, {});
+    await queryInterface.bulkInsert('levels', levels, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Levels', null, {});
+    await queryInterface.bulkDelete('levels', null, {});
   }
 };

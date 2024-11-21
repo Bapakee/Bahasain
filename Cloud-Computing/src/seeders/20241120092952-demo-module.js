@@ -15,10 +15,10 @@ module.exports = {
       });
     }
 
-    await queryInterface.bulkInsert('Modules', modules, {});
+    await queryInterface.bulkInsert('modules', modules, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Modules', null, {});
+    await queryInterface.bulkDelete('modules', null, {});
   }
 };
