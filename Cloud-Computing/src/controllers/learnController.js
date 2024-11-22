@@ -6,60 +6,74 @@ const getModules = async (req, res) => {
     const userId = req.user.id; // ID pengguna dari token
 
     try {
+        // Ambil data pengguna berdasarkan ID
         const user = await User.findByPk(userId);
         if (!user) {
-            return res.status(401).json({ error: 'User tidak ada' });
+            return res.status(401).json({ error: 'User tidak ditemukan' });
         }
 
-        // Fetch all modules where the level is <= user's level
+        // Ambil semua modul dari database
         const modules = await Module.findAll({
+            order: [['level', 'ASC']],
             where: {
                 level: {
-                    [Op.lte]: user.userLevel, // Level module must be <= user's level
                     [Op.gt]: 0, // Level module must be greater than 0
                 },
-            },
-            order: [['level', 'ASC']], // Order by level in ascending order
+            }, // Urutkan berdasarkan level secara ascending
             include: [
                 {
-                    model: Level, // Include related Levels for each Module
+                    model: Level, // Sertakan semua level terkait untuk setiap modul
+                    order: [['order', 'ASC']], // Urutkan level berdasarkan urutan (order)
                     include: [
                         {
-                            model: UserProgress, // Include UserProgress to check completion status
-                            where: { userId }, // Only include progress for the specific user
-                            required: false, // It's a left join, so no need for UserProgress to exist
-                            attributes: ['id', 'completed', 'score'], // Get 'id', 'completed', and 'score' attributes
+                            model: UserProgress, // Sertakan progres pengguna untuk memeriksa status penyelesaian
+                            where: { userId }, // Ambil hanya progres untuk pengguna tertentu
+                            required: false, // Left join untuk memastikan level tanpa progres juga dimasukkan
+                            attributes: ['id', 'completed', 'score'], // Ambil atribut yang relevan
                         },
                     ],
                 },
             ],
         });
 
-        // Transform the data to match the desired response format
-        const response = modules.map(module => ({
-            id: module.id,
-            name: module.name,
-            level: module.level,
-            levels: module.Levels.map(level => ({
-                id: level.id,
-                title: level.title,
-                order : level.order,
-                score: level.UserProgresses?.length > 0
-                    ? level.UserProgresses[0].score
-                    : null, // Include progress ID and score if exists
-            })),
-        }));
+        // Transformasikan data ke format respons yang diinginkan
+        const response = modules.map((module) => {
+            // Hitung jumlah level dan level yang telah diselesaikan pengguna
+            const totalLevels = module.Levels.length;
+            const completedLevels = module.Levels.filter(
+                (level) => level.UserProgresses?.[0]?.completed
+            ).length;
 
-        // Return the formatted response
-        res.status(200).json(response);
+            return {
+                id: module.id,
+                name: module.name,
+                level: module.level,
+                isAccessible: user.level >= module.level, // Cek apakah modul dapat diakses
+                lessonsCompleted: `${completedLevels}/${totalLevels}`, // Format penyelesaian modul
+                levels: module.Levels.map((level) => ({
+                    id: level.id,
+                    title: level.title,
+                    order: level.order,
+                    score: level.UserProgresses?.[0]?.score || null, // Sertakan skor jika ada
+                    isCompleted: !!level.UserProgresses?.[0]?.completed, // Boolean status penyelesaian
+                })),
+            };
+        });
+
+        // Kirim respons ke klien
+        res.status(200).json({
+            message : 'Successful get module',
+            data: response,
+        });
     } catch (error) {
         console.error('Error fetching modules and levels:', error);
         res.status(500).json({
             status: 'failed',
-            message: 'Error fetching modules and levels',
+            message: 'Gagal mengambil data modul dan level',
         });
     }
 };
+
 
 const getLevel = async (req, res) => {
     const { moduleId, levelId } = req.params
