@@ -21,6 +21,10 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      order : {
+        allowNull : true,
+        type :Sequelize.INTEGER
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE
@@ -30,6 +34,11 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addConstraint('levels', {
+      fields: ['module_id','order'], // Kombinasi kolom
+      type: 'unique',
+      name: 'unique_module_order', // Nama constraint (opsional)
+  });
   },
   async down(queryInterface, Sequelize) {
     // await queryInterface.removeConstraint('userprogresses', 'userprogresses_ibfk_3');

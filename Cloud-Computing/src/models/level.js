@@ -28,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     title: {
       type: DataTypes.STRING,
       field: 'title'
+    },
+    order : {
+      type : DataTypes.INTEGER,
+      field: 'order'
     }
   }, {
     sequelize,
