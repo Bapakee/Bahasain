@@ -36,10 +36,24 @@ class EditTextPassword @JvmOverloads constructor(
         })
     }
 
-    override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
-        hint = "Password"
-        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+    fun validateConfirmPassword(confirmPasswordField: EditTextPassword) {
+        confirmPasswordField.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (s.toString().isNotEmpty() && s.toString() != this@EditTextPassword.text.toString()) {
+                    (confirmPasswordField.parent.parent as? TextInputLayout)?.error =
+                        context.getString(R.string.password_same_warning)
+                } else {
+                    (confirmPasswordField.parent.parent as? TextInputLayout)?.apply {
+                        error = null
+                        isErrorEnabled = false
+                    }
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
     }
 
     companion object {

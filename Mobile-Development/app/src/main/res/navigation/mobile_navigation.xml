@@ -3,13 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.bahasain.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+    app:startDestination="@+id/navigation_learn">
 
     <fragment
         android:id="@+id/navigation_learn"
@@ -22,6 +16,12 @@
         android:name="com.bahasain.ui.cultural.CulturalFragment"
         android:label="@string/title_cultural"
         tools:layout="@layout/fragment_cultural" />
+
+    <fragment
+        android:id="@+id/navigation_vocab"
+        android:name="com.bahasain.ui.vocab.VocabFragment"
+        android:label="@string/vocab"
+        tools:layout="@layout/fragment_vocab" />
 
     <fragment
         android:id="@+id/navigation_profile"
