@@ -28,6 +28,9 @@ module.exports = {
       answer: {
         type: Sequelize.STRING
       },
+      explanation:{
+        type: Sequelize.JSON
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE

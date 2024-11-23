@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       entity_type: {
-        type: Sequelize.ENUM('quiz','content','kalcer')
+        type: Sequelize.STRING
       },
       entity_id: {
         type: Sequelize.INTEGER

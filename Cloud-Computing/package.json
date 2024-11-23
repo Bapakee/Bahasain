@@ -8,7 +8,7 @@
     "dev": "nodemon src/app.js",
     "db:migrate": "npx sequelize-cli db:migrate --config src/config/config.js --migrations-path src/migrations",
     "db:fresh": "npx sequelize-cli db:migrate:undo:all --config src/config/config.js --migrations-path src/migrations && npx sequelize-cli db:migrate --config src/config/config.js --migrations-path src/migrations",
-    "db:seed":"npx sequelize-cli db:seed:all --config src/config/config.js --seeders-path src/seeders"
+    "db:seed": "npx sequelize-cli db:seed:all --config src/config/config.js --seeders-path src/seeders"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "express": "^4.21.1",
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.46",
     "mysql2": "^3.11.4",
     "nanoid": "^3.3.7",
     "nodemailer": "^6.9.16",

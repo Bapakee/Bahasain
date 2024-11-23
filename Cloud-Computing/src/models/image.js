@@ -10,36 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Image.belongsTo(models.Content, {
-        foreignKey: 'entity_id',
-        constraints: false,
-        as: 'content',
-      });
       Image.belongsTo(models.Quiz, {
         foreignKey: 'entity_id',
         constraints: false,
         as: 'quiz',
-      });
-      Image.belongsTo(models.Kalcer, {
-        foreignKey: 'entity_id',
-        constraints: false,
-        as: 'kalcer',
-      });
-      
-    }
-    static getEntityType(type) {
-      const types = {
-        content: 'Content',
-        quiz: 'Quiz',
-        kalcer: 'Kalcer',
-      };
-      return types[type];
+      });      
     }
   }
   
   Image.init({
     entityType: {
-      type: DataTypes.ENUM('quiz', 'content', 'kalcer'),
+      type: DataTypes.STRING,
       field: 'entity_type'
     },
     entityId: {

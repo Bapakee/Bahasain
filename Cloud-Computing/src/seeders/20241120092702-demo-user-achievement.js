@@ -23,10 +23,10 @@ module.exports = {
       });
     }
 
-    await queryInterface.bulkInsert('UserAchievements', userAchievements, {});
+    await queryInterface.bulkInsert('user_achievements', userAchievements, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('UserAchievements', null, {});
+    await queryInterface.bulkDelete('user_achievements', null, {});
   }
 };
