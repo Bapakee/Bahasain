@@ -9,14 +9,14 @@
     <string name="btn_continue">CONTINUE</string>
     <string name="btn_skip">SKIP</string>
 
-    <string name="title_onboarding_1">Hi,\n Welcome to BahasaIn!</string>
-    <string name="txt_onboarding_1">Your gateway to mastering Bahasa Indonesia\n and exploring its rich culture.</string>
+    <string name="title_onboarding_1">Hi,\nWelcome to BahasaIn!</string>
+    <string name="txt_onboarding_1">Your gateway to mastering Bahasa\nIndonesia and exploring its rich culture.</string>
 
-    <string name="title_onboarding_2">Discover Indonesian Culture.</string>
-    <string name="txt_onboarding_2">Immerse yourself in folklore, history, and culinary\nadventures.</string>
+    <string name="title_onboarding_2">Discover Indonesian\nCulture.</string>
+    <string name="txt_onboarding_2">Immerse yourself in folklore, history, and\nculinary adventures.</string>
 
-    <string name="title_onboarding_3">Make Learning Fun and Interactive</string>
-    <string name="txt_onboarding_3">Engage with games, quizzes, and daily challenges\n while you learn.</string>
+    <string name="title_onboarding_3">Make Learning Fun\nand Interactive</string>
+    <string name="txt_onboarding_3">Engage with games, quizzes, and daily\nchallenges while you learn.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -37,4 +37,5 @@
     <string name="email_address">Email address</string>
     <string name="dont_have_account">Don\'t have an account ?</string>
     <string name="register_now">Register Now</string>
+    <string name="btn_forgot_password">Forgot Password?</string>
 </resources>

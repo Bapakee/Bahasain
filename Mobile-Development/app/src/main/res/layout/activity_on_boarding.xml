@@ -28,7 +28,6 @@
         app:tabIndicatorGravity="center"
         app:tabRippleColor="@android:color/transparent"
         app:tabIndicatorHeight="4dp"
-        app:tabTextColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@id/btn_next"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
