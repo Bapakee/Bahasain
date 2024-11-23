@@ -24,10 +24,10 @@ module.exports = {
       });
     }
 
-    await queryInterface.bulkInsert('UserProgresses', userProgresses, {});
+    await queryInterface.bulkInsert('user_progresses', userProgresses, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('UserProgresses', null, {});
+    await queryInterface.bulkDelete('user_Progresses', null, {});
   }
 };

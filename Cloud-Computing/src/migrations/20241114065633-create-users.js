@@ -21,6 +21,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      profile_pict:{
+        allowNull : true,
+        type: Sequelize.STRING
+      },
+      interest:{
+        allowNull : true,
+        type : Sequelize.JSON
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE

@@ -51,7 +51,7 @@ const {getModules,getLevel} = require('../controllers/learnController')
  *                               type: boolean
  *                               example: false
  */
-router.get('/', auth, getModules);
+router.get('/', getModules);
 
 
 /**
@@ -146,6 +146,6 @@ router.get('/', auth, getModules);
  *                                   type: string
  *                                   example: "Paris"
  */
-router.get('/:moduleId/level/:levelId',auth,getLevel)
+router.get('/:moduleId/level/:levelId',getLevel)
 
 module.exports = router;

@@ -55,6 +55,16 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true,
         field: 'user_level'
+      },
+      profile_pict : {
+        type : DataTypes.STRING,
+        allowNull : true,
+        field : 'profile_pict'
+      },
+      interest : {
+        type : DataTypes.JSON,
+        allowNull : true,
+        field : 'interest'
       }
     },
     {

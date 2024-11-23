@@ -13,9 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       // Relasi dengan Module
       Level.belongsTo(models.Module, { foreignKey: 'module_id'});
 
-      // Relasi dengan Content
-      Level.hasMany(models.Content, { foreignKey: 'level_id'});
-
       // Relasi dengan Quiz
       Level.hasMany(models.Quiz, { foreignKey: 'level_id'});
       Level.hasMany(models.UserProgress, {
@@ -31,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     title: {
       type: DataTypes.STRING,
       field: 'title'
+    },
+    order : {
+      type : DataTypes.INTEGER,
+      field: 'order'
     }
   }, {
     sequelize,

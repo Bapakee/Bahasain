@@ -44,7 +44,6 @@ const login = async (req, res) => {
       }
       const accessToken = generateAccessToken(user);
       const refreshToken = await generateRefreshToken(user);
-      console.log('Generated refresh token:', refreshToken); // Debug log
       res.json({ accessToken, refreshToken });
   } catch (err) {
       res.status(500).json({ error: err.message });

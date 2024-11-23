@@ -1,5 +1,5 @@
 const validateBody = (requiredFields = [], optionalFields = []) => {
-    return (req, res, next) => {
+    return (req, res, next) => {  
       const keys = Object.keys(req.body);
   
       // Cari field yang tidak diperbolehkan

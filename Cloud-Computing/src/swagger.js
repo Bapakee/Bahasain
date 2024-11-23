@@ -4,9 +4,9 @@ const swaggerOptions = {
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
-      title: 'API Documentation',
+      title: 'BahasaIn API Documentation',
       version: '1.0.0',
-      description: 'API documentation for the application',
+      description: 'Kumpulan dokumentasi API untuk aplikasi BahasaIn',
     },
     servers: [
       {

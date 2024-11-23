@@ -6,19 +6,20 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     const levels = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i <= 5; i++) {
       levels.push({
-        module_id: i+1,
+        module_id: i,
         title: faker.lorem.word(),
+        order : i,
         created_at: new Date(),
         updated_at: new Date(),
       });
     }
 
-    await queryInterface.bulkInsert('Levels', levels, {});
+    await queryInterface.bulkInsert('levels', levels, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Levels', null, {});
+    await queryInterface.bulkDelete('levels', null, {});
   }
 };
