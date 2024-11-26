@@ -4,11 +4,15 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivityOnBoardingBinding
-import com.bahasain.ui.main.MainActivity
+import com.bahasain.ui.MainActivity
+import com.bahasain.ui.ViewModelFactory
+import com.bahasain.ui.auth.login.LoginActivity
+import com.bahasain.ui.splash.SplashViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardingActivity : AppCompatActivity() {
@@ -16,6 +20,10 @@ class OnBoardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardingBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: OnBoardingAdapter
+
+    private val viewModel by viewModels<SplashViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     private lateinit var sharedPreferences: SharedPreferences
     private val PREF_NAME = "OnBoardingPrefs"
@@ -54,9 +62,15 @@ class OnBoardingActivity : AppCompatActivity() {
             if (viewPager.currentItem < onboardingItems.size - 1) {
                 viewPager.currentItem += 1
             } else {
-                startActivity(Intent(this, MainActivity::class.java))
                 saveOnBoardingPref()
-                finish()
+                viewModel.getSession().observe(this) { user ->
+                    if (user.token.isEmpty()) {
+                        val intent = Intent(this, LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                        finish()
+                    }
+                }
             }
         }
     }

@@ -6,88 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.bahasain.ui.learn.LearnFragment">
 
-    <LinearLayout
-        android:id="@+id/nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_nav"
-            android:background="@android:color/transparent" />
-
-        <LinearLayout
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/point"
-                android:layout_marginEnd="32dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_poin"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="324"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/inter"
-                    android:layout_gravity="center"
-                    android:textFontWeight="500"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/streak"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_streak"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="12"
-                    android:textColor="@color/blue"
-                    android:fontFamily="@font/inter"
-                    android:layout_gravity="center"
-                    android:textFontWeight="500"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btn_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_notification"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-
     <ScrollView
         android:paddingHorizontal="32dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/nav"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout

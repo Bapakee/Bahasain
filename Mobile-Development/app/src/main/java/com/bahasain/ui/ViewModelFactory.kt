@@ -6,7 +6,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.bahasain.data.UserRepository
 import com.bahasain.di.Injection
 import com.bahasain.ui.auth.login.LoginViewModel
-import com.bahasain.ui.main.MainViewModel
+import com.bahasain.ui.auth.register.RegisterViewModel
+import com.bahasain.ui.splash.SplashViewModel
 
 class ViewModelFactory(
     private val userRepository: UserRepository
@@ -19,8 +20,12 @@ class ViewModelFactory(
                 LoginViewModel(userRepository) as T
             }
 
-            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
-                MainViewModel(userRepository) as T
+            modelClass.isAssignableFrom(SplashViewModel::class.java) -> {
+                SplashViewModel(userRepository) as T
+            }
+
+            modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
+                RegisterViewModel(userRepository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

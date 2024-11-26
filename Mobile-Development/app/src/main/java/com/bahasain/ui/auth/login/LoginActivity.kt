@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -14,6 +15,7 @@ import com.bahasain.data.Result
 import com.bahasain.data.pref.UserModel
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.auth.register.RegisterActivity
+import com.bahasain.ui.MainActivity
 import com.bahasain.ui.view.ButtonSign
 import com.bahasain.ui.view.EditTextEmail
 import com.bahasain.ui.view.EditTextPassword
@@ -67,15 +69,21 @@ class LoginActivity : AppCompatActivity() {
             if (result != null){
                 when(result){
                     is Result.Loading -> {
-
+                        showLoading(true)
                     }
                     is Result.Success -> {
+                        showLoading(false)
                         Toast.makeText(this, "Login Succes", Toast.LENGTH_SHORT).show()
 
                         val token = result.data.accessToken
                         viewModel.saveSession(UserModel(email, token, password))
+
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                     is Result.Error -> {
+                        showLoading(false)
                         Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -115,5 +123,9 @@ class LoginActivity : AppCompatActivity() {
         intent.flags =
             Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar?.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

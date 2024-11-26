@@ -68,27 +68,38 @@ class PlacementActivity : AppCompatActivity() {
 
         viewPager = binding.viewPager
 
-        // Inisialisasi adapter
+        viewPager.isUserInputEnabled = false
+
         adapter = PlacementAdapter(placementQuiz) { isCorrect ->
-            goToNextQuiz()
+            nextQuiz()
         }
 
-        // Hubungkan adapter ke ViewPager2
         viewPager.adapter = adapter
 
         binding.btnContinue.setOnClickListener {
-            goToNextQuiz()
+            nextQuiz()
+        }
+
+        binding.btnBack.setOnClickListener{
+            backQuiz()
         }
     }
 
-
-    private fun goToNextQuiz() {
+    private fun nextQuiz() {
         if (currentQuizIndex < placementQuiz.size - 1) {
             currentQuizIndex++
-            viewPager.setCurrentItem(currentQuizIndex, true)
+            viewPager.setCurrentItem(currentQuizIndex, false)
         } else {
             // Quiz selesai, tampilkan skor
         }
     }
 
+    private fun backQuiz(){
+        if (currentQuizIndex > 0) {
+            currentQuizIndex--
+            viewPager.setCurrentItem(currentQuizIndex, false)
+        }
+    }
+
 }
+

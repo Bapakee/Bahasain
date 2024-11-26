@@ -30,7 +30,7 @@
             android:name="com.bahasain.ui.onboarding.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name="com.bahasain.ui.SplashActivity"
+            android:name="com.bahasain.ui.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.bahasain.ui.main.MainActivity"
+            android:name="com.bahasain.ui.MainActivity"
             android:exported="true" />
     </application>
 

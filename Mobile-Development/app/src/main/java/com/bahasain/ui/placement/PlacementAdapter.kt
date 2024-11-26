@@ -87,16 +87,22 @@ class PlacementAdapter(
             binding.quiz.text = quiz.quiz
 
             quiz.optionsQuiz.forEachIndexed { index, option ->
-                val radioButton = RadioButton(binding.root.context).apply {
+                val radioButton = LayoutInflater.from(binding.root.context)
+                    .inflate(R.layout.item_radio, binding.rgQuiz, false) as RadioButton
+
+                radioButton.apply {
                     text = option
                     id = index
                 }
-                binding.rgQuiz.addView(radioButton)
-            }
 
-            binding.rgQuiz.setOnCheckedChangeListener { _, checkedId ->
-                val isCorrect = checkedId == quiz.correctAnswer
-                onContinueClicked(isCorrect)
+                radioButton.setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) {
+                        val isCorrect = index == quiz.correctAnswer
+                        onContinueClicked(isCorrect)
+                    }
+                }
+
+                binding.rgQuiz.addView(radioButton)
             }
         }
     }
@@ -110,7 +116,10 @@ class PlacementAdapter(
             val selectedIndices = mutableListOf<Int>()
 
             quiz.optionsQuiz.forEachIndexed { index, option ->
-                val checkBox = CheckBox(binding.root.context).apply {
+                val checkBox = LayoutInflater.from(binding.root.context)
+                    .inflate(R.layout.item_checkbox, binding.llOptions, false) as CheckBox
+
+                checkBox.apply {
                     text = option
                     id = index
                 }
@@ -122,7 +131,6 @@ class PlacementAdapter(
                     if (isChecked) selectedIndices.add(index)
                     else selectedIndices.remove(index)
 
-                    // Periksa apakah jawaban sudah benar
                     val isCorrect = selectedIndices == quiz.correctAnswer.toSet()
                     onContinueClicked(isCorrect)
                 }

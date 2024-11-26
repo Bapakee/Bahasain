@@ -5,7 +5,10 @@ import androidx.lifecycle.liveData
 import com.bahasain.data.pref.UserModel
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiService
+import com.bahasain.data.remote.request.LoginRequest
+import com.bahasain.data.remote.request.RegisterRequest
 import com.bahasain.data.remote.response.LoginResponse
+import com.bahasain.data.remote.response.RegisterResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import retrofit2.HttpException
@@ -14,10 +17,27 @@ class UserRepository private constructor(
     private val apiService: ApiService,
     private val userPreferences: UserPreferences
 ){
-    fun login(email: String, password: String): LiveData<Result<LoginResponse>> = liveData {
+    fun register(registerRequest: RegisterRequest): LiveData<Result<RegisterResponse>> = liveData {
         emit(Result.Loading)
         try {
-            val response = apiService.login(email,password)
+            val response = apiService.register(registerRequest)
+            emit(Result.Success(response))
+        }catch (e: HttpException){
+            val jsonString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonString, RegisterResponse::class.java)
+            val errorMessage = when (errorBody.error) {
+                is String -> errorBody.error // Jika error adalah string
+                is List<*> -> errorBody.error.joinToString("\n") // Jika error adalah array
+                else -> "Unknown error"
+            }
+            emit(Result.Error(errorMessage))
+        }
+    }
+
+    fun login(loginRequest: LoginRequest): LiveData<Result<LoginResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.login(loginRequest)
             emit(Result.Success(response))
         }catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
