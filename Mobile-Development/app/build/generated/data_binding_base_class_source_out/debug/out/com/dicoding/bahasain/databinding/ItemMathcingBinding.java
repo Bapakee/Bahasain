@@ -4,7 +4,6 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,9 +20,6 @@ public final class ItemMathcingBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnNext;
-
-  @NonNull
   public final LinearLayout leftColumn;
 
   @NonNull
@@ -35,11 +31,9 @@ public final class ItemMathcingBinding implements ViewBinding {
   @NonNull
   public final TextView tvQuiz;
 
-  private ItemMathcingBinding(@NonNull LinearLayout rootView, @NonNull Button btnNext,
-      @NonNull LinearLayout leftColumn, @NonNull TextView quizTitle,
-      @NonNull LinearLayout rightColumn, @NonNull TextView tvQuiz) {
+  private ItemMathcingBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout leftColumn,
+      @NonNull TextView quizTitle, @NonNull LinearLayout rightColumn, @NonNull TextView tvQuiz) {
     this.rootView = rootView;
-    this.btnNext = btnNext;
     this.leftColumn = leftColumn;
     this.quizTitle = quizTitle;
     this.rightColumn = rightColumn;
@@ -73,12 +67,6 @@ public final class ItemMathcingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnNext;
-      Button btnNext = ViewBindings.findChildViewById(rootView, id);
-      if (btnNext == null) {
-        break missingId;
-      }
-
       id = R.id.leftColumn;
       LinearLayout leftColumn = ViewBindings.findChildViewById(rootView, id);
       if (leftColumn == null) {
@@ -103,8 +91,8 @@ public final class ItemMathcingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemMathcingBinding((LinearLayout) rootView, btnNext, leftColumn, quizTitle,
-          rightColumn, tvQuiz);
+      return new ItemMathcingBinding((LinearLayout) rootView, leftColumn, quizTitle, rightColumn,
+          tvQuiz);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

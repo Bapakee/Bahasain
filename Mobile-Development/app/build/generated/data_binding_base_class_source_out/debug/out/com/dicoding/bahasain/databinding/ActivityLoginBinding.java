@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,20 +36,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final ImageButton btnFacebook;
 
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
+  @NonNull
   public final TextView btnForgot;
 
   @NonNull
@@ -82,6 +70,9 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final ConstraintLayout main;
 
   @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
   public final LinearLayout textButton;
 
   @NonNull
@@ -89,12 +80,12 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull FrameLayout backgroundSign, @NonNull ImageButton btnDiscord,
-      @NonNull ImageButton btnFacebook, @Nullable TextView btnForgot,
-      @NonNull ImageButton btnGoogle, @NonNull ButtonSign btnSign, @NonNull TextView btnSignup,
-      @NonNull TextView dontHave, @NonNull TextInputLayout edtEmailLayout,
-      @NonNull TextInputLayout edtPasswordLayout, @NonNull EditTextEmail edtTextEmail,
-      @NonNull EditTextPassword edtTextPassword, @NonNull LinearLayout iconSocial,
-      @NonNull ConstraintLayout main, @NonNull LinearLayout textButton,
+      @NonNull ImageButton btnFacebook, @NonNull TextView btnForgot, @NonNull ImageButton btnGoogle,
+      @NonNull ButtonSign btnSign, @NonNull TextView btnSignup, @NonNull TextView dontHave,
+      @NonNull TextInputLayout edtEmailLayout, @NonNull TextInputLayout edtPasswordLayout,
+      @NonNull EditTextEmail edtTextEmail, @NonNull EditTextPassword edtTextPassword,
+      @NonNull LinearLayout iconSocial, @NonNull ConstraintLayout main,
+      @NonNull ProgressBar progressBar, @NonNull LinearLayout textButton,
       @NonNull TextView tvSignupWith) {
     this.rootView = rootView;
     this.backgroundSign = backgroundSign;
@@ -111,6 +102,7 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.edtTextPassword = edtTextPassword;
     this.iconSocial = iconSocial;
     this.main = main;
+    this.progressBar = progressBar;
     this.textButton = textButton;
     this.tvSignupWith = tvSignupWith;
   }
@@ -162,6 +154,9 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       id = R.id.btn_forgot;
       TextView btnForgot = ViewBindings.findChildViewById(rootView, id);
+      if (btnForgot == null) {
+        break missingId;
+      }
 
       id = R.id.btn_google;
       ImageButton btnGoogle = ViewBindings.findChildViewById(rootView, id);
@@ -219,6 +214,12 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
       id = R.id.text_button;
       LinearLayout textButton = ViewBindings.findChildViewById(rootView, id);
       if (textButton == null) {
@@ -233,8 +234,8 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, backgroundSign, btnDiscord,
           btnFacebook, btnForgot, btnGoogle, btnSign, btnSignup, dontHave, edtEmailLayout,
-          edtPasswordLayout, edtTextEmail, edtTextPassword, iconSocial, main, textButton,
-          tvSignupWith);
+          edtPasswordLayout, edtTextEmail, edtTextPassword, iconSocial, main, progressBar,
+          textButton, tvSignupWith);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

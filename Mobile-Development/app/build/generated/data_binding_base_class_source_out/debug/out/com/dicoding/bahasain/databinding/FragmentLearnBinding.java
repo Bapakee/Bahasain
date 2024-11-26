@@ -5,114 +5,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
+import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentLearnBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
-  public final ImageButton btnNotification;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
-  public final LinearLayout nav;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
-  public final LinearLayout point;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
-  public final LinearLayout streak;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-v28/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
+  @NonNull
   public final Button test;
 
-  private FragmentLearnBinding(@NonNull ConstraintLayout rootView,
-      @Nullable ImageButton btnNotification, @Nullable LinearLayout nav,
-      @Nullable LinearLayout point, @Nullable LinearLayout streak, @Nullable Button test) {
+  private FragmentLearnBinding(@NonNull ScrollView rootView, @NonNull Button test) {
     this.rootView = rootView;
-    this.btnNotification = btnNotification;
-    this.nav = nav;
-    this.point = point;
-    this.streak = streak;
     this.test = test;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -133,17 +50,19 @@ public final class FragmentLearnBinding implements ViewBinding {
 
   @NonNull
   public static FragmentLearnBinding bind(@NonNull View rootView) {
-    ImageButton btnNotification = ViewBindings.findChildViewById(rootView, R.id.btn_notification);
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.test;
+      Button test = ViewBindings.findChildViewById(rootView, id);
+      if (test == null) {
+        break missingId;
+      }
 
-    LinearLayout nav = ViewBindings.findChildViewById(rootView, R.id.nav);
-
-    LinearLayout point = ViewBindings.findChildViewById(rootView, R.id.point);
-
-    LinearLayout streak = ViewBindings.findChildViewById(rootView, R.id.streak);
-
-    Button test = ViewBindings.findChildViewById(rootView, R.id.test);
-
-    return new FragmentLearnBinding((ConstraintLayout) rootView, btnNotification, nav, point,
-        streak, test);
+      return new FragmentLearnBinding((ScrollView) rootView, test);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

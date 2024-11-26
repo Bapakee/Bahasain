@@ -56,10 +56,6 @@
         "source": "com.dicoding.bahasain.app-main-55:/drawable/tab_indicator_survey.xml"
     },
     {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout_item_placement.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout/item_placement.xml"
-    },
-    {
         "merged": "com.dicoding.bahasain.app-debug-53:/navigation_mobile_navigation.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/navigation/mobile_navigation.xml"
     },
@@ -110,6 +106,10 @@
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/drawable-xxxhdpi_icon_notification.png.flat",
         "source": "com.dicoding.bahasain.app-pngs-49:/drawable-xxxhdpi/icon_notification.png"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-debug-53:/layout_item_radio.xml.flat",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_radio.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_splash.xml.flat",

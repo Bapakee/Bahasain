@@ -18,12 +18,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
         tools:text="Apa arti ungkapan buah tangan?"
         android:gravity="center"/>
 
     <RadioGroup
         android:id="@+id/rg_quiz"
+        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

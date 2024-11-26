@@ -4,6 +4,10 @@
         "source": "com.dicoding.bahasain.app-main-55:/layout/fragment_learn.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_radio.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_radio.xml"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_placement.xml",
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_placement.xml"
     },
@@ -58,10 +62,6 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/fragment_cultural.xml",
         "source": "com.dicoding.bahasain.app-main-55:/layout/fragment_cultural.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_placement.xml",
-        "source": "com.dicoding.bahasain.app-main-55:/layout/item_placement.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_on_boarding.xml",

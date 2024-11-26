@@ -13,5 +13,4 @@ class SplashViewModel(
     fun getSession(): LiveData<UserModel> {
         return userRepository.getSession().asLiveData()
     }
-
 }

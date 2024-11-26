@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -62,6 +63,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final ConstraintLayout main;
 
   @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
   public final TextView titleSignup;
 
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
@@ -71,7 +75,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
       @NonNull TextInputLayout edtPasswordLayout, @NonNull EditTextPassword edtTextConfirmPassword,
       @NonNull EditTextEmail edtTextEmail, @NonNull EditTextName edtTextName,
       @NonNull EditTextPassword edtTextPassword, @NonNull ConstraintLayout main,
-      @NonNull TextView titleSignup) {
+      @NonNull ProgressBar progressBar, @NonNull TextView titleSignup) {
     this.rootView = rootView;
     this.backgroundSign = backgroundSign;
     this.btnLogin = btnLogin;
@@ -85,6 +89,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.edtTextName = edtTextName;
     this.edtTextPassword = edtTextPassword;
     this.main = main;
+    this.progressBar = progressBar;
     this.titleSignup = titleSignup;
   }
 
@@ -183,6 +188,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
       id = R.id.title_signup;
       TextView titleSignup = ViewBindings.findChildViewById(rootView, id);
       if (titleSignup == null) {
@@ -191,7 +202,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
       return new ActivityRegisterBinding((ConstraintLayout) rootView, backgroundSign, btnLogin,
           btnRegister, edtEmailLayout, edtNameLayout, edtPasswordConfirmLayout, edtPasswordLayout,
-          edtTextConfirmPassword, edtTextEmail, edtTextName, edtTextPassword, main, titleSignup);
+          edtTextConfirmPassword, edtTextEmail, edtTextName, edtTextPassword, main, progressBar,
+          titleSignup);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

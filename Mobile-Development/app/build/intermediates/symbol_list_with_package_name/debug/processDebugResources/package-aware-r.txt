@@ -3314,7 +3314,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnNext
 id btn_back
 id btn_continue
 id btn_discord
@@ -3322,6 +3321,7 @@ id btn_facebook
 id btn_forgot
 id btn_google
 id btn_login
+id btn_nav
 id btn_next
 id btn_notification
 id btn_register
@@ -3473,6 +3473,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_profile
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3615,6 +3616,7 @@ id point
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id quiz
@@ -3755,8 +3757,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_point
 id tv_quiz
 id tv_signup_with
+id tv_streak
 id unchecked
 id uniform
 id unlabeled
@@ -3931,7 +3935,7 @@ layout item_checkbox
 layout item_mathcing
 layout item_multiple_choice
 layout item_onboarding
-layout item_placement
+layout item_radio
 layout item_single_choice
 layout item_survey
 layout m3_alert_dialog

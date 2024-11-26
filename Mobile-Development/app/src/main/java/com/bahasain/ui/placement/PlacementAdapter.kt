@@ -165,4 +165,3 @@ class PlacementAdapter(
         const val VIEW_TYPE_MATCHING = 3
     }
 }
-

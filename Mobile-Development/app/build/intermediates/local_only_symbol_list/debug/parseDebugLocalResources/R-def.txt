@@ -45,7 +45,6 @@ drawable tab_indicator
 drawable tab_indicator_survey
 font inter
 id background_sign
-id btnNext
 id btn_back
 id btn_continue
 id btn_discord
@@ -53,6 +52,7 @@ id btn_facebook
 id btn_forgot
 id btn_google
 id btn_login
+id btn_nav
 id btn_next
 id btn_notification
 id btn_register
@@ -73,6 +73,7 @@ id edt_text_password
 id icon_social
 id imageOnboarding
 id indicator
+id iv_profile
 id leftColumn
 id llOptions
 id logo
@@ -86,6 +87,7 @@ id navigation_learn
 id navigation_profile
 id navigation_vocab
 id point
+id progressBar
 id quiz
 id quiz_title
 id rg_quiz
@@ -99,8 +101,10 @@ id text_home
 id text_notifications
 id titleOnboarding
 id title_signup
+id tv_point
 id tv_quiz
 id tv_signup_with
+id tv_streak
 id viewPager
 layout activity_login
 layout activity_main
@@ -117,7 +121,7 @@ layout item_checkbox
 layout item_mathcing
 layout item_multiple_choice
 layout item_onboarding
-layout item_placement
+layout item_radio
 layout item_single_choice
 layout item_survey
 menu bottom_nav_menu

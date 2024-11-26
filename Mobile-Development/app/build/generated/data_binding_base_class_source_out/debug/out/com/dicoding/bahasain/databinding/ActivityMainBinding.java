@@ -4,6 +4,9 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,16 +23,46 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageButton btnNav;
+
+  @NonNull
+  public final ImageButton btnNotification;
+
+  @NonNull
   public final ConstraintLayout container;
+
+  @NonNull
+  public final LinearLayout nav;
 
   @NonNull
   public final BottomNavigationView navView;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @NonNull BottomNavigationView navView) {
+  @NonNull
+  public final LinearLayout point;
+
+  @NonNull
+  public final LinearLayout streak;
+
+  @NonNull
+  public final TextView tvPoint;
+
+  @NonNull
+  public final TextView tvStreak;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnNav,
+      @NonNull ImageButton btnNotification, @NonNull ConstraintLayout container,
+      @NonNull LinearLayout nav, @NonNull BottomNavigationView navView, @NonNull LinearLayout point,
+      @NonNull LinearLayout streak, @NonNull TextView tvPoint, @NonNull TextView tvStreak) {
     this.rootView = rootView;
+    this.btnNav = btnNav;
+    this.btnNotification = btnNotification;
     this.container = container;
+    this.nav = nav;
     this.navView = navView;
+    this.point = point;
+    this.streak = streak;
+    this.tvPoint = tvPoint;
+    this.tvStreak = tvStreak;
   }
 
   @Override
@@ -59,7 +92,25 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_nav;
+      ImageButton btnNav = ViewBindings.findChildViewById(rootView, id);
+      if (btnNav == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_notification;
+      ImageButton btnNotification = ViewBindings.findChildViewById(rootView, id);
+      if (btnNotification == null) {
+        break missingId;
+      }
+
       ConstraintLayout container = (ConstraintLayout) rootView;
+
+      id = R.id.nav;
+      LinearLayout nav = ViewBindings.findChildViewById(rootView, id);
+      if (nav == null) {
+        break missingId;
+      }
 
       id = R.id.nav_view;
       BottomNavigationView navView = ViewBindings.findChildViewById(rootView, id);
@@ -67,7 +118,32 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, container, navView);
+      id = R.id.point;
+      LinearLayout point = ViewBindings.findChildViewById(rootView, id);
+      if (point == null) {
+        break missingId;
+      }
+
+      id = R.id.streak;
+      LinearLayout streak = ViewBindings.findChildViewById(rootView, id);
+      if (streak == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_point;
+      TextView tvPoint = ViewBindings.findChildViewById(rootView, id);
+      if (tvPoint == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_streak;
+      TextView tvStreak = ViewBindings.findChildViewById(rootView, id);
+      if (tvStreak == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnNav, btnNotification,
+          container, nav, navView, point, streak, tvPoint, tvStreak);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
