@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout-v28/item_checkbox.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/item_checkbox.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout-v28/fragment_learn.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/fragment_learn.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout-v28/activity_login.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/activity_login.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout-v28/activity_register.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/activity_register.xml"
+    }
+]

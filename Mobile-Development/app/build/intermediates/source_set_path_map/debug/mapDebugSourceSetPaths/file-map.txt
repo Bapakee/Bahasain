@@ -1,0 +1,56 @@
+com.dicoding.bahasain.app-core-runtime-2.2.0-0 C:\Users\Lenovo\.gradle\caches\transforms-4\013c52fe78e872ad1175db333c71f03f\transformed\core-runtime-2.2.0\res
+com.dicoding.bahasain.app-core-splashscreen-1.0.1-1 C:\Users\Lenovo\.gradle\caches\transforms-4\031ecbd04921ecbaf253bc02e6958798\transformed\core-splashscreen-1.0.1\res
+com.dicoding.bahasain.app-navigation-fragment-2.8.3-2 C:\Users\Lenovo\.gradle\caches\transforms-4\042a93046d4731ce35001af4e346c2fb\transformed\navigation-fragment-2.8.3\res
+com.dicoding.bahasain.app-lifecycle-viewmodel-savedstate-2.8.7-3 C:\Users\Lenovo\.gradle\caches\transforms-4\04711295f4f156bc1e18c86135959ef4\transformed\lifecycle-viewmodel-savedstate-2.8.7\res
+com.dicoding.bahasain.app-slidingpanelayout-1.2.0-4 C:\Users\Lenovo\.gradle\caches\transforms-4\07271c658a6296be5a849d487b5e1adc\transformed\slidingpanelayout-1.2.0\res
+com.dicoding.bahasain.app-startup-runtime-1.1.1-5 C:\Users\Lenovo\.gradle\caches\transforms-4\09d167da984314bc83cd805b70638179\transformed\startup-runtime-1.1.1\res
+com.dicoding.bahasain.app-material-1.12.0-6 C:\Users\Lenovo\.gradle\caches\transforms-4\1388d1938e197a04106a3c700bc9bc00\transformed\material-1.12.0\res
+com.dicoding.bahasain.app-emoji2-1.3.0-7 C:\Users\Lenovo\.gradle\caches\transforms-4\2199cba8d66558e678a440b1062df2c0\transformed\emoji2-1.3.0\res
+com.dicoding.bahasain.app-lifecycle-viewmodel-ktx-2.8.7-8 C:\Users\Lenovo\.gradle\caches\transforms-4\21e35a14277cfd8aafcd6d50cc21cfd6\transformed\lifecycle-viewmodel-ktx-2.8.7\res
+com.dicoding.bahasain.app-lifecycle-livedata-2.8.7-9 C:\Users\Lenovo\.gradle\caches\transforms-4\25cfdf7c6aced3e0c8b1a4233edbc9d3\transformed\lifecycle-livedata-2.8.7\res
+com.dicoding.bahasain.app-lifecycle-runtime-ktx-release-10 C:\Users\Lenovo\.gradle\caches\transforms-4\2b19406bfc3d9983b5e75dfdbb9cad18\transformed\lifecycle-runtime-ktx-release\res
+com.dicoding.bahasain.app-tracing-1.2.0-11 C:\Users\Lenovo\.gradle\caches\transforms-4\2b82c3ab1721dc13497396d04226bb2b\transformed\tracing-1.2.0\res
+com.dicoding.bahasain.app-lifecycle-livedata-core-2.8.7-12 C:\Users\Lenovo\.gradle\caches\transforms-4\36b9ebc40ee69569f7b77002e5d255eb\transformed\lifecycle-livedata-core-2.8.7\res
+com.dicoding.bahasain.app-activity-1.9.3-13 C:\Users\Lenovo\.gradle\caches\transforms-4\39c0c8cbc79cd9d35a2cba408db19880\transformed\activity-1.9.3\res
+com.dicoding.bahasain.app-appcompat-resources-1.7.0-14 C:\Users\Lenovo\.gradle\caches\transforms-4\3a19d888164f95fc7c6eb98f38508339\transformed\appcompat-resources-1.7.0\res
+com.dicoding.bahasain.app-savedstate-ktx-1.2.1-15 C:\Users\Lenovo\.gradle\caches\transforms-4\3f373f1f3771a6e72ca1b8298c18f8d1\transformed\savedstate-ktx-1.2.1\res
+com.dicoding.bahasain.app-savedstate-1.2.1-16 C:\Users\Lenovo\.gradle\caches\transforms-4\3ff2565d28b9fbd6971f4763aac9debc\transformed\savedstate-1.2.1\res
+com.dicoding.bahasain.app-transition-1.5.0-17 C:\Users\Lenovo\.gradle\caches\transforms-4\533daee6bdf0d009783f0e221814e456\transformed\transition-1.5.0\res
+com.dicoding.bahasain.app-constraintlayout-2.2.0-18 C:\Users\Lenovo\.gradle\caches\transforms-4\538f26c4f7873b32fed6d0e0d1b46304\transformed\constraintlayout-2.2.0\res
+com.dicoding.bahasain.app-lifecycle-process-2.8.7-19 C:\Users\Lenovo\.gradle\caches\transforms-4\562cea2c3dcc2f7fd1a7aadf58942eee\transformed\lifecycle-process-2.8.7\res
+com.dicoding.bahasain.app-activity-ktx-1.9.3-20 C:\Users\Lenovo\.gradle\caches\transforms-4\5bf2e069c613ce301b8afaab61198821\transformed\activity-ktx-1.9.3\res
+com.dicoding.bahasain.app-viewpager2-1.0.0-21 C:\Users\Lenovo\.gradle\caches\transforms-4\67e597331f3b87ec60a066bf97793e5e\transformed\viewpager2-1.0.0\res
+com.dicoding.bahasain.app-navigation-runtime-ktx-2.8.3-22 C:\Users\Lenovo\.gradle\caches\transforms-4\7b759bd61b93fddf539e5634c16f5dfe\transformed\navigation-runtime-ktx-2.8.3\res
+com.dicoding.bahasain.app-annotation-experimental-1.4.1-23 C:\Users\Lenovo\.gradle\caches\transforms-4\8451b81b9a11edc2ff4bdd9bc850b62b\transformed\annotation-experimental-1.4.1\res
+com.dicoding.bahasain.app-window-1.0.0-24 C:\Users\Lenovo\.gradle\caches\transforms-4\88b3e9490bda1b4c9840a70348299ff8\transformed\window-1.0.0\res
+com.dicoding.bahasain.app-datastore-release-25 C:\Users\Lenovo\.gradle\caches\transforms-4\917a6dd4c0a83ff4eb069a48c7096121\transformed\datastore-release\res
+com.dicoding.bahasain.app-navigation-runtime-2.8.3-26 C:\Users\Lenovo\.gradle\caches\transforms-4\97d79e3de05f96708fef41c483f6e4e0\transformed\navigation-runtime-2.8.3\res
+com.dicoding.bahasain.app-drawerlayout-1.1.1-27 C:\Users\Lenovo\.gradle\caches\transforms-4\a4b0aaba1f251133301ddeb68d2063f1\transformed\drawerlayout-1.1.1\res
+com.dicoding.bahasain.app-core-1.15.0-28 C:\Users\Lenovo\.gradle\caches\transforms-4\aa00372580d1ab44cac01be368418435\transformed\core-1.15.0\res
+com.dicoding.bahasain.app-navigation-common-2.8.3-29 C:\Users\Lenovo\.gradle\caches\transforms-4\ad705ccc0eb594ade568153dae1dad94\transformed\navigation-common-2.8.3\res
+com.dicoding.bahasain.app-navigation-ui-2.8.3-30 C:\Users\Lenovo\.gradle\caches\transforms-4\c01fc4c7465e1a4ab60edc788b63823b\transformed\navigation-ui-2.8.3\res
+com.dicoding.bahasain.app-recyclerview-1.1.0-31 C:\Users\Lenovo\.gradle\caches\transforms-4\c8f7e3ecd263cf223b8a78d615d466ae\transformed\recyclerview-1.1.0\res
+com.dicoding.bahasain.app-cardview-1.0.0-32 C:\Users\Lenovo\.gradle\caches\transforms-4\cb693b840972c146ed7455efd25b47ad\transformed\cardview-1.0.0\res
+com.dicoding.bahasain.app-navigation-common-ktx-2.8.3-33 C:\Users\Lenovo\.gradle\caches\transforms-4\cccd90ef1a218bbd0b14c94f2229aa8e\transformed\navigation-common-ktx-2.8.3\res
+com.dicoding.bahasain.app-emoji2-views-helper-1.3.0-34 C:\Users\Lenovo\.gradle\caches\transforms-4\cce26de41eda68f857b4847b94eab4ab\transformed\emoji2-views-helper-1.3.0\res
+com.dicoding.bahasain.app-core-ktx-1.15.0-35 C:\Users\Lenovo\.gradle\caches\transforms-4\d92dfd36c0683cc27d2020c308f40e50\transformed\core-ktx-1.15.0\res
+com.dicoding.bahasain.app-datastore-core-release-36 C:\Users\Lenovo\.gradle\caches\transforms-4\dcdb1804bec0fdb489f00a339d050739\transformed\datastore-core-release\res
+com.dicoding.bahasain.app-lifecycle-viewmodel-release-37 C:\Users\Lenovo\.gradle\caches\transforms-4\e0e3263e543c784b40e63297b799f6be\transformed\lifecycle-viewmodel-release\res
+com.dicoding.bahasain.app-navigation-ui-ktx-2.8.3-38 C:\Users\Lenovo\.gradle\caches\transforms-4\eb1191f09153002cdcb5a9cdf3aab192\transformed\navigation-ui-ktx-2.8.3\res
+com.dicoding.bahasain.app-lifecycle-runtime-release-39 C:\Users\Lenovo\.gradle\caches\transforms-4\ebc15ca7cd1a509f57b3de932ba4fc68\transformed\lifecycle-runtime-release\res
+com.dicoding.bahasain.app-coordinatorlayout-1.1.0-40 C:\Users\Lenovo\.gradle\caches\transforms-4\eda1ad6f979223474988c892d0cbd63e\transformed\coordinatorlayout-1.1.0\res
+com.dicoding.bahasain.app-navigation-fragment-ktx-2.8.3-41 C:\Users\Lenovo\.gradle\caches\transforms-4\efe0f74741e79dd7a89d2b171291f800\transformed\navigation-fragment-ktx-2.8.3\res
+com.dicoding.bahasain.app-fragment-ktx-1.6.2-42 C:\Users\Lenovo\.gradle\caches\transforms-4\f03eb9de74c920c077e17b05a379142a\transformed\fragment-ktx-1.6.2\res
+com.dicoding.bahasain.app-lifecycle-livedata-core-ktx-2.8.7-43 C:\Users\Lenovo\.gradle\caches\transforms-4\f1528a50e0cc0f58e4b66dfb6419d5c4\transformed\lifecycle-livedata-core-ktx-2.8.7\res
+com.dicoding.bahasain.app-fragment-1.6.2-44 C:\Users\Lenovo\.gradle\caches\transforms-4\f44c2661274dcf3d76eb08c8c559eb51\transformed\fragment-1.6.2\res
+com.dicoding.bahasain.app-appcompat-1.7.0-45 C:\Users\Lenovo\.gradle\caches\transforms-4\f4a9bc0c1cafc852199fc4de364e69fa\transformed\appcompat-1.7.0\res
+com.dicoding.bahasain.app-lifecycle-livedata-ktx-2.8.7-46 C:\Users\Lenovo\.gradle\caches\transforms-4\f51311f6966e65f5e6aafbd6a7a95348\transformed\lifecycle-livedata-ktx-2.8.7\res
+com.dicoding.bahasain.app-datastore-preferences-release-47 C:\Users\Lenovo\.gradle\caches\transforms-4\f8c2f9a5a9b3437d581ad75b5010fd1d\transformed\datastore-preferences-release\res
+com.dicoding.bahasain.app-profileinstaller-1.4.0-48 C:\Users\Lenovo\.gradle\caches\transforms-4\fb7d1622e7ceba3a15fee7511bfeff27\transformed\profileinstaller-1.4.0\res
+com.dicoding.bahasain.app-pngs-49 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\build\generated\res\pngs\debug
+com.dicoding.bahasain.app-resValues-50 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\build\generated\res\resValues\debug
+com.dicoding.bahasain.app-packageDebugResources-51 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.dicoding.bahasain.app-packageDebugResources-52 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.dicoding.bahasain.app-debug-53 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.dicoding.bahasain.app-debug-54 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\debug\res
+com.dicoding.bahasain.app-main-55 C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\res
