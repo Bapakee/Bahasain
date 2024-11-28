@@ -44,6 +44,9 @@ drawable tab_background
 drawable tab_indicator
 drawable tab_indicator_survey
 font inter
+font inter_bold
+font inter_medium
+font inter_semibold
 id background_sign
 id btn_back
 id btn_continue
@@ -101,6 +104,8 @@ id text_home
 id text_notifications
 id titleOnboarding
 id title_signup
+id tv_level
+id tv_name
 id tv_point
 id tv_quiz
 id tv_signup_with

@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.bahasain.ui.profile.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_profile"/>
+            android:layout_marginStart="22dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/title_profile"
+            android:textSize="24sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="22dp">
 
             <ImageView
                 android:id="@+id/iv_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/icon_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/icon_profile" />
 
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_level"
                 app:layout_constraintStart_toEndOf="@id/iv_profile"
-                tools:text="Imanuella Yesha"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="@id/iv_profile"
+                tools:text="Imanuella Yesha" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/tab_indicator"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+                app:layout_constraintStart_toEndOf="@id/iv_profile"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:text="level" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

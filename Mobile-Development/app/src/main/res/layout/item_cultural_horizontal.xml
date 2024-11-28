@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/image_round_background"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <ImageView
+        android:id="@+id/iv_culture"
+        android:layout_width="318dp"
+        android:layout_height="167dp"
+        tools:src="@tools:sample/avatars"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Candi Prambanan"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="16sp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_location"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="22dp"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Daerah Istimewa Yogyakarta"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="42dp"
+        android:layout_gravity="bottom"
+        android:textColor="@color/white"/>
+</FrameLayout>

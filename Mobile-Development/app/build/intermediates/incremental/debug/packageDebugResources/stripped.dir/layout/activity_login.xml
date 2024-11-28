@@ -94,8 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textFontWeight="500"
-        android:fontFamily="@font/inter"
+        android:fontFamily="@font/inter_medium"
         android:text="@string/signup_with"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,8 +148,7 @@
             android:id="@+id/dont_have"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textFontWeight="500"
-            android:fontFamily="@font/inter"
+            android:fontFamily="@font/inter_medium"
             android:text="@string/dont_have_account" />
 
         <TextView
@@ -160,8 +158,7 @@
             android:layout_marginStart="8dp"
             android:clickable="true"
             android:focusable="true"
-            android:textFontWeight="500"
-            android:fontFamily="@font/inter"
+            android:fontFamily="@font/inter_medium"
             android:text="@string/register_now"
             android:textColor="@color/blue" />
     </LinearLayout>
@@ -173,6 +170,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         tools:visibility="visible"
+        android:elevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

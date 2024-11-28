@@ -3211,6 +3211,9 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font inter
+font inter_bold
+font inter_medium
+font inter_semibold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3757,6 +3760,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_level
+id tv_name
 id tv_point
 id tv_quiz
 id tv_signup_with

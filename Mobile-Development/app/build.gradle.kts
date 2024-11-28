@@ -60,4 +60,6 @@ dependencies {
     //noinspection UseTomlInstead
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation(libs.logging.interceptor)
+
+    implementation("com.auth0:java-jwt:4.4.0")
 }

@@ -16,6 +16,10 @@
         "source": "com.dicoding.bahasain.app-main-55:/drawable/icon_facebook.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-debug-53:/font_inter_semibold.ttf.flat",
+        "source": "com.dicoding.bahasain.app-main-55:/font/inter_semibold.ttf"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-debug-53:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/drawable/ic_launcher_foreground.xml"
     },
@@ -38,14 +42,6 @@
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/xml_backup_rules.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout-v28_fragment_learn.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/fragment_learn.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout-v28_item_checkbox.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/item_checkbox.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_survey.xml.flat",
@@ -104,6 +100,10 @@
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_register.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-debug-53:/font_inter_bold.ttf.flat",
+        "source": "com.dicoding.bahasain.app-main-55:/font/inter_bold.ttf"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-debug-53:/drawable-xxxhdpi_icon_notification.png.flat",
         "source": "com.dicoding.bahasain.app-pngs-49:/drawable-xxxhdpi/icon_notification.png"
     },
@@ -114,10 +114,6 @@
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_splash.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_splash.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout-v28_activity_login.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/activity_login.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_item_survey.xml.flat",
@@ -142,6 +138,10 @@
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_main.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-debug-53:/font_inter_medium.ttf.flat",
+        "source": "com.dicoding.bahasain.app-main-55:/font/inter_medium.ttf"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_item_multiple_choice.xml.flat",
@@ -174,10 +174,6 @@
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.dicoding.bahasain.app-main-55:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout-v28_activity_register.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout-v28/activity_register.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/drawable_baseline_circle_black.xml.flat",
@@ -220,12 +216,12 @@
         "source": "com.dicoding.bahasain.app-main-55:/drawable/icon_discord.xml"
     },
     {
-        "merged": "com.dicoding.bahasain.app-debug-53:/drawable-hdpi_icon_notification.png.flat",
-        "source": "com.dicoding.bahasain.app-pngs-49:/drawable-hdpi/icon_notification.png"
-    },
-    {
         "merged": "com.dicoding.bahasain.app-debug-53:/menu_bottom_nav_menu.xml.flat",
         "source": "com.dicoding.bahasain.app-main-55:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-debug-53:/drawable-hdpi_icon_notification.png.flat",
+        "source": "com.dicoding.bahasain.app-pngs-49:/drawable-hdpi/icon_notification.png"
     },
     {
         "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_login.xml.flat",

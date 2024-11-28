@@ -4,7 +4,7 @@
             "outputFile": "com.dicoding.bahasain.app-mergeDebugResources-51:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-4\\1388d1938e197a04106a3c700bc9bc00\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-4\\c5bcc1c0de7b1cf1ba37a67da7dce7c5\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

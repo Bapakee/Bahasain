@@ -7,6 +7,7 @@ import com.bahasain.data.UserRepository
 import com.bahasain.di.Injection
 import com.bahasain.ui.auth.login.LoginViewModel
 import com.bahasain.ui.auth.register.RegisterViewModel
+import com.bahasain.ui.profile.ProfileViewModel
 import com.bahasain.ui.splash.SplashViewModel
 
 class ViewModelFactory(
@@ -26,6 +27,10 @@ class ViewModelFactory(
 
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(userRepository) as T
+            }
+
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(userRepository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

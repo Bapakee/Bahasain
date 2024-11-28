@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
@@ -22,9 +23,18 @@ public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   public final ImageView ivProfile;
 
-  private FragmentProfileBinding(@NonNull NestedScrollView rootView, @NonNull ImageView ivProfile) {
+  @NonNull
+  public final TextView tvLevel;
+
+  @NonNull
+  public final TextView tvName;
+
+  private FragmentProfileBinding(@NonNull NestedScrollView rootView, @NonNull ImageView ivProfile,
+      @NonNull TextView tvLevel, @NonNull TextView tvName) {
     this.rootView = rootView;
     this.ivProfile = ivProfile;
+    this.tvLevel = tvLevel;
+    this.tvName = tvName;
   }
 
   @Override
@@ -60,7 +70,19 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((NestedScrollView) rootView, ivProfile);
+      id = R.id.tv_level;
+      TextView tvLevel = ViewBindings.findChildViewById(rootView, id);
+      if (tvLevel == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_name;
+      TextView tvName = ViewBindings.findChildViewById(rootView, id);
+      if (tvName == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((NestedScrollView) rootView, ivProfile, tvLevel, tvName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

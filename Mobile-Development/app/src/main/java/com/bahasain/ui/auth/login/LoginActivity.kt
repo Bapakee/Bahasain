@@ -11,6 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.auth0.jwt.JWT
 import com.bahasain.data.Result
 import com.bahasain.data.pref.UserModel
 import com.bahasain.ui.ViewModelFactory
@@ -76,7 +77,10 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, "Login Succes", Toast.LENGTH_SHORT).show()
 
                         val token = result.data.accessToken
-                        viewModel.saveSession(UserModel(email, token, password))
+
+                        val userInfo = decodeToken(token)
+                        val userModel = UserModel(userInfo["name"] ?: "", userInfo["email"] ?: "", userInfo["token"] ?: "")
+                        viewModel.saveSession(userModel)
 
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
@@ -90,6 +94,14 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun decodeToken(token: String) : Map<String, String>{
+        val jwt = JWT.decode(token)
+        val name = jwt.getClaim("name").asString()
+        val email = jwt.getClaim("email").asString()
+        return mapOf("name" to name, "email" to email)
+    }
+
 
     private fun setEdtText() {
         val textWatcher = object : TextWatcher {

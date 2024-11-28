@@ -10,9 +10,9 @@ import kotlinx.coroutines.launch
 class LoginViewModel(private val repository: UserRepository) : ViewModel() {
     fun login(email: String, password: String) = repository.login(LoginRequest(email, password))
 
-    fun saveSession(user: UserModel) {
+    fun saveSession(userModel: UserModel) {
         viewModelScope.launch {
-            repository.saveSession(user)
+            repository.saveSession(userModel)
         }
     }
 }

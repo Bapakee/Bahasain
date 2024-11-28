@@ -22,7 +22,6 @@ class LearnFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentLearnBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -32,7 +31,7 @@ class LearnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.test?.setOnClickListener{
+        binding.test.setOnClickListener{
             startActivity(Intent(requireContext(), SurveyActivity::class.java))
         }
     }
