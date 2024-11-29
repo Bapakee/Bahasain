@@ -8,6 +8,14 @@
         "source": "com.dicoding.bahasain.app-main-55:/layout/item_radio.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_learn.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_learn.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_cultural_horizontal.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_cultural_horizontal.xml"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_placement.xml",
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_placement.xml"
     },
@@ -22,6 +30,10 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_single_choice.xml",
         "source": "com.dicoding.bahasain.app-main-55:/layout/item_single_choice.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_resep_cultural.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_resep_cultural.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_register.xml",
@@ -66,6 +78,10 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_on_boarding.xml",
         "source": "com.dicoding.bahasain.app-main-55:/layout/activity_on_boarding.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_story_cultural.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_story_cultural.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_mathcing.xml",

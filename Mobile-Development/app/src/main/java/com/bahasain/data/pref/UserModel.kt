@@ -1,7 +1,11 @@
 package com.bahasain.data.pref
 
 class UserModel (
-    val name: String,
-    val email: String,
-    val token: String
+    val accessToken: String,
+    val refreshToken: String,
+
+//    val id: String,
+//    val userName: String,
+//    val userLevel: String,
+//    val isNew: Boolean = false
 )

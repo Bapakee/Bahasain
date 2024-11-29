@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
@@ -17,18 +18,26 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
     suspend fun saveSession(user: UserModel) {
         Log.d("UserPreferences", "Saving session: $user")
         dataStore.edit { preferences ->
-            preferences[NAME_KEY] = user.name
-            preferences[EMAIL_KEY] = user.email
-            preferences[TOKEN_KEY] = user.token
+            preferences[ACCESS_TOKEN_KEY] = user.accessToken
+            preferences[REFRESH_TOKEN_KEY] = user.refreshToken
+
+//            preferences[ID_KEY] = user.id
+//            preferences[NAME_KEY] = user.userName
+//            preferences[ISNEW_KEY] = user.isNew
+//            preferences[LEVEL_KEY] = user.userLevel
         }
     }
 
     fun getSession(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
             UserModel(
-                preferences[NAME_KEY] ?: "",
-                preferences[EMAIL_KEY] ?: "",
-                preferences[TOKEN_KEY] ?: ""
+                preferences[ACCESS_TOKEN_KEY] ?: "",
+                preferences[REFRESH_TOKEN_KEY] ?: "",
+//
+//                preferences[ID_KEY] ?: "",
+//                preferences[NAME_KEY] ?: "",
+//                preferences[LEVEL_KEY] ?: "",
+//                preferences[ISNEW_KEY] ?: false,
             )
         }
     }
@@ -46,9 +55,14 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
         @Volatile
         private var INSTANCE: UserPreferences? = null
 
-        private val NAME_KEY = stringPreferencesKey("name")
-        private val EMAIL_KEY = stringPreferencesKey("email")
-        private val TOKEN_KEY = stringPreferencesKey("token")
+
+        private val ACCESS_TOKEN_KEY = stringPreferencesKey("token")
+        private val REFRESH_TOKEN_KEY = stringPreferencesKey("token")
+//
+//        private val ID_KEY = stringPreferencesKey("id")
+//        private val NAME_KEY = stringPreferencesKey("name")
+//        private val ISNEW_KEY = booleanPreferencesKey("isNew")
+//        private val LEVEL_KEY = stringPreferencesKey("level")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreferences {
             return INSTANCE ?: synchronized(this) {

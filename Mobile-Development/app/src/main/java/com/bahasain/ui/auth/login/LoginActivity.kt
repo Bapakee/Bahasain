@@ -11,7 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.auth0.jwt.JWT
+import com.auth0.android.jwt.JWT
 import com.bahasain.data.Result
 import com.bahasain.data.pref.UserModel
 import com.bahasain.ui.ViewModelFactory
@@ -55,37 +55,48 @@ class LoginActivity : AppCompatActivity() {
         setEdtText()
         setButtonEnable()
 
-        btnSignIn.setOnClickListener{ login() }
-        binding.btnSignup.setOnClickListener{ signupView() }
+        btnSignIn.setOnClickListener { login() }
+        binding.btnSignup.setOnClickListener { signupView() }
     }
 
-    private fun login(){
+    private fun login() {
         edtTextEmail = binding.edtTextEmail
         edtTextPassword = binding.edtTextPassword
 
         val email = edtTextEmail.text.toString()
         val password = edtTextPassword.text.toString()
 
-        viewModel.login(email, password).observe(this){ result ->
-            if (result != null){
-                when(result){
+        viewModel.login(email, password).observe(this) { result ->
+            if (result != null) {
+                when (result) {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Success -> {
                         showLoading(false)
-                        Toast.makeText(this, "Login Succes", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
 
-                        val token = result.data.accessToken
+                        val accessToken = result.data.data?.accessToken
+                        val refreshToken = result.data.data?.refreshToken
 
-                        val userInfo = decodeToken(token)
-                        val userModel = UserModel(userInfo["name"] ?: "", userInfo["email"] ?: "", userInfo["token"] ?: "")
+//                        val userInfo = decodeToken(accessToken.toString())
+                        val userModel = UserModel(
+                            accessToken.toString(),
+                            refreshToken.toString(),
+//                            userInfo["id"] ?: "",
+//                            userInfo["name"] ?: "",
+//                            userInfo["level"] ?: "",
+//                            userInfo["isNew"].toBoolean()
+                        )
+
                         viewModel.saveSession(userModel)
 
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish()
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
@@ -95,13 +106,21 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun decodeToken(token: String) : Map<String, String>{
-        val jwt = JWT.decode(token)
-        val name = jwt.getClaim("name").asString()
-        val email = jwt.getClaim("email").asString()
-        return mapOf("name" to name, "email" to email)
-    }
-
+//    private fun decodeToken(token: String): Map<String, String?> {
+//        val jwt = JWT(token)
+//
+//        val id = jwt.getClaim("id").asString()
+//        val name = jwt.getClaim("name").asString()
+//        val isNew = jwt.getClaim("isNew").asString()
+//        val level = jwt.getClaim("level").asString()
+//
+//        return mapOf(
+//            "id" to id,
+//            "name" to name,
+//            "isNew" to isNew,
+//            "level" to level
+//        )
+//    }
 
     private fun setEdtText() {
         val textWatcher = object : TextWatcher {
@@ -130,7 +149,7 @@ class LoginActivity : AppCompatActivity() {
         btnSignIn.isEnabled = isPasswordValid && isEmailValid
     }
 
-    private fun signupView(){
+    private fun signupView() {
         val intent = Intent(this, RegisterActivity::class.java)
         intent.flags =
             Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK

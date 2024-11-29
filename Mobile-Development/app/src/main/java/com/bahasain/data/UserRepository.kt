@@ -25,12 +25,7 @@ class UserRepository private constructor(
         }catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, RegisterResponse::class.java)
-            val errorMessage = when (errorBody.error) {
-                is String -> errorBody.error // Jika error adalah string
-                is List<*> -> errorBody.error.joinToString("\n") // Jika error adalah array
-                else -> "Unknown error"
-            }
-            emit(Result.Error(errorMessage))
+            emit(Result.Error(errorBody.message))
         }
     }
 
@@ -42,7 +37,7 @@ class UserRepository private constructor(
         }catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, LoginResponse::class.java)
-            emit(Result.Error(errorBody.error))
+            emit(Result.Error(errorBody.message.toString()))
         }
     }
 
