@@ -53,4 +53,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.core.splashscreen)
+
+    implementation(libs.androidx.datastore.preferences)
+
+    implementation(libs.retrofit)
+    //noinspection UseTomlInstead
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.java.jwt)
+    implementation (libs.jwtdecode)
 }

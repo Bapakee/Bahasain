@@ -18,8 +18,8 @@ class ButtonSign @JvmOverloads constructor(
     private var disabledBackground: Drawable
 
     init {
-        txtColorEnable = ContextCompat.getColor(context, android.R.color.background_light)
-        txtColorDisable = ContextCompat.getColor(context, android.R.color.darker_gray)
+        txtColorEnable = ContextCompat.getColor(context, R.color.white)
+        txtColorDisable = ContextCompat.getColor(context, R.color.gray)
         enabledBackground = ContextCompat.getDrawable(context, R.drawable.bg_button_sign) as Drawable
         disabledBackground =
             ContextCompat.getDrawable(context, R.drawable.bg_button_disabled_sign) as Drawable

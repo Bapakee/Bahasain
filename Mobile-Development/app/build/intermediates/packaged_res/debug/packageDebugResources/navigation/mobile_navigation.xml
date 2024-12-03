@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_learn">
+
+    <fragment
+        android:id="@+id/navigation_learn"
+        android:name="com.bahasain.ui.learn.LearnFragment"
+        android:label="@string/title_learn"
+        tools:layout="@layout/fragment_learn" />
+
+    <fragment
+        android:id="@+id/navigation_cultural"
+        android:name="com.bahasain.ui.cultural.CulturalFragment"
+        android:label="@string/title_cultural"
+        tools:layout="@layout/fragment_cultural" />
+
+    <fragment
+        android:id="@+id/navigation_vocab"
+        android:name="com.bahasain.ui.vocab.VocabFragment"
+        android:label="@string/vocab"
+        tools:layout="@layout/fragment_vocab" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.bahasain.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
