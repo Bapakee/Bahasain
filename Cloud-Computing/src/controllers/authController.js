@@ -148,15 +148,11 @@ const resetPassword = async (req, res) => {
 
 
 const logout = async (req, res) => {
-  const { refreshToken } = req.body;
-
-  if (!refreshToken) {
-    return errorResponse(res, 'Refresh token required for logout', 'Token missing', 400);
-  }
+  const userId= req.user.id;
 
   try {
     const deletedToken = await Token.destroy({
-      where: { token: refreshToken, type: 'refresh' },
+      where: { userId: userId, type: 'refresh' },
     });
 
     if (!deletedToken) {
