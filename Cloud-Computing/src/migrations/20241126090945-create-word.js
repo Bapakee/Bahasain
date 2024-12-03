@@ -2,27 +2,20 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('streaks', {
+    await queryInterface.createTable('words', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      word: {
         type: Sequelize.STRING,
-        allowNull: false,
-        references: {
-          model: 'users', // Nama tabel Users
-          key: 'id',
-        },
-        onDelete: 'CASCADE',
+        allowNull: false
       },
-      streak: {
-        type: Sequelize.INTEGER
-      },
-      last_activity: {
-        type: Sequelize.DATE
+      category: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       created_at: {
         allowNull: false,
@@ -35,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('streaks');
+    await queryInterface.dropTable('words');
   }
 };
