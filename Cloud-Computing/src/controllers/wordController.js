@@ -57,4 +57,44 @@ const getWord = async (req, res) => {
     }
 };
 
-module.exports = { getWord };
+
+const getWordById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Fetch the word by primary key along with associated WordCategory
+        const word = await Word.findByPk(id, {
+            include: [
+                {
+                    model: WordCategory,
+                }
+            ]
+        });
+
+        // Check if the word was found
+        if (!word) {
+            return errorResponse(res, 'Word not found', 'No word found with the given ID', 404);
+        }
+
+        // Format the response
+        const response = {
+            id: word.id,
+            word: word.word,
+            categories: word.WordCategories.map(category => ({
+                category : category.category,
+                translate:category.translate,
+                description:category.description,
+                example:category.example
+            })), // assuming WordCategory is the association
+        };
+
+        // Send the success response
+        successResponse(res, response, 'Word fetched successfully');
+    } catch (error) {
+        // Send error response in case of failure
+        errorResponse(res, error, 'Error fetching word', 500);
+    }
+};
+
+
+module.exports = { getWord,getWordById };
