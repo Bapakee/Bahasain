@@ -5,12 +5,12 @@ const auth = require('../middleware/auth');
 
 /**
  * @swagger
- * /words/:
+ * /word/:
  *   get:
  *     summary: Retrieve a list of words with optional filtering and pagination
  *     description: Fetches words based on search criteria, categories, and pagination.
  *     tags:
- *       - Words
+ *       - Word
  *     parameters:
  *       - name: page
  *         in: query
@@ -92,7 +92,55 @@ const auth = require('../middleware/auth');
 
 router.get('/',auth,getWord)
 
-router.get('/:id',auth,getWordById)
+/**
+ * @swagger
+ * /word/{id}:
+ *   get:
+ *     summary: Get a word by ID
+ *     tags: [Word]
+ *     description: This endpoint allows you to fetch a word by its ID along with its associated category details.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: The ID of the word to be fetched
+ *         schema:
+ *           type: integer
+ *     security:
+ *       - bearerAuth: []  # Assuming bearer authentication is used
+ *     responses:
+ *       200:
+ *         description: Word fetched successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: integer
+ *                   description: The word's ID
+ *                 word:
+ *                   type: string
+ *                   description: The word
+ *                 translate:
+ *                   type: string
+ *                   description: The translation of the word
+ *                 category:
+ *                   type: string
+ *                   description: The category of the word
+ *                 description:
+ *                   type: string
+ *                   description: The description of the word
+ *                 example:
+ *                   type: string
+ *                   description: An example sentence with the word
+ *       404:
+ *         description: Word not found
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/:id', auth, getWordById);
+
 
 
 
