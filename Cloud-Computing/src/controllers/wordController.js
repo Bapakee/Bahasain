@@ -4,51 +4,45 @@ const { successResponse, errorResponse,paginatedResponse } = require('../utils/r
 
 
 const getWord = async (req, res) => {
-    const { page = 1, limit = 20, search = '', categories = '' } = req.query;
+    const { page = 1, limit = 15, search = '', categories = '' } = req.query;
 
     try {
         // Prepare categories for filtering if provided
         let categoryFilter = {};
         if (categories) {
-            // Split categories by commas and trim extra spaces
             categoryFilter = {
                 category: {
-                    [Op.in]: categories.split(',').map(category => category.trim())
-                }
+                    [Op.in]: categories.split(',').map(category => category.trim()),
+                },
             };
         }
 
-        // Build query conditions for counting total
-        const totalConditions = {
-            where: {
-                word: {
-                    [Op.like]: `%${search}%`, // Search by word
-                },
+        // Build query conditions
+        const whereConditions = {
+            word: {
+                [Op.like]: `%${search}%`, // Search by word
             },
-            include: [
-                {
-                    model: WordCategory,
-                    where: {
-                        ...categoryFilter
-                    },
-                    reqruired:false,
-                    
-                }
-            ],
-            disticnt:true,
-            col: 'id',
         };
-
-        // Count the total number of records
-        const total = await Word.count(totalConditions);
 
         // Build query conditions for fetching data with pagination
         const fetchConditions = {
-            ...totalConditions,
+            where: whereConditions,
+            include: [
+                {
+                    model: WordCategory,
+                    required: !!categories, // Use INNER JOIN if categories are provided
+                    where: categories ? categoryFilter : undefined,
+                    attributes: [],
+                },
+            ],
             order: [['word', 'ASC']], // Order by word alphabetically
             offset: (page - 1) * limit, // For pagination
             limit: parseInt(limit, 10), // Limit number of records per page
+            distinct: true, // Ensure unique rows are returned
         };
+
+        // Count the total number of records
+        const total = await Word.count(fetchConditions);
 
         // Fetch the words from the database
         const words = await Word.findAll(fetchConditions);
@@ -66,6 +60,7 @@ const getWord = async (req, res) => {
         errorResponse(res, error.message, 'Error fetching data', 500);
     }
 };
+
 
 
 
