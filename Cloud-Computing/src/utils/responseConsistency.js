@@ -17,14 +17,15 @@ const successResponse = (res, data, message = 'Success', statusCode = 200) => {
   };
   
   // Utility function for paginated responses
-  const paginatedResponse = (res, data, page, limit, total) => {
+  const paginatedResponse = (res, data, message = 'Success', page, limit, total) => {
     return res.status(200).json({
       success: true,
+      message:message,
       data,
       pagination: {
-        page,
-        limit,
-        total
+        page:parseInt(page),
+        limit:parseInt(limit),
+        total:parseInt(total)
       }
     });
   };
