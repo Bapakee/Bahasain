@@ -1,38 +1,41 @@
 package com.bahasain.ui.placement
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.CheckBox
-import android.widget.RadioButton
-import android.widget.TextView
+import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.children
 import androidx.viewpager2.widget.ViewPager2
+import com.bahasain.data.Result
+import com.bahasain.ui.MainActivity
+import com.bahasain.ui.ViewModelFactory
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivityPlacementBinding
-import com.dicoding.bahasain.databinding.ItemMathcingBinding
-import com.dicoding.bahasain.databinding.ItemMultipleChoiceBinding
-import com.dicoding.bahasain.databinding.ItemSingleChoiceBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class PlacementActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPlacementBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: PlacementAdapter
-    private var currentQuizIndex = 0
+
+    private val viewModel by viewModels<PlacementViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     private val placementQuiz = listOf(
         Placement.Matching(
             quizTitle = "Vocabulary Matching",
             quiz = "Pasangkan kata dengan artinya",
             pairs = listOf(
-                "Rumah" to "Book",
+                "Rumah" to "House",
                 "Makan" to "Eat",
-                "Buku" to "Sleep",
-                "Tidur" to "House"
+                "Buku" to "Book",
+                "Tidur" to "Sleep"
             )
         ),
         Placement.SingleChoice(
@@ -55,6 +58,8 @@ class PlacementActivity : AppCompatActivity() {
         )
     )
 
+    private val placementAnswers = mutableMapOf<Int, Any>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPlacementBinding.inflate(layoutInflater)
@@ -66,15 +71,21 @@ class PlacementActivity : AppCompatActivity() {
             insets
         }
 
+        
         viewPager = binding.viewPager
 
         viewPager.isUserInputEnabled = false
 
-        adapter = PlacementAdapter(placementQuiz) { isCorrect ->
-            nextQuiz()
+        adapter = PlacementAdapter(placementQuiz) { selectedOptions ->
+            val currentPosition = viewPager.currentItem
+
+            binding.btnContinue.isEnabled = true
         }
 
         viewPager.adapter = adapter
+
+        val indicator = binding.indicator
+        TabLayoutMediator(indicator, viewPager) { _, _ -> }.attach()
 
         binding.btnContinue.setOnClickListener {
             nextQuiz()
@@ -83,22 +94,90 @@ class PlacementActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener{
             backQuiz()
         }
+
+        binding.btnContinue.isEnabled = false
     }
 
+    private fun calculateScore(): Int {
+        var score = 0
+
+        placementQuiz.forEach { quiz ->
+            when (quiz) {
+                is Placement.SingleChoice -> {
+                    if (quiz.userAnswer == quiz.correctAnswer) {
+                        score++
+                    }
+                }
+                is Placement.MultipleChoice -> {
+                    if (quiz.userAnswers.containsAll(quiz.correctAnswers) &&
+                        quiz.correctAnswers.containsAll(quiz.userAnswers)
+                    ) {
+                        score++
+                    }
+                }
+                is Placement.Matching -> {
+                    if (quiz.pairs.all { it.second == quiz.userMatches[it.first] }) {
+                        score++
+                    }
+                }
+            }
+        }
+
+        return score
+    }
+
+    private fun setLevel(){
+        val score = calculateScore()
+        viewModel.setLevel(score).observe(this) { result ->
+            if (result != null){
+                when(result){
+                    is Result.Loading -> {
+                        showLoading(true)
+                    }
+                    is Result.Success -> {
+                        showLoading(false)
+                        Toast.makeText(this, "level anda $score", Toast.LENGTH_SHORT).show()
+                    }
+                    is Result.Error -> {
+                        showLoading(false)
+                    }
+                }
+            }
+        }
+    }
+
+
     private fun nextQuiz() {
-        if (currentQuizIndex < placementQuiz.size - 1) {
-            currentQuizIndex++
-            viewPager.setCurrentItem(currentQuizIndex, false)
+        if (viewPager.currentItem < placementQuiz.size - 1) {
+            viewPager.currentItem += 1
         } else {
-            // Quiz selesai, tampilkan skor
+            val score = calculateScore()
+            setLevel()
+
+            viewModel.getSession().observe(this) { session ->
+                if (session != null) {
+                    val updatedSession = session.copy(userLevel = score)
+                    viewModel.saveSession(updatedSession)
+                } else {
+                    Toast.makeText(this, "Gagal memuat sesi", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            Toast.makeText(this, "Skor Anda: $score/${placementQuiz.size}", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
     private fun backQuiz(){
-        if (currentQuizIndex > 0) {
-            currentQuizIndex--
-            viewPager.setCurrentItem(currentQuizIndex, false)
+        if (viewPager.currentItem > 0) {
+            viewPager.currentItem -= 1
         }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 }

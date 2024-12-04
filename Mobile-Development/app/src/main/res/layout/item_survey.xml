@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         tools:text="Quis"
         android:textStyle="bold"
-        android:textSize="32sp"
-        android:textColor="@color/black"/>
+        android:textSize="32sp"/>
 
     <TextView
         android:id="@+id/descSurvey"

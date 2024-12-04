@@ -18,7 +18,6 @@ class SurveyActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySurveyBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: SurveyAdapter
-    private var currentSelectedOptions = mutableListOf<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +31,6 @@ class SurveyActivity : AppCompatActivity() {
         }
 
         viewPager = binding.viewPager
-
         viewPager.isUserInputEnabled = false
 
         val survey = listOf(
@@ -66,21 +64,22 @@ class SurveyActivity : AppCompatActivity() {
             )
         )
 
+        val surveyAnswers = mutableMapOf<Int, List<Int>>()
+
         adapter = SurveyAdapter(survey) { surveyId, selectedOptions ->
-            Toast.makeText(
-                this,
-                "Survey ID: $surveyId, Selected: $selectedOptions",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+            surveyAnswers[surveyId] = selectedOptions
 
-        adapter = SurveyAdapter(survey) { _, selectedOptions ->
-            currentSelectedOptions = selectedOptions.toMutableList()
-
-            binding.btnContinue.isEnabled = currentSelectedOptions.isNotEmpty()
+            updateContinueButtonState(viewPager.currentItem, surveyAnswers)
         }
 
         viewPager.adapter = adapter
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                updateContinueButtonState(position, surveyAnswers)
+            }
+        })
 
         val indicator = binding.indicator
         TabLayoutMediator(indicator, viewPager) { _, _ -> }.attach()
@@ -101,5 +100,11 @@ class SurveyActivity : AppCompatActivity() {
         }
 
         binding.btnContinue.isEnabled = false
+    }
+
+    private fun updateContinueButtonState(position: Int, surveyAnswers: Map<Int, List<Int>>) {
+        val currentSurveyId = position + 1 // Assuming survey IDs are sequential starting from 1
+        val selectedOptions = surveyAnswers[currentSurveyId] ?: emptyList()
+        binding.btnContinue.isEnabled = selectedOptions.isNotEmpty()
     }
 }

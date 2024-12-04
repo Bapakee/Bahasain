@@ -31,11 +31,11 @@
             android:layout_width="match_parent"
             android:layout_marginHorizontal="24dp"
             android:layout_height="16dp"
-            android:background="@color/gray"
+            android:background="@drawable/tab_bg_placement"
             app:tabIndicatorFullWidth="true"
-            app:tabIndicatorColor="@color/orange"
-            app:tabIndicator="@drawable/tab_indicator_survey"
-            app:tabSelectedTextColor="@color/orange"
+            app:tabIndicatorColor="@color/blue"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabSelectedTextColor="@color/blue"
             app:tabIndicatorGravity="center"
             app:tabRippleColor="@android:color/transparent"
             app:tabIndicatorHeight="16dp"/>
@@ -60,6 +60,19 @@
         android:background="@drawable/bg_button_continue"
         android:layout_marginBottom="100dp"
         android:layout_marginHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

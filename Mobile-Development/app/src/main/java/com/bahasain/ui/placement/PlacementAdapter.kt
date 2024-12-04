@@ -1,19 +1,26 @@
 package com.bahasain.ui.placement
 
+import android.content.ClipData
+import android.os.Build
+import android.util.Log
+import android.view.DragEvent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.bahasain.R
-import com.dicoding.bahasain.databinding.ItemMathcingBinding
+import com.dicoding.bahasain.databinding.ItemMathcingChoiceBinding
 import com.dicoding.bahasain.databinding.ItemMultipleChoiceBinding
 import com.dicoding.bahasain.databinding.ItemSingleChoiceBinding
 
 class PlacementAdapter(
     private val placementQuiz: List<Placement>,
-    private val onContinueClicked: (Boolean) -> Unit
+    private val onOptionsSelected: (selectedOption: Any) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -37,7 +44,7 @@ class PlacementAdapter(
             }
 
             VIEW_TYPE_MATCHING -> {
-                val binding = ItemMathcingBinding.inflate(
+                val binding = ItemMathcingChoiceBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
@@ -49,26 +56,23 @@ class PlacementAdapter(
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val quiz = placementQuiz[position]
         when (holder) {
             is SingleChoiceViewHolder -> {
-                println("Binding SingleChoice: $quiz")
-                holder.bind(quiz as Placement.SingleChoice, onContinueClicked)
+                holder.bind(quiz as Placement.SingleChoice, onOptionsSelected)
             }
 
             is MultipleChoiceViewHolder -> {
-                println("Binding MultipleChoice: $quiz")
-                holder.bind(quiz as Placement.MultipleChoice, onContinueClicked)
+                holder.bind(quiz as Placement.MultipleChoice, onOptionsSelected)
             }
 
             is MatchingViewHolder -> {
-                println("Binding Matching: $quiz")
-                holder.bind(quiz as Placement.Matching, onContinueClicked)
+                holder.bind(quiz as Placement.Matching, onOptionsSelected)
             }
         }
     }
-
 
     override fun getItemCount(): Int = placementQuiz.size
 
@@ -82,9 +86,14 @@ class PlacementAdapter(
 
     class SingleChoiceViewHolder(private val binding: ItemSingleChoiceBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(quiz: Placement.SingleChoice, onContinueClicked: (Boolean) -> Unit) {
+        fun bind(
+            quiz: Placement.SingleChoice,
+            onOptionsSelected: (selectedOption: List<Int>) -> Unit
+        ) {
             binding.quizTitle.text = quiz.quizTitle
             binding.quiz.text = quiz.quiz
+
+            binding.rgQuiz.removeAllViews()
 
             quiz.optionsQuiz.forEachIndexed { index, option ->
                 val radioButton = LayoutInflater.from(binding.root.context)
@@ -97,11 +106,10 @@ class PlacementAdapter(
 
                 radioButton.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) {
-                        val isCorrect = index == quiz.correctAnswer
-                        onContinueClicked(isCorrect)
+                        quiz.userAnswer = index
+                        onOptionsSelected(listOf(index))
                     }
                 }
-
                 binding.rgQuiz.addView(radioButton)
             }
         }
@@ -109,7 +117,10 @@ class PlacementAdapter(
 
     class MultipleChoiceViewHolder(private val binding: ItemMultipleChoiceBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(quiz: Placement.MultipleChoice, onContinueClicked: (Boolean) -> Unit) {
+        fun bind(
+            quiz: Placement.MultipleChoice,
+            onOptionsSelected: (selectedOption: List<Int>) -> Unit
+        ) {
             binding.quizTitle.text = quiz.quizTitle
             binding.quiz.text = quiz.quiz
 
@@ -124,39 +135,95 @@ class PlacementAdapter(
                     id = index
                 }
                 checkBox.setOnCheckedChangeListener { _, isChecked ->
-                    if (isChecked) selectedIndices.add(index)
-                    else selectedIndices.remove(index)
-                }
-                checkBox.setOnCheckedChangeListener { _, isChecked ->
-                    if (isChecked) selectedIndices.add(index)
-                    else selectedIndices.remove(index)
-
-                    val isCorrect = selectedIndices == quiz.correctAnswer.toSet()
-                    onContinueClicked(isCorrect)
+                    if (isChecked) {
+                        selectedIndices.add(index)
+                    } else {
+                        selectedIndices.remove(index)
+                    }
+                    quiz.userAnswers = selectedIndices.toList()
+                    onOptionsSelected(selectedIndices)
                 }
                 binding.llOptions.addView(checkBox)
             }
         }
     }
 
-    class MatchingViewHolder(private val binding: ItemMathcingBinding) :
+    class MatchingViewHolder(private val binding: ItemMathcingChoiceBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(quiz: Placement.Matching, onContinueClicked: (Boolean) -> Unit) {
-            binding.quizTitle.text = quiz.quizTitle
 
-            quiz.pairs.forEach { (word, meaning) ->
-                val wordView = TextView(binding.root.context).apply {
-                    text = word
-                    setBackgroundResource(R.drawable.checkbox_background)
+        private val userMatches = mutableMapOf<String, String>()
+
+        @RequiresApi(Build.VERSION_CODES.N)
+        fun bind(quiz: Placement.Matching, onOptionsSelected: (selectedOption: List<Int>) -> Unit) {
+            binding.quizTitle.text = quiz.quizTitle
+            binding.tvQuiz.text = quiz.quiz
+
+            quiz.pairs.forEach { (word, _) ->
+                val textView = inflateLeftTextView(word)
+                binding.leftColumn.addView(textView)
+            }
+
+            quiz.pairs.forEach { (word, _) ->
+                val textView = inflateRightTextView("")
+                textView.tag = word
+                binding.rightColumn.addView(textView)
+            }
+
+            quiz.pairs.map { it.second }.shuffled().forEach { meaning ->
+                val textView = inflateAnswerTextView(meaning)
+                textView.setOnLongClickListener {
+                    val clipData = ClipData.newPlainText("text", meaning)
+                    val dragShadow = View.DragShadowBuilder(it)
+                    it.startDragAndDrop(clipData, dragShadow, null, 0)
+                    true
                 }
-                val meaningView = TextView(binding.root.context).apply {
-                    text = meaning
-                    setBackgroundResource(R.drawable.checkbox_background)
+                binding.answerColumn.addView(textView)
+            }
+
+            binding.rightColumn.children.forEach { view ->
+                view.setOnDragListener { _, event ->
+                    if (event.action == DragEvent.ACTION_DROP) {
+                        val draggedText = event.clipData.getItemAt(0).text.toString()
+                        val word = (view as TextView).tag?.toString()
+                        if (word != null) {
+                            userMatches[word] = draggedText
+                            quiz.userMatches = userMatches
+                            onOptionsSelected(
+                                quiz.pairs.mapIndexedNotNull { index, pair ->
+                                    if (userMatches[pair.first] == pair.second) index else null
+                                }
+                            )
+                        } else {
+                            Log.e("Debug", "Tag is null for view in rightColumn")
+                        }
+                        view.text = draggedText
+                    }
+                    true
                 }
-                binding.leftColumn.addView(wordView)
-                binding.rightColumn.addView(meaningView)
             }
         }
+
+        private fun inflateLeftTextView(text: String): TextView {
+            return (LayoutInflater.from(binding.root.context)
+                .inflate(R.layout.item_left_matching, binding.leftColumn, false) as TextView).apply {
+                this.text = text
+            }
+        }
+
+        private fun inflateRightTextView(text: String): TextView {
+            return (LayoutInflater.from(binding.root.context)
+                .inflate(R.layout.item_right_matching, binding.rightColumn, false) as TextView).apply {
+                this.text = text
+            }
+        }
+
+        private fun inflateAnswerTextView(text: String): TextView {
+            return (LayoutInflater.from(binding.root.context)
+                .inflate(R.layout.item_answer_matching, binding.answerColumn, false) as TextView).apply {
+                this.text = text
+            }
+        }
+
     }
 
     companion object {

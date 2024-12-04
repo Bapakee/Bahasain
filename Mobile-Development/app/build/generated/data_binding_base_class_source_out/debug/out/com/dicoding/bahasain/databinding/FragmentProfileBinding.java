@@ -4,6 +4,7 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,6 +22,9 @@ public final class FragmentProfileBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
+  public final Button btnLogout;
+
+  @NonNull
   public final ImageView ivProfile;
 
   @NonNull
@@ -29,9 +33,10 @@ public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   public final TextView tvName;
 
-  private FragmentProfileBinding(@NonNull NestedScrollView rootView, @NonNull ImageView ivProfile,
-      @NonNull TextView tvLevel, @NonNull TextView tvName) {
+  private FragmentProfileBinding(@NonNull NestedScrollView rootView, @NonNull Button btnLogout,
+      @NonNull ImageView ivProfile, @NonNull TextView tvLevel, @NonNull TextView tvName) {
     this.rootView = rootView;
+    this.btnLogout = btnLogout;
     this.ivProfile = ivProfile;
     this.tvLevel = tvLevel;
     this.tvName = tvName;
@@ -64,6 +69,12 @@ public final class FragmentProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_logout;
+      Button btnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (btnLogout == null) {
+        break missingId;
+      }
+
       id = R.id.iv_profile;
       ImageView ivProfile = ViewBindings.findChildViewById(rootView, id);
       if (ivProfile == null) {
@@ -82,7 +93,8 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((NestedScrollView) rootView, ivProfile, tvLevel, tvName);
+      return new FragmentProfileBinding((NestedScrollView) rootView, btnLogout, ivProfile, tvLevel,
+          tvName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

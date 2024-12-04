@@ -4,10 +4,12 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
@@ -17,19 +19,33 @@ import java.lang.String;
 
 public final class FragmentLearnBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button test;
+  public final TextView descLearn;
 
-  private FragmentLearnBinding(@NonNull ScrollView rootView, @NonNull Button test) {
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final RecyclerView recyclerView;
+
+  @NonNull
+  public final TextView titlePage;
+
+  private FragmentLearnBinding(@NonNull ConstraintLayout rootView, @NonNull TextView descLearn,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView recyclerView,
+      @NonNull TextView titlePage) {
     this.rootView = rootView;
-    this.test = test;
+    this.descLearn = descLearn;
+    this.progressBar = progressBar;
+    this.recyclerView = recyclerView;
+    this.titlePage = titlePage;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +70,32 @@ public final class FragmentLearnBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.test;
-      Button test = ViewBindings.findChildViewById(rootView, id);
-      if (test == null) {
+      id = R.id.desc_learn;
+      TextView descLearn = ViewBindings.findChildViewById(rootView, id);
+      if (descLearn == null) {
         break missingId;
       }
 
-      return new FragmentLearnBinding((ScrollView) rootView, test);
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.title_page;
+      TextView titlePage = ViewBindings.findChildViewById(rootView, id);
+      if (titlePage == null) {
+        break missingId;
+      }
+
+      return new FragmentLearnBinding((ConstraintLayout) rootView, descLearn, progressBar,
+          recyclerView, titlePage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
