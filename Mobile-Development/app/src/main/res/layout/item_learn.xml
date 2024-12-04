@@ -53,28 +53,10 @@
             app:layout_constraintTop_toBottomOf="@id/tv_chapter"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLesson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_light"
-        android:orientation="horizontal"
-        android:paddingVertical="8dp">
-
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            tools:src="@tools:sample/avatars"
-            android:layout_marginStart="22dp" />
-
-        <TextView
-            android:id="@+id/tv_lesson_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Basic Greetings"
-            android:fontFamily="@font/inter_semibold"
-            android:textSize="16sp"
-            android:layout_marginStart="16dp"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>

@@ -3077,7 +3077,10 @@ drawable baseline_circle_gray
 drawable bg_button_continue
 drawable bg_button_disabled_sign
 drawable bg_button_sign
+drawable bg_corner_10
+drawable bg_corner_20
 drawable bg_edit_text_sign
+drawable bg_matching
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3121,6 +3124,7 @@ drawable icon_cultural
 drawable icon_discord
 drawable icon_facebook
 drawable icon_google
+drawable icon_home
 drawable icon_learn
 drawable icon_location
 drawable icon_nav
@@ -3128,6 +3132,7 @@ drawable icon_notification
 drawable icon_poin
 drawable icon_profile
 drawable icon_streak
+drawable icon_trivia
 drawable icon_vocab
 drawable indeterminate_static
 drawable logo_bahasain
@@ -3206,7 +3211,8 @@ drawable notify_panel_notification_icon_bg
 drawable ob_image_1
 drawable ob_image_2
 drawable ob_image_3
-drawable tab_background
+drawable tab_bg_placement
+drawable tab_bg_survey
 drawable tab_indicator
 drawable tab_indicator_survey
 drawable test_level_drawable
@@ -3296,6 +3302,7 @@ id always
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
+id answerColumn
 id antiClockwise
 id anticipate
 id arc
@@ -3319,6 +3326,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn
 id btn_back
 id btn_continue
 id btn_discord
@@ -3326,6 +3334,7 @@ id btn_facebook
 id btn_forgot
 id btn_google
 id btn_login
+id btn_logout
 id btn_nav
 id btn_next
 id btn_notification
@@ -3379,6 +3388,7 @@ id default_activity_button
 id deltaRelative
 id dependency_ordering
 id descSurvey
+id desc_learn
 id descriptionOnboarding
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -3479,6 +3489,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_culture
+id iv_lesson_image
 id iv_profile
 id iv_resep
 id iv_story
@@ -3574,6 +3585,7 @@ id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_cultural
 id navigation_header_container
+id navigation_home
 id navigation_learn
 id navigation_profile
 id navigation_vocab
@@ -3632,6 +3644,7 @@ id quiz_title
 id radio
 id ratio
 id rectangles
+id recyclerView
 id report_drawn
 id reverseSawtooth
 id rg_quiz
@@ -3643,6 +3656,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id rvLesson
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3724,7 +3738,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id test
 id text
 id text2
 id textEnd
@@ -3748,6 +3761,7 @@ id time
 id title
 id titleDividerNoCustom
 id titleOnboarding
+id title_page
 id title_signup
 id title_template
 id toggle
@@ -3765,6 +3779,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvLeftText
 id tv_chapter
 id tv_lesson_name
 id tv_lessons_info
@@ -3943,22 +3958,28 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_cultural
+layout fragment_home
 layout fragment_learn
 layout fragment_profile
 layout fragment_vocab
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_answer_matching
 layout item_checkbox
 layout item_cultural_horizontal
 layout item_learn
-layout item_mathcing
+layout item_left_matching
+layout item_lesson_card_list
+layout item_mathcing_choice
 layout item_multiple_choice
 layout item_onboarding
 layout item_radio
 layout item_resep_cultural
+layout item_right_matching
 layout item_single_choice
 layout item_story_cultural
 layout item_survey
+layout item_trivia_home
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4026,6 +4047,8 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
+raw learn
+raw placement_data
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4066,6 +4089,7 @@ string btn_back
 string btn_continue
 string btn_forgot_password
 string btn_login
+string btn_logout
 string btn_register
 string btn_skip
 string call_notification_answer_action

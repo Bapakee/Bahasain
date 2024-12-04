@@ -1,0 +1,62 @@
+[
+  {
+    "quizTitle": "Vocabulary Matching",
+    "quiz": "Pasangkan kata dengan artinya",
+    "quizType": "matching",
+    "pairs": [
+      {
+        "indonesia": "Rumah",
+        "english": "House"
+      },
+      {
+        "indonesia": "Makan",
+        "english": "Eat"
+      },
+      {
+        "indonesia": "Buku",
+        "english": "Book"
+      },
+      {
+        "indonesia": "Tidur",
+        "english": "Sleep"
+      }
+    ]
+  },
+  {
+    "quizTitle": "Grammar",
+    "quiz": "Pilih kalimat yang benar",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Saya sudah nasi makan tadi pagi.",
+      "Saya sudah makan nasi tadi pagi.",
+      "Sudah makan saya nasi tadi pagi.",
+      "I don’t Know"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "quizTitle": "Idioms and Expressions",
+    "quiz": "Apa arti ungkapan \"buah tangan\"?",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Hasil kebun",
+      "Oleh-oleh",
+      "Hadiah besar",
+      "I don’t Know"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "quizTitle": "Complex Sentence Comprehension",
+    "quiz": "Apa yang dilakukan ibu setelah selesai memasak?",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Mengajak kami makan",
+      "Pergi ke pasar",
+      "Membersihkan dapur",
+      "Berbicara di ruang tamu",
+      "I don’t Know"
+    ],
+    "correctAnswer": 0
+  }
+]

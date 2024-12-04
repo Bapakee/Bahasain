@@ -61,6 +61,5 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation(libs.logging.interceptor)
 
-    implementation(libs.java.jwt)
     implementation (libs.jwtdecode)
 }

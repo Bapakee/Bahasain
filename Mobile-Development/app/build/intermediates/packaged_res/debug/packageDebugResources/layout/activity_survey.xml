@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_marginHorizontal="24dp"
         android:layout_height="4dp"
-        android:background="@color/gray"
+        android:background="@drawable/tab_bg_survey"
         android:layout_marginTop="48dp"
         app:tabIndicatorFullWidth="true"
         app:tabIndicatorColor="@color/orange"

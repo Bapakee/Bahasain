@@ -20,6 +20,7 @@
     <string name="btn_continue">CONTINUE</string>
     <string name="btn_forgot_password">Forgot Password?</string>
     <string name="btn_login">Login</string>
+    <string name="btn_logout">Logout</string>
     <string name="btn_register">Register</string>
     <string name="btn_skip">SKIP</string>
     <string name="confirm_password">Confirm password</string>

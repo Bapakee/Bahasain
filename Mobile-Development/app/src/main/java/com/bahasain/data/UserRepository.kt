@@ -5,8 +5,10 @@ import androidx.lifecycle.liveData
 import com.bahasain.data.pref.UserModel
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiService
+import com.bahasain.data.remote.request.LevelRequest
 import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.RegisterRequest
+import com.bahasain.data.remote.response.LevelResponse
 import com.bahasain.data.remote.response.LoginResponse
 import com.bahasain.data.remote.response.RegisterResponse
 import com.google.gson.Gson
@@ -37,6 +39,18 @@ class UserRepository private constructor(
         }catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, LoginResponse::class.java)
+            emit(Result.Error(errorBody.message.toString()))
+        }
+    }
+
+    fun setLevel(levelRequest: LevelRequest): LiveData<Result<LevelResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.setLevel(levelRequest)
+            emit(Result.Success(response))
+        }catch (e: HttpException){
+            val jsonString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonString, LevelResponse::class.java)
             emit(Result.Error(errorBody.message.toString()))
         }
     }

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -39,17 +40,21 @@ public final class ActivityPlacementBinding implements ViewBinding {
   public final LinearLayout nav;
 
   @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
   public final ViewPager2 viewPager;
 
   private ActivityPlacementBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnBack,
       @NonNull Button btnContinue, @NonNull TabLayout indicator, @NonNull ConstraintLayout main,
-      @NonNull LinearLayout nav, @NonNull ViewPager2 viewPager) {
+      @NonNull LinearLayout nav, @NonNull ProgressBar progressBar, @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.btnContinue = btnContinue;
     this.indicator = indicator;
     this.main = main;
     this.nav = nav;
+    this.progressBar = progressBar;
     this.viewPager = viewPager;
   }
 
@@ -106,6 +111,12 @@ public final class ActivityPlacementBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
       id = R.id.viewPager;
       ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
       if (viewPager == null) {
@@ -113,7 +124,7 @@ public final class ActivityPlacementBinding implements ViewBinding {
       }
 
       return new ActivityPlacementBinding((ConstraintLayout) rootView, btnBack, btnContinue,
-          indicator, main, nav, viewPager);
+          indicator, main, nav, progressBar, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

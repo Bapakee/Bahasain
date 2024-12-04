@@ -14,9 +14,10 @@ import androidx.core.view.WindowInsetsCompat
 import com.auth0.android.jwt.JWT
 import com.bahasain.data.Result
 import com.bahasain.data.pref.UserModel
+import com.bahasain.ui.MainActivity
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.auth.register.RegisterActivity
-import com.bahasain.ui.MainActivity
+import com.bahasain.ui.survey.SurveyActivity
 import com.bahasain.ui.view.ButtonSign
 import com.bahasain.ui.view.EditTextEmail
 import com.bahasain.ui.view.EditTextPassword
@@ -80,21 +81,29 @@ class LoginActivity : AppCompatActivity() {
                         val accessToken = result.data.data?.accessToken
                         val refreshToken = result.data.data?.refreshToken
 
-//                        val userInfo = decodeToken(accessToken.toString())
+                        val jwt = JWT(accessToken.toString())
+
+                        val name = jwt.getClaim("name").asString()
+                        val level = jwt.getClaim("level").asInt()
+
                         val userModel = UserModel(
                             accessToken.toString(),
                             refreshToken.toString(),
-//                            userInfo["id"] ?: "",
-//                            userInfo["name"] ?: "",
-//                            userInfo["level"] ?: "",
-//                            userInfo["isNew"].toBoolean()
+                            name.toString(),
+                            level ?: 0
                         )
 
                         viewModel.saveSession(userModel)
 
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                        if(level == null){
+                            val intent = Intent(this, SurveyActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }else{
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
                     }
 
                     is Result.Error -> {
@@ -105,22 +114,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-
-//    private fun decodeToken(token: String): Map<String, String?> {
-//        val jwt = JWT(token)
-//
-//        val id = jwt.getClaim("id").asString()
-//        val name = jwt.getClaim("name").asString()
-//        val isNew = jwt.getClaim("isNew").asString()
-//        val level = jwt.getClaim("level").asString()
-//
-//        return mapOf(
-//            "id" to id,
-//            "name" to name,
-//            "isNew" to isNew,
-//            "level" to level
-//        )
-//    }
 
     private fun setEdtText() {
         val textWatcher = object : TextWatcher {

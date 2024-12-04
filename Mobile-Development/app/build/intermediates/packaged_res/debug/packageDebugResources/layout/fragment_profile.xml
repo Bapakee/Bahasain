@@ -29,6 +29,8 @@
                 android:id="@+id/iv_profile"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:src="@drawable/icon_profile"
+                android:background="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@drawable/icon_profile" />
@@ -62,5 +64,14 @@
                 tools:text="level" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_logout"
+            android:textAllCaps="false"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
