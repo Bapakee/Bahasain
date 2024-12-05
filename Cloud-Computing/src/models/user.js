@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // Relasi dengan tabel Streak
-      User.hasOne(models.Streak, { foreignKey: 'user_id', as: 'streak' });
+      User.hasOne(models.Streak, { foreignKey: 'user_id'});
 
       // Relasi dengan tabel Tokens
       User.hasMany(models.Token, { foreignKey: 'user_id', as: 'tokens' });
@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
         through: models.UserAchievement,
         foreignKey: 'user_id',
         otherKey: 'achievement_id',
-        as: 'achievements',
       });
 
       // Relasi dengan tabel UserProgress
