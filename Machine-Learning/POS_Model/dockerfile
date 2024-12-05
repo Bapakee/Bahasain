@@ -1,0 +1,27 @@
+# Use a lightweight Python base image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt /app/requirements.txt
+
+# Install the required dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the dataset
+COPY dataset/ /app/dataset/
+
+# Copy critical files explicitly 
+COPY app.py /app/app.py
+COPY model_POS_v3.h5 /app/
+COPY /tokenizer/tokenizer.pickle /app/
+COPY /tokenizer/tag_tokenizer.pickle /app/
+
+
+# Expose the port on which the app runs
+EXPOSE 8000
+
+# Run the application using Uvicorn
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

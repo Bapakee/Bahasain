@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "node src/app.js",
+    "start-proxy": "./cloud_sql_proxy -instances=bahasain:asia-southeast2:bahasain=tcp:3306",
     "dev": "nodemon src/app.js",
     "db:migrate": "npx sequelize-cli db:migrate --config src/config/config.js --migrations-path src/migrations",
     "db:fresh": "npx sequelize-cli db:migrate:undo:all --config src/config/config.js --migrations-path src/migrations && npx sequelize-cli db:migrate --config src/config/config.js --migrations-path src/migrations",
@@ -16,6 +17,7 @@
   "description": "",
   "dependencies": {
     "@faker-js/faker": "^9.2.0",
+    "axios": "^1.7.8",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",

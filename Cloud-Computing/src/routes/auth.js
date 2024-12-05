@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const { register, login, refresh, logout, requestResetPassword, resetPassword } = require('../controllers/authController');
 const { validateBody } = require('../middleware/validateBody');
+const auth = require('../middleware/auth')
 
 /**
  * @swagger
@@ -37,13 +38,17 @@ const { validateBody } = require('../middleware/validateBody');
  *                 type: string
  *                 description: The user's password
  *                 example: P@ssw0rd
+ *               confirmPassword:
+ *                 type: string
+ *                 description: The user's password confirmation
+ *                 example: P@ssw0rd
  *     responses:
  *       201:
  *         description: User created successfully
  *       400:
  *         description: Bad request
  */
-router.post('/register', validateBody(['name', 'email', 'password','confirmPassword']), register);
+router.post('/register', validateBody(['name', 'email', 'password', 'confirmPassword']), register);
 
 /**
  * @swagger
@@ -146,7 +151,7 @@ router.post('/refresh', validateBody(['refreshToken']), refresh);
  *       500:
  *         description: Internal server error
  */
-router.post('/request-reset-password',validateBody(['email']), requestResetPassword);
+router.post('/request-reset-password', validateBody(['email']), requestResetPassword);
 
 /**
  * @swagger
@@ -188,26 +193,15 @@ router.post('/request-reset-password',validateBody(['email']), requestResetPassw
  *       500:
  *         description: Internal server error
  */
-router.post('/reset-password/:token',validateBody(['password','confirmPassword']), resetPassword)
+router.post('/reset-password/:token', validateBody(['password', 'confirmPassword']), resetPassword);
 
 /**
  * @swagger
  * /auth/logout:
- *   post:
+ *   delete:
  *     summary: Logout user
  *     tags: [Auth]
  *     description: This endpoint allows a user to logout by removing their refresh token.
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               refreshToken:
- *                 type: string
- *                 description: The user's refresh token to be removed
- *                 example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
  *     responses:
  *       200:
  *         description: Logout successful
@@ -218,10 +212,6 @@ router.post('/reset-password/:token',validateBody(['password','confirmPassword']
  *       500:
  *         description: Internal server error
  */
-
-router.post('/logout',validateBody(['refreshToken']), logout);
-
-
-
+router.delete('/logout',auth, logout);
 
 module.exports = router;

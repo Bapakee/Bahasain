@@ -1,0 +1,45 @@
+# Ignore Python cache files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore Git files
+.git/
+.gitignore
+
+# Ignore Docker-related files
+Dockerfile.*
+docker-compose.yml
+
+
+# Ignore Jupyter Notebook files
+Translate_v7.ipynb
+translate_v7.py
+
+# Ignore everything except essential files
+!app.py
+!requirements.txt
+!english.txt
+!indonesian.txt
+!encoder_model.h5
+!decoder_model.h5
+!input_tokenizer.pickle
+!output_tokenizer.pickle

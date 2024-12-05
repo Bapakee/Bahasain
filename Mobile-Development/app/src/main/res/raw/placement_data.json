@@ -1,0 +1,84 @@
+[
+  {
+    "id" : 1,
+    "quizTitle": "Vocabulary Matching",
+    "quiz": "Pasangkan kata dengan artinya",
+    "quizType": "matching",
+    "pairs": [
+      {
+        "indonesia": "Rumah",
+        "english": "House"
+      },
+      {
+        "indonesia": "Makan",
+        "english": "Eat"
+      },
+      {
+        "indonesia": "Buku",
+        "english": "Book"
+      },
+      {
+        "indonesia": "Tidur",
+        "english": "Sleep"
+      }
+    ]
+  },
+  {
+    "id" : 2,
+    "quizTitle": "Grammar",
+    "textReading" : "",
+    "quiz": "Pilih kalimat yang benar",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Saya sudah nasi makan tadi pagi.",
+      "Saya sudah makan nasi tadi pagi.",
+      "Sudah makan saya nasi tadi pagi.",
+      "I don’t Know"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id" : 3,
+    "quizTitle": "Idioms and Expressions",
+    "textReading": "",
+    "quiz": "Apa arti ungkapan \"buah tangan\"?",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Hasil kebun",
+      "Oleh-oleh",
+      "Hadiah besar",
+      "I don’t Know"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id" : 4,
+    "quizTitle": "Complex Sentence Comprehension",
+    "textReading" : "",
+    "quiz": "Apa yang dilakukan ibu setelah selesai memasak?",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Mengajak kami makan",
+      "Pergi ke pasar",
+      "Membersihkan dapur",
+      "Berbicara di ruang tamu",
+      "I don’t Know"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id" : 5,
+    "quizTitle": "Reading",
+    "textReading": "Rina suka membaca buku di sore hari. Dia sering pergi ke perpustakaan untuk meminjam buku baru. Buku favoritnya adalah tentang sejarah Indonesia. Setelah membaca, Rina biasanya menulis catatan di buku kecilnya.",
+    "quiz": "Apa yang sering dilakukan Rina di perpustakaan?",
+    "quizType": "singleChoice",
+    "optionsQuiz": [
+      "Menulis catatan",
+      "Meminjam buku",
+      "Mengajar anak-anak",
+      "Membaca buku",
+      "I don’t Know"
+    ],
+    "correctAnswer": 1
+  }
+]
