@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth');
 const learnRoutes = require('./routes/learn');
 const progressRoutes = require('./routes/progress');
 const wordRoutes = require('./routes/word')
+const translateRoutes = require('./routes/translate')
 const auth = require('./middleware/auth')
 
 const app = express();
@@ -18,6 +19,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/module',auth, learnRoutes);
 app.use('/api/progress',auth, progressRoutes);
 app.use('/api/word',auth, wordRoutes);
+app.use('/api/translate',auth,translateRoutes)
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.originalUrl} - Body:`, req.body);
   next();
