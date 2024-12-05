@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { getWord, getWordById }= require ('../controllers/wordController')
-const auth = require('../middleware/auth');
 
 /**
  * @swagger
@@ -90,7 +89,7 @@ const auth = require('../middleware/auth');
  *                   example: Internal server error
  */
 
-router.get('/',auth,getWord)
+router.get('/',getWord)
 
 /**
  * @swagger
@@ -139,7 +138,7 @@ router.get('/',auth,getWord)
  *       500:
  *         description: Internal server error
  */
-router.get('/:id', auth, getWordById);
+router.get('/:id', getWordById);
 
 
 

@@ -11,8 +11,8 @@ COPY /models/encoder_model.h5 /app/
 COPY /models/decoder_model.h5 /app/
 COPY /dataset/indonesian.txt /app/
 COPY /dataset/english.txt /app/
-COPY /pickle/input_tokenizer.txt /app/
-COPY /pickle/output_tokenizer.txt /app/
+COPY /pickle/input_tokenizer.pickle /app/
+COPY /pickle/output_tokenizer.pickle /app/
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
