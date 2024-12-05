@@ -13,9 +13,12 @@ import androidx.viewpager2.widget.ViewPager2
 import com.bahasain.data.Result
 import com.bahasain.ui.MainActivity
 import com.bahasain.ui.ViewModelFactory
+import com.bahasain.ui.loadPlacementQuizFromJson
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivityPlacementBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class PlacementActivity : AppCompatActivity() {
 
@@ -23,42 +26,11 @@ class PlacementActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: PlacementAdapter
 
+    private lateinit var placementQuiz: List<Placement>
+
     private val viewModel by viewModels<PlacementViewModel> {
         ViewModelFactory.getInstance(this)
     }
-
-    private val placementQuiz = listOf(
-        Placement.Matching(
-            quizTitle = "Vocabulary Matching",
-            quiz = "Pasangkan kata dengan artinya",
-            pairs = listOf(
-                "Rumah" to "House",
-                "Makan" to "Eat",
-                "Buku" to "Book",
-                "Tidur" to "Sleep"
-            )
-        ),
-        Placement.SingleChoice(
-            quizTitle = "Grammar",
-            quiz = "Pilih kalimat yang benar",
-            optionsQuiz = listOf("Saya sudah nasi makan tadi pagi.", "Saya sudah makan nasi tadi pagi.","Sudah makan saya nasi tadi pagi.","I don’t Know"),
-            correctAnswer = 1
-        ),
-        Placement.SingleChoice(
-            quizTitle = "Idioms and Expressions",
-            quiz = "Apa arti ungkapan \"buah tangan\"?",
-            optionsQuiz = listOf("Hasil kebun","Oleh-oleh","Hadiah besar","I don’t Know"),
-            correctAnswer = 1
-        ),
-        Placement.SingleChoice(
-            quizTitle = "Complex Sentence Comprehension",
-            quiz = "Apa yang dilakukan ibu setelah selesai memasak?",
-            optionsQuiz = listOf("Mengajak kami makan", "Pergi ke pasar", "Membersihkan dapur", "Berbicara di ruang tamu", "I don’t Know"),
-            correctAnswer = 0
-        )
-    )
-
-    private val placementAnswers = mutableMapOf<Int, Any>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,18 +43,29 @@ class PlacementActivity : AppCompatActivity() {
             insets
         }
 
-        
+        val jsonString = loadPlacementQuizFromJson(this, R.raw.placement_data)
+        placementQuiz = parsePlacementQuiz(jsonString)
+
         viewPager = binding.viewPager
 
         viewPager.isUserInputEnabled = false
 
-        adapter = PlacementAdapter(placementQuiz) { selectedOptions ->
-            val currentPosition = viewPager.currentItem
+        val quizAnswers = mutableMapOf<Int, List<Int>>()
 
-            binding.btnContinue.isEnabled = true
+        adapter = PlacementAdapter(placementQuiz) { quizId, selectedOptions ->
+            quizAnswers[quizId] = selectedOptions
+
+            updateContinueButtonState(viewPager.currentItem, quizAnswers)
         }
 
         viewPager.adapter = adapter
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                updateContinueButtonState(position, quizAnswers)
+            }
+        })
 
         val indicator = binding.indicator
         TabLayoutMediator(indicator, viewPager) { _, _ -> }.attach()
@@ -91,11 +74,30 @@ class PlacementActivity : AppCompatActivity() {
             nextQuiz()
         }
 
-        binding.btnBack.setOnClickListener{
+        binding.btnBack.setOnClickListener {
             backQuiz()
         }
 
         binding.btnContinue.isEnabled = false
+    }
+
+    private fun updateContinueButtonState(position: Int, quizAnswers: Map<Int, List<Int>>) {
+        val currentSurveyId = position + 1
+        val isAnswered = when (val currentQuiz = placementQuiz[position]) {
+            is Placement.Matching -> {
+                currentQuiz.userMatches.size == currentQuiz.pairs.size
+            }
+
+            else -> {
+                val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+                selectedOptions.isNotEmpty()
+            }
+        }
+
+        val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+        selectedOptions.isNotEmpty()
+
+        binding.btnContinue.isEnabled = isAnswered
     }
 
     private fun calculateScore(): Int {
@@ -108,6 +110,7 @@ class PlacementActivity : AppCompatActivity() {
                         score++
                     }
                 }
+
                 is Placement.MultipleChoice -> {
                     if (quiz.userAnswers.containsAll(quiz.correctAnswers) &&
                         quiz.correctAnswers.containsAll(quiz.userAnswers)
@@ -115,8 +118,9 @@ class PlacementActivity : AppCompatActivity() {
                         score++
                     }
                 }
+
                 is Placement.Matching -> {
-                    if (quiz.pairs.all { it.second == quiz.userMatches[it.first] }) {
+                    if (quiz.pairs.all { it.english == quiz.userMatches[it.indonesia] }) {
                         score++
                     }
                 }
@@ -126,18 +130,32 @@ class PlacementActivity : AppCompatActivity() {
         return score
     }
 
-    private fun setLevel(){
+    private fun setLevel() : Int{
         val score = calculateScore()
-        viewModel.setLevel(score).observe(this) { result ->
-            if (result != null){
-                when(result){
+
+        val level = when {
+            score == placementQuiz.size -> EXPERT_LEVEL
+            score == placementQuiz.size - 1 -> INTERMEDIATE_LEVEL
+            score <= placementQuiz.size - 2 -> BASIC_LEVEL
+            else -> 0
+        }
+
+        return level
+    }
+
+    private fun updateLevel() {
+        viewModel.setLevel(setLevel()).observe(this) { result ->
+            if (result != null) {
+                when (result) {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Success -> {
                         showLoading(false)
-                        Toast.makeText(this, "level anda $score", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "level anda ${setLevel()}", Toast.LENGTH_SHORT).show()
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                     }
@@ -146,31 +164,30 @@ class PlacementActivity : AppCompatActivity() {
         }
     }
 
-
     private fun nextQuiz() {
         if (viewPager.currentItem < placementQuiz.size - 1) {
             viewPager.currentItem += 1
         } else {
-            val score = calculateScore()
-            setLevel()
+            updateLevel()
 
             viewModel.getSession().observe(this) { session ->
                 if (session != null) {
-                    val updatedSession = session.copy(userLevel = score)
+                    val updatedSession = session.copy(userLevel = setLevel())
                     viewModel.saveSession(updatedSession)
                 } else {
                     Toast.makeText(this, "Gagal memuat sesi", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            Toast.makeText(this, "Skor Anda: $score/${placementQuiz.size}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Skor Anda: ${setLevel()}/${placementQuiz.size}", Toast.LENGTH_LONG)
+                .show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
 
-    private fun backQuiz(){
+    private fun backQuiz() {
         if (viewPager.currentItem > 0) {
             viewPager.currentItem -= 1
         }
@@ -180,4 +197,49 @@ class PlacementActivity : AppCompatActivity() {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
+    private fun parsePlacementQuiz(jsonString: String): List<Placement> {
+        val gson = Gson()
+
+        val listType = object : TypeToken<List<Map<String, Any>>>() {}.type
+        val rawList: List<Map<String, Any>> = gson.fromJson(jsonString, listType)
+
+        return rawList.map { item ->
+            when (val quizType = item["quizType"]) {
+                "singleChoice" -> {
+                    val id = (item["id"] as Double).toInt()
+                    val options = item["optionsQuiz"] as List<String>
+                    val correctAnswer = (item["correctAnswer"] as Double).toInt()
+                    Placement.SingleChoice(
+                        id = id,
+                        quizTitle = item["quizTitle"] as String,
+                        textReading = item["textReading"] as String,
+                        quiz = item["quiz"] as String,
+                        optionsQuiz = options,
+                        correctAnswer = correctAnswer
+                    )
+                }
+
+                "matching" -> {
+                    val id = (item["id"] as Double).toInt()
+                    val pair = (item["pairs"] as List<Map<String, String>>).map {
+                        Pair(it["indonesia"]!!, it["english"]!!)
+                    }
+                    Placement.Matching(
+                        id = id,
+                        quizTitle = item["quizTitle"] as String,
+                        quiz = item["quiz"] as String,
+                        pairs = pair
+                    )
+                }
+
+                else -> throw IllegalArgumentException("Unknown quiz type: $quizType")
+            }
+        }
+    }
+
+    companion object{
+        private const val BASIC_LEVEL = 1
+        private const val INTERMEDIATE_LEVEL = 2
+        private const val EXPERT_LEVEL = 3
+    }
 }

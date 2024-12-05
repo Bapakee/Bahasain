@@ -30,6 +30,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Bahasain" >
         <activity
+            android:name="com.bahasain.ui.placement.PlacementResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.placement.PlacementIntroActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bahasain.ui.placement.PlacementActivity"
             android:exported="false" />
         <activity

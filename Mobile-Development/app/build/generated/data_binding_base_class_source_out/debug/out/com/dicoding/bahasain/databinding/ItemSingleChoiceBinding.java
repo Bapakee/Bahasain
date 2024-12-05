@@ -32,13 +32,18 @@ public final class ItemSingleChoiceBinding implements ViewBinding {
   @NonNull
   public final LinearLayout singleChoice;
 
+  @NonNull
+  public final TextView tvReading;
+
   private ItemSingleChoiceBinding(@NonNull LinearLayout rootView, @NonNull TextView quiz,
-      @NonNull TextView quizTitle, @NonNull RadioGroup rgQuiz, @NonNull LinearLayout singleChoice) {
+      @NonNull TextView quizTitle, @NonNull RadioGroup rgQuiz, @NonNull LinearLayout singleChoice,
+      @NonNull TextView tvReading) {
     this.rootView = rootView;
     this.quiz = quiz;
     this.quizTitle = quizTitle;
     this.rgQuiz = rgQuiz;
     this.singleChoice = singleChoice;
+    this.tvReading = tvReading;
   }
 
   @Override
@@ -88,8 +93,14 @@ public final class ItemSingleChoiceBinding implements ViewBinding {
 
       LinearLayout singleChoice = (LinearLayout) rootView;
 
+      id = R.id.tv_reading;
+      TextView tvReading = ViewBindings.findChildViewById(rootView, id);
+      if (tvReading == null) {
+        break missingId;
+      }
+
       return new ItemSingleChoiceBinding((LinearLayout) rootView, quiz, quizTitle, rgQuiz,
-          singleChoice);
+          singleChoice, tvReading);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

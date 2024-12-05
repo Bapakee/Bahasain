@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bahasain.ui.placement.PlacementActivity
+import com.bahasain.ui.placement.PlacementIntroActivity
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivitySurveyBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -94,7 +95,7 @@ class SurveyActivity : AppCompatActivity() {
             if (viewPager.currentItem < survey.size - 1) {
                 viewPager.currentItem += 1
             } else {
-                startActivity(Intent(this, PlacementActivity::class.java))
+                startActivity(Intent(this, PlacementIntroActivity::class.java))
                 finish()
             }
         }

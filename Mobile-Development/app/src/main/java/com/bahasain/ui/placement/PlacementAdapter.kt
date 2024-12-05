@@ -20,7 +20,7 @@ import com.dicoding.bahasain.databinding.ItemSingleChoiceBinding
 
 class PlacementAdapter(
     private val placementQuiz: List<Placement>,
-    private val onOptionsSelected: (selectedOption: Any) -> Unit
+    private val onOptionsSelected: (quizId: Int, selectedOption: List<Int>) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -88,10 +88,15 @@ class PlacementAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(
             quiz: Placement.SingleChoice,
-            onOptionsSelected: (selectedOption: List<Int>) -> Unit
+            onOptionsSelected: (quizId: Int, selectedOption: List<Int>) -> Unit
         ) {
             binding.quizTitle.text = quiz.quizTitle
             binding.quiz.text = quiz.quiz
+
+            if (quiz.textReading.isNotEmpty()){
+                binding.tvReading.visibility = View.VISIBLE
+                binding.tvReading.text = quiz.textReading
+            }
 
             binding.rgQuiz.removeAllViews()
 
@@ -107,7 +112,7 @@ class PlacementAdapter(
                 radioButton.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) {
                         quiz.userAnswer = index
-                        onOptionsSelected(listOf(index))
+                        onOptionsSelected(quiz.id, listOf(index))
                     }
                 }
                 binding.rgQuiz.addView(radioButton)
@@ -119,7 +124,7 @@ class PlacementAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(
             quiz: Placement.MultipleChoice,
-            onOptionsSelected: (selectedOption: List<Int>) -> Unit
+            onOptionsSelected: (quizId: Int, selectedOption: List<Int>) -> Unit
         ) {
             binding.quizTitle.text = quiz.quizTitle
             binding.quiz.text = quiz.quiz
@@ -141,7 +146,7 @@ class PlacementAdapter(
                         selectedIndices.remove(index)
                     }
                     quiz.userAnswers = selectedIndices.toList()
-                    onOptionsSelected(selectedIndices)
+                    onOptionsSelected(quiz.id, selectedIndices)
                 }
                 binding.llOptions.addView(checkBox)
             }
@@ -151,12 +156,19 @@ class PlacementAdapter(
     class MatchingViewHolder(private val binding: ItemMathcingChoiceBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private val userMatches = mutableMapOf<String, String>()
-
         @RequiresApi(Build.VERSION_CODES.N)
-        fun bind(quiz: Placement.Matching, onOptionsSelected: (selectedOption: List<Int>) -> Unit) {
+        fun bind(
+            quiz: Placement.Matching,
+            onOptionsSelected: (quizId: Int, selectedOption: List<Int>) -> Unit
+        ) {
             binding.quizTitle.text = quiz.quizTitle
             binding.tvQuiz.text = quiz.quiz
+
+            binding.leftColumn.removeAllViews()
+            binding.rightColumn.removeAllViews()
+            binding.answerColumn.removeAllViews()
+
+            val userMatches = mutableMapOf<String, String>()
 
             quiz.pairs.forEach { (word, _) ->
                 val textView = inflateLeftTextView(word)
@@ -169,7 +181,7 @@ class PlacementAdapter(
                 binding.rightColumn.addView(textView)
             }
 
-            quiz.pairs.map { it.second }.shuffled().forEach { meaning ->
+            quiz.pairs.map { it.english }.shuffled().forEach { meaning ->
                 val textView = inflateAnswerTextView(meaning)
                 textView.setOnLongClickListener {
                     val clipData = ClipData.newPlainText("text", meaning)
@@ -189,8 +201,9 @@ class PlacementAdapter(
                             userMatches[word] = draggedText
                             quiz.userMatches = userMatches
                             onOptionsSelected(
+                                quiz.id,
                                 quiz.pairs.mapIndexedNotNull { index, pair ->
-                                    if (userMatches[pair.first] == pair.second) index else null
+                                    if (userMatches[pair.english] == pair.indonesia) index else null
                                 }
                             )
                         } else {
@@ -205,21 +218,33 @@ class PlacementAdapter(
 
         private fun inflateLeftTextView(text: String): TextView {
             return (LayoutInflater.from(binding.root.context)
-                .inflate(R.layout.item_left_matching, binding.leftColumn, false) as TextView).apply {
+                .inflate(
+                    R.layout.item_left_matching,
+                    binding.leftColumn,
+                    false
+                ) as TextView).apply {
                 this.text = text
             }
         }
 
         private fun inflateRightTextView(text: String): TextView {
             return (LayoutInflater.from(binding.root.context)
-                .inflate(R.layout.item_right_matching, binding.rightColumn, false) as TextView).apply {
+                .inflate(
+                    R.layout.item_right_matching,
+                    binding.rightColumn,
+                    false
+                ) as TextView).apply {
                 this.text = text
             }
         }
 
         private fun inflateAnswerTextView(text: String): TextView {
             return (LayoutInflater.from(binding.root.context)
-                .inflate(R.layout.item_answer_matching, binding.answerColumn, false) as TextView).apply {
+                .inflate(
+                    R.layout.item_answer_matching,
+                    binding.answerColumn,
+                    false
+                ) as TextView).apply {
                 this.text = text
             }
         }

@@ -3135,6 +3135,7 @@ drawable icon_streak
 drawable icon_trivia
 drawable icon_vocab
 drawable indeterminate_static
+drawable intro_placement
 drawable logo_bahasain
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3339,8 +3340,10 @@ id btn_nav
 id btn_next
 id btn_notification
 id btn_register
+id btn_setLevel
 id btn_sign
 id btn_signup
+id btn_start
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3388,7 +3391,9 @@ id default_activity_button
 id deltaRelative
 id dependency_ordering
 id descSurvey
+id desc_intro
 id desc_learn
+id desc_title
 id descriptionOnboarding
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -3489,6 +3494,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_culture
+id iv_intro
 id iv_lesson_image
 id iv_profile
 id iv_resep
@@ -3761,6 +3767,7 @@ id time
 id title
 id titleDividerNoCustom
 id titleOnboarding
+id title_desc_intro
 id title_page
 id title_signup
 id title_template
@@ -3788,6 +3795,7 @@ id tv_location
 id tv_name
 id tv_point
 id tv_quiz
+id tv_reading
 id tv_signup_with
 id tv_streak
 id tv_title
@@ -3938,6 +3946,8 @@ layout activity_login
 layout activity_main
 layout activity_on_boarding
 layout activity_placement
+layout activity_placement_intro
+layout activity_placement_result
 layout activity_register
 layout activity_splash
 layout activity_survey
@@ -4090,6 +4100,8 @@ string btn_continue
 string btn_forgot_password
 string btn_login
 string btn_logout
+string btn_placement_setLevel
+string btn_placement_start
 string btn_register
 string btn_skip
 string call_notification_answer_action
@@ -4104,6 +4116,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
 string confirm_password
+string desc_intro
 string desc_signup
 string dest_title
 string dont_have_account
@@ -4113,7 +4126,6 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string invalid_email_format
@@ -4241,8 +4253,11 @@ string signup_with
 string start_with_the_basics
 string status_bar_notification_info_overflow
 string title_cultural
+string title_desc_intro
+string title_desc_intro_placement
 string title_dictionary
 string title_home
+string title_intro_placement
 string title_learn
 string title_onboarding_1
 string title_onboarding_2

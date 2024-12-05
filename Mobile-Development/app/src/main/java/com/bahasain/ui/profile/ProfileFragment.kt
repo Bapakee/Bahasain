@@ -29,7 +29,6 @@ class ProfileFragment : Fragment() {
         }
 
         viewModel.getSession().observe(viewLifecycleOwner){ user ->
-
             val name = user.userName
             val level = user.userLevel
 
@@ -40,7 +39,7 @@ class ProfileFragment : Fragment() {
                     1 -> "Basic"
                     2 -> "Intermediate"
                     3 -> "expert"
-                    else -> "Unknown Level"
+                    else -> " Unknown Level"
                 }
             binding.tvName.text = name
             binding.tvLevel.text = currentLevel
