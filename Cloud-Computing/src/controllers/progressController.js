@@ -1,4 +1,3 @@
-const { test } = require('../config/config');
 const { UserProgress, User, Module,Level, sequelize } = require('../models');
 const { updateOrCreateStreak, checkAndUpdateUserLevel } = require('../services/progress/index');
 const { successResponse, errorResponse } = require('../utils/responseConsistency'); // Import utility functions

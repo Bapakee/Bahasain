@@ -55,16 +55,16 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         field: 'user_level'
       },
-      profilePict : {
+      avatar : {
         type : DataTypes.STRING,
         allowNull : true,
-        field : 'profile_pict'
+        field : 'avatar'
       },
-      interest : {
-        type : DataTypes.JSON,
+      notificationPreference : {
+        type : DataTypes.INTEGER,
         allowNull : true,
-        field : 'interest'
-      },
+        field : 'notification_preference'
+      }
     },
     {
       sequelize,

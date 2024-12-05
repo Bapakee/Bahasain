@@ -4,11 +4,13 @@ const swaggerDocs = require('./config/swagger');
 const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes');
+const helmet = require('helmet')
 
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
+app.use(helmet())
 app.use(express.static('src/public'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
