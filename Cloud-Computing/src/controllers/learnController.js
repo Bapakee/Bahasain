@@ -11,7 +11,10 @@ const getModules = async (req, res) => {
         // Ambil data pengguna berdasarkan ID
         const user = await User.findByPk(userId);
         if (!user) {
-            return errorResponse(res, 'User tidak ditemukan', 'User not found', 401);
+            return errorResponse(res, 'User not found', 'User not found', 401);
+        }
+        if (!user.userLevel) {
+            return errorResponse(res,  'user level not set','Access denied', 403);
         }
 
         // Ambil semua modul dari database
@@ -74,30 +77,50 @@ const getModules = async (req, res) => {
 
 const getLevel = async (req, res) => {
     const { moduleId, levelId } = req.params;
-    
+    const userId = req.user.id;
+
     try {
+        // Fetch user level
+        const user = await User.findByPk(userId, {
+            attributes: ['userLevel'],
+        });
+        if (!user) {
+            return errorResponse(res, 'User not found', 'Pengguna tidak ditemukan', 404);
+        }
+        const { userLevel } = user;
+
+        // Fetch module level
+        const module = await Module.findByPk(moduleId, {
+            attributes: ['level'],
+        });
+        if (!module) {
+            return errorResponse(res, 'Module not found', 'Modul tidak ditemukan', 404);
+        }
+        const { level: moduleLevel } = module;
+
+        // Check level access
+        if (userLevel < moduleLevel) {
+            return errorResponse(res, `Your level (${userLevel?? 0}) is not sufficient to access this module. Required level: ${moduleLevel}.`, 'Access denied', 403);
+        }
+
+        // Fetch levels with quizzes and options
         const levels = await Level.findAll({
-            where: {
-                moduleId: moduleId,
-                id: levelId,
-            },
+            where: { moduleId, id: levelId },
             order: [['order', 'ASC']],
             include: [
                 {
                     model: Quiz,
-                    include: [
-                        {
-                            model: QuizOption,
-                        },
-                    ],
+                    include: [{ model: QuizOption }],
                 },
             ],
         });
 
+        // Handle empty levels
         if (!levels || levels.length < 1) {
-            return errorResponse(res, 'Level tidak tersedia', 'Level not available', 401);
+            return errorResponse(res, 'Level not available', 'Level tidak tersedia', 404);
         }
 
+        // Transform levels data into a cleaner response format
         const response = levels.map((level) => ({
             id: level.id,
             title: level.title,
@@ -107,18 +130,18 @@ const getLevel = async (req, res) => {
                 question: quiz.question,
                 answer: quiz.answer,
                 imageUrl: quiz.imageUrl,
-                quizOption: quiz.QuizOptions.map((quizOption) => ({
+                quizOptions: quiz.QuizOptions.map((quizOption) => ({
                     id: quizOption.id,
                     option: quizOption.option,
                 })),
             })),
         }));
 
-        // Kirim respons ke klien menggunakan successResponse
-        successResponse(res, response, 'Level content fetched successfully');
+        // Send success response
+        return successResponse(res, response, 'Level content fetched successfully');
     } catch (error) {
         console.error('Error fetching level:', error);
-        errorResponse(res, error, 'Error fetching level content', 500);
+        return errorResponse(res, error.message || 'Internal Server Error', 'Error fetching level content', 500);
     }
 };
 
