@@ -27,7 +27,7 @@ class UserRepository private constructor(
         }catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, RegisterResponse::class.java)
-            emit(Result.Error(errorBody.message))
+            emit(Result.Error(errorBody.message.toString()))
         }
     }
 

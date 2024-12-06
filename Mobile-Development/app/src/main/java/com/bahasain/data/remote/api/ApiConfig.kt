@@ -49,7 +49,7 @@ object ApiConfig {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://bahasain-app-843640172543.asia-southeast2.run.app/api/")
+            .baseUrl("https://backend-app-238480322773.asia-southeast2.run.app//api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
@@ -106,7 +106,7 @@ object ApiConfig {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://bahasain-app-843640172543.asia-southeast2.run.app/api/")
+            .baseUrl("https://backend-app-238480322773.asia-southeast2.run.app//api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

@@ -70,6 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
+        app:endIconMode="password_toggle"
         android:layout_marginTop="16dp"
         android:hint="@string/password"
         app:layout_constraintTop_toBottomOf="@id/edt_email_layout">
@@ -88,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
+        app:endIconMode="password_toggle"
         android:hint="@string/confirm_password"
         app:layout_constraintTop_toBottomOf="@id/edt_password_layout">
 

@@ -28,10 +28,6 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\item_single_choice.xml"
     },
     {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_splash.xml",
-        "source": "com.dicoding.bahasain.app-main-55:/layout/activity_splash.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\item_onboarding.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\item_onboarding.xml"
     },
@@ -42,6 +38,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\fragment_profile.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/item_onboarding.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/item_onboarding.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\activity_register.xml",

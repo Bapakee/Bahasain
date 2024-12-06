@@ -52,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
+        app:endIconMode="password_toggle"
         android:layout_marginTop="32dp"
         android:hint="@string/password"
         app:layout_constraintTop_toBottomOf="@id/edt_email_layout">
@@ -60,6 +61,7 @@
             android:id="@+id/edt_text_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:ems="10" />
     </com.google.android.material.textfield.TextInputLayout>
 

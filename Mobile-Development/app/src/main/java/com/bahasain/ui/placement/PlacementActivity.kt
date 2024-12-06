@@ -179,9 +179,8 @@ class PlacementActivity : AppCompatActivity() {
                 }
             }
 
-            Toast.makeText(this, "Skor Anda: ${setLevel()}/${placementQuiz.size}", Toast.LENGTH_LONG)
-                .show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, PlacementResultActivity::class.java)
+            intent.putExtra("LEVEL", setLevel())
             startActivity(intent)
             finish()
         }

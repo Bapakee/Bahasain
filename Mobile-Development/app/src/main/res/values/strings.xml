@@ -45,4 +45,8 @@
     <string name="desc_intro">It takes approximately 5 minutes and will help place you at the right learning level, from Beginner to Proficient.</string>
     <string name="btn_placement_start">Start Placement Test</string>
     <string name="btn_placement_setLevel">Start from Level 1</string>
+    <string name="title_result_placement">You\'re All Set!</string>
+    <string name="title_desc_result_placement">Begin at %s Level</string>
+    <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
+    <string name="btn_start_result_placement">Start Learning</string>
 </resources>

@@ -25,8 +25,10 @@
     <string name="btn_placement_start">Start Placement Test</string>
     <string name="btn_register">Register</string>
     <string name="btn_skip">SKIP</string>
+    <string name="btn_start_result_placement">Start Learning</string>
     <string name="confirm_password">Confirm password</string>
     <string name="desc_intro">It takes approximately 5 minutes and will help place you at the right learning level, from Beginner to Proficient.</string>
+    <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
     <string name="desc_signup">Already have an account ?</string>
     <string name="dont_have_account">Don\'t have an account ?</string>
     <string name="email_address">Email address</string>
@@ -42,6 +44,7 @@
     <string name="title_cultural">Cultural</string>
     <string name="title_desc_intro">Jump ahead finding your exact level!</string>
     <string name="title_desc_intro_placement">Take a quick test to determine your Bahasa Indonesia proficiency.</string>
+    <string name="title_desc_result_placement">Begin at %s Level</string>
     <string name="title_dictionary">Dictionary</string>
     <string name="title_home">Home</string>
     <string name="title_intro_placement">Placement Test</string>
@@ -51,6 +54,7 @@
     <string name="title_onboarding_3">Make Learning Fun\nand Interactive</string>
     <string name="title_profile">Profile</string>
     <string name="title_register">Hey There \nPlease Register!</string>
+    <string name="title_result_placement">You\'re All Set!</string>
     <string name="title_signin">Hey There\nPlease Sign In!</string>
     <string name="txt_onboarding_1">Your gateway to mastering Bahasa\nIndonesia and exploring its rich culture.</string>
     <string name="txt_onboarding_2">Immerse yourself in folklore, history, and\nculinary adventures.</string>

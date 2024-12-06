@@ -3212,6 +3212,7 @@ drawable notify_panel_notification_icon_bg
 drawable ob_image_1
 drawable ob_image_2
 drawable ob_image_3
+drawable result_placement
 drawable tab_bg_placement
 drawable tab_bg_survey
 drawable tab_indicator
@@ -3393,6 +3394,7 @@ id dependency_ordering
 id descSurvey
 id desc_intro
 id desc_learn
+id desc_result
 id desc_title
 id descriptionOnboarding
 id design_bottom_sheet
@@ -3468,6 +3470,11 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guideline
+id guideline2
+id guideline_horizontal1
+id guideline_vertical1
+id guideline_vertical2
 id header_title
 id hide_ime_id
 id hideable
@@ -3498,6 +3505,7 @@ id iv_intro
 id iv_lesson_image
 id iv_profile
 id iv_resep
+id iv_result
 id iv_story
 id jumpToEnd
 id jumpToStart
@@ -3768,6 +3776,7 @@ id title
 id titleDividerNoCustom
 id titleOnboarding
 id title_desc_intro
+id title_desc_result
 id title_page
 id title_signup
 id title_template
@@ -4104,6 +4113,7 @@ string btn_placement_setLevel
 string btn_placement_start
 string btn_register
 string btn_skip
+string btn_start_result_placement
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -4117,6 +4127,7 @@ string character_counter_pattern
 string clear_text_end_icon_content_description
 string confirm_password
 string desc_intro
+string desc_result_placement
 string desc_signup
 string dest_title
 string dont_have_account
@@ -4255,6 +4266,7 @@ string status_bar_notification_info_overflow
 string title_cultural
 string title_desc_intro
 string title_desc_intro_placement
+string title_desc_result_placement
 string title_dictionary
 string title_home
 string title_intro_placement
@@ -4264,6 +4276,7 @@ string title_onboarding_2
 string title_onboarding_3
 string title_profile
 string title_register
+string title_result_placement
 string title_signin
 string txt_onboarding_1
 string txt_onboarding_2

@@ -3211,6 +3211,7 @@ int drawable notify_panel_notification_icon_bg 0x7f070102
 int drawable ob_image_1 0x7f070103
 int drawable ob_image_2 0x7f070104
 int drawable ob_image_3 0x7f070105
+int drawable result_placement 0x7f07010d
 int drawable tab_bg_placement 0x7f070106
 int drawable tab_bg_survey 0x7f070107
 int drawable tab_indicator 0x7f070108
@@ -3392,6 +3393,7 @@ int id dependency_ordering 0x7f0900a6
 int id descSurvey 0x7f0900a7
 int id desc_intro 0x7f090257
 int id desc_learn 0x7f0900a8
+int id desc_result 0x7f09025b
 int id desc_title 0x7f090258
 int id descriptionOnboarding 0x7f0900a9
 int id design_bottom_sheet 0x7f0900aa
@@ -3467,6 +3469,11 @@ int id graph_wrap 0x7f0900ef
 int id group_divider 0x7f0900f0
 int id grouping 0x7f0900f1
 int id groups 0x7f0900f2
+int id guideline 0x7f09025e
+int id guideline2 0x7f09025f
+int id guideline_horizontal1 0x7f090260
+int id guideline_vertical1 0x7f090261
+int id guideline_vertical2 0x7f090262
 int id header_title 0x7f0900f3
 int id hide_ime_id 0x7f0900f4
 int id hideable 0x7f0900f5
@@ -3497,6 +3504,7 @@ int id iv_intro 0x7f090259
 int id iv_lesson_image 0x7f09010d
 int id iv_profile 0x7f09010e
 int id iv_resep 0x7f09010f
+int id iv_result 0x7f09025c
 int id iv_story 0x7f090110
 int id jumpToEnd 0x7f090111
 int id jumpToStart 0x7f090112
@@ -3767,6 +3775,7 @@ int id title 0x7f09021a
 int id titleDividerNoCustom 0x7f09021b
 int id titleOnboarding 0x7f09021c
 int id title_desc_intro 0x7f09025a
+int id title_desc_result 0x7f09025d
 int id title_page 0x7f09021d
 int id title_signup 0x7f09021e
 int id title_template 0x7f09021f
@@ -4103,6 +4112,7 @@ int string btn_placement_setLevel 0x7f1300cd
 int string btn_placement_start 0x7f1300ce
 int string btn_register 0x7f130029
 int string btn_skip 0x7f13002a
+int string btn_start_result_placement 0x7f1300d3
 int string call_notification_answer_action 0x7f13002b
 int string call_notification_answer_video_action 0x7f13002c
 int string call_notification_decline_action 0x7f13002d
@@ -4116,6 +4126,7 @@ int string character_counter_pattern 0x7f130034
 int string clear_text_end_icon_content_description 0x7f130035
 int string confirm_password 0x7f130036
 int string desc_intro 0x7f1300cf
+int string desc_result_placement 0x7f1300d4
 int string desc_signup 0x7f130037
 int string dest_title 0x7f130038
 int string dont_have_account 0x7f130039
@@ -4254,6 +4265,7 @@ int string status_bar_notification_info_overflow 0x7f1300be
 int string title_cultural 0x7f1300bf
 int string title_desc_intro 0x7f1300d0
 int string title_desc_intro_placement 0x7f1300d1
+int string title_desc_result_placement 0x7f1300d5
 int string title_dictionary 0x7f1300c0
 int string title_home 0x7f1300c1
 int string title_intro_placement 0x7f1300d2
@@ -4263,6 +4275,7 @@ int string title_onboarding_2 0x7f1300c4
 int string title_onboarding_3 0x7f1300c5
 int string title_profile 0x7f1300c6
 int string title_register 0x7f1300c7
+int string title_result_placement 0x7f1300d6
 int string title_signin 0x7f1300c8
 int string txt_onboarding_1 0x7f1300c9
 int string txt_onboarding_2 0x7f1300ca

@@ -48,6 +48,7 @@ drawable logo_bahasain
 drawable ob_image_1
 drawable ob_image_2
 drawable ob_image_3
+drawable result_placement
 drawable tab_bg_placement
 drawable tab_bg_survey
 drawable tab_indicator
@@ -79,6 +80,7 @@ id container
 id descSurvey
 id desc_intro
 id desc_learn
+id desc_result
 id desc_title
 id descriptionOnboarding
 id dont_have
@@ -90,6 +92,11 @@ id edt_text_confirm_password
 id edt_text_email
 id edt_text_name
 id edt_text_password
+id guideline
+id guideline2
+id guideline_horizontal1
+id guideline_vertical1
+id guideline_vertical2
 id icon_social
 id imageOnboarding
 id indicator
@@ -98,6 +105,7 @@ id iv_intro
 id iv_lesson_image
 id iv_profile
 id iv_resep
+id iv_result
 id iv_story
 id leftColumn
 id llOptions
@@ -128,6 +136,7 @@ id text_home
 id text_notifications
 id titleOnboarding
 id title_desc_intro
+id title_desc_result
 id title_page
 id title_signup
 id tvLeftText
@@ -192,8 +201,10 @@ string btn_placement_setLevel
 string btn_placement_start
 string btn_register
 string btn_skip
+string btn_start_result_placement
 string confirm_password
 string desc_intro
+string desc_result_placement
 string desc_signup
 string dont_have_account
 string email_address
@@ -209,6 +220,7 @@ string start_with_the_basics
 string title_cultural
 string title_desc_intro
 string title_desc_intro_placement
+string title_desc_result_placement
 string title_dictionary
 string title_home
 string title_intro_placement
@@ -218,6 +230,7 @@ string title_onboarding_2
 string title_onboarding_3
 string title_profile
 string title_register
+string title_result_placement
 string title_signin
 string txt_onboarding_1
 string txt_onboarding_2

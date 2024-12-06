@@ -113,7 +113,7 @@ class RegisterActivity : AppCompatActivity() {
         val email = edtTextEmail.text?.toString().orEmpty()
         val password = edtTextPassword.text?.toString().orEmpty()
 
-        val isNameValid = name.length > 3
+        val isNameValid = name.length >= 3
 
         val isEmailValid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
