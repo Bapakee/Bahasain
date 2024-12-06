@@ -7,6 +7,7 @@ const {
 } = require('../services/progress/index');
 const { updateOrCreateStreak, checkAndUpdateUserLevel } = require('../services/progress/index');
 const { successResponse, errorResponse } = require('../utils/responseConsistency');
+const {User,UserProgress} = require('../models')
 
 const putUserProgress = async (req, res) => {
     const transaction = await sequelize.transaction();
@@ -17,8 +18,6 @@ const putUserProgress = async (req, res) => {
 
         // Fetch and validate user
         const user = await fetchUser(userId, transaction);
-        user.point += score;
-        await user.save({ transaction });
 
         // Fetch and validate module
         const module = await fetchModule(moduleId, transaction);
@@ -31,7 +30,7 @@ const putUserProgress = async (req, res) => {
         await validateAccess(user.userLevel, module.level);
 
         // Update or create user progress
-        const userProgress = await updateOrCreateProgress({ userId, moduleId, levelId, score }, transaction);
+        const {userProgressReturn,message} = await updateOrCreateProgress({ user, moduleId, levelId, score }, transaction);
 
         // Check and update user level
         const userProgressLevel = await UserProgress.findAll({ where: { userId, moduleId }, transaction });
@@ -44,7 +43,9 @@ const putUserProgress = async (req, res) => {
         await transaction.commit();
 
         // Send success response
-        successResponse(res, { ...userProgress.toJSON(), levelUp }, 'User progress updated successfully.');
+        const { user_id, module_id, level_id, ...filteredResponse } = userProgressReturn.toJSON();
+        successResponse(res, { ...filteredResponse, levelUp }, message);
+        
     } catch (error) {
         if (!transaction.finished) await transaction.rollback();
         console.error('Error processing user progress:', error);

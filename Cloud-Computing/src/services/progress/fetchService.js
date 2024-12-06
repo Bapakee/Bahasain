@@ -2,7 +2,7 @@ const { UserProgress, User, Module, Level } = require('../../models');
 
 async function fetchUser(userId, transaction) {
     const user = await User.findByPk(userId, {
-        attributes: ['userLevel', 'point'],
+        attributes: ['id','userLevel', 'point'],
         transaction,
     });
     if (!user) {

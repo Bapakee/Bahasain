@@ -4,7 +4,6 @@ const { Level, Module, User, UserProgress } = require('../../models');
  * Cek dan update level user jika semua level pada modul diselesaikan
  */
 const checkAndUpdateUserLevel = async (userId, moduleId, userProgressLevel, transaction) => {
-    console.log(userProgressLevel,'test');
     
     try {
         // Ambil semua level yang terkait dengan modul ini

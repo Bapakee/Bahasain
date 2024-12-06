@@ -5,8 +5,8 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.addColumn('users', 'point', {
       type: Sequelize.STRING,
-      allowNull: true, // Sesuaikan dengan kebutuhan Anda
-      defaultValue: null, // Optional, level default jika diperlukan
+      allowNull: false, // Sesuaikan dengan kebutuhan Anda
+      defaultValue: 0, // Optional, level default jika diperlukan
     });
   },
 

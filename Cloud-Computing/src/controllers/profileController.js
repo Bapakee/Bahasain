@@ -8,12 +8,16 @@ const getHead = async (req, res) => {
             include: [
                 {
                     model: Streak,
-                    attributes: ['streaK'],
+                    attributes: ['streak'],
                 },
             ],
             attributes: ['point'],
         });
-        successResponse(res, user, 'Head fetched successfully');
+        const response = {
+            point : parseInt(user.point),
+            streak : user.Streak.streak
+        }
+        successResponse(res, response, 'Head fetched successfully');
     } catch (error) {
         errorResponse(res, null, 'Failed to fetch head', 500);
     }
