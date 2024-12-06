@@ -64,6 +64,11 @@ module.exports = (sequelize, DataTypes) => {
         type : DataTypes.INTEGER,
         allowNull : true,
         field : 'notification_preference'
+      },
+      point : {
+        type : DataTypes.INTEGER,
+        allowNull : true,
+        field : 'point'
       }
     },
     {
