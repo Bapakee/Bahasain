@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -80,6 +81,8 @@ class LoginActivity : AppCompatActivity() {
 
                         val accessToken = result.data.data?.accessToken
                         val refreshToken = result.data.data?.refreshToken
+
+                        Log.d("token", "$accessToken")
 
                         val jwt = JWT(accessToken.toString())
 

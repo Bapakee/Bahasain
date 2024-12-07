@@ -3120,6 +3120,7 @@ drawable ic_search_black_24
 drawable icon_back
 drawable icon_background
 drawable icon_bahasain
+drawable icon_category
 drawable icon_cultural
 drawable icon_discord
 drawable icon_facebook
@@ -3131,6 +3132,8 @@ drawable icon_nav
 drawable icon_notification
 drawable icon_poin
 drawable icon_profile
+drawable icon_search
+drawable icon_speaker
 drawable icon_streak
 drawable icon_trivia
 drawable icon_vocab
@@ -3472,6 +3475,7 @@ id grouping
 id groups
 id guideline
 id guideline2
+id guideline3
 id guideline_horizontal1
 id guideline_vertical1
 id guideline_vertical2
@@ -3551,6 +3555,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id meaning_layout
 id message
 id middle
 id mini
@@ -3681,6 +3686,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search_Layout
 id search_badge
 id search_bar
 id search_button
@@ -3690,6 +3696,7 @@ id search_go_btn
 id search_mag_icon
 id search_plate
 id search_src_text
+id search_view
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3760,7 +3767,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id text_button
-id text_home
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3775,11 +3781,13 @@ id time
 id title
 id titleDividerNoCustom
 id titleOnboarding
+id title_category
 id title_desc_intro
 id title_desc_result
 id title_page
 id title_signup
 id title_template
+id title_wotd
 id toggle
 id top
 id topPanel
@@ -3809,7 +3817,10 @@ id tv_signup_with
 id tv_streak
 id tv_title
 id tv_title_module
+id tv_title_page
+id tv_title_word
 id tv_total
+id tv_word_type
 id unchecked
 id uniform
 id unlabeled
@@ -3830,6 +3841,7 @@ id west
 id withText
 id with_icon
 id withinBounds
+id wotd_layout
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3984,6 +3996,7 @@ layout fragment_vocab
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_answer_matching
+layout item_category_vocab
 layout item_checkbox
 layout item_cultural_horizontal
 layout item_learn
@@ -4274,6 +4287,7 @@ string title_learn
 string title_onboarding_1
 string title_onboarding_2
 string title_onboarding_3
+string title_page_dictionary
 string title_profile
 string title_register
 string title_result_placement

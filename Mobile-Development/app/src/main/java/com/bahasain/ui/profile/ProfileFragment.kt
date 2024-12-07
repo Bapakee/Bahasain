@@ -31,8 +31,9 @@ class ProfileFragment : Fragment() {
         viewModel.getSession().observe(viewLifecycleOwner){ user ->
             val name = user.userName
             val level = user.userLevel
+            val token = user.accessToken
 
-            Log.d("Profile Info", "Name: $name, Level: $level")
+            Log.d("Profile Info", "Name: $name, Level: $level, token: $token")
 
             val currentLevel =
                 when(level) {

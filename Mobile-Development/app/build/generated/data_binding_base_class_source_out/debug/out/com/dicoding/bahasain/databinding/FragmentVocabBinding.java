@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
@@ -20,11 +23,51 @@ public final class FragmentVocabBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textHome;
+  public final TextView meaningLayout;
 
-  private FragmentVocabBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textHome) {
+  @NonNull
+  public final RecyclerView recyclerView;
+
+  @NonNull
+  public final Toolbar searchLayout;
+
+  @NonNull
+  public final SearchView searchView;
+
+  @NonNull
+  public final TextView titleCategory;
+
+  @NonNull
+  public final TextView titleWotd;
+
+  @NonNull
+  public final TextView tvTitlePage;
+
+  @NonNull
+  public final TextView tvTitleWord;
+
+  @NonNull
+  public final TextView tvWordType;
+
+  @NonNull
+  public final ConstraintLayout wotdLayout;
+
+  private FragmentVocabBinding(@NonNull ConstraintLayout rootView, @NonNull TextView meaningLayout,
+      @NonNull RecyclerView recyclerView, @NonNull Toolbar searchLayout,
+      @NonNull SearchView searchView, @NonNull TextView titleCategory, @NonNull TextView titleWotd,
+      @NonNull TextView tvTitlePage, @NonNull TextView tvTitleWord, @NonNull TextView tvWordType,
+      @NonNull ConstraintLayout wotdLayout) {
     this.rootView = rootView;
-    this.textHome = textHome;
+    this.meaningLayout = meaningLayout;
+    this.recyclerView = recyclerView;
+    this.searchLayout = searchLayout;
+    this.searchView = searchView;
+    this.titleCategory = titleCategory;
+    this.titleWotd = titleWotd;
+    this.tvTitlePage = tvTitlePage;
+    this.tvTitleWord = tvTitleWord;
+    this.tvWordType = tvWordType;
+    this.wotdLayout = wotdLayout;
   }
 
   @Override
@@ -54,13 +97,69 @@ public final class FragmentVocabBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_home;
-      TextView textHome = ViewBindings.findChildViewById(rootView, id);
-      if (textHome == null) {
+      id = R.id.meaning_layout;
+      TextView meaningLayout = ViewBindings.findChildViewById(rootView, id);
+      if (meaningLayout == null) {
         break missingId;
       }
 
-      return new FragmentVocabBinding((ConstraintLayout) rootView, textHome);
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.search_Layout;
+      Toolbar searchLayout = ViewBindings.findChildViewById(rootView, id);
+      if (searchLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.search_view;
+      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      if (searchView == null) {
+        break missingId;
+      }
+
+      id = R.id.title_category;
+      TextView titleCategory = ViewBindings.findChildViewById(rootView, id);
+      if (titleCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.title_wotd;
+      TextView titleWotd = ViewBindings.findChildViewById(rootView, id);
+      if (titleWotd == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_title_page;
+      TextView tvTitlePage = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitlePage == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_title_word;
+      TextView tvTitleWord = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitleWord == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_word_type;
+      TextView tvWordType = ViewBindings.findChildViewById(rootView, id);
+      if (tvWordType == null) {
+        break missingId;
+      }
+
+      id = R.id.wotd_layout;
+      ConstraintLayout wotdLayout = ViewBindings.findChildViewById(rootView, id);
+      if (wotdLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentVocabBinding((ConstraintLayout) rootView, meaningLayout, recyclerView,
+          searchLayout, searchView, titleCategory, titleWotd, tvTitlePage, tvTitleWord, tvWordType,
+          wotdLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

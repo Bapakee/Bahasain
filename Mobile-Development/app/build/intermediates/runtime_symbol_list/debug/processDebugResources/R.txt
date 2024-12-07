@@ -3119,6 +3119,7 @@ int drawable ic_search_black_24 0x7f0700a6
 int drawable icon_back 0x7f0700a7
 int drawable icon_background 0x7f0700a8
 int drawable icon_bahasain 0x7f0700a9
+int drawable icon_category 0x7f07010e
 int drawable icon_cultural 0x7f0700aa
 int drawable icon_discord 0x7f0700ab
 int drawable icon_facebook 0x7f0700ac
@@ -3130,6 +3131,8 @@ int drawable icon_nav 0x7f0700b1
 int drawable icon_notification 0x7f0700b2
 int drawable icon_poin 0x7f0700b3
 int drawable icon_profile 0x7f0700b4
+int drawable icon_search 0x7f07010f
+int drawable icon_speaker 0x7f070110
 int drawable icon_streak 0x7f0700b5
 int drawable icon_trivia 0x7f0700b6
 int drawable icon_vocab 0x7f0700b7
@@ -3471,6 +3474,7 @@ int id grouping 0x7f0900f1
 int id groups 0x7f0900f2
 int id guideline 0x7f09025e
 int id guideline2 0x7f09025f
+int id guideline3 0x7f090263
 int id guideline_horizontal1 0x7f090260
 int id guideline_vertical1 0x7f090261
 int id guideline_vertical2 0x7f090262
@@ -3550,6 +3554,7 @@ int id material_timepicker_ok_button 0x7f090139
 int id material_timepicker_view 0x7f09013a
 int id material_value_index 0x7f09013b
 int id matrix 0x7f09013c
+int id meaning_layout 0x7f090264
 int id message 0x7f09013d
 int id middle 0x7f09013e
 int id mini 0x7f09013f
@@ -3680,6 +3685,7 @@ int id scrollIndicatorDown 0x7f0901bb
 int id scrollIndicatorUp 0x7f0901bc
 int id scrollView 0x7f0901bd
 int id scrollable 0x7f0901be
+int id search_Layout 0x7f090265
 int id search_badge 0x7f0901bf
 int id search_bar 0x7f0901c0
 int id search_button 0x7f0901c1
@@ -3689,6 +3695,7 @@ int id search_go_btn 0x7f0901c4
 int id search_mag_icon 0x7f0901c5
 int id search_plate 0x7f0901c6
 int id search_src_text 0x7f0901c7
+int id search_view 0x7f090266
 int id search_voice_btn 0x7f0901c8
 int id select_dialog_listview 0x7f0901c9
 int id selected 0x7f0901ca
@@ -3759,7 +3766,6 @@ int id textSpacerNoTitle 0x7f09020a
 int id textStart 0x7f09020b
 int id textTop 0x7f09020c
 int id text_button 0x7f09020d
-int id text_home 0x7f09020e
 int id text_input_end_icon 0x7f09020f
 int id text_input_error_icon 0x7f090210
 int id text_input_start_icon 0x7f090211
@@ -3774,11 +3780,13 @@ int id time 0x7f090219
 int id title 0x7f09021a
 int id titleDividerNoCustom 0x7f09021b
 int id titleOnboarding 0x7f09021c
+int id title_category 0x7f090267
 int id title_desc_intro 0x7f09025a
 int id title_desc_result 0x7f09025d
 int id title_page 0x7f09021d
 int id title_signup 0x7f09021e
 int id title_template 0x7f09021f
+int id title_wotd 0x7f090268
 int id toggle 0x7f090220
 int id top 0x7f090221
 int id topPanel 0x7f090222
@@ -3808,7 +3816,10 @@ int id tv_signup_with 0x7f090239
 int id tv_streak 0x7f09023a
 int id tv_title 0x7f09023b
 int id tv_title_module 0x7f09023c
+int id tv_title_page 0x7f090269
+int id tv_title_word 0x7f09026a
 int id tv_total 0x7f09023d
+int id tv_word_type 0x7f09026b
 int id unchecked 0x7f09023e
 int id uniform 0x7f09023f
 int id unlabeled 0x7f090240
@@ -3829,6 +3840,7 @@ int id west 0x7f09024e
 int id withText 0x7f09024f
 int id with_icon 0x7f090250
 int id withinBounds 0x7f090251
+int id wotd_layout 0x7f09026c
 int id wrap 0x7f090252
 int id wrap_content 0x7f090253
 int id wrap_content_constrained 0x7f090254
@@ -3983,6 +3995,7 @@ int layout fragment_vocab 0x7f0c0039
 int layout ime_base_split_test_activity 0x7f0c003a
 int layout ime_secondary_split_test_activity 0x7f0c003b
 int layout item_answer_matching 0x7f0c003c
+int layout item_category_vocab 0x7f0c008a
 int layout item_checkbox 0x7f0c003d
 int layout item_cultural_horizontal 0x7f0c003e
 int layout item_learn 0x7f0c003f
@@ -4273,6 +4286,7 @@ int string title_learn 0x7f1300c2
 int string title_onboarding_1 0x7f1300c3
 int string title_onboarding_2 0x7f1300c4
 int string title_onboarding_3 0x7f1300c5
+int string title_page_dictionary 0x7f1300d7
 int string title_profile 0x7f1300c6
 int string title_register 0x7f1300c7
 int string title_result_placement 0x7f1300d6
