@@ -4,7 +4,7 @@ const { successResponse, errorResponse,paginatedResponse } = require('../utils/r
 
 
 const getWord = async (req, res) => {
-    const { page = 1, limit = 15, search = '', categories = '' } = req.query;
+    const { page = 1, limit = 0, search = '', categories = '' } = req.query;
 
     try {
         // Prepare categories for filtering if provided
@@ -37,9 +37,13 @@ const getWord = async (req, res) => {
             ],
             order: [['word', 'ASC']], // Order by word alphabetically
             offset: (page - 1) * limit, // For pagination
-            limit: parseInt(limit, 10), // Limit number of records per page
             distinct: true, // Ensure unique rows are returned
         };
+
+        // req by md
+        if (limit > 0) {
+            fetchConditions.limit = parseInt(limit, 10); // Limit number of records per page
+        }
 
         // Count the total number of records
         const total = await Word.count(fetchConditions);
