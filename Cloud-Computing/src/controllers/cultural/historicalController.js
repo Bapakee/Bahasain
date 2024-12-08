@@ -43,8 +43,9 @@ const getHistoricalDetail = async (req, res) => {
         if (!HistoricalDetail) {
             return errorResponse(res, null, 'Historical detail not found', 404);
         }
+        const cleanData = HistoricalDetail.dataValues;
 
-        return successResponse(res, HistoricalDetail, 'Historical detail fetched successfully');
+        return successResponse(res, cleanData, 'Historical detail fetched successfully');
     } catch (error) {
         return errorResponse(res, null, 'Error when fetching Historical Detail', 500);
     }

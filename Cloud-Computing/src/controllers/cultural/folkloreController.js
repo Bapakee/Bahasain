@@ -39,8 +39,9 @@ const getFolkloreDetail = async (req, res) => {
         if (!folkloreDetail) {
             return errorResponse(res, null, 'Folklore detail not found', 404);
         }
+        const cleanData = folkloreDetail.dataValues;
 
-        return successResponse(res, folkloreDetail, 'Folklore detail fetched successfully');
+        return successResponse(res, cleanData, 'Historical detail fetched successfully');
     } catch (error) {
         return errorResponse(res, null, 'Error when fetching Folklore Detail', 500);
     }
