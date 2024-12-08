@@ -1,11 +1,27 @@
 // Utility function for creating a standard API response
 const successResponse = (res, data, message = 'Success', statusCode = 200) => {
-    return res.status(statusCode).json({
+  // Jika data kosong, ubah pesan menjadi "Data is empty"
+  if (Array.isArray(data) && data.length === 0) {
+      message = 'Data is empty';
+  }
+
+  // Fungsi untuk menghapus properti yang mengandung "_"
+  const cleanData = Array.isArray(data)
+      ? data.map(item => {
+          return Object.fromEntries(
+              Object.entries(item).filter(([key]) => !key.includes('_'))
+          );
+      })
+      : Object.fromEntries(
+          Object.entries(data).filter(([key]) => !key.includes('_'))
+      );
+
+  return res.status(statusCode).json({
       success: true,
       message,
-      data
-    });
-  };
+      data: cleanData
+  });
+};
   
   // Utility function for creating a standard error response
   const errorResponse = (res, error, message = 'Something went wrong', statusCode = 500) => {
