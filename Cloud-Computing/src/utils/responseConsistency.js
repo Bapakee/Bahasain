@@ -2,7 +2,7 @@
 const successResponse = (res, data, message = 'Success', statusCode = 200) => {
   // Jika data kosong, ubah pesan menjadi "Data is empty"
   if (Array.isArray(data) && data.length === 0) {
-      message = 'Data is empty';
+      return errorResponse(res,null,'Data is empty',404)
   }
 
   // Fungsi untuk menghapus properti yang mengandung "_" atau "createdAt" / "updatedAt"
