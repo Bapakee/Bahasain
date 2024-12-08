@@ -16,12 +16,17 @@ const getFolklore = async (req, res) => {
 
         const result = folkloreData.map((item) => {
             const plainTextContent = cheerio.load(item.content).text();
-
+            
             const words = plainTextContent.split(/\s+/);
             const overview = words.slice(0, 30).join(' ');
 
+            const imageName = item.title.replace(/\s+/g, '_');
+
+            const imageUrl = `${process.env.BUCKET_URL}/folklore/${encodeURIComponent(item.title)}/${imageName}_1.png`;
+
             return {
                 ...item.toJSON(),
+                imageUrl: imageUrl, // Dynamic image URL based on item.title
                 content: overview, // Shortened content preview
             };
         });
@@ -32,6 +37,7 @@ const getFolklore = async (req, res) => {
     }
 };
 
+
 const getFolkloreDetail = async (req, res) => {
     const { id } = req.params; // Use req.params for the id
     try {
@@ -39,8 +45,9 @@ const getFolkloreDetail = async (req, res) => {
         if (!folkloreDetail) {
             return errorResponse(res, null, 'Folklore detail not found', 404);
         }
+        const cleanData = folkloreDetail.dataValues;
 
-        return successResponse(res, folkloreDetail, 'Folklore detail fetched successfully');
+        return successResponse(res, cleanData, 'Historical detail fetched successfully');
     } catch (error) {
         return errorResponse(res, null, 'Error when fetching Folklore Detail', 500);
     }
