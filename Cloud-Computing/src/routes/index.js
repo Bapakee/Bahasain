@@ -6,6 +6,7 @@ const wordRoutes = require('./word');
 const translateRoutes = require('./translate');
 const settingRoutes = require('./setting')
 const profileRoutes = require('./profile')
+const culturalRoutes = require('./cultural/index')
 const auth = require('../middleware/auth');
 
 const router = express.Router();
@@ -17,5 +18,6 @@ router.use('/word', auth, wordRoutes);
 router.use('/translate', auth, translateRoutes);
 router.use('/setting', auth, settingRoutes)
 router.use('/profile', auth, profileRoutes)
+router.use('/cultural',auth,culturalRoutes)
 
 module.exports = router;
