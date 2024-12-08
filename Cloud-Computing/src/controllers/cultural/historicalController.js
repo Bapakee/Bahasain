@@ -1,4 +1,3 @@
-const { where } = require('sequelize');
 const { Historical } = require('../../models')
 const { successResponse, errorResponse } = require('../../utils/responseConsistency');
 const cheerio = require('cheerio');
@@ -15,6 +14,8 @@ const getHistorical = async (req, res) => {
                 },
             },
         });
+        console.log(HistoricalData);
+        
 
         const result = HistoricalData.map((item) => {
             const plainTextContent = cheerio.load(item.content).text();
