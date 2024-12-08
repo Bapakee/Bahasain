@@ -5,6 +5,7 @@
     <color name="blue_200">#9FA8DA</color>
     <color name="blue_light">#E5F2FF</color>
     <color name="gray">#D9D9D9</color>
+    <color name="gray_light">#F3F3F3</color>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="orange">#F1592A</color>
     <color name="purple_200">#AA1BD7</color>
@@ -26,12 +27,15 @@
     <string name="btn_register">Register</string>
     <string name="btn_skip">SKIP</string>
     <string name="btn_start_result_placement">Start Learning</string>
+    <string name="btn_translate">Translate</string>
     <string name="confirm_password">Confirm password</string>
     <string name="desc_intro">It takes approximately 5 minutes and will help place you at the right learning level, from Beginner to Proficient.</string>
     <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
     <string name="desc_signup">Already have an account ?</string>
     <string name="dont_have_account">Don\'t have an account ?</string>
     <string name="email_address">Email address</string>
+    <string name="english">English</string>
+    <string name="indonesia">Indonesia</string>
     <string name="invalid_email_format">Invalid Email Format.</string>
     <string name="name">Name</string>
     <string name="name_length_warning">Name must be more than 3 characters</string>
@@ -61,6 +65,7 @@
     <string name="txt_onboarding_2">Immerse yourself in folklore, history, and\nculinary adventures.</string>
     <string name="txt_onboarding_3">Engage with games, quizzes, and daily\nchallenges while you learn.</string>
     <string name="vocab">Vocab</string>
+    <string name="word_of_the_day">Word of the Day</string>
     <style name="SplashScreenTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
     </style>

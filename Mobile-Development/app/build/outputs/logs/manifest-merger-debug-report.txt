@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\Lenovo\.gradle\caches\transforms-4\039f363b45d620d0d2239666384424ff\transformed\viewbinding-8.6.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.8.3] C:\Users\Lenovo\.gradle\caches\transforms-4\b47af8112883db99a44511be833c4f13\transformed\navigation-common-2.8.3\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.8.3] C:\Users\Lenovo\.gradle\caches\transforms-4\c3bf510181ff095fe841f9d4e593b420\transformed\navigation-common-ktx-2.8.3\AndroidManifest.xml:2:1-7:12
@@ -84,8 +84,8 @@ ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobi
 	android:name
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:7:5-51:19
-INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:7:5-51:19
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:7:5-54:19
+INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:7:5-54:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-4\01f6c80a2815eb68ad758b3dc7497685\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-4\01f6c80a2815eb68ad758b3dc7497685\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-4\25005564ffa6f23a69a347def464d407\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -126,72 +126,78 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Le
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:15:9-46
 	android:dataExtractionRules
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:9:9-65
-activity#com.bahasain.ui.placement.PlacementResultActivity
+activity#com.bahasain.ui.vocab.category.CategoryActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:18:13-77
-activity#com.bahasain.ui.placement.PlacementIntroActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:18:13-75
+activity#com.bahasain.ui.placement.PlacementResultActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:21:13-76
-activity#com.bahasain.ui.placement.PlacementActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:21:13-77
+activity#com.bahasain.ui.placement.PlacementIntroActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:24:13-71
-activity#com.bahasain.ui.survey.SurveyActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:24:13-76
+activity#com.bahasain.ui.placement.PlacementActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:27:13-65
-activity#com.bahasain.ui.auth.register.RegisterActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:27:13-71
+activity#com.bahasain.ui.survey.SurveyActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:30:13-74
-activity#com.bahasain.ui.auth.login.LoginActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:30:13-65
+activity#com.bahasain.ui.auth.register.RegisterActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:33:13-68
-activity#com.bahasain.ui.onboarding.OnBoardingActivity
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:33:13-74
+activity#com.bahasain.ui.auth.login.LoginActivity
 ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
 		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:36:13-73
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:36:13-68
+activity#com.bahasain.ui.onboarding.OnBoardingActivity
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:38:9-40:40
+	android:exported
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:39:13-73
 activity#com.bahasain.ui.splash.SplashActivity
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:38:9-47:20
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:41:9-50:20
 	android:exported
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:40:13-36
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:43:13-36
 	android:theme
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:41:13-53
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:44:13-53
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:39:13-65
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:42:13-65
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:42:13-46:29
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:45:13-49:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:48:17-77
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:45:27-74
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:48:27-74
 activity#com.bahasain.ui.MainActivity
-ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:48:9-50:40
+ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:51:9-53:40
 	android:exported
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:52:13-56
 uses-sdk
 INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml

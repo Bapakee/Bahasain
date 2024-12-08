@@ -1,13 +1,12 @@
 package com.bahasain.ui.vocab
 
-import android.os.Build
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.bahasain.R
+import com.bahasain.ui.vocab.category.CategoryActivity
 import com.dicoding.bahasain.databinding.ItemCategoryVocabBinding
 
 class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.ViewHolder>(DIFF_CALLBACK) {
@@ -23,10 +22,15 @@ class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.ViewHolder>(DI
         return ViewHolder(binding)
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val category = getItem(position)
         holder.bind(category)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, CategoryActivity::class.java)
+            intent.putExtra("WORD_CATEGORIES", category.keyCategories)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     companion object {

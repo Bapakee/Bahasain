@@ -4,13 +4,17 @@ import com.bahasain.data.remote.request.LevelRequest
 import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
+import com.bahasain.data.remote.request.TranslateRequest
 import com.bahasain.data.remote.response.LevelResponse
 import com.bahasain.data.remote.response.LoginResponse
 import com.bahasain.data.remote.response.ModuleResponse
 import com.bahasain.data.remote.response.RegisterResponse
+import com.bahasain.data.remote.response.TranslateResponse
+import com.bahasain.data.remote.response.WordCategoriesResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
     @POST("auth/login")
@@ -40,4 +44,15 @@ interface ApiService {
 
     @GET("module")
     suspend fun getModule(): ModuleResponse
+
+    @GET("word?limit=100")
+    suspend fun getWordCategories(
+        @Query("categories") categories: String
+    ): WordCategoriesResponse
+
+    @POST("translate")
+    suspend fun translate(
+        @Body translateRequest: TranslateRequest
+    ): TranslateResponse
+
 }

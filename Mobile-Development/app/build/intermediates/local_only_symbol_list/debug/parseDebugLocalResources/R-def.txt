@@ -5,6 +5,7 @@ color blue
 color blue_200
 color blue_light
 color gray
+color gray_light
 color ic_launcher_background
 color orange
 color purple_200
@@ -37,6 +38,7 @@ drawable icon_google
 drawable icon_home
 drawable icon_learn
 drawable icon_location
+drawable icon_mic
 drawable icon_nav
 drawable icon_notification
 drawable icon_poin
@@ -79,6 +81,7 @@ id btn_setLevel
 id btn_sign
 id btn_signup
 id btn_start
+id btn_translate
 id container
 id descSurvey
 id desc_intro
@@ -131,15 +134,18 @@ id progressBar
 id quiz
 id quiz_title
 id recyclerView
+id result_title
+id result_translate_layout
 id rg_quiz
 id rightColumn
 id rvLesson
-id search_Layout
-id search_view
+id rv_category
+id rv_word
 id single_choice
 id streak
 id survey
 id text_button
+id text_input_translate
 id text_notifications
 id title
 id titleOnboarding
@@ -148,9 +154,15 @@ id title_desc_intro
 id title_desc_result
 id title_page
 id title_signup
+id title_translate
+id title_translate_layout
 id title_wotd
+id tranlate_layout
+id tvHeader
 id tvLeftText
+id tvWord
 id tv_chapter
+id tv_english
 id tv_lesson_name
 id tv_lessons_info
 id tv_level
@@ -159,6 +171,8 @@ id tv_name
 id tv_point
 id tv_quiz
 id tv_reading
+id tv_result_pos
+id tv_result_translate
 id tv_signup_with
 id tv_streak
 id tv_title
@@ -169,6 +183,7 @@ id tv_total
 id tv_word_type
 id viewPager
 id wotd_layout
+layout activity_category
 layout activity_login
 layout activity_main
 layout activity_on_boarding
@@ -184,6 +199,7 @@ layout fragment_learn
 layout fragment_profile
 layout fragment_vocab
 layout item_answer_matching
+layout item_categories
 layout item_category_vocab
 layout item_checkbox
 layout item_cultural_horizontal
@@ -200,6 +216,7 @@ layout item_single_choice
 layout item_story_cultural
 layout item_survey
 layout item_trivia_home
+layout item_word_categories
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -217,12 +234,15 @@ string btn_placement_start
 string btn_register
 string btn_skip
 string btn_start_result_placement
+string btn_translate
 string confirm_password
 string desc_intro
 string desc_result_placement
 string desc_signup
 string dont_have_account
 string email_address
+string english
+string indonesia
 string invalid_email_format
 string name
 string name_length_warning
@@ -252,6 +272,7 @@ string txt_onboarding_1
 string txt_onboarding_2
 string txt_onboarding_3
 string vocab
+string word_of_the_day
 style SplashScreenTheme
 style Theme.Bahasain
 xml backup_rules

@@ -50,4 +50,8 @@
     <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
     <string name="btn_start_result_placement">Start Learning</string>
     <string name="title_page_dictionary">Dictionary</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="english">English</string>
+    <string name="word_of_the_day">Word of the Day</string>
+    <string name="btn_translate">Translate</string>
 </resources>

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Bahasain"
         tools:targetApi="31">
         <activity
+            android:name="com.bahasain.ui.vocab.category.CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bahasain.ui.placement.PlacementResultActivity"
             android:exported="false" />
         <activity

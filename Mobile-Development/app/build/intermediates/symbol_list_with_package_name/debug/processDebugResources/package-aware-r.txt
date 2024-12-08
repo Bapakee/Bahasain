@@ -1490,6 +1490,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gray
+color gray_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -3128,6 +3129,7 @@ drawable icon_google
 drawable icon_home
 drawable icon_learn
 drawable icon_location
+drawable icon_mic
 drawable icon_nav
 drawable icon_notification
 drawable icon_poin
@@ -3348,6 +3350,7 @@ id btn_setLevel
 id btn_sign
 id btn_signup
 id btn_start
+id btn_translate
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3665,6 +3668,8 @@ id ratio
 id rectangles
 id recyclerView
 id report_drawn
+id result_title
+id result_translate_layout
 id reverseSawtooth
 id rg_quiz
 id right
@@ -3676,6 +3681,8 @@ id rounded
 id row_index_key
 id rtl
 id rvLesson
+id rv_category
+id rv_word
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3686,7 +3693,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id search_Layout
 id search_badge
 id search_bar
 id search_button
@@ -3696,7 +3702,6 @@ id search_go_btn
 id search_mag_icon
 id search_plate
 id search_src_text
-id search_view
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3770,6 +3775,7 @@ id text_button
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_input_translate
 id text_notifications
 id textinput_counter
 id textinput_error
@@ -3787,11 +3793,14 @@ id title_desc_result
 id title_page
 id title_signup
 id title_template
+id title_translate
+id title_translate_layout
 id title_wotd
 id toggle
 id top
 id topPanel
 id touch_outside
+id tranlate_layout
 id transitionToEnd
 id transitionToStart
 id transition_clip
@@ -3803,8 +3812,11 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvHeader
 id tvLeftText
+id tvWord
 id tv_chapter
+id tv_english
 id tv_lesson_name
 id tv_lessons_info
 id tv_level
@@ -3813,6 +3825,8 @@ id tv_name
 id tv_point
 id tv_quiz
 id tv_reading
+id tv_result_pos
+id tv_result_translate
 id tv_signup_with
 id tv_streak
 id tv_title
@@ -3963,6 +3977,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_category
 layout activity_login
 layout activity_main
 layout activity_on_boarding
@@ -3996,6 +4011,7 @@ layout fragment_vocab
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_answer_matching
+layout item_categories
 layout item_category_vocab
 layout item_checkbox
 layout item_cultural_horizontal
@@ -4012,6 +4028,7 @@ layout item_single_choice
 layout item_story_cultural
 layout item_survey
 layout item_trivia_home
+layout item_word_categories
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4127,6 +4144,7 @@ string btn_placement_start
 string btn_register
 string btn_skip
 string btn_start_result_placement
+string btn_translate
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -4145,6 +4163,7 @@ string desc_signup
 string dest_title
 string dont_have_account
 string email_address
+string english
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -4152,6 +4171,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string indonesia
 string invalid_email_format
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
@@ -4296,6 +4316,7 @@ string txt_onboarding_1
 string txt_onboarding_2
 string txt_onboarding_3
 string vocab
+string word_of_the_day
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
