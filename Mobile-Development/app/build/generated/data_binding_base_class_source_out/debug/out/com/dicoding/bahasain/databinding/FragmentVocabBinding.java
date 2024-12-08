@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,10 +30,19 @@ public final class FragmentVocabBinding implements ViewBinding {
   public final TextView meaningLayout;
 
   @NonNull
+  public final ProgressBar pbResultTranslate;
+
+  @NonNull
+  public final ProgressBar pbWotd;
+
+  @NonNull
   public final TextView resultTitle;
 
   @NonNull
   public final ConstraintLayout resultTranslateLayout;
+
+  @NonNull
+  public final TextView resulttranslateWotd;
 
   @NonNull
   public final RecyclerView rvCategory;
@@ -77,20 +87,24 @@ public final class FragmentVocabBinding implements ViewBinding {
   public final ConstraintLayout wotdLayout;
 
   private FragmentVocabBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnTranslate,
-      @NonNull TextView meaningLayout, @NonNull TextView resultTitle,
-      @NonNull ConstraintLayout resultTranslateLayout, @NonNull RecyclerView rvCategory,
-      @NonNull TextInputEditText textInputTranslate, @NonNull TextView titleCategory,
-      @NonNull TextView titleTranslate, @NonNull ConstraintLayout titleTranslateLayout,
-      @NonNull TextView titleWotd, @NonNull ConstraintLayout tranlateLayout,
-      @NonNull TextView tvEnglish, @NonNull TextView tvResultPos,
-      @NonNull TextView tvResultTranslate, @NonNull TextView tvTitlePage,
-      @NonNull TextView tvTitleWord, @NonNull TextView tvWordType,
+      @NonNull TextView meaningLayout, @NonNull ProgressBar pbResultTranslate,
+      @NonNull ProgressBar pbWotd, @NonNull TextView resultTitle,
+      @NonNull ConstraintLayout resultTranslateLayout, @NonNull TextView resulttranslateWotd,
+      @NonNull RecyclerView rvCategory, @NonNull TextInputEditText textInputTranslate,
+      @NonNull TextView titleCategory, @NonNull TextView titleTranslate,
+      @NonNull ConstraintLayout titleTranslateLayout, @NonNull TextView titleWotd,
+      @NonNull ConstraintLayout tranlateLayout, @NonNull TextView tvEnglish,
+      @NonNull TextView tvResultPos, @NonNull TextView tvResultTranslate,
+      @NonNull TextView tvTitlePage, @NonNull TextView tvTitleWord, @NonNull TextView tvWordType,
       @NonNull ConstraintLayout wotdLayout) {
     this.rootView = rootView;
     this.btnTranslate = btnTranslate;
     this.meaningLayout = meaningLayout;
+    this.pbResultTranslate = pbResultTranslate;
+    this.pbWotd = pbWotd;
     this.resultTitle = resultTitle;
     this.resultTranslateLayout = resultTranslateLayout;
+    this.resulttranslateWotd = resulttranslateWotd;
     this.rvCategory = rvCategory;
     this.textInputTranslate = textInputTranslate;
     this.titleCategory = titleCategory;
@@ -146,6 +160,18 @@ public final class FragmentVocabBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pb_result_translate;
+      ProgressBar pbResultTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (pbResultTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.pb_wotd;
+      ProgressBar pbWotd = ViewBindings.findChildViewById(rootView, id);
+      if (pbWotd == null) {
+        break missingId;
+      }
+
       id = R.id.result_title;
       TextView resultTitle = ViewBindings.findChildViewById(rootView, id);
       if (resultTitle == null) {
@@ -155,6 +181,12 @@ public final class FragmentVocabBinding implements ViewBinding {
       id = R.id.result_translate_layout;
       ConstraintLayout resultTranslateLayout = ViewBindings.findChildViewById(rootView, id);
       if (resultTranslateLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.resulttranslate_wotd;
+      TextView resulttranslateWotd = ViewBindings.findChildViewById(rootView, id);
+      if (resulttranslateWotd == null) {
         break missingId;
       }
 
@@ -243,9 +275,10 @@ public final class FragmentVocabBinding implements ViewBinding {
       }
 
       return new FragmentVocabBinding((ConstraintLayout) rootView, btnTranslate, meaningLayout,
-          resultTitle, resultTranslateLayout, rvCategory, textInputTranslate, titleCategory,
-          titleTranslate, titleTranslateLayout, titleWotd, tranlateLayout, tvEnglish, tvResultPos,
-          tvResultTranslate, tvTitlePage, tvTitleWord, tvWordType, wotdLayout);
+          pbResultTranslate, pbWotd, resultTitle, resultTranslateLayout, resulttranslateWotd,
+          rvCategory, textInputTranslate, titleCategory, titleTranslate, titleTranslateLayout,
+          titleWotd, tranlateLayout, tvEnglish, tvResultPos, tvResultTranslate, tvTitlePage,
+          tvTitleWord, tvWordType, wotdLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

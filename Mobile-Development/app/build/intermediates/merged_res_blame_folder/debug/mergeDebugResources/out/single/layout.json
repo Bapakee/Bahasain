@@ -12,10 +12,6 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\activity_on_boarding.xml"
     },
     {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/activity_category.xml",
-        "source": "com.dicoding.bahasain.app-main-55:/layout/activity_category.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\item_radio.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\item_radio.xml"
     },
@@ -46,6 +42,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\item_word_categories.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\item_word_categories.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-52:/layout/fragment_vocab.xml",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/fragment_vocab.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-52:\\layout\\activity_register.xml",

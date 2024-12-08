@@ -29,7 +29,9 @@ class VocabFragment : Fragment() {
         CategoryModel("Adjectives", "adjective"),
         CategoryModel("Adverb", "adverb"),
         CategoryModel("Preposition", "preposition"),
-        CategoryModel("Conjunction", "conjunction")
+        CategoryModel("Conjunction", "conjunction"),
+        CategoryModel("DerivedNoun", "derivedNoun"),
+        CategoryModel("CordConjunct", "coordConj"),
     )
 
     override fun onCreateView(
@@ -52,7 +54,39 @@ class VocabFragment : Fragment() {
 
         adapter.submitList(categories)
 
+        getWotd()
+
+        observeTranslate()
+
         binding.btnTranslate.setOnClickListener{ translate() }
+    }
+
+    private fun getWotd(){
+        viewModel.getWotd().observe(viewLifecycleOwner){ result->
+            if (result != null){
+                when(result){
+                    is Result.Loading -> {
+                        showLoadingWotd(true)
+                    }
+
+                    is Result.Success -> {
+                        showLoadingWotd(false)
+                        binding.tvTitleWord.text = result.data?.data?.word
+                        val categories = result.data?.data?.categories
+
+                        categories?.forEach { category ->
+                            binding.tvWordType.text = category?.category
+                            binding.resulttranslateWotd.text = category?.translate
+                        }
+                    }
+
+                    is Result.Error -> {
+                        showLoadingWotd(false)
+
+                    }
+                }
+            }
+        }
     }
 
     private fun translate(){
@@ -61,21 +95,44 @@ class VocabFragment : Fragment() {
             if (result != null){
                 when(result){
                     is Result.Loading -> {
-
+                        showLoadingTranslate(true)
                     }
 
                     is Result.Success -> {
-                        binding.tvResultTranslate.text = result.data?.translate
+                        showLoadingTranslate(false)
+                        val translate = result.data?.translate
 
                         val pos = result.data?.pos?.joinToString("/ ")
                         binding.tvResultPos.text = pos
+
+                        viewModel.translateResult.value = translate
+                        viewModel.posResult.value = pos
                     }
 
                     is Result.Error -> {
+                        showLoadingTranslate(false)
                         Toast.makeText(requireContext(), result.error, Toast.LENGTH_SHORT).show()
                     }
                 }
             }
+        }
+    }
+
+    private fun showLoadingTranslate(isLoading: Boolean) {
+        binding.pbResultTranslate.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun showLoadingWotd(isLoading: Boolean) {
+        binding.pbWotd.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun observeTranslate(){
+        viewModel.translateResult.observe(viewLifecycleOwner) { translate ->
+            binding.tvResultTranslate.text = translate
+        }
+
+        viewModel.posResult.observe(viewLifecycleOwner) { pos ->
+            binding.tvResultPos.text = pos
         }
     }
 

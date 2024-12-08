@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class WotdResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: DataWotd? = null,
 
 	@field:SerializedName("success")
 	val success: Boolean? = null,
@@ -14,7 +14,7 @@ data class WotdResponse(
 	val message: String? = null
 )
 
-data class Data(
+data class DataWotd(
 
 	@field:SerializedName("id")
 	val id: Int? = null,

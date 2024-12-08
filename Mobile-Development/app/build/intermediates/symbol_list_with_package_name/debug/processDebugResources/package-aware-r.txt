@@ -3651,6 +3651,8 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_result_translate
+id pb_wotd
 id peekHeight
 id percent
 id pin
@@ -3669,7 +3671,9 @@ id rectangles
 id recyclerView
 id report_drawn
 id result_title
+id result_translate
 id result_translate_layout
+id resulttranslate_wotd
 id reverseSawtooth
 id rg_quiz
 id right
@@ -3816,7 +3820,9 @@ id tvHeader
 id tvLeftText
 id tvWord
 id tv_chapter
+id tv_date
 id tv_english
+id tv_example
 id tv_lesson_name
 id tv_lessons_info
 id tv_level

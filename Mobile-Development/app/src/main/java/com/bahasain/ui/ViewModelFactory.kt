@@ -9,6 +9,7 @@ import com.bahasain.data.VocabRepository
 import com.bahasain.di.Injection
 import com.bahasain.ui.auth.login.LoginViewModel
 import com.bahasain.ui.auth.register.RegisterViewModel
+import com.bahasain.ui.home.HomeViewModel
 import com.bahasain.ui.learn.LearnViewModel
 import com.bahasain.ui.placement.PlacementViewModel
 import com.bahasain.ui.profile.ProfileViewModel
@@ -50,6 +51,10 @@ class ViewModelFactory(
 
             modelClass.isAssignableFrom(VocabViewModel::class.java) -> {
                 VocabViewModel(vocabRepository) as T
+            }
+            
+            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
+                HomeViewModel(vocabRepository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

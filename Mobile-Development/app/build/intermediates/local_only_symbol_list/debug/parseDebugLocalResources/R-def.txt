@@ -129,13 +129,17 @@ id navigation_home
 id navigation_learn
 id navigation_profile
 id navigation_vocab
+id pb_result_translate
+id pb_wotd
 id point
 id progressBar
 id quiz
 id quiz_title
 id recyclerView
 id result_title
+id result_translate
 id result_translate_layout
+id resulttranslate_wotd
 id rg_quiz
 id rightColumn
 id rvLesson
@@ -162,7 +166,9 @@ id tvHeader
 id tvLeftText
 id tvWord
 id tv_chapter
+id tv_date
 id tv_english
+id tv_example
 id tv_lesson_name
 id tv_lessons_info
 id tv_level

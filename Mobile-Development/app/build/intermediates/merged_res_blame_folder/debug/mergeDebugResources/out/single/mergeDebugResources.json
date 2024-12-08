@@ -56,6 +56,10 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\activity_splash.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-debug-53:/layout_fragment_vocab.xml.flat",
+        "source": "com.dicoding.bahasain.app-main-55:/layout/fragment_vocab.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_bg_corner_10.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\bg_corner_10.xml"
     },
@@ -170,10 +174,6 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_checkbox_background.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\checkbox_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_bg_btn_translate.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\bg_btn_translate.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_icon_category.xml.flat",
@@ -312,20 +312,20 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\layout\\item_learn.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_icon_search.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\icon_search.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\raw_placement_data.json.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\raw\\placement_data.json"
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\navigation\\mobile_navigation.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_bg_edit_text_sign.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\bg_edit_text_sign.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\navigation\\mobile_navigation.xml"
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\raw_placement_data.json.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\raw\\placement_data.json"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\drawable_icon_search.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\drawable\\icon_search.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\layout_item_cultural_horizontal.xml.flat",
@@ -346,10 +346,6 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-55:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-53:/layout_activity_category.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-55:/layout/activity_category.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-53:\\mipmap-hdpi_ic_launcher_round.webp.flat",

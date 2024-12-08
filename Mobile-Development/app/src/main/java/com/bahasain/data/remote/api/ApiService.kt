@@ -11,6 +11,7 @@ import com.bahasain.data.remote.response.ModuleResponse
 import com.bahasain.data.remote.response.RegisterResponse
 import com.bahasain.data.remote.response.TranslateResponse
 import com.bahasain.data.remote.response.WordCategoriesResponse
+import com.bahasain.data.remote.response.WotdResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -54,5 +55,8 @@ interface ApiService {
     suspend fun translate(
         @Body translateRequest: TranslateRequest
     ): TranslateResponse
+
+    @GET("word/0")
+    suspend fun getWotd() : WotdResponse
 
 }
