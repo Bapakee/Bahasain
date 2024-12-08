@@ -14,7 +14,6 @@ const getHistorical = async (req, res) => {
                 },
             },
         });
-        console.log(HistoricalData);
         
 
         const result = HistoricalData.map((item) => {
@@ -23,9 +22,14 @@ const getHistorical = async (req, res) => {
             const words = plainTextContent.split(/\s+/);
             const overview = words.slice(0, 30).join(' ');
 
+            const imageName = item.title.replace(/\s+/g, '_');
+
+            const imageUrl = `${process.env.BUCKET_URL}/Historical/${encodeURIComponent(item.title)}/${imageName}.png`;
+
             return {
-                ...item.toJSON(), // Include all other attributes
-                content: overview, // Append ellipsis if truncated
+                ...item.toJSON(),
+                imageUrl: imageUrl, // Dynamic image URL based on item.title
+                content: overview, // Shortened content preview
             };
         });
 
@@ -43,8 +47,9 @@ const getHistoricalDetail = async (req, res) => {
         if (!HistoricalDetail) {
             return errorResponse(res, null, 'Historical detail not found', 404);
         }
+        const cleanData = HistoricalDetail.dataValues;
 
-        return successResponse(res, HistoricalDetail, 'Historical detail fetched successfully');
+        return successResponse(res, cleanData, 'Historical detail fetched successfully');
     } catch (error) {
         return errorResponse(res, null, 'Error when fetching Historical Detail', 500);
     }
