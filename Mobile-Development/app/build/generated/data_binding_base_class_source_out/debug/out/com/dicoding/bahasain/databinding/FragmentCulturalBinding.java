@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
@@ -20,12 +21,30 @@ public final class FragmentCulturalBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textNotifications;
+  public final RecyclerView rvFolklore;
+
+  @NonNull
+  public final RecyclerView rvHistorical;
+
+  @NonNull
+  public final TextView titleFolklore;
+
+  @NonNull
+  public final TextView titleHistorical;
+
+  @NonNull
+  public final TextView titlePage;
 
   private FragmentCulturalBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textNotifications) {
+      @NonNull RecyclerView rvFolklore, @NonNull RecyclerView rvHistorical,
+      @NonNull TextView titleFolklore, @NonNull TextView titleHistorical,
+      @NonNull TextView titlePage) {
     this.rootView = rootView;
-    this.textNotifications = textNotifications;
+    this.rvFolklore = rvFolklore;
+    this.rvHistorical = rvHistorical;
+    this.titleFolklore = titleFolklore;
+    this.titleHistorical = titleHistorical;
+    this.titlePage = titlePage;
   }
 
   @Override
@@ -55,13 +74,38 @@ public final class FragmentCulturalBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_notifications;
-      TextView textNotifications = ViewBindings.findChildViewById(rootView, id);
-      if (textNotifications == null) {
+      id = R.id.rv_folklore;
+      RecyclerView rvFolklore = ViewBindings.findChildViewById(rootView, id);
+      if (rvFolklore == null) {
         break missingId;
       }
 
-      return new FragmentCulturalBinding((ConstraintLayout) rootView, textNotifications);
+      id = R.id.rv_historical;
+      RecyclerView rvHistorical = ViewBindings.findChildViewById(rootView, id);
+      if (rvHistorical == null) {
+        break missingId;
+      }
+
+      id = R.id.title_folklore;
+      TextView titleFolklore = ViewBindings.findChildViewById(rootView, id);
+      if (titleFolklore == null) {
+        break missingId;
+      }
+
+      id = R.id.title_historical;
+      TextView titleHistorical = ViewBindings.findChildViewById(rootView, id);
+      if (titleHistorical == null) {
+        break missingId;
+      }
+
+      id = R.id.title_page;
+      TextView titlePage = ViewBindings.findChildViewById(rootView, id);
+      if (titlePage == null) {
+        break missingId;
+      }
+
+      return new FragmentCulturalBinding((ConstraintLayout) rootView, rvFolklore, rvHistorical,
+          titleFolklore, titleHistorical, titlePage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

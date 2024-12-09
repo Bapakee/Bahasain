@@ -1,18 +1,17 @@
-package com.bahasain.data
+package com.bahasain.data.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import com.bahasain.data.pref.UserPreferences
+import com.bahasain.data.Result
 import com.bahasain.data.remote.api.ApiService
 import com.bahasain.data.remote.request.TranslateRequest
 import com.bahasain.data.remote.response.DataItemWord
 import com.bahasain.data.remote.response.DataTranslate
-import com.bahasain.data.remote.response.DataWotd
+import com.bahasain.data.remote.response.TriviaResponse
 import com.bahasain.data.remote.response.WotdResponse
 
 class VocabRepository(
-    private val apiService: ApiService,
-    private val userPreferences: UserPreferences
+    private val apiService: ApiService
 ) {
     fun getWordCategories(wordCategories: String): LiveData<Result<List<DataItemWord?>?>> =
         liveData {
@@ -48,17 +47,24 @@ class VocabRepository(
         }
     }
 
-    companion object {
-        private const val TAG = "Vocab Repository"
+    fun getTrivia(): LiveData<Result<TriviaResponse?>?> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getTrivia()
+            emit(Result.Success(response))
+        }catch(e: Exception) {
+            emit(Result.Error(e.message.toString()))
+        }
+    }
 
+    companion object {
         @Volatile
         private var instance: VocabRepository? = null
         fun getInstance(
-            apiService: ApiService,
-            userPreferences: UserPreferences
+            apiService: ApiService
         ): VocabRepository =
             instance ?: synchronized(this) {
-                instance ?: VocabRepository(apiService, userPreferences)
+                instance ?: VocabRepository(apiService)
             }.also { instance = it }
     }
 }

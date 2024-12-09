@@ -1,5 +1,6 @@
 package com.bahasain.ui.vocab
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -58,7 +59,13 @@ class VocabFragment : Fragment() {
 
         observeTranslate()
 
+        val resultTranslate = binding.tvResultTranslate.text
+        val resultPos = binding.tvResultPos.text
+        updateVisibility(resultTranslate, resultPos)
+
         binding.btnTranslate.setOnClickListener{ translate() }
+        binding.btnClear.setOnClickListener{ clearText() }
+        binding.btnCopy.setOnClickListener{ copyResult() }
     }
 
     private fun getWotd(){
@@ -82,7 +89,7 @@ class VocabFragment : Fragment() {
 
                     is Result.Error -> {
                         showLoadingWotd(false)
-
+                        Toast.makeText(requireContext(), result.error, Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -118,6 +125,28 @@ class VocabFragment : Fragment() {
         }
     }
 
+    private fun clearText(){
+        binding.textInputTranslate.text?.clear()
+
+        binding.tvResultTranslate.text = ""
+        binding.tvResultPos.text = ""
+
+        viewModel.translateResult.value = ""
+        viewModel.posResult.value = ""
+
+        updateVisibility(binding.tvResultTranslate.text, binding.tvResultPos.text)
+    }
+
+    private fun copyResult(){
+        val textCopy = binding.tvResultTranslate.text.toString()
+
+        if (textCopy.isNotEmpty()){
+            val clipBoard = requireContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+            val clip = android.content.ClipData.newPlainText("Copied Text", textCopy)
+            clipBoard.setPrimaryClip(clip)
+        }
+    }
+
     private fun showLoadingTranslate(isLoading: Boolean) {
         binding.pbResultTranslate.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
@@ -129,10 +158,24 @@ class VocabFragment : Fragment() {
     private fun observeTranslate(){
         viewModel.translateResult.observe(viewLifecycleOwner) { translate ->
             binding.tvResultTranslate.text = translate
+
+            updateVisibility(binding.tvResultTranslate.text, binding.tvResultPos.text)
         }
 
         viewModel.posResult.observe(viewLifecycleOwner) { pos ->
             binding.tvResultPos.text = pos
+
+            updateVisibility(binding.tvResultTranslate.text, binding.tvResultPos.text)
+        }
+    }
+
+    private fun updateVisibility(resultTranslate: CharSequence, resultPos: CharSequence) {
+        if (resultTranslate.isNullOrBlank() && resultPos.isNullOrBlank()) {
+            binding.vResultTranslate.visibility = View.VISIBLE
+            binding.vResultPos.visibility = View.VISIBLE
+        } else {
+            binding.vResultTranslate.visibility = View.INVISIBLE
+            binding.vResultPos.visibility = View.INVISIBLE
         }
     }
 

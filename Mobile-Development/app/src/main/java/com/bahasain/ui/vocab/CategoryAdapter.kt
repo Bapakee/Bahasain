@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bahasain.ui.vocab.category.CategoryActivity
+import com.bahasain.ui.vocab.category.WordCategoryActivity
 import com.dicoding.bahasain.databinding.ItemCategoryVocabBinding
 
 class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.ViewHolder>(DIFF_CALLBACK) {
@@ -27,7 +27,7 @@ class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.ViewHolder>(DI
         holder.bind(category)
 
         holder.itemView.setOnClickListener{
-            val intent = Intent(holder.itemView.context, CategoryActivity::class.java)
+            val intent = Intent(holder.itemView.context, WordCategoryActivity::class.java)
             intent.putExtra("WORD_CATEGORIES", category.keyCategories)
             holder.itemView.context.startActivity(intent)
         }

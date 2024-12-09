@@ -10,20 +10,7 @@ import com.dicoding.bahasain.databinding.ItemWordCategoriesBinding
 
 class WordCategoryAdapter : ListAdapter<WordCategoryModel, RecyclerView.ViewHolder>(DIFF_CALLBACK) {
 
-    companion object {
-        private const val TYPE_HEADER = 0
-        private const val TYPE_WORD_ITEM = 1
-
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<WordCategoryModel>() {
-            override fun areItemsTheSame(oldItem: WordCategoryModel, newItem: WordCategoryModel): Boolean {
-                return oldItem == newItem
-            }
-
-            override fun areContentsTheSame(oldItem: WordCategoryModel, newItem: WordCategoryModel): Boolean {
-                return oldItem == newItem
-            }
-        }
-    }
+    private var filteredList: List<WordCategoryModel> = currentList
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
@@ -60,6 +47,35 @@ class WordCategoryAdapter : ListAdapter<WordCategoryModel, RecyclerView.ViewHold
         RecyclerView.ViewHolder(binding.root) {
         fun bind(wordItem: WordCategoryModel.WordItem) {
             binding.tvWord.text = wordItem.word
+        }
+    }
+
+    fun filter(query: String) {
+        filteredList = if (query.isEmpty()) {
+            currentList
+        } else {
+            currentList.filter {
+                when (it) {
+                    is WordCategoryModel.Header -> it.title.contains(query, ignoreCase = true)
+                    is WordCategoryModel.WordItem -> it.word.contains(query, ignoreCase = true)
+                }
+            }
+        }
+        submitList(filteredList)
+    }
+
+    companion object {
+        private const val TYPE_HEADER = 0
+        private const val TYPE_WORD_ITEM = 1
+
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<WordCategoryModel>() {
+            override fun areItemsTheSame(oldItem: WordCategoryModel, newItem: WordCategoryModel): Boolean {
+                return oldItem == newItem
+            }
+
+            override fun areContentsTheSame(oldItem: WordCategoryModel, newItem: WordCategoryModel): Boolean {
+                return oldItem == newItem
+            }
         }
     }
 }

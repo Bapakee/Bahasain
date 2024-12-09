@@ -3073,8 +3073,10 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_arrow_right_alt_24
 drawable baseline_circle_black
 drawable baseline_circle_gray
+drawable baseline_search_24
 drawable bg_button_continue
 drawable bg_button_disabled_sign
 drawable bg_button_sign
@@ -3122,6 +3124,8 @@ drawable icon_back
 drawable icon_background
 drawable icon_bahasain
 drawable icon_category
+drawable icon_clear
+drawable icon_copy
 drawable icon_cultural
 drawable icon_discord
 drawable icon_facebook
@@ -3129,7 +3133,6 @@ drawable icon_google
 drawable icon_home
 drawable icon_learn
 drawable icon_location
-drawable icon_mic
 drawable icon_nav
 drawable icon_notification
 drawable icon_poin
@@ -3335,7 +3338,9 @@ id bounceEnd
 id bounceStart
 id btn
 id btn_back
+id btn_clear
 id btn_continue
+id btn_copy
 id btn_discord
 id btn_facebook
 id btn_forgot
@@ -3470,6 +3475,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3492,6 +3498,7 @@ id horizontal
 id horizontal_only
 id icon
 id icon_group
+id icon_location
 id icon_social
 id ifRoom
 id ignore
@@ -3508,12 +3515,12 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_culture
+id iv_folklore
 id iv_intro
 id iv_lesson_image
 id iv_profile
 id iv_resep
 id iv_result
-id iv_story
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3653,6 +3660,7 @@ id path
 id pathRelative
 id pb_result_translate
 id pb_wotd
+id pb_wotd_home
 id peekHeight
 id percent
 id pin
@@ -3686,6 +3694,8 @@ id row_index_key
 id rtl
 id rvLesson
 id rv_category
+id rv_folklore
+id rv_historical
 id rv_word
 id save_non_transition_alpha
 id save_overlay_view
@@ -3697,6 +3707,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -3754,6 +3765,8 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id survey
+id t_eng
+id t_ind
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3780,7 +3793,6 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_input_translate
-id text_notifications
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3794,6 +3806,8 @@ id titleOnboarding
 id title_category
 id title_desc_intro
 id title_desc_result
+id title_folklore
+id title_historical
 id title_page
 id title_signup
 id title_template
@@ -3816,11 +3830,13 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id trivia_layout
 id tvHeader
 id tvLeftText
 id tvWord
 id tv_chapter
 id tv_date
+id tv_desc_trivia
 id tv_english
 id tv_example
 id tv_lesson_name
@@ -3838,6 +3854,7 @@ id tv_streak
 id tv_title
 id tv_title_module
 id tv_title_page
+id tv_title_trivia
 id tv_title_word
 id tv_total
 id tv_word_type
@@ -3846,6 +3863,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id v_result_pos
+id v_result_translate
 id vertical
 id vertical_only
 id viewPager
@@ -3983,7 +4002,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_category
 layout activity_login
 layout activity_main
 layout activity_on_boarding
@@ -3993,6 +4011,7 @@ layout activity_placement_result
 layout activity_register
 layout activity_splash
 layout activity_survey
+layout activity_word_category
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4020,7 +4039,8 @@ layout item_answer_matching
 layout item_categories
 layout item_category_vocab
 layout item_checkbox
-layout item_cultural_horizontal
+layout item_folklore_cultural
+layout item_historical_cultural
 layout item_learn
 layout item_left_matching
 layout item_lesson_card_list
@@ -4028,10 +4048,9 @@ layout item_mathcing_choice
 layout item_multiple_choice
 layout item_onboarding
 layout item_radio
-layout item_resep_cultural
+layout item_recipe_cultural
 layout item_right_matching
 layout item_single_choice
-layout item_story_cultural
 layout item_survey
 layout item_trivia_home
 layout item_word_categories
@@ -4176,8 +4195,10 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
+string historical_exploration
 string icon_content_description
 string indonesia
+string interactive_folklore
 string invalid_email_format
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
@@ -4303,6 +4324,7 @@ string signup_with
 string start_with_the_basics
 string status_bar_notification_info_overflow
 string title_cultural
+string title_daily_trivia
 string title_desc_intro
 string title_desc_intro_placement
 string title_desc_result_placement

@@ -3,12 +3,14 @@ package com.bahasain.ui
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.bahasain.data.ModuleRepository
-import com.bahasain.data.UserRepository
-import com.bahasain.data.VocabRepository
+import com.bahasain.data.repository.CultureRepository
+import com.bahasain.data.repository.ModuleRepository
+import com.bahasain.data.repository.UserRepository
+import com.bahasain.data.repository.VocabRepository
 import com.bahasain.di.Injection
 import com.bahasain.ui.auth.login.LoginViewModel
 import com.bahasain.ui.auth.register.RegisterViewModel
+import com.bahasain.ui.cultural.CulturalViewModel
 import com.bahasain.ui.home.HomeViewModel
 import com.bahasain.ui.learn.LearnViewModel
 import com.bahasain.ui.placement.PlacementViewModel
@@ -19,7 +21,8 @@ import com.bahasain.ui.vocab.VocabViewModel
 class ViewModelFactory(
     private val userRepository: UserRepository,
     private val moduleRepository: ModuleRepository,
-    private val vocabRepository: VocabRepository
+    private val vocabRepository: VocabRepository,
+    private val cultureRepository: CultureRepository
 ) : ViewModelProvider.NewInstanceFactory(){
 
     @Suppress("UNCHECKED_CAST")
@@ -57,6 +60,10 @@ class ViewModelFactory(
                 HomeViewModel(vocabRepository) as T
             }
 
+            modelClass.isAssignableFrom(CulturalViewModel::class.java) -> {
+                CulturalViewModel(cultureRepository) as T
+            }
+
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }
@@ -71,8 +78,9 @@ class ViewModelFactory(
                 synchronized(ViewModelFactory::class.java) {
                     INSTANCE = ViewModelFactory(
                         Injection.provideUserRepository(context),
-                        Injection.ProvideModuleRepository(context),
-                        Injection.ProvideVocabRepository(context)
+                        Injection.provideModuleRepository(context),
+                        Injection.provideVocabRepository(context),
+                        Injection.provideCulturalRepository(context)
                     )
                 }
             }

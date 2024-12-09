@@ -1,4 +1,4 @@
-#Sun Dec 08 15:47:12 ICT 2024
+#Mon Dec 09 14:35:28 ICT 2024
 base.0=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex

@@ -4,10 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bahasain.data.Result
-import com.bahasain.data.VocabRepository
+import com.bahasain.data.repository.VocabRepository
 import com.bahasain.data.remote.request.TranslateRequest
 import com.bahasain.data.remote.response.DataItemWord
-import com.bahasain.data.remote.response.DataTranslate
 
 class VocabViewModel(private val repository: VocabRepository) : ViewModel() {
 

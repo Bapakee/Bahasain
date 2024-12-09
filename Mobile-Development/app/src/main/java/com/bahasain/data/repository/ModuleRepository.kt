@@ -1,20 +1,19 @@
-package com.bahasain.data
+package com.bahasain.data.repository
 
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import com.bahasain.data.Result
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiConfig
 import com.bahasain.data.remote.api.ApiService
-import com.bahasain.data.remote.response.DataItem
+import com.bahasain.data.remote.response.DataItemLearn
 import kotlinx.coroutines.flow.firstOrNull
 
 class ModuleRepository private constructor(
     private val apiService: ApiService,
     private val userPreferences: UserPreferences
 ) {
-    fun getModule(): LiveData<Result<List<DataItem?>?>> = liveData {
+    fun getModule(): LiveData<Result<List<DataItemLearn?>?>> = liveData {
         emit(Result.Loading)
         try {
             userPreferences.getSession().collect {
@@ -40,10 +39,7 @@ class ModuleRepository private constructor(
         }
     }
 
-
     companion object {
-        private const val TAG = "Module Repository"
-
         @Volatile
         private var instance: ModuleRepository? = null
         fun getInstance(

@@ -42,6 +42,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        getTrivia()
         getWotd()
 
        binding.btn.setOnClickListener{
@@ -55,15 +56,17 @@ class HomeFragment : Fragment() {
             if (result != null){
                 when(result){
                     is Result.Loading -> {
-
+                        showLoadingWotd(true)
                     }
 
                     is Result.Success -> {
-                        binding.tvDate.text = getDateWithMonthNameCalendar()
+                        showLoadingWotd(false)
+                        binding.tvDate.text = getDateCalendar()
                         binding.tvTitleWord.text = result.data?.data?.word
                         val categories = result.data?.data?.categories
 
                         categories?.forEach { category ->
+                            showLoadingWotd(false)
                             binding.tvWordType.text = category?.category
                             binding.resultTranslate.text = category?.translate
                             binding.tvExample.text = category?.example
@@ -78,7 +81,32 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun getDateWithMonthNameCalendar(): String {
+    private fun getTrivia(){
+        viewModel.getTrivia().observe(viewLifecycleOwner){ result ->
+            if (result != null){
+                when(result){
+                    is Result.Loading -> {
+
+                    }
+
+                    is Result.Success -> {
+                        binding.tvTitleTrivia.text = result.data?.data?.title
+                        binding.tvDescTrivia.text = result.data?.data?.description
+                    }
+
+                    is Result.Error -> {
+
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showLoadingWotd(isLoading: Boolean) {
+        binding.pbWotdHome.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun getDateCalendar(): String {
         val calendar = Calendar.getInstance()
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         val month = SimpleDateFormat("MMMM", Locale("id", "ID")).format(calendar.time) // Nama bulan

@@ -2,6 +2,7 @@
 agp = "8.6.0"
 coreSplashscreen = "1.0.1"
 datastorePreferences = "1.1.1"
+glide = "4.16.0"
 gsonVersion = "2.10.1"
 javaJwt = "4.4.0"
 jwtdecode = "2.0.1"
@@ -25,6 +26,7 @@ retrofit = "2.11.0"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 google-gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
 java-jwt = { module = "com.auth0:java-jwt", version.ref = "javaJwt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

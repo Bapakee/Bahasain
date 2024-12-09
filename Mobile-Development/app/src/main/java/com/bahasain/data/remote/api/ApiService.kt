@@ -5,11 +5,14 @@ import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
 import com.bahasain.data.remote.request.TranslateRequest
+import com.bahasain.data.remote.response.FolkloreResponse
+import com.bahasain.data.remote.response.HistoricalResponse
 import com.bahasain.data.remote.response.LevelResponse
 import com.bahasain.data.remote.response.LoginResponse
 import com.bahasain.data.remote.response.ModuleResponse
 import com.bahasain.data.remote.response.RegisterResponse
 import com.bahasain.data.remote.response.TranslateResponse
+import com.bahasain.data.remote.response.TriviaResponse
 import com.bahasain.data.remote.response.WordCategoriesResponse
 import com.bahasain.data.remote.response.WotdResponse
 import retrofit2.http.Body
@@ -40,7 +43,7 @@ interface ApiService {
 
     @POST("progress/level")
     suspend fun setLevel(
-        @Body level : LevelRequest
+        @Body level: LevelRequest
     ): LevelResponse
 
     @GET("module")
@@ -57,6 +60,14 @@ interface ApiService {
     ): TranslateResponse
 
     @GET("word/0")
-    suspend fun getWotd() : WotdResponse
+    suspend fun getWotd(): WotdResponse
 
+    @GET("trivia")
+    suspend fun getTrivia(): TriviaResponse
+
+    @GET("cultural/historical")
+    suspend fun getHistorical(): HistoricalResponse
+
+    @GET("cultural/folklore")
+    suspend fun getFolklore(): FolkloreResponse
 }

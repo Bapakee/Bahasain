@@ -1,7 +1,8 @@
-package com.bahasain.data
+package com.bahasain.data.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import com.bahasain.data.Result
 import com.bahasain.data.pref.UserModel
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiService

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class ModuleResponse(
 
 	@field:SerializedName("data")
-	val data: List<DataItem?>? = null,
+	val data: List<DataItemLearn?>? = null,
 
 	@field:SerializedName("success")
 	val success: Boolean? = null,
@@ -32,7 +32,7 @@ data class LevelsItem(
 	val isCompleted: Boolean? = null
 )
 
-data class DataItem(
+data class DataItemLearn(
 
 	@field:SerializedName("isAccessible")
 	val isAccessible: Boolean? = null,

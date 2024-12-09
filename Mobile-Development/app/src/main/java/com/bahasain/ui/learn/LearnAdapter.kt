@@ -6,13 +6,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bahasain.data.remote.response.DataItem
+import com.bahasain.data.remote.response.DataItemLearn
 import com.dicoding.bahasain.databinding.ItemLearnBinding
 
-class LearnAdapter : ListAdapter<DataItem, LearnAdapter.ModuleViewHolder>(DIFF_CALLBACK) {
+class LearnAdapter : ListAdapter<DataItemLearn, LearnAdapter.ModuleViewHolder>(DIFF_CALLBACK) {
 
-    class ModuleViewHolder(private val binding: ItemLearnBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(module : DataItem){
+    class ModuleViewHolder(private val binding: ItemLearnBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(module: DataItemLearn) {
             binding.tvLessonsInfo.text = "Module - ${module.level.toString()}"
             binding.tvTotal.text = module.lessonsCompleted
 
@@ -36,14 +37,14 @@ class LearnAdapter : ListAdapter<DataItem, LearnAdapter.ModuleViewHolder>(DIFF_C
     }
 
     companion object {
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItem>() {
-            override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItemLearn>() {
+            override fun areItemsTheSame(oldItem: DataItemLearn, newItem: DataItemLearn): Boolean {
                 return oldItem.id == newItem.id
             }
 
             override fun areContentsTheSame(
-                oldItem: DataItem,
-                newItem: DataItem
+                oldItem: DataItemLearn,
+                newItem: DataItemLearn
             ): Boolean {
                 return oldItem == newItem
             }

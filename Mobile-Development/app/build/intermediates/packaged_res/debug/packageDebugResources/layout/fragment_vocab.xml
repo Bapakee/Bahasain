@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/inter_semibold"
         android:text="Translate"
         android:textSize="20sp"
@@ -43,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@id/title_translate">
 
         <TextView
+            android:id="@+id/t_eng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
@@ -51,7 +52,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_right_alt_24"
+            app:layout_constraintStart_toEndOf="@id/t_eng"
+            app:layout_constraintEnd_toStartOf="@id/t_ind"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
+            android:id="@+id/t_ind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
@@ -67,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/bg_corner_10"
         android:backgroundTint="@color/gray_light"
         android:padding="16dp"
@@ -83,27 +93,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_clear"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_input_translate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:fontFamily="@font/inter"
+            android:layout_marginTop="8dp"
             android:hint="Type Text"
             android:textColorHint="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_english" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@id/btn_translate"
-            app:layout_constraintBottom_toBottomOf="@id/btn_translate"
-            app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/icon_mic"
-            android:background="@android:color/transparent"/>
         <Button
             android:id="@+id/btn_translate"
             android:layout_width="wrap_content"
@@ -144,11 +155,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="-------"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/result_title"
             tools:text="Apa Kabar?" />
+
+        <View
+            android:id="@+id/v_result_translate"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_corner_10"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintTop_toTopOf="@id/tv_result_translate"
+            app:layout_constraintBottom_toBottomOf="@id/tv_result_translate"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/tv_result_pos"
@@ -156,12 +177,31 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_result_translate"
             tools:text="pronoun"
-            android:text="-------"
             android:textColor="@color/black"
             android:fontFamily="@font/inter"
             android:textSize="12sp"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"/>
+
+        <View
+            android:id="@+id/v_result_pos"
+            android:layout_width="70dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_corner_10"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintTop_toTopOf="@id/tv_result_pos"
+            app:layout_constraintBottom_toBottomOf="@id/tv_result_pos"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btn_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_copy"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ProgressBar
             android:id="@+id/pb_result_translate"
@@ -207,6 +247,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
             android:textColor="@color/blue"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Rumah" />
@@ -216,6 +257,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textSize="14sp"
             android:fontFamily="@font/inter"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@id/tv_title_word"

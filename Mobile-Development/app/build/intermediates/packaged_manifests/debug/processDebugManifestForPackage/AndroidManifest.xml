@@ -30,7 +30,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Bahasain" >
         <activity
-            android:name="com.bahasain.ui.vocab.category.CategoryActivity"
+            android:name="com.bahasain.ui.vocab.category.WordCategoryActivity"
             android:exported="false" />
         <activity
             android:name="com.bahasain.ui.placement.PlacementResultActivity"
