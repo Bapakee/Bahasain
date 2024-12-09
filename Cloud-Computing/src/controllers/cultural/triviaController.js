@@ -18,7 +18,6 @@ const getDailyTrivia = async (req, res) => {
         return errorResponse(res, error, 'Failed to fetch trivia');
     }
 }
-``
 
 
 module.exports = {getDailyTrivia }
