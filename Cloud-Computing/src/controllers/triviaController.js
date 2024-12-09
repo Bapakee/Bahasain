@@ -1,5 +1,5 @@
-const { DailyTrivia,Sequelize } = require ('../../models')
-const { successResponse, errorResponse } = require('../../utils/responseConsistency');
+const { DailyTrivia,Sequelize } = require ('../models')
+const { successResponse, errorResponse } = require('../utils/responseConsistency');
 
 const getDailyTrivia = async (req, res) => {
     try {
