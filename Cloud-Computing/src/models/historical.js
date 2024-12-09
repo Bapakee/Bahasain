@@ -32,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Historical',
-      tableName: 'Historicals',
       underscored: true,
       timestamps: false, // Since created_at and updated_at are handled manually
     }

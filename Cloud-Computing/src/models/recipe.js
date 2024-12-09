@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      imageUrl: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
       content: {
         type: DataTypes.TEXT,
         allowNull: true,
@@ -36,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Recipe',
-      tableName: 'Recipes',
       underscored: true,
       timestamps: false, // Since created_at and updated_at are handled manually
     }
