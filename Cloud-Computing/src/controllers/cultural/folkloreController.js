@@ -22,7 +22,7 @@ const getFolklore = async (req, res) => {
 
             const imageName = item.title.replace(/\s+/g, '_');
 
-            const imageUrl = `${process.env.BUCKET_URL}/folklore/${encodeURIComponent(item.title)}/${imageName}_1.png`;
+            const imageUrl = `${process.env.BUCKET_URL}/folklore/${encodeURIComponent(item.title)}/${imageName}_Cover.png`;
 
             return {
                 ...item.toJSON(),
