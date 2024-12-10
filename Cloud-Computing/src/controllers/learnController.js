@@ -1,7 +1,6 @@
 const { UserProgress, Module, Level, Quiz, QuizOption, Sequelize, User } = require('../models');
+const {getAllModule} = require('../services/getModule')
 const { successResponse, errorResponse } = require('../utils/responseConsistency');
-
-const { Op, where } = require('sequelize');
 
 // Fungsi untuk mendapatkan modul dengan level dan status penyelesaian
 const getModules = async (req, res) => {
@@ -18,28 +17,7 @@ const getModules = async (req, res) => {
         }
 
         // Ambil semua modul dari database
-        const modules = await Module.findAll({
-            order: [['level', 'ASC']], // Urutkan berdasarkan level secara ascending
-            where: {
-                level: {
-                    [Op.gt]: 0, // Level module must be greater than 0
-                },
-            },
-            include: [
-                {
-                    model: Level, // Sertakan semua level terkait untuk setiap modul
-                    order: [['order', 'ASC']], // Urutkan level berdasarkan urutan (order)
-                    include: [
-                        {
-                            model: UserProgress,
-                            where: { userId }, // Ambil hanya progres untuk pengguna tertentu
-                            required: false, // Left join untuk memastikan level tanpa progres juga dimasukkan
-                            attributes: ['id', 'completed', 'score'], // Ambil atribut yang relevan
-                        },
-                    ],
-                },
-            ],
-        });
+        const modules = await getAllModule(userId)
 
         // Transformasikan data ke format respons yang diinginkan
         const response = modules.map((module) => {
