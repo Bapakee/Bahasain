@@ -22,6 +22,9 @@ data class DataItemDetailRecipe(
 	@field:SerializedName("id")
 	val id: Int? = null,
 
+	@field:SerializedName("imageUrl")
+	val imageUrl: String? = null,
+
 	@field:SerializedName("title")
 	val title: String? = null,
 

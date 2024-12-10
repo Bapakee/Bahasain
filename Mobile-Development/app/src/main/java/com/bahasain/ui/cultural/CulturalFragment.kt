@@ -13,6 +13,7 @@ import com.bahasain.data.Result
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.cultural.folklore.FolkloreActivity
 import com.bahasain.ui.cultural.historical.HistoricalActivity
+import com.bahasain.ui.cultural.recipe.RecipeActivity
 import com.dicoding.bahasain.databinding.FragmentCulturalBinding
 
 class CulturalFragment : Fragment() {
@@ -48,7 +49,7 @@ class CulturalFragment : Fragment() {
 
         binding.rvHistorical.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.rvFolklore.layoutManager = GridLayoutManager(requireContext(), 3)
+        binding.rvFolklore.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvRecipe.layoutManager = GridLayoutManager(requireContext(), 3)
 
         binding.rvHistorical.adapter = adapterHistorical
@@ -70,7 +71,8 @@ class CulturalFragment : Fragment() {
         }
 
         binding.btnRecipeShowAll.setOnClickListener {
-
+            val intent = Intent(requireContext(), RecipeActivity::class.java)
+            startActivity(intent)
         }
     }
 

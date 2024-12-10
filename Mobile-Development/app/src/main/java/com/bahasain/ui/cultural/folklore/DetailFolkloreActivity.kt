@@ -2,6 +2,8 @@ package com.bahasain.ui.cultural.folklore
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.MotionEvent
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -58,6 +60,8 @@ class DetailFolkloreActivity : AppCompatActivity() {
                         binding.webView.apply {
                             settings.javaScriptEnabled = true
                             settings.domStorageEnabled = true
+                            isHorizontalScrollBarEnabled = false
+                            setOverScrollMode(WebView.OVER_SCROLL_NEVER)
                             webViewClient = object : WebViewClient() {}
                             if (htmlContent != null) {
                                 loadDataWithBaseURL(null, htmlContent, "text/html", "utf-8", null)

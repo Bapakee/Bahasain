@@ -30,6 +30,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Bahasain" >
         <activity
+            android:name="com.bahasain.ui.cultural.recipe.DetailRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.recipe.RecipeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bahasain.ui.learn.quiz.QuizActivity"
             android:exported="false" />
         <activity

@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Bahasain"
         tools:targetApi="31">
         <activity
+            android:name="com.bahasain.ui.cultural.recipe.DetailRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.recipe.RecipeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bahasain.ui.learn.quiz.QuizActivity"
             android:exported="false" />
         <activity

@@ -3137,6 +3137,7 @@ int drawable icon_learn 0x7f0700b5
 int drawable icon_location 0x7f0700b6
 int drawable icon_nav 0x7f0700b7
 int drawable icon_notification 0x7f0700b8
+int drawable icon_play 0x7f070116
 int drawable icon_poin 0x7f0700b9
 int drawable icon_profile 0x7f0700ba
 int drawable icon_search 0x7f0700bb
@@ -3355,6 +3356,7 @@ int id btn_nav 0x7f090075
 int id btn_next 0x7f090076
 int id btn_notification 0x7f090077
 int id btn_placement 0x7f090297
+int id btn_play 0x7f09029d
 int id btn_recipe_show_all 0x7f090299
 int id btn_register 0x7f090078
 int id btn_setLevel 0x7f090079
@@ -3525,6 +3527,7 @@ int id item_touch_helper_previous_elevation 0x7f09011c
 int id iv_culture 0x7f09011d
 int id iv_folklore 0x7f09011e
 int id iv_intro 0x7f09011f
+int id iv_layout 0x7f09029e
 int id iv_lesson_image 0x7f090120
 int id iv_profile 0x7f090121
 int id iv_recipe 0x7f09029a
@@ -4018,6 +4021,7 @@ int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_detail_folklore 0x7f0c0093
 int layout activity_detail_historical 0x7f0c001c
+int layout activity_detail_recipe 0x7f0c0096
 int layout activity_folklore 0x7f0c001d
 int layout activity_historical 0x7f0c001e
 int layout activity_login 0x7f0c001f
@@ -4027,6 +4031,7 @@ int layout activity_placement 0x7f0c0022
 int layout activity_placement_intro 0x7f0c0023
 int layout activity_placement_result 0x7f0c0024
 int layout activity_quiz 0x7f0c0094
+int layout activity_recipe 0x7f0c0095
 int layout activity_register 0x7f0c0025
 int layout activity_splash 0x7f0c0026
 int layout activity_survey 0x7f0c0027

@@ -3138,6 +3138,7 @@ drawable icon_learn
 drawable icon_location
 drawable icon_nav
 drawable icon_notification
+drawable icon_play
 drawable icon_poin
 drawable icon_profile
 drawable icon_search
@@ -3356,6 +3357,7 @@ id btn_nav
 id btn_next
 id btn_notification
 id btn_placement
+id btn_play
 id btn_recipe_show_all
 id btn_register
 id btn_setLevel
@@ -3526,6 +3528,7 @@ id item_touch_helper_previous_elevation
 id iv_culture
 id iv_folklore
 id iv_intro
+id iv_layout
 id iv_lesson_image
 id iv_profile
 id iv_recipe
@@ -4019,6 +4022,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_detail_folklore
 layout activity_detail_historical
+layout activity_detail_recipe
 layout activity_folklore
 layout activity_historical
 layout activity_login
@@ -4028,6 +4032,7 @@ layout activity_placement
 layout activity_placement_intro
 layout activity_placement_result
 layout activity_quiz
+layout activity_recipe
 layout activity_register
 layout activity_splash
 layout activity_survey

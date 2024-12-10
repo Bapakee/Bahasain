@@ -72,12 +72,20 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_recipe.xml",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_recipe.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_historical.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_historical.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_folklore.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_folklore.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_detail_recipe.xml",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_detail_recipe.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_radio.xml",
@@ -120,12 +128,12 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_placement_result.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_left_matching.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_left_matching.xml"
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_lesson_card_list.xml",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_lesson_card_list.xml"
     },
     {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_recipe_cultural.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_recipe_cultural.xml"
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_left_matching.xml",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_left_matching.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_learn.xml",
