@@ -22,7 +22,7 @@ const getRecipe = async (req, res) => {
             
             const imageName = item.title.replace(/\s+/g, '_');
 
-            const imageUrl = `${process.env.BUCKET_URL}/recipe/${encodeURIComponent(item.title)}/${imageName}.png`;
+            const imageUrl = `${process.env.BUCKET_URL}/Recipe/${imageName}.png`;
 
             return {
                 ...item.toJSON(),
