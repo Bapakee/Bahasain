@@ -23,11 +23,10 @@ const getRecipe = async (req, res) => {
             const imageName = item.title.replace(/\s+/g, '_');
 
             const imageUrl = `${process.env.BUCKET_URL}/Recipe/${imageName}.png`;
-
             return {
-                ...item.toJSON(),
+                id:item.id,
+                title:item.title,              
                 imageUrl: imageUrl, // Dynamic image URL based on item.title
-                content: overview, // Shortened content preview
             };
         });
 
@@ -43,12 +42,20 @@ const getRecipeDetail = async (req, res) => {
         if (!RecipeDetail) {
             return errorResponse(res, null, 'Recipe detail not found', 404);
         }
+        const imageName = RecipeDetail.title.replace(/\s+/g, '_');
 
+        const imageUrl = `${process.env.BUCKET_URL}/Recipe/${imageName}.png`;
         const cleanData = RecipeDetail.dataValues; // Mengambil semua atribut
 
-        return successResponse(res, cleanData, 'Recipe detail fetched successfully');
+        const response ={
+            ...cleanData,
+            imageUrl
+        }
+        
+
+        return successResponse(res, response, 'Recipe detail fetched successfully');
     } catch (error) {
-        return errorResponse(res, null, 'Error when fetching Recipe Detail', 500);
+        return errorResponse(res, error, 'Error when fetching Recipe Detail', 500);
     }
 };
 
