@@ -57,6 +57,7 @@ const getModules = async (req, res) => {
                 lessonsCompleted: `${completedLevels}/${totalLevels}`, // Format penyelesaian modul
                 levels: module.Levels.map((level) => ({
                     id: level.id,
+                    moduleId: module.id,
                     title: level.title,
                     order: level.order,
                     score: level.UserProgresses?.[0]?.score || null, // Sertakan skor jika ada
