@@ -77,6 +77,7 @@ const getProfile = async (req, res) => {
             name,
             avatar:avatarLink,
             level: userLevel,
+            notif:user.notificationPreference,
             percent:parseFloat(percent), // Persentase modul yang selesai
             certiLink, // Link sertifikat untuk modul yang selesai
         };
