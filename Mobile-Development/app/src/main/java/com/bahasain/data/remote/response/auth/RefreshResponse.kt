@@ -1,11 +1,11 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.auth
 
 import com.google.gson.annotations.SerializedName
 
-data class LoginResponse(
+data class RefreshResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: DataItemRefresh? = null,
 
 	@field:SerializedName("success")
 	val success: Boolean? = null,
@@ -14,11 +14,8 @@ data class LoginResponse(
 	val message: String? = null
 )
 
-data class Data(
+data class DataItemRefresh(
 
 	@field:SerializedName("accessToken")
-	val accessToken: String? = null,
-
-	@field:SerializedName("refreshToken")
-	val refreshToken: String? = null
+	val accessToken: String? = null
 )

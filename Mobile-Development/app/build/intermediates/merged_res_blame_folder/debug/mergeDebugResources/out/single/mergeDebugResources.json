@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\tab_indicator_survey.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_detail_folklore.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_detail_folklore.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_placement_intro.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_placement_intro.xml"
     },
@@ -36,6 +40,14 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\baseline_circle_gray.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_bg_text_blur.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\bg_text_blur.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_quiz.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_quiz.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_fragment_learn.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\fragment_learn.xml"
     },
@@ -46,6 +58,14 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_radio.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_detail_historical.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_detail_historical.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_view_folklore_cultural.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_view_folklore_cultural.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_speaker.xml.flat",
@@ -68,12 +88,12 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\checkbox_background.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_bg_button_continue.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\bg_button_continue.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_folklore_cultural.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_folklore_cultural.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_bg_button_continue.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\bg_button_continue.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_poin.xml.flat",
@@ -90,6 +110,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_recipe_cultural.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_recipe_cultural.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-debug-54:/layout_item_recipe_cultural.xml.flat",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_recipe_cultural.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable-xxhdpi_icon_notification.png.flat",
@@ -116,12 +140,12 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\ob_image_2.png"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_learn.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_learn.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_copy.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_copy.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_learn.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_learn.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_learn.xml.flat",
@@ -132,8 +156,16 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_folklore.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_folklore.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_right_matching.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_right_matching.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_view_historical_cultural.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_view_historical_cultural.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_trivia.xml.flat",
@@ -144,12 +176,12 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_location.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable-hdpi_icon_notification.png.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-pngs-50:\\drawable-hdpi\\icon_notification.png"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_word_category.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_word_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable-hdpi_icon_notification.png.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-pngs-50:\\drawable-hdpi\\icon_notification.png"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_lesson_card_list.xml.flat",
@@ -184,6 +216,10 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_on_boarding.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_btn_show_all.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\btn_show_all.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_vocab.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_vocab.xml"
     },
@@ -206,10 +242,6 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_result_placement.png.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\result_placement.png"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-debug-54:/layout_fragment_home.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_bg_button_sign.xml.flat",
@@ -264,6 +296,10 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\tab_bg_placement.xml"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_activity_historical.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_historical.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_bg_edit_text_sign.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\bg_edit_text_sign.xml"
     },
@@ -292,12 +328,12 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\drawable\\icon_clear.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_item_multiple_choice.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_multiple_choice.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-54:\\drawable_icon_category.xml.flat",

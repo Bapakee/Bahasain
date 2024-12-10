@@ -218,6 +218,20 @@ class PlacementActivity : AppCompatActivity() {
                     )
                 }
 
+                "multipleChoice" -> {
+                    val id = (item["id"] as Double).toInt()
+                    val options = item["optionsQuiz"] as List<String>
+                    val correctAnswer = item["correctAnswer"] as List<Int>
+                    Placement.MultipleChoice(
+                        id = id,
+                        quizTitle = item["quizTitle"] as String,
+                        textReading = item["textReading"] as String,
+                        quiz = item["quiz"] as String,
+                        optionsQuiz = options,
+                        correctAnswers = correctAnswer
+                    )
+                }
+
                 "matching" -> {
                     val id = (item["id"] as Double).toInt()
                     val pair = (item["pairs"] as List<Map<String, String>>).map {

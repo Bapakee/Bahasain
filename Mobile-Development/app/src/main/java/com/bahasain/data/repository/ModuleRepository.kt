@@ -6,8 +6,11 @@ import com.bahasain.data.Result
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiConfig
 import com.bahasain.data.remote.api.ApiService
-import com.bahasain.data.remote.response.DataItemLearn
+import com.bahasain.data.remote.response.learn.DataItemLearn
+import com.bahasain.data.remote.response.learn.DataItemQuiz
+import com.bahasain.data.remote.response.learn.QuizResponse
 import kotlinx.coroutines.flow.firstOrNull
+import retrofit2.HttpException
 
 class ModuleRepository private constructor(
     private val apiService: ApiService,
@@ -22,20 +25,18 @@ class ModuleRepository private constructor(
                 emit(Result.Success(module))
             }
         } catch (e: Exception) {
-            if (e.message?.contains("401") == true) {
-                val refreshToken = userPreferences.getSession().firstOrNull()?.refreshToken
-                val newAccessToken = ApiConfig.refreshAccessToken(refreshToken, userPreferences)
-                if (!newAccessToken.isNullOrEmpty()) {
-                    emit(Result.Loading)
-                    val retryResponse = apiService.getModule()
-                    val module = retryResponse.data
-                    emit(Result.Success(module))
-                } else {
-                    emit(Result.Error("Failed to refresh token: ${e.message}"))
-                }
-            } else {
-                emit(Result.Error(e.message.toString()))
-            }
+            emit(Result.Error(e.message.toString()))
+        }
+    }
+
+    fun getQuiz(moduleId: String, moduleLevel: String): LiveData<Result<List<DataItemQuiz>>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.getQuiz(moduleId, moduleLevel)
+            val quiz = response.data
+            emit(Result.Success(quiz))
+        }catch (e: HttpException){
+            emit(Result.Error(e.message().toString()))
         }
     }
 

@@ -5,10 +5,10 @@ import androidx.lifecycle.liveData
 import com.bahasain.data.Result
 import com.bahasain.data.remote.api.ApiService
 import com.bahasain.data.remote.request.TranslateRequest
-import com.bahasain.data.remote.response.DataItemWord
-import com.bahasain.data.remote.response.DataTranslate
-import com.bahasain.data.remote.response.TriviaResponse
-import com.bahasain.data.remote.response.WotdResponse
+import com.bahasain.data.remote.response.vocab.DataItemWord
+import com.bahasain.data.remote.response.vocab.DataTranslate
+import com.bahasain.data.remote.response.vocab.TriviaResponse
+import com.bahasain.data.remote.response.vocab.WotdResponse
 
 class VocabRepository(
     private val apiService: ApiService

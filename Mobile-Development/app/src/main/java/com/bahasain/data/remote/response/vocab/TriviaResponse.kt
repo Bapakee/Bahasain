@@ -1,16 +1,16 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.vocab
 
 import com.google.gson.annotations.SerializedName
 
 data class TriviaResponse(
 
-	@field:SerializedName("data")
+    @field:SerializedName("data")
 	val data: DataItemTrivia? = null,
 
-	@field:SerializedName("success")
+    @field:SerializedName("success")
 	val success: Boolean? = null,
 
-	@field:SerializedName("message")
+    @field:SerializedName("message")
 	val message: String? = null
 )
 

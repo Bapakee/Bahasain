@@ -1,11 +1,14 @@
 package com.bahasain.ui.cultural
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bahasain.data.remote.response.DataItemFolklore
+import com.bahasain.data.remote.response.cultural.DataItemFolklore
+import com.bahasain.ui.cultural.folklore.DetailFolkloreActivity
+import com.bahasain.ui.cultural.historical.DetailHistoricalActivity
 import com.bumptech.glide.Glide
 import com.dicoding.bahasain.databinding.ItemFolkloreCulturalBinding
 
@@ -20,6 +23,7 @@ class FolkloreAdapter :
                 .into(binding.ivFolklore)
 
             binding.tvTitle.text = folklore.title
+            binding.tvLocation.text = folklore.origin
         }
     }
 
@@ -35,6 +39,12 @@ class FolkloreAdapter :
     override fun onBindViewHolder(holder: FolkloreViewHolder, position: Int) {
         val folklore = getItem(position)
         holder.bind(folklore)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, DetailFolkloreActivity::class.java)
+            intent.putExtra("FOLKLORE_ID", folklore.id.toString())
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     companion object {
@@ -54,5 +64,4 @@ class FolkloreAdapter :
             }
         }
     }
-
 }

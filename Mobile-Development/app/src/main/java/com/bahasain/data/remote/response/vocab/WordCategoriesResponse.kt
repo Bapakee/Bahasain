@@ -1,4 +1,4 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.vocab
 
 import com.google.gson.annotations.SerializedName
 

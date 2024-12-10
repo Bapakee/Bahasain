@@ -1,11 +1,11 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.cultural
 
 import com.google.gson.annotations.SerializedName
 
-data class FolkloreResponse(
+data class RecipeResponse(
 
 	@field:SerializedName("data")
-	val data: List<DataItemFolklore?>? = null,
+	val data: List<DataItemRecipe?>? = null,
 
 	@field:SerializedName("success")
 	val success: Boolean? = null,
@@ -14,13 +14,13 @@ data class FolkloreResponse(
 	val message: String? = null
 )
 
-data class DataItemFolklore(
+data class DataItemRecipe(
 
-	@field:SerializedName("origin")
-	val origin: Any? = null,
+	@field:SerializedName("videoUrl")
+	val videoUrl: String? = null,
 
 	@field:SerializedName("imageUrl")
-	val imageUrl: Any? = null,
+	val imageUrl: String? = null,
 
 	@field:SerializedName("id")
 	val id: Int? = null,

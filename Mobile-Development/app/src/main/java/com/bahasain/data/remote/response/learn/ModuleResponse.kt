@@ -1,4 +1,4 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.learn
 
 import com.google.gson.annotations.SerializedName
 
@@ -12,24 +12,6 @@ data class ModuleResponse(
 
 	@field:SerializedName("message")
 	val message: String? = null
-)
-
-data class LevelsItem(
-
-	@field:SerializedName("score")
-	val score: Any? = null,
-
-	@field:SerializedName("id")
-	val id: Int? = null,
-
-	@field:SerializedName("title")
-	val title: String? = null,
-
-	@field:SerializedName("order")
-	val order: Int? = null,
-
-	@field:SerializedName("isCompleted")
-	val isCompleted: Boolean? = null
 )
 
 data class DataItemLearn(
@@ -51,4 +33,25 @@ data class DataItemLearn(
 
 	@field:SerializedName("levels")
 	val levels: List<LevelsItem?>? = null
+)
+
+data class LevelsItem(
+
+	@field:SerializedName("score")
+	val score: Any? = null,
+
+	@field:SerializedName("id")
+	val id: Int? = null,
+
+	@field:SerializedName("moduleId")
+	val moduleId: Int? = null,
+
+	@field:SerializedName("title")
+	val title: String? = null,
+
+	@field:SerializedName("order")
+	val order: Int? = null,
+
+	@field:SerializedName("isCompleted")
+	val isCompleted: Boolean? = null
 )

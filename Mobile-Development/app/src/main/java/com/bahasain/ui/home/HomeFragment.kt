@@ -10,6 +10,8 @@ import androidx.fragment.app.viewModels
 import com.bahasain.data.Result
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.onboarding.OnBoardingActivity
+import com.bahasain.ui.placement.PlacementActivity
+import com.bahasain.ui.placement.PlacementIntroActivity
 import com.bahasain.ui.survey.SurveyActivity
 import com.bahasain.ui.vocab.VocabViewModel
 import com.dicoding.bahasain.R
@@ -45,10 +47,15 @@ class HomeFragment : Fragment() {
         getTrivia()
         getWotd()
 
-       binding.btn.setOnClickListener{
-           val intent = Intent(requireContext(), SurveyActivity::class.java)
-           startActivity(intent)
-       }
+        binding.btnSurvey.setOnClickListener{
+            val intent = Intent(requireContext(), SurveyActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPlacement.setOnClickListener{
+            val intent = Intent(requireContext(), PlacementIntroActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getWotd(){

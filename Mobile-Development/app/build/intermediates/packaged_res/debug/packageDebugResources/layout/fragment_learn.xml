@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="32dp"
+    android:paddingHorizontal="32dp"
     tools:context="com.bahasain.ui.learn.LearnFragment">
 
     <TextView

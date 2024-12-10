@@ -1,11 +1,13 @@
 package com.bahasain.ui.cultural
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bahasain.data.remote.response.DataItemHistorical
+import com.bahasain.data.remote.response.cultural.DataItemHistorical
+import com.bahasain.ui.cultural.historical.DetailHistoricalActivity
 import com.bumptech.glide.Glide
 import com.dicoding.bahasain.databinding.ItemHistoricalCulturalBinding
 
@@ -36,6 +38,12 @@ class HistoricalAdapter :
     override fun onBindViewHolder(holder: HistoricalViewHolder, position: Int) {
         val historical = getItem(position)
         holder.bind(historical)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, DetailHistoricalActivity::class.java)
+            intent.putExtra("HISTORICAL_ID", historical.id.toString())
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     companion object {

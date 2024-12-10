@@ -5,19 +5,27 @@ import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
 import com.bahasain.data.remote.request.TranslateRequest
-import com.bahasain.data.remote.response.FolkloreResponse
-import com.bahasain.data.remote.response.HistoricalResponse
-import com.bahasain.data.remote.response.LevelResponse
-import com.bahasain.data.remote.response.LoginResponse
-import com.bahasain.data.remote.response.ModuleResponse
-import com.bahasain.data.remote.response.RegisterResponse
-import com.bahasain.data.remote.response.TranslateResponse
-import com.bahasain.data.remote.response.TriviaResponse
-import com.bahasain.data.remote.response.WordCategoriesResponse
-import com.bahasain.data.remote.response.WotdResponse
+import com.bahasain.data.remote.response.cultural.FolkloreResponse
+import com.bahasain.data.remote.response.cultural.HistoricalResponse
+import com.bahasain.data.remote.response.learn.LevelResponse
+import com.bahasain.data.remote.response.auth.LoginResponse
+import com.bahasain.data.remote.response.auth.RefreshResponse
+import com.bahasain.data.remote.response.learn.ModuleResponse
+import com.bahasain.data.remote.response.auth.RegisterResponse
+import com.bahasain.data.remote.response.cultural.DetailFolkloreResponse
+import com.bahasain.data.remote.response.cultural.DetailHistoricalResponse
+import com.bahasain.data.remote.response.cultural.DetailRecipeResponse
+import com.bahasain.data.remote.response.cultural.RecipeResponse
+import com.bahasain.data.remote.response.learn.QuizResponse
+import com.bahasain.data.remote.response.vocab.TranslateResponse
+import com.bahasain.data.remote.response.vocab.TriviaResponse
+import com.bahasain.data.remote.response.vocab.WordCategoriesResponse
+import com.bahasain.data.remote.response.vocab.WotdResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.PATCH
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
@@ -34,7 +42,7 @@ interface ApiService {
     @POST("auth/refresh")
     suspend fun refreshToken(
         @Body refreshToken: RefreshRequest
-    ): LoginResponse
+    ): RefreshResponse
 
     @POST("auth/logout")
     suspend fun logout(
@@ -48,6 +56,12 @@ interface ApiService {
 
     @GET("module")
     suspend fun getModule(): ModuleResponse
+
+    @GET("module/{id}/level/{level}")
+    suspend fun getQuiz(
+        @Path("id") moduleId : String,
+        @Path("level") moduleLevel : String
+    ): QuizResponse
 
     @GET("word?limit=100")
     suspend fun getWordCategories(
@@ -68,6 +82,24 @@ interface ApiService {
     @GET("cultural/historical")
     suspend fun getHistorical(): HistoricalResponse
 
+    @GET("cultural/historical/{id}")
+    suspend fun getDetailHistorical(
+        @Path("id") historicalId : String
+    ): DetailHistoricalResponse
+
     @GET("cultural/folklore")
     suspend fun getFolklore(): FolkloreResponse
+
+    @GET("cultural/folklore/{id}")
+    suspend fun getDetailFolklore(
+        @Path("id") folkloreId: String
+    ): DetailFolkloreResponse
+
+    @GET("cultural/recipe")
+    suspend fun getRecipe(): RecipeResponse
+
+    @GET("cultural/recipe/{id}")
+    suspend fun getDetailRecipe(
+        @Path("id") recipeId: String
+    ): DetailRecipeResponse
 }

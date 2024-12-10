@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -22,7 +23,7 @@ import java.lang.String;
 
 public final class FragmentVocabBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final ImageButton btnClear;
@@ -105,7 +106,7 @@ public final class FragmentVocabBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout wotdLayout;
 
-  private FragmentVocabBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnClear,
+  private FragmentVocabBinding(@NonNull NestedScrollView rootView, @NonNull ImageButton btnClear,
       @NonNull ImageButton btnCopy, @NonNull Button btnTranslate, @NonNull TextView meaningLayout,
       @NonNull ProgressBar pbResultTranslate, @NonNull ProgressBar pbWotd,
       @NonNull TextView resultTitle, @NonNull ConstraintLayout resultTranslateLayout,
@@ -150,7 +151,7 @@ public final class FragmentVocabBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -337,7 +338,7 @@ public final class FragmentVocabBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentVocabBinding((ConstraintLayout) rootView, btnClear, btnCopy, btnTranslate,
+      return new FragmentVocabBinding((NestedScrollView) rootView, btnClear, btnCopy, btnTranslate,
           meaningLayout, pbResultTranslate, pbWotd, resultTitle, resultTranslateLayout,
           resulttranslateWotd, rvCategory, tEng, tInd, textInputTranslate, titleCategory,
           titleTranslate, titleTranslateLayout, titleWotd, tranlateLayout, tvEnglish, tvResultPos,

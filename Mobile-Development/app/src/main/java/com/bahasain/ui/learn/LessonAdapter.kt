@@ -1,11 +1,13 @@
 package com.bahasain.ui.learn
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bahasain.data.remote.response.LevelsItem
+import com.bahasain.data.remote.response.learn.LevelsItem
+import com.bahasain.ui.learn.quiz.QuizActivity
 import com.dicoding.bahasain.databinding.ItemLessonCardListBinding
 
 class LessonAdapter : ListAdapter<LevelsItem, LessonAdapter.LessonViewHolder>(DIFF_CALLBACK) {
@@ -24,6 +26,18 @@ class LessonAdapter : ListAdapter<LevelsItem, LessonAdapter.LessonViewHolder>(DI
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
         val lesson = getItem(position)
         holder.bind(lesson)
+
+        holder.itemView.setOnClickListener{
+            val moduleId = lesson.moduleId
+            val moduleLevel = lesson.id
+
+            val intent = Intent(holder.itemView.context, QuizActivity::class.java).apply {
+                putExtra("MODULE_ID", moduleId.toString())
+                putExtra("MODULE_LEVEL", moduleLevel.toString())
+            }
+
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     companion object {

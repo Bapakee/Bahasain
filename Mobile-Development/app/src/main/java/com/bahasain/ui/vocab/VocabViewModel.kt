@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.bahasain.data.Result
 import com.bahasain.data.repository.VocabRepository
 import com.bahasain.data.remote.request.TranslateRequest
-import com.bahasain.data.remote.response.DataItemWord
+import com.bahasain.data.remote.response.vocab.DataItemWord
 
 class VocabViewModel(private val repository: VocabRepository) : ViewModel() {
 

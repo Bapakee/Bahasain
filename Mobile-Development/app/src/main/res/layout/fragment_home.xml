@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="32dp"
+    android:paddingHorizontal="32dp"
     tools:context="com.bahasain.ui.home.HomeFragment">
 
     <TextView
@@ -13,18 +13,27 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_bold"
         android:text="@string/title_home"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/btn_survey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Survey"
         android:layout_marginStart="8dp"
         app:layout_constraintTop_toTopOf="@id/title_page"
         app:layout_constraintStart_toEndOf="@id/title_page"/>
+
+    <Button
+        android:id="@+id/btn_placement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placement"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/btn_survey"
+        app:layout_constraintStart_toEndOf="@id/btn_survey"/>
 
     <LinearLayout
         android:id="@+id/trivia_layout"
@@ -66,7 +75,7 @@
             tools:text="title"
             android:gravity="center"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:fontFamily="@font/inter_medium"
             android:textColor="@color/white"
             android:textAlignment="center"/>
@@ -76,7 +85,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/inter"
             android:gravity="center"
             android:textAlignment="center"
@@ -86,12 +94,59 @@
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/learning_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/trivia_layout">
+
+        <TextView
+            android:id="@+id/tv_learning_progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learning Progress"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_learn_show_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:outlineProvider="none"
+            android:padding="0dp"
+            android:text="@string/btn_show_all"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            app:icon="@drawable/btn_show_all"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/learning_progress_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/learning_progress_layout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_with_the_basics"
+            app:layout_constraintTop_toBottomOf="@id/tv_learning_progress_layout"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_corner_20"
         android:backgroundTint="@color/blue"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/learning_progress_layout">
 
         <LinearLayout
             android:layout_width="match_parent"

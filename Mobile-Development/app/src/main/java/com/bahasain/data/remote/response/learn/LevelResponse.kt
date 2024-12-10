@@ -1,8 +1,8 @@
-package com.bahasain.data.remote.response
+package com.bahasain.data.remote.response.learn
 
 import com.google.gson.annotations.SerializedName
 
-data class RegisterResponse(
+data class LevelResponse(
 
 	@field:SerializedName("success")
 	val success: Boolean? = null,
@@ -11,5 +11,5 @@ data class RegisterResponse(
 	val message: String? = null,
 
 	@field:SerializedName("error")
-	val error: Any? = null
+	val error: String? = null
 )

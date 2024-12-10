@@ -59,4 +59,9 @@
     <string name="title_daily_trivia">Daily Trivia</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_show_all">Show all</string>
+    <string name="historical">Historical</string>
+    <string name="lessons_completed">Lessons completed</string>
+    <string name="title_module">Module - %s</string>
+    <string name="traditional_recipes">Traditional Recipes</string>
 </resources>

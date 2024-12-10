@@ -8,10 +8,12 @@ import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.remote.api.ApiService
 import com.bahasain.data.remote.request.LevelRequest
 import com.bahasain.data.remote.request.LoginRequest
+import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
-import com.bahasain.data.remote.response.LevelResponse
-import com.bahasain.data.remote.response.LoginResponse
-import com.bahasain.data.remote.response.RegisterResponse
+import com.bahasain.data.remote.response.learn.LevelResponse
+import com.bahasain.data.remote.response.auth.LoginResponse
+import com.bahasain.data.remote.response.auth.RefreshResponse
+import com.bahasain.data.remote.response.auth.RegisterResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import retrofit2.HttpException
