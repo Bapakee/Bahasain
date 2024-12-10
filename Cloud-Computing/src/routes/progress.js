@@ -185,7 +185,7 @@ router.put('/',validateBody(['moduleId','levelId','score']),putUserProgress);
  *                   example: Internal server error.
  */
 
-router.post('/level',auth,validateBody(['score']),setUserLevel);
+router.post('/level',auth,validateBody(['level']),setUserLevel);
 
 
 

@@ -58,15 +58,15 @@ const putUserProgress = async (req, res) => {
 
 const setUserLevel = async (req, res) => {
     try {
-        const { score } = req.body;
+        const { level } = req.body;
         const userId = req.user.id;
 
-        // Validate score
-        if (score < 0 || score > 10) {
-            return errorResponse(res, 'Invalid score', 'Score must be between 0 and 10', 400);
+        // Validate level
+        if (level < 0 || level > 3) {
+            return errorResponse(res, 'Invalid Level', 'Level must be between 0 and 10', 400);
         }
 
-        const userLevel = score > 7 ? 3 : score >= 5 ? 2 : 1;
+        const userLevel = level
 
         // Update user level
         const user = await User.findByPk(userId);
