@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes');
 const helmet = require('helmet')
+const resetStreak = require('./services/resetStreak')
 
 const app = express();
 
@@ -27,6 +28,9 @@ app.use('/api', routes);
 app.get('/reset-password/:token', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/reset-password.html'));
 });
+
+// Handle reset-streak
+app.post('/reset-streak',resetStreak)
 
 // 404 Handler
 app.use((req, res) => {
