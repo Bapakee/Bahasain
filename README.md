@@ -91,3 +91,7 @@ The prototype design of this application was created using Figma. If you are int
 - C247B4KY2864 - Muhammad Hafi - Universitas Lambung Mangkurat - Cloud Computing
 - A593B4KY0298 - Akmal Kafi Ar Ridho - Universitas Qomaruddin - Mobile Development
 - A284B4KX1963 - Imanuella Yesha Metanoia - Universitas Negeri Surabaya - Mobile Development
+
+### Contact
+- BahasaIn - @BahasainApp - YOUTUBE CHANNEL
+- Project Link: https://github.com/Bapakee/Bahasain/tree/main/Machine-Learning
