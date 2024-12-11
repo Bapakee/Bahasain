@@ -14,6 +14,6 @@ Machine Learning Workspace
 
 BahasaIn - [@BahasainApp](https://youtube.com/@bahasainapp?si=oIAY0DYt4onk3ETp) - YOUTUBE CHANNEL
 
-Project Link: [https://github.com/baksara-id/machine-learning](https://github.com/baksara-id/machine-learning)
+Project Link: [https://github.com/Bapakee/Bahasain/tree/main/Machine-Learning](https://github.com/Bapakee/Bahasain/tree/main/Machine-Learning)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
