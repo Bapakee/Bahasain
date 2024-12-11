@@ -72,11 +72,14 @@ The prototype design of this application was created using Figma. If you are int
 
 ## **🔑Repositories**
 
-1. **Machine Learning**  
+1. **Machine Learning**
+   - https://github.com/Bapakee/Bahasain/tree/main/Machine-Learning
    
-2. **Mobile Development**  
+3. **Mobile Development**
+   - https://github.com/Bapakee/Bahasain/tree/main/Mobile-Development
    
-3. **Cloud Computing**  
+5. **Cloud Computing**
+   - (https://github.com/Bapakee/Bahasain/tree/main/Cloud-Computing)
 
 
 ---
