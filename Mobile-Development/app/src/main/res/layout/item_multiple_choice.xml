@@ -7,12 +7,10 @@
 
     <TextView
         android:id="@+id/quiz_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Quis"
-        android:textStyle="bold"
-        android:textSize="32sp"
-        android:textColor="@color/black"/>
+        android:gravity="center"
+        tools:text="Idioms and Expressions" />
 
     <TextView
         android:id="@+id/tv_reading"
@@ -21,20 +19,23 @@
         android:fontFamily="@font/inter"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/quiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        tools:text="Select all that apply"/>
-
-    <LinearLayout
-        android:id="@+id/llOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:text="Apa arti ungkapan buah tangan?"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:orientation="vertical" />
+
 </LinearLayout>
