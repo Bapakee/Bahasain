@@ -136,9 +136,9 @@ id iv_result
 id learning_progress_layout
 id leftColumn
 id llOptions
+id ll_options
 id logo
 id main
-id meaning_layout
 id mobile_navigation
 id nav
 id nav_host_fragment_activity_main
@@ -149,7 +149,6 @@ id navigation_learn
 id navigation_profile
 id navigation_vocab
 id pb_result_translate
-id pb_wotd
 id pb_wotd_home
 id point
 id progressBar
@@ -159,7 +158,6 @@ id recyclerView
 id result_title
 id result_translate
 id result_translate_layout
-id resulttranslate_wotd
 id rg_quiz
 id rightColumn
 id rvLesson
@@ -188,7 +186,6 @@ id title_recipe
 id title_signup
 id title_translate
 id title_translate_layout
-id title_wotd
 id tranlate_layout
 id trivia_layout
 id tvHeader
@@ -224,7 +221,6 @@ id v_result_pos
 id v_result_translate
 id viewPager
 id webView
-id wotd_layout
 layout activity_detail_folklore
 layout activity_detail_historical
 layout activity_detail_recipe
