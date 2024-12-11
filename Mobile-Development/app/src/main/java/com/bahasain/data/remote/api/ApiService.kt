@@ -17,6 +17,7 @@ import com.bahasain.data.remote.response.cultural.DetailHistoricalResponse
 import com.bahasain.data.remote.response.cultural.DetailRecipeResponse
 import com.bahasain.data.remote.response.cultural.RecipeResponse
 import com.bahasain.data.remote.response.learn.QuizResponse
+import com.bahasain.data.remote.response.user.ProfileResponse
 import com.bahasain.data.remote.response.vocab.TranslateResponse
 import com.bahasain.data.remote.response.vocab.TriviaResponse
 import com.bahasain.data.remote.response.vocab.WordCategoriesResponse
@@ -43,6 +44,9 @@ interface ApiService {
     suspend fun refreshToken(
         @Body refreshToken: RefreshRequest
     ): RefreshResponse
+
+    @GET("profile")
+    suspend fun getProfile(): ProfileResponse
 
     @POST("auth/logout")
     suspend fun logout(

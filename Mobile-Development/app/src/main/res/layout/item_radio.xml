@@ -5,7 +5,6 @@
     android:background="@drawable/checkbox_background"
     android:gravity="center"
     android:layout_marginTop="8dp"
-    android:fontFamily="@font/inter"
-    android:textFontWeight="500"
+    android:fontFamily="@font/inter_medium"
     android:textSize="16sp"
     android:textColor="@drawable/checkbox_text_color" />

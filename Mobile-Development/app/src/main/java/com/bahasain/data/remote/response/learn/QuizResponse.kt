@@ -20,7 +20,7 @@ data class DataItemQuiz(
 	val id: Int? = null,
 
 	@field:SerializedName("quizzes")
-	val quizzes: List<QuizzesItem?>? = null,
+	val quizzes: List<QuizzesItem>,
 
 	@field:SerializedName("title")
 	val title: String? = null

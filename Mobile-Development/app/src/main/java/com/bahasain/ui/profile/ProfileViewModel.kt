@@ -12,6 +12,8 @@ class ProfileViewModel(
     private val userRepository: UserRepository
 ): ViewModel() {
 
+    fun getProfile() = userRepository.getProfile()
+
     fun getSession(): LiveData<UserModel> {
         return userRepository.getSession().asLiveData()
     }

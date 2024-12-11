@@ -1,4 +1,4 @@
-package com.bahasain.data.remote.response.auth
+package com.bahasain.data.remote.response.user
 
 import com.google.gson.annotations.SerializedName
 

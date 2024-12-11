@@ -2163,6 +2163,7 @@ color primary_text_disabled_material_light
 color purple_200
 color purple_500
 color purple_700
+color red_200
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -3468,6 +3469,9 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id feedbackContainer
+id feedbackDetail
+id feedbackText
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3531,6 +3535,7 @@ id iv_intro
 id iv_layout
 id iv_lesson_image
 id iv_profile
+id iv_quiz
 id iv_recipe
 id iv_result
 id jumpToEnd
@@ -3548,6 +3553,7 @@ id linear
 id listMode
 id list_item
 id llOptions
+id ll_options
 id locale
 id logo
 id ltr
@@ -3578,7 +3584,6 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
-id meaning_layout
 id message
 id middle
 id mini
@@ -3672,7 +3677,6 @@ id password_toggle
 id path
 id pathRelative
 id pb_result_translate
-id pb_wotd
 id pb_wotd_home
 id peekHeight
 id percent
@@ -3694,7 +3698,6 @@ id report_drawn
 id result_title
 id result_translate
 id result_translate_layout
-id resulttranslate_wotd
 id reverseSawtooth
 id rg_quiz
 id right
@@ -3828,7 +3831,6 @@ id title_signup
 id title_template
 id title_translate
 id title_translate_layout
-id title_wotd
 id toggle
 id top
 id topPanel
@@ -3898,7 +3900,6 @@ id west
 id withText
 id with_icon
 id withinBounds
-id wotd_layout
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -4072,6 +4073,8 @@ layout item_lesson_card_list
 layout item_mathcing_choice
 layout item_multiple_choice
 layout item_onboarding
+layout item_options_quiz
+layout item_quiz_options
 layout item_radio
 layout item_recipe_cultural
 layout item_right_matching

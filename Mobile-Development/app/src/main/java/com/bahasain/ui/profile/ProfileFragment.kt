@@ -9,8 +9,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.auth0.android.jwt.JWT
+import com.bahasain.data.Result
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.auth.login.LoginActivity
+import com.bahasain.ui.cultural.CulturalViewModel
+import com.bahasain.ui.setLevel
+import com.bumptech.glide.Glide
+import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.FragmentProfileBinding
 
 
@@ -20,38 +25,8 @@ class ProfileFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val factory: ViewModelFactory = ViewModelFactory.getInstance(requireActivity())
-        val viewModel: ProfileViewModel by viewModels {
-            factory
-        }
-
-        viewModel.getSession().observe(viewLifecycleOwner){ user ->
-            val name = user.userName
-            val level = user.userLevel
-            val token = user.accessToken
-
-            Log.d("Profile Info", "Name: $name, Level: $level, token: $token")
-
-            val currentLevel =
-                when(level) {
-                    1 -> "Basic"
-                    2 -> "Intermediate"
-                    3 -> "expert"
-                    else -> " Unknown Level"
-                }
-            binding.tvName.text = name
-            binding.tvLevel.text = currentLevel
-        }
-
-        binding.btnLogout.setOnClickListener{
-            viewModel.logout()
-            val intent = Intent(requireActivity(), LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
+    private val viewModel: ProfileViewModel by viewModels {
+        ViewModelFactory.getInstance(requireContext())
     }
 
     override fun onCreateView(
@@ -62,6 +37,46 @@ class ProfileFragment : Fragment() {
         val root: View = binding.root
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        getProfile()
+
+        binding.btnLogout.setOnClickListener{
+            viewModel.logout()
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+    }
+
+    private fun getProfile(){
+        viewModel.getProfile().observe(viewLifecycleOwner){ result ->
+            if (result != null){
+                when(result){
+                    is Result.Loading -> {
+
+                    }
+
+                    is Result.Success -> {
+                        Glide.with(requireContext())
+                            .load(result.data?.data?.avatar ?: R.drawable.icon_profile)
+                            .into(binding.ivProfile)
+
+                        val level =  result.data?.data?.level
+
+                        binding.tvName.text = result.data?.data?.name
+                        binding.tvLevel.text = setLevel(level ?: -1)
+                    }
+
+                    is Result.Error -> {
+
+                    }
+                }
+            }
+        }
     }
 
     override fun onDestroy() {

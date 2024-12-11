@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bahasain.data.Result
-import com.bahasain.ui.MainActivity
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.loadPlacementQuizFromJson
 import com.dicoding.bahasain.R
@@ -82,19 +81,19 @@ class PlacementActivity : AppCompatActivity() {
     }
 
     private fun updateContinueButtonState(position: Int, quizAnswers: Map<Int, List<Int>>) {
-        val currentSurveyId = position + 1
+        val currentPlacementId = position + 1
         val isAnswered = when (val currentQuiz = placementQuiz[position]) {
             is Placement.Matching -> {
                 currentQuiz.userMatches.size == currentQuiz.pairs.size
             }
 
             else -> {
-                val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+                val selectedOptions = quizAnswers[currentPlacementId] ?: emptyList()
                 selectedOptions.isNotEmpty()
             }
         }
 
-        val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+        val selectedOptions = quizAnswers[currentPlacementId] ?: emptyList()
         selectedOptions.isNotEmpty()
 
         binding.btnContinue.isEnabled = isAnswered

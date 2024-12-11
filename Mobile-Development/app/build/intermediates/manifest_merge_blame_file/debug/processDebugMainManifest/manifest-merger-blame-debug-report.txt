@@ -9,235 +9,235 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:5:22-64
+11-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:5:22-64
 12
 13    <permission
-13-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
 14        android:name="com.dicoding.bahasain.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.dicoding.bahasain.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+17-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:7:5-75:19
+19-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:7:5-75:19
 20        android:allowBackup="true"
-20-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:8:9-35
+20-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:8:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.15.0] C:\Users\Lenovo\.gradle\caches\transforms-4\48ee52c78e21b9c6742338f92b8e42ef\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.15.0] /Users/imanuellayesha/.gradle/caches/transforms-4/48ee52c78e21b9c6742338f92b8e42ef/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:9:9-65
+22-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:9:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="true"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:10:9-54
+25-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:10:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:11:9-43
+26-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:11:9-43
 27        android:label="@string/app_name"
-27-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:12:9-41
+27-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:12:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:13:9-54
+28-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:13:9-54
 29        android:supportsRtl="true"
-29-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:14:9-35
+29-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:14:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.Bahasain" >
-31-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:15:9-46
+31-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:15:9-46
 32        <activity
-32-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:17:9-19:40
+32-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:17:9-19:40
 33            android:name="com.bahasain.ui.cultural.recipe.DetailRecipeActivity"
-33-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:18:13-80
+33-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:18:13-80
 34            android:exported="false" />
-34-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:19:13-37
+34-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:19:13-37
 35        <activity
-35-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:20:9-22:40
+35-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:20:9-22:40
 36            android:name="com.bahasain.ui.cultural.recipe.RecipeActivity"
-36-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:21:13-74
+36-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:21:13-74
 37            android:exported="false" />
-37-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:22:13-37
+37-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:22:13-37
 38        <activity
-38-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:23:9-25:40
+38-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:23:9-25:40
 39            android:name="com.bahasain.ui.learn.quiz.QuizActivity"
-39-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:24:13-67
+39-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:24:13-67
 40            android:exported="false" />
-40-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:25:13-37
+40-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:25:13-37
 41        <activity
-41-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:26:9-28:40
+41-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:26:9-28:40
 42            android:name="com.bahasain.ui.cultural.folklore.DetailFolkloreActivity"
-42-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:27:13-84
+42-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:27:13-84
 43            android:exported="false" />
-43-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:28:13-37
+43-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:28:13-37
 44        <activity
-44-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:29:9-31:40
+44-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:29:9-31:40
 45            android:name="com.bahasain.ui.cultural.folklore.FolkloreActivity"
-45-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:30:13-78
+45-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:30:13-78
 46            android:exported="false" />
-46-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:31:13-37
+46-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:31:13-37
 47        <activity
-47-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:32:9-34:40
+47-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:32:9-34:40
 48            android:name="com.bahasain.ui.cultural.historical.DetailHistoricalActivity"
-48-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:33:13-88
+48-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:33:13-88
 49            android:exported="false" />
-49-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:34:13-37
+49-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:34:13-37
 50        <activity
-50-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:35:9-37:40
+50-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:35:9-37:40
 51            android:name="com.bahasain.ui.cultural.historical.HistoricalActivity"
-51-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:36:13-82
+51-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:36:13-82
 52            android:exported="false" />
-52-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:37:13-37
+52-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:37:13-37
 53        <activity
-53-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:38:9-40:40
+53-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:38:9-40:40
 54            android:name="com.bahasain.ui.vocab.category.WordCategoryActivity"
-54-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:39:13-79
+54-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:39:13-79
 55            android:exported="false" />
-55-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:40:13-37
+55-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:40:13-37
 56        <activity
-56-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:41:9-43:40
+56-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:41:9-43:40
 57            android:name="com.bahasain.ui.placement.PlacementResultActivity"
-57-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:42:13-77
+57-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:42:13-77
 58            android:exported="false" />
-58-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:43:13-37
+58-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:43:13-37
 59        <activity
-59-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:44:9-46:40
+59-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:44:9-46:40
 60            android:name="com.bahasain.ui.placement.PlacementIntroActivity"
-60-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:45:13-76
+60-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:45:13-76
 61            android:exported="false" />
-61-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:46:13-37
+61-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:46:13-37
 62        <activity
-62-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:47:9-49:40
+62-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:47:9-49:40
 63            android:name="com.bahasain.ui.placement.PlacementActivity"
-63-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:48:13-71
+63-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:48:13-71
 64            android:exported="false" />
-64-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:49:13-37
+64-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:49:13-37
 65        <activity
-65-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:50:9-52:40
+65-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:50:9-52:40
 66            android:name="com.bahasain.ui.survey.SurveyActivity"
-66-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:51:13-65
+66-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:51:13-65
 67            android:exported="false" />
-67-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:52:13-37
+67-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:52:13-37
 68        <activity
-68-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:53:9-55:40
+68-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:53:9-55:40
 69            android:name="com.bahasain.ui.auth.register.RegisterActivity"
-69-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:54:13-74
+69-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:54:13-74
 70            android:exported="false" />
-70-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:55:13-37
+70-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:55:13-37
 71        <activity
-71-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:56:9-58:40
+71-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:56:9-58:40
 72            android:name="com.bahasain.ui.auth.login.LoginActivity"
-72-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:57:13-68
+72-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:57:13-68
 73            android:exported="false" />
-73-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:58:13-37
+73-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:58:13-37
 74        <activity
-74-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:59:9-61:40
+74-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:59:9-61:40
 75            android:name="com.bahasain.ui.onboarding.OnBoardingActivity"
-75-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:60:13-73
+75-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:60:13-73
 76            android:exported="false" />
-76-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:61:13-37
+76-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:61:13-37
 77        <activity
-77-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:62:9-71:20
+77-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:62:9-71:20
 78            android:name="com.bahasain.ui.splash.SplashActivity"
-78-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:63:13-65
+78-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:63:13-65
 79            android:exported="true"
-79-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:64:13-36
+79-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:64:13-36
 80            android:theme="@style/SplashScreenTheme" >
-80-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:65:13-53
+80-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:65:13-53
 81            <intent-filter>
-81-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:66:13-70:29
+81-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:66:13-70:29
 82                <action android:name="android.intent.action.MAIN" />
-82-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:67:17-69
-82-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:67:25-66
+82-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:67:17-69
+82-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:67:25-66
 83
 84                <category android:name="android.intent.category.LAUNCHER" />
-84-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:69:17-77
-84-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:69:27-74
+84-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:69:17-77
+84-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:69:27-74
 85            </intent-filter>
 86        </activity>
 87        <activity
-87-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:72:9-74:40
+87-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:72:9-74:40
 88            android:name="com.bahasain.ui.MainActivity"
-88-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:73:13-56
+88-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:73:13-56
 89            android:exported="false" />
-89-->C:\Users\Lenovo\Documents\Bangkit 2024 batch 2\Bahasain\Bahasain\Mobile-Development\app\src\main\AndroidManifest.xml:74:13-37
+89-->/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/src/main/AndroidManifest.xml:74:13-37
 90
 91        <provider
-91-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+91-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 92            android:name="androidx.startup.InitializationProvider"
-92-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+92-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
 93            android:authorities="com.dicoding.bahasain.androidx-startup"
-93-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+93-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
 94            android:exported="false" >
-94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+94-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
 95            <meta-data
-95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+95-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
 96                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+96-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 97                android:value="androidx.startup" />
-97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-4\1c70bebf5706111ac1c2b941a7299bfb\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+97-->[androidx.emoji2:emoji2:1.3.0] /Users/imanuellayesha/.gradle/caches/transforms-4/1c70bebf5706111ac1c2b941a7299bfb/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
 98            <meta-data
-98-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lenovo\.gradle\caches\transforms-4\c28f8426beddce95748c0e0d3085e372\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+98-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/imanuellayesha/.gradle/caches/transforms-4/c28f8426beddce95748c0e0d3085e372/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
 99                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-99-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lenovo\.gradle\caches\transforms-4\c28f8426beddce95748c0e0d3085e372\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+99-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/imanuellayesha/.gradle/caches/transforms-4/c28f8426beddce95748c0e0d3085e372/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
 100                android:value="androidx.startup" />
-100-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lenovo\.gradle\caches\transforms-4\c28f8426beddce95748c0e0d3085e372\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+100-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/imanuellayesha/.gradle/caches/transforms-4/c28f8426beddce95748c0e0d3085e372/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
 101            <meta-data
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
 102                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
 103                android:value="androidx.startup" />
-103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
 104        </provider>
 105
 106        <uses-library
-106-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+106-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
 107            android:name="androidx.window.extensions"
-107-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+107-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
 108            android:required="false" />
-108-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+108-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
 109        <uses-library
-109-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+109-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
 110            android:name="androidx.window.sidecar"
-110-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+110-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
 111            android:required="false" />
-111-->[androidx.window:window:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f0d56e693d3909d275994a2b4a0844f6\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+111-->[androidx.window:window:1.0.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f0d56e693d3909d275994a2b4a0844f6/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
 112
 113        <receiver
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
 114            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
 115            android:directBootAware="false"
-115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
 116            android:enabled="true"
-116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
 117            android:exported="true"
-117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
 118            android:permission="android.permission.DUMP" >
-118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
 119            <intent-filter>
-119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
 120                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
 121            </intent-filter>
 122            <intent-filter>
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
 123                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
 124            </intent-filter>
 125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
 126                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+126-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+126-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
 127            </intent-filter>
 128            <intent-filter>
-128-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+128-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
 129                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-129-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-129-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-4\f640c4357ddeb82e1288898ec0a34dc7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/imanuellayesha/.gradle/caches/transforms-4/f640c4357ddeb82e1288898ec0a34dc7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
 130            </intent-filter>
 131        </receiver>
 132    </application>

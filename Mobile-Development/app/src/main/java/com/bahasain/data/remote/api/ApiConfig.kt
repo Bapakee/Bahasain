@@ -23,7 +23,6 @@ object ApiConfig {
             val userPreferences = UserPreferences.getInstance(context.dataStore)
             val accessToken = runBlocking { userPreferences.getSession().firstOrNull()?.accessToken }
 
-
             val requestWithToken = originalRequest.newBuilder()
                 .header("Authorization", "Bearer $accessToken")
                 .build()

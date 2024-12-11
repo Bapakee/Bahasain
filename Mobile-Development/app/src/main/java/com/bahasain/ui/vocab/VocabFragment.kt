@@ -55,8 +55,6 @@ class VocabFragment : Fragment() {
 
         adapter.submitList(categories)
 
-        getWotd()
-
         observeTranslate()
 
         val resultTranslate = binding.tvResultTranslate.text
@@ -68,34 +66,10 @@ class VocabFragment : Fragment() {
         binding.btnCopy.setOnClickListener{ copyResult() }
     }
 
-    private fun getWotd(){
-        viewModel.getWotd().observe(viewLifecycleOwner){ result->
-            if (result != null){
-                when(result){
-                    is Result.Loading -> {
-                        showLoadingWotd(true)
-                    }
+<<<<<<< HEAD
+=======
 
-                    is Result.Success -> {
-                        showLoadingWotd(false)
-                        binding.tvTitleWord.text = result.data?.data?.word
-                        val categories = result.data?.data?.categories
-
-                        categories?.forEach { category ->
-                            binding.tvWordType.text = category?.category
-                            binding.resulttranslateWotd.text = category?.translate
-                        }
-                    }
-
-                    is Result.Error -> {
-                        showLoadingWotd(false)
-                        Toast.makeText(requireContext(), result.error, Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
-        }
-    }
-
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     private fun translate(){
         val word = binding.textInputTranslate.text.toString()
         viewModel.translate(word).observe(viewLifecycleOwner){ result ->
@@ -149,10 +123,6 @@ class VocabFragment : Fragment() {
 
     private fun showLoadingTranslate(isLoading: Boolean) {
         binding.pbResultTranslate.visibility = if (isLoading) View.VISIBLE else View.GONE
-    }
-
-    private fun showLoadingWotd(isLoading: Boolean) {
-        binding.pbWotd.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     private fun observeTranslate(){

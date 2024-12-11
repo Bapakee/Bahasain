@@ -9,6 +9,7 @@
     <color name="blue_light">#E5F2FF</color>
     <color name="gray_light">#F3F3F3</color>
     <color name="black_transparent">#7B000000</color>
+    <color name="red_200">#FFECE6</color>
 
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
