@@ -3,3 +3,6 @@
 <br><br>
 Machine Learning Workspace
 </h1>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
