@@ -3226,6 +3226,7 @@ drawable ob_image_1
 drawable ob_image_2
 drawable ob_image_3
 drawable result_placement
+drawable tab_background
 drawable tab_bg_placement
 drawable tab_bg_survey
 drawable tab_indicator
@@ -3553,7 +3554,6 @@ id linear
 id listMode
 id list_item
 id llOptions
-id ll_options
 id locale
 id logo
 id ltr
@@ -4065,11 +4065,13 @@ layout item_answer_matching
 layout item_categories
 layout item_category_vocab
 layout item_checkbox
+layout item_cultural_horizontal
 layout item_folklore_cultural
 layout item_historical_cultural
 layout item_learn
 layout item_left_matching
 layout item_lesson_card_list
+layout item_mathcing
 layout item_mathcing_choice
 layout item_multiple_choice
 layout item_onboarding

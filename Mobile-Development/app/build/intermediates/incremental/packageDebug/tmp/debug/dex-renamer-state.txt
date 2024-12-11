@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#Wed Dec 11 12:52:52 ICT 2024
+#Wed Dec 11 14:50:46 ICT 2024
 base.0=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
@@ -18,31 +16,6 @@ base.6=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\
 base.7=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 base.8=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
 base.9=C\:\\Users\\Lenovo\\Documents\\Bangkit 2024 batch 2\\Bahasain\\Bahasain\\Mobile-Development\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-=======
-=======
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-#Wed Dec 11 14:15:31 WIB 2024
-base.0=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.10=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.11=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.12=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
-base.13=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
-base.14=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
-base.15=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.16=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.2=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.4=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
-base.5=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-base.6=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
-base.7=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.8=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
-base.9=/Users/imanuellayesha/Documents/GitHub/Bahasain/Mobile-Development/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-<<<<<<< HEAD
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-=======
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=3/classes.dex
@@ -52,13 +25,13 @@ path.13=6/classes.dex
 path.14=8/classes.dex
 path.15=9/classes.dex
 path.16=classes2.dex
-path.2=1/classes.dex
-path.3=10/classes.dex
-path.4=11/classes.dex
-path.5=12/classes.dex
-path.6=13/classes.dex
-path.7=14/classes.dex
-path.8=15/classes.dex
+path.2=10/classes.dex
+path.3=11/classes.dex
+path.4=12/classes.dex
+path.5=13/classes.dex
+path.6=14/classes.dex
+path.7=15/classes.dex
+path.8=1/classes.dex
 path.9=2/classes.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex

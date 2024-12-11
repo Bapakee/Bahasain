@@ -18,55 +18,6 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_quiz.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/activity_quiz.xml"
-<<<<<<< HEAD
-    },
-    {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\fragment_cultural.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\fragment_cultural.xml"
-=======
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_detail_historical.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/activity_detail_historical.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_answer_matching.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_answer_matching.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_view_historical_cultural.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_view_historical_cultural.xml"
-=======
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_trivia_home.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_trivia_home.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_single_choice.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_single_choice.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_detail_folklore.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/activity_detail_folklore.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_radio.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_radio.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_quiz.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/activity_quiz.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_mathcing_choice.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_mathcing_choice.xml"
-=======
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_word_category.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/activity_word_category.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-=======
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_detail_historical.xml",
@@ -89,13 +40,16 @@
         "source": "com.dicoding.bahasain.app-main-56:/layout/activity_detail_folklore.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_options_quiz.xml",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_options_quiz.xml"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_radio.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_radio.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_word_category.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/activity_word_category.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_left_matching.xml",
@@ -110,6 +64,10 @@
         "source": "com.dicoding.bahasain.app-main-56:/layout/fragment_home.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_quiz_options.xml",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_quiz_options.xml"
+    },
+    {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_word_categories.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_word_categories.xml"
     },
@@ -120,26 +78,10 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_survey.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/activity_survey.xml"
-<<<<<<< HEAD
-    },
-    {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_options_quiz.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_options_quiz.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_recipe.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_recipe.xml"
-=======
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_categories.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_categories.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-=======
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_categories.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_categories.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/fragment_profile.xml",
@@ -162,55 +104,10 @@
         "source": "com.dicoding.bahasain.app-main-56:/layout/activity_on_boarding.xml"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_onboarding.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_onboarding.xml"
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_cultural_horizontal.xml",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_cultural_horizontal.xml"
     },
     {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_quiz_options.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_quiz_options.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_quiz_options.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_quiz_options.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_right_matching.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_right_matching.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\fragment_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_detail_historical.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_detail_historical.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_single_choice.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_single_choice.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_category_vocab.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_category_vocab.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_trivia_home.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_trivia_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\activity_placement_result.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\activity_placement_result.xml"
-=======
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_right_matching.xml",
-        "source": "com.dicoding.bahasain.app-main-56:/layout/item_right_matching.xml"
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-    },
-    {
-        "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-53:\\layout\\item_left_matching.xml",
-        "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-56:\\layout\\item_left_matching.xml"
-=======
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_right_matching.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_right_matching.xml"
     },
@@ -221,10 +118,6 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_folklore_cultural.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_folklore_cultural.xml"
-<<<<<<< HEAD
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-=======
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/activity_folklore.xml",
@@ -245,6 +138,10 @@
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_recipe_cultural.xml",
         "source": "com.dicoding.bahasain.app-main-56:/layout/item_recipe_cultural.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_mathcing.xml",
+        "source": "com.dicoding.bahasain.app-main-56:/layout/item_mathcing.xml"
     },
     {
         "merged": "com.dicoding.bahasain.app-mergeDebugResources-53:/layout/item_mathcing_choice.xml",

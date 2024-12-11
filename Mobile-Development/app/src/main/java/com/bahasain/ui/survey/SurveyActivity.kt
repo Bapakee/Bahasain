@@ -58,9 +58,9 @@ class SurveyActivity : AppCompatActivity() {
             ),
             SurveyModel(
                 id = 4,
-                survey = "When do you usually study?",
+                survey = "How long can you learning Bahasa Indonesia per day?",
                 descSurvey = "Select all that apply",
-                optionsSurvey = listOf("Morning (08:00–11:00)", "Afternoon (12:00–15:00)", "Evening (18:00–21:00)", "No specific time, I’m flexible"),
+                optionsSurvey = listOf("Less than 10 minutes\n(Quick daily refreshers)", "10-20 minutes\n(Short lessons with progress)", "30-60 minutes\n(Standard lessons activities)", "More than an hour\n(Comprehensive lessons)"),
                 correctAnswer = listOf(3,2)
             )
         )

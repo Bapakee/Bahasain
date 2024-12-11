@@ -243,12 +243,5 @@
             android:overScrollMode="never"
             app:layout_constraintTop_toBottomOf="@id/title_category"
             tools:spanCount="3" />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
-=======
->>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

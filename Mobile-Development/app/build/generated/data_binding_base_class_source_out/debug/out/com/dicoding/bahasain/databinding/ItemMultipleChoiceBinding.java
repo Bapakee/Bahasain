@@ -67,7 +67,7 @@ public final class ItemMultipleChoiceBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.ll_options;
+      id = R.id.llOptions;
       LinearLayout llOptions = ViewBindings.findChildViewById(rootView, id);
       if (llOptions == null) {
         break missingId;
