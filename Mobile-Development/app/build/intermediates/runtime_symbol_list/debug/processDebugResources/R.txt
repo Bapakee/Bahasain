@@ -3357,6 +3357,7 @@ int id btn_nav 0x7f090075
 int id btn_next 0x7f090076
 int id btn_notification 0x7f090077
 <<<<<<< HEAD
+<<<<<<< HEAD
 int id btn_placement 0x7f090297
 int id btn_play 0x7f09029d
 int id btn_recipe_show_all 0x7f090299
@@ -3905,6 +3906,8 @@ int id wrap_content_constrained 0x7f090290
 int id x_left 0x7f090291
 int id x_right 0x7f090292
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 int id btn_placement 0x7f090078
 int id btn_play 0x7f090079
 int id btn_recipe_show_all 0x7f09007a
@@ -4449,6 +4452,9 @@ int id wrap_content 0x7f090298
 int id wrap_content_constrained 0x7f090299
 int id x_left 0x7f09029a
 int id x_right 0x7f09029b
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 int integer abc_config_activityDefaultDur 0x7f0a0000
 int integer abc_config_activityShortDur 0x7f0a0001
@@ -4566,6 +4572,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0c0018
 int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
+<<<<<<< HEAD
 <<<<<<< HEAD
 int layout activity_detail_folklore 0x7f0c0093
 int layout activity_detail_historical 0x7f0c001c
@@ -4693,6 +4700,8 @@ int layout select_dialog_singlechoice_material 0x7f0c0090
 int layout splash_screen_view 0x7f0c0091
 int layout support_simple_spinner_dropdown_item 0x7f0c0092
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 int layout activity_detail_folklore 0x7f0c001c
 int layout activity_detail_historical 0x7f0c001d
 int layout activity_detail_recipe 0x7f0c001e
@@ -4816,6 +4825,9 @@ int layout select_dialog_multichoice_material 0x7f0c0093
 int layout select_dialog_singlechoice_material 0x7f0c0094
 int layout splash_screen_view 0x7f0c0095
 int layout support_simple_spinner_dropdown_item 0x7f0c0096
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 int menu bottom_nav_menu 0x7f0e0000
 int mipmap ic_launcher 0x7f0f0000

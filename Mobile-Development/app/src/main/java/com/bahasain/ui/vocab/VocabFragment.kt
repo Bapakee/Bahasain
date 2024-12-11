@@ -67,7 +67,10 @@ class VocabFragment : Fragment() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
     private fun translate(){

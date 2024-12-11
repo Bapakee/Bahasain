@@ -4,6 +4,7 @@ com.dicoding.bahasain:style/Base.V14.Theme.Material3.Dark.SideSheetDialog = 0x7f
 com.dicoding.bahasain:styleable/AppCompatSeekBar = 0x7f150012
 com.dicoding.bahasain:style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary = 0x7f14038f
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Widget.Material3.Badge = 0x7f14034f
 com.dicoding.bahasain:macro/m3_comp_time_input_time_input_field_focus_outline_color = 0x7f0d0148
 com.dicoding.bahasain:style/Base.V14.ThemeOverlay.Material3.BottomSheetDialog = 0x7f14009d
@@ -19,10 +20,17 @@ com.dicoding.bahasain:style/Widget.AppCompat.Button.Colored = 0x7f140301
 =======
 com.dicoding.bahasain:style/Widget.MaterialComponents.ActionMode = 0x7f1403f7
 com.dicoding.bahasain:style/Base.V14.ThemeOverlay.Material3.BottomSheetDialog = 0x7f14009d
+=======
+com.dicoding.bahasain:style/Widget.MaterialComponents.ActionMode = 0x7f1403f7
+com.dicoding.bahasain:style/Base.V14.ThemeOverlay.Material3.BottomSheetDialog = 0x7f14009d
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.Material3.Badge = 0x7f14034f
 com.dicoding.bahasain:style/Widget.AppCompat.Light.ActionBar.TabText.Inverse = 0x7f140312
 com.dicoding.bahasain:macro/m3_comp_filled_autocomplete_menu_container_color = 0x7f0d0041
 com.dicoding.bahasain:string/abc_menu_function_shortcut_label = 0x7f13000c
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Base.Theme.AppCompat.CompactMenu = 0x7f14004c
 com.dicoding.bahasain:macro/m3_comp_outlined_card_focus_outline_color = 0x7f0d00ac
@@ -32,6 +40,7 @@ com.dicoding.bahasain:macro/m3_comp_time_picker_time_selector_unselected_focus_s
 com.dicoding.bahasain:styleable/ViewBackgroundHelper = 0x7f1500a5
 com.dicoding.bahasain:style/Widget.Design.TextInputEditText = 0x7f140346
 com.dicoding.bahasain:style/Base.V7.Theme.AppCompat.Dialog = 0x7f1400be
+<<<<<<< HEAD
 <<<<<<< HEAD
 com.dicoding.bahasain:id/material_clock_face = 0x7f09013d
 com.dicoding.bahasain:style/TextAppearance.MaterialComponents.Caption = 0x7f140203
@@ -73,6 +82,25 @@ com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.TextInputEditText.Fi
 com.dicoding.bahasain:style/Widget.Design.BottomSheet.Modal = 0x7f14033f
 com.dicoding.bahasain:style/Widget.Material3.MaterialDivider.Heavy = 0x7f1403bc
 com.dicoding.bahasain:style/Base.Widget.AppCompat.Toolbar.Button.Navigation = 0x7f1400fe
+=======
+com.dicoding.bahasain:id/material_clock_face = 0x7f090143
+com.dicoding.bahasain:styleable/TextEffects = 0x7f15009b
+com.dicoding.bahasain:macro/m3_comp_fab_tertiary_icon_color = 0x7f0d0040
+com.dicoding.bahasain:style/Base.TextAppearance.MaterialComponents.Button = 0x7f140045
+com.dicoding.bahasain:interpolator/btn_radio_to_off_mtrl_animation_interpolator_0 = 0x7f0b0004
+com.dicoding.bahasain:id/carryVelocity = 0x7f090087
+com.dicoding.bahasain:macro/m3_comp_top_app_bar_small_headline_color = 0x7f0d0170
+com.dicoding.bahasain:style/Base.TextAppearance.AppCompat.Widget.Button.Inverse = 0x7f14003c
+com.dicoding.bahasain:id/selected = 0x7f0901f1
+com.dicoding.bahasain:styleable/StateListDrawable = 0x7f150093
+com.dicoding.bahasain:macro/m3_comp_outlined_text_field_focus_input_text_color = 0x7f0d00b9
+com.dicoding.bahasain:id/textinput_suffix_text = 0x7f090240
+com.dicoding.bahasain:styleable/FloatingActionButton = 0x7f150037
+com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox = 0x7f1402e8
+com.dicoding.bahasain:style/Widget.Design.BottomSheet.Modal = 0x7f14033f
+com.dicoding.bahasain:style/Widget.Material3.MaterialDivider.Heavy = 0x7f1403bc
+com.dicoding.bahasain:style/Base.Widget.AppCompat.Toolbar.Button.Navigation = 0x7f1400fe
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:macro/m3_comp_navigation_bar_inactive_hover_label_text_color = 0x7f0d0070
 com.dicoding.bahasain:string/path_password_eye_mask_strike_through = 0x7f1300bf
 com.dicoding.bahasain:style/TextAppearance.MaterialComponents.Caption = 0x7f140203
@@ -108,11 +136,15 @@ com.dicoding.bahasain:style/Base.Animation.AppCompat.DropDownUp = 0x7f14000e
 com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.TimePicker = 0x7f1402ec
 com.dicoding.bahasain:dimen/m3_comp_badge_size = 0x7f060102
 com.dicoding.bahasain:style/Widget.Material3.Slider.Legacy.Label = 0x7f1403dc
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.MaterialComponents.Badge = 0x7f1403ff
 com.dicoding.bahasain:style/Base.TextAppearance.AppCompat.Title = 0x7f14002f
 com.dicoding.bahasain:macro/m3_comp_time_picker_period_selector_selected_label_text_color = 0x7f0d0158
 com.dicoding.bahasain:style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox.Dense = 0x7f1403fe
+<<<<<<< HEAD
 <<<<<<< HEAD
 com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.TimePicker = 0x7f1402ec
 com.dicoding.bahasain:dimen/m3_comp_badge_size = 0x7f060102
@@ -143,6 +175,10 @@ com.dicoding.bahasain:string/path_password_eye_mask_strike_through = 0x7f1300be
 com.dicoding.bahasain:id/fill_vertical = 0x7f0900ea
 com.dicoding.bahasain:style/Theme.SplashScreen.Common = 0x7f14027e
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
+com.dicoding.bahasain:id/fill_vertical = 0x7f0900ea
+com.dicoding.bahasain:style/Theme.SplashScreen.Common = 0x7f14027e
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.MaterialComponents.TimePicker.ImageButton = 0x7f14046a
 com.dicoding.bahasain:style/TextAppearance.MaterialComponents.Subtitle1 = 0x7f14020c
 com.dicoding.bahasain:style/Widget.Material3.Button.OutlinedButton.Icon = 0x7f140363
@@ -155,10 +191,13 @@ com.dicoding.bahasain:style/Widget.Material3.Button.Icon = 0x7f14035d
 com.dicoding.bahasain:id/groups = 0x7f090100
 com.dicoding.bahasain:style/Widget.AppCompat.Light.ActionBar.Solid = 0x7f14030d
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Widget.Material3.MaterialDivider.Heavy = 0x7f1403bc
 com.dicoding.bahasain:layout/abc_action_bar_title_item = 0x7f0c0000
 com.dicoding.bahasain:style/TextAppearance.Compat.Notification.Info = 0x7f1401cc
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:id/title_translate_layout = 0x7f09024f
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Title = 0x7f1401b5
 com.dicoding.bahasain:style/Widget.AppCompat.Spinner = 0x7f140333
@@ -167,6 +206,7 @@ com.dicoding.bahasain:style/Widget.MaterialComponents.TextInputLayout.OutlinedBo
 com.dicoding.bahasain:style/SplashScreenTheme = 0x7f14019a
 com.dicoding.bahasain:style/TextAppearance.Compat.Notification.Info = 0x7f1401cc
 com.dicoding.bahasain:layout/abc_action_bar_title_item = 0x7f0c0000
+<<<<<<< HEAD
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.Switch.Track.Shape = 0x7f14016c
 com.dicoding.bahasain:id/autoCompleteToStart = 0x7f090059
@@ -194,12 +234,20 @@ com.dicoding.bahasain:style/Widget.Material3.Button.Icon = 0x7f14035d
 com.dicoding.bahasain:style/TextAppearance.MaterialComponents.Overline = 0x7f14020b
 com.dicoding.bahasain:id/action_mode_bar = 0x7f090041
 =======
+=======
+com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.Switch.Track.Shape = 0x7f14016c
+com.dicoding.bahasain:id/autoCompleteToStart = 0x7f090059
+com.dicoding.bahasain:style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large = 0x7f1401aa
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.AppCompat.Toolbar = 0x7f140339
 com.dicoding.bahasain:style/Widget.Material3.Light.ActionBar.Solid = 0x7f1403a0
 com.dicoding.bahasain:dimen/m3_large_fab_max_image_size = 0x7f0601bb
 com.dicoding.bahasain:style/Widget.Material3.PopupMenu.Overflow = 0x7f1403cd
 com.dicoding.bahasain:styleable/ImageFilterView = 0x7f150043
 com.dicoding.bahasain:layout/activity_survey = 0x7f0c002b
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ThemeOverlay.Material3.ExtendedFloatingActionButton.Primary = 0x7f1402a9
 com.dicoding.bahasain:id/action_mode_bar = 0x7f090041
@@ -209,8 +257,11 @@ com.dicoding.bahasain:style/Widget.Material3.CircularProgressIndicator.ExtraSmal
 com.dicoding.bahasain:style/Widget.Material3.SearchView = 0x7f1403d2
 com.dicoding.bahasain:styleable/SearchView = 0x7f150087
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Theme.MaterialComponents.CompactMenu = 0x7f140251
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:styleable/ThemeEnforcement = 0x7f15009e
 com.dicoding.bahasain:style/ShapeAppearanceOverlay.Material3.FloatingActionButton = 0x7f14018d
 com.dicoding.bahasain:dimen/design_fab_translation_z_pressed = 0x7f060076
@@ -223,9 +274,13 @@ com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.Dark = 0x7f1402d6
 com.dicoding.bahasain:style/Widget.MaterialComponents.PopupMenu = 0x7f140448
 com.dicoding.bahasain:style/Base.TextAppearance.AppCompat.Tooltip = 0x7f140031
 com.dicoding.bahasain:style/Widget.MaterialComponents.MaterialCalendar.HeaderDivider = 0x7f140433
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.Material3.FloatingActionButton.Tertiary = 0x7f14039f
 com.dicoding.bahasain:style/Base.V14.Theme.MaterialComponents.Dialog = 0x7f140096
+<<<<<<< HEAD
 <<<<<<< HEAD
 com.dicoding.bahasain:style/Base.ThemeOverlay.AppCompat.Dark = 0x7f14007d
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Widget.PopupMenu.Small = 0x7f1401c8
@@ -242,11 +297,16 @@ com.dicoding.bahasain:styleable/StateListDrawableItem = 0x7f150094
 com.dicoding.bahasain:style/ShapeAppearance.Material3.Corner.ExtraLarge = 0x7f140175
 com.dicoding.bahasain:string/title_register = 0x7f1300d9
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Header.Text = 0x7f1402e2
 com.dicoding.bahasain:styleable/StateListDrawableItem = 0x7f150094
 com.dicoding.bahasain:style/ShapeAppearance.Material3.Corner.ExtraLarge = 0x7f140175
 com.dicoding.bahasain:layout/design_text_input_start_icon = 0x7f0c003c
 com.dicoding.bahasain:string/title_register = 0x7f1300db
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ThemeOverlay.Material3.FloatingActionButton.Surface = 0x7f1402af
 com.dicoding.bahasain:style/Base.V21.Theme.MaterialComponents = 0x7f1400a8
@@ -260,11 +320,17 @@ com.dicoding.bahasain:style/TextAppearance.M3.Sys.Typescale.TitleMedium = 0x7f14
 com.dicoding.bahasain:id/action_bar_title = 0x7f09003a
 com.dicoding.bahasain:style/Widget.Material3.Button.TextButton.Dialog.Flush = 0x7f140366
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:styleable/Tooltip = 0x7f1500a0
 com.dicoding.bahasain:interpolator/m3_sys_motion_easing_linear = 0x7f0b000a
 com.dicoding.bahasain:macro/m3_comp_time_picker_period_selector_selected_container_color = 0x7f0d0155
 com.dicoding.bahasain:styleable/RangeSlider = 0x7f150081
 com.dicoding.bahasain:xml/data_extraction_rules = 0x7f160001
+=======
+com.dicoding.bahasain:styleable/RangeSlider = 0x7f150081
+com.dicoding.bahasain:interpolator/m3_sys_motion_easing_linear = 0x7f0b000a
+com.dicoding.bahasain:macro/m3_comp_time_picker_period_selector_selected_container_color = 0x7f0d0155
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:styleable/RangeSlider = 0x7f150081
 com.dicoding.bahasain:interpolator/m3_sys_motion_easing_linear = 0x7f0b000a
@@ -350,6 +416,10 @@ com.dicoding.bahasain:id/accessibility_custom_action_28 = 0x7f090026
 com.dicoding.bahasain:style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon = 0x7f140424
 com.dicoding.bahasain:macro/m3_comp_navigation_rail_active_pressed_state_layer_color = 0x7f0d0098
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+com.dicoding.bahasain:layout/mtrl_calendar_year = 0x7f0c007c
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:layout/mtrl_calendar_year = 0x7f0c007c
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
@@ -385,6 +455,7 @@ com.dicoding.bahasain:string/historical_exploration = 0x7f13004b
 com.dicoding.bahasain:integer/m3_chip_anim_duration = 0x7f0a0010
 com.dicoding.bahasain:style/Theme.MaterialComponents.DayNight.BottomSheetDialog = 0x7f140253
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Widget.MaterialComponents.NavigationRailView.Colored = 0x7f140443
 com.dicoding.bahasain:drawable/material_ic_menu_arrow_down_black_24dp = 0x7f0700d6
 com.dicoding.bahasain:id/disjoint = 0x7f0900bf
@@ -393,12 +464,17 @@ com.dicoding.bahasain:string/abc_toolbar_collapse_description = 0x7f13001a
 com.dicoding.bahasain:style/ThemeOverlay.Material3.ExtendedFloatingActionButton.Tertiary = 0x7f1402ac
 com.dicoding.bahasain:style/Widget.MaterialComponents.TimePicker.Display.TextInputEditText = 0x7f140468
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ThemeOverlay.Material3.DynamicColors.Dark = 0x7f1402a6
 com.dicoding.bahasain:style/Widget.MaterialComponents.NavigationRailView.Colored = 0x7f140443
 com.dicoding.bahasain:drawable/material_ic_menu_arrow_down_black_24dp = 0x7f0700d7
 com.dicoding.bahasain:id/disjoint = 0x7f0900c3
 com.dicoding.bahasain:string/abc_toolbar_collapse_description = 0x7f13001a
 com.dicoding.bahasain:style/ThemeOverlay.Material3.ExtendedFloatingActionButton.Tertiary = 0x7f1402ac
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Theme.Bahasain = 0x7f140229
 com.dicoding.bahasain:macro/m3_comp_suggestion_chip_label_text_type = 0x7f0d0118
@@ -414,6 +490,7 @@ com.dicoding.bahasain:style/Base.V14.Theme.MaterialComponents = 0x7f140094
 com.dicoding.bahasain:id/outward = 0x7f0901a8
 com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.Toolbar.Popup.Primary = 0x7f1402ef
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Widget.Material3.ChipGroup = 0x7f14037b
 com.dicoding.bahasain:macro/m3_comp_sheet_side_detached_container_shape = 0x7f0d0107
 com.dicoding.bahasain:style/TextAppearance.Design.Error = 0x7f1401d3
@@ -425,6 +502,8 @@ com.dicoding.bahasain:dimen/m3_sys_motion_easing_emphasized_accelerate_control_x
 com.dicoding.bahasain:dimen/m3_small_fab_size = 0x7f0601ef
 com.dicoding.bahasain:style/Widget.MaterialComponents.Chip.Entry = 0x7f140418
 com.dicoding.bahasain:styleable/NavGraphNavigator = 0x7f150072
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.SearchView.FullScreen.Container.Shape = 0x7f140168
@@ -484,12 +563,18 @@ com.dicoding.bahasain:string/vocab = 0x7f1300e2
 com.dicoding.bahasain:string/exposed_dropdown_menu_content_description = 0x7f130045
 com.dicoding.bahasain:style/ThemeOverlay.Material3.TextInputEditText.FilledBox = 0x7f1402c4
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/feedbackContainer = 0x7f0902a0
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.Switch.Handle.Shape = 0x7f14016a
 com.dicoding.bahasain:id/clear_text = 0x7f090094
 com.dicoding.bahasain:id/right = 0x7f0901cd
 com.dicoding.bahasain:dimen/m3_comp_progress_indicator_stop_indicator_size = 0x7f060165
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Widget.Switch = 0x7f1401c9
 com.dicoding.bahasain:style/Widget.Material3.MaterialTimePicker.Clock = 0x7f1403bf
@@ -553,11 +638,14 @@ com.dicoding.bahasain:style/Widget.MaterialComponents.Light.ActionBar.Solid = 0x
 com.dicoding.bahasain:style/ShapeAppearanceOverlay.MaterialComponents.FloatingActionButton = 0x7f140195
 com.dicoding.bahasain:style/Theme.AppCompat.DialogWhenLarge = 0x7f14021f
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:macro/m3_comp_search_bar_pressed_state_layer_color = 0x7f0d00ec
 com.dicoding.bahasain:macro/m3_comp_switch_unselected_pressed_icon_color = 0x7f0d013c
 com.dicoding.bahasain:style/ThemeOverlay.Material3.MaterialAlertDialog.Centered = 0x7f1402b6
 com.dicoding.bahasain:macro/m3_comp_navigation_rail_inactive_hover_state_layer_color = 0x7f0d009b
 com.dicoding.bahasain:id/accessibility_custom_action_28 = 0x7f090026
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar = 0x7f140321
@@ -567,7 +655,12 @@ com.dicoding.bahasain:string/call_notification_screening_text = 0x7f130036
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Body2 = 0x7f14019d
 com.dicoding.bahasain:style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Header.Text.Day = 0x7f1402e3
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/dimensions = 0x7f0900b9
+=======
+com.dicoding.bahasain:id/dimensions = 0x7f0900bd
+com.dicoding.bahasain:color/primary_text_disabled_material_dark = 0x7f0502fe
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:id/dimensions = 0x7f0900bd
 com.dicoding.bahasain:color/primary_text_disabled_material_dark = 0x7f0502fe
@@ -597,7 +690,11 @@ com.dicoding.bahasain:dimen/mtrl_low_ripple_pressed_alpha = 0x7f0602c3
 com.dicoding.bahasain:style/Widget.MaterialComponents.CircularProgressIndicator.Small = 0x7f14041e
 com.dicoding.bahasain:macro/m3_comp_filled_icon_button_container_color = 0x7f0d0048
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/tv_example = 0x7f090262
+=======
+com.dicoding.bahasain:id/tv_example = 0x7f09026a
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:id/tv_example = 0x7f09026a
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
@@ -624,9 +721,12 @@ com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.BottomAppBar.Container.Shape
 com.dicoding.bahasain:id/btn_notification = 0x7f090077
 com.dicoding.bahasain:style/RtlOverlay.Widget.AppCompat.PopupMenuItem.Title = 0x7f140153
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/compress = 0x7f090096
 com.dicoding.bahasain:string/password = 0x7f1300b9
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:id/compress = 0x7f09009a
 com.dicoding.bahasain:macro/m3_comp_navigation_bar_inactive_pressed_state_layer_color = 0x7f0d0076
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
@@ -661,9 +761,12 @@ com.dicoding.bahasain:macro/m3_comp_filled_tonal_button_container_color = 0x7f0d
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Subhead.Inverse = 0x7f1401b4
 com.dicoding.bahasain:style/Base.Widget.MaterialComponents.TextView = 0x7f140121
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Theme.MaterialComponents.Light.Dialog.MinWidth = 0x7f140276
 com.dicoding.bahasain:style/Base.V21.ThemeOverlay.Material3.BottomSheetDialog = 0x7f1400ad
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Base.Theme.MaterialComponents.Light.DarkActionBar = 0x7f140070
 com.dicoding.bahasain:macro/m3_comp_radio_button_unselected_focus_state_layer_color = 0x7f0d00e0
 com.dicoding.bahasain:style/ShapeAppearance.MaterialComponents.MediumComponent = 0x7f140184
@@ -673,6 +776,9 @@ com.dicoding.bahasain:interpolator/btn_checkbox_checked_mtrl_animation_interpola
 com.dicoding.bahasain:style/Base.V24.Theme.Material3.Dark.Dialog = 0x7f1400b5
 com.dicoding.bahasain:style/MaterialAlertDialog.Material3.Title.Text.CenterStacked = 0x7f140132
 com.dicoding.bahasain:style/Theme.Material3.DayNight.NoActionBar = 0x7f14023e
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/ShapeAppearance.Material3.Corner.Large = 0x7f140178
 com.dicoding.bahasain:style/ShapeAppearance.MaterialComponents.MediumComponent = 0x7f140184
@@ -785,11 +891,19 @@ com.dicoding.bahasain:style/Base.Widget.AppCompat.CompoundButton.Switch = 0x7f14
 com.dicoding.bahasain:style/Base.Widget.Material3.CompoundButton.Switch = 0x7f140108
 com.dicoding.bahasain:style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog = 0x7f1400d3
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:layout/item_trivia_home = 0x7f0c0051
 com.dicoding.bahasain:styleable/ConstraintLayout_Layout = 0x7f15002a
 com.dicoding.bahasain:id/tag_accessibility_actions = 0x7f09021b
 com.dicoding.bahasain:dimen/m3_sys_elevation_level1 = 0x7f0601f3
 com.dicoding.bahasain:id/btn_continue = 0x7f09006b
+=======
+com.dicoding.bahasain:layout/item_trivia_home = 0x7f0c0055
+com.dicoding.bahasain:styleable/ConstraintLayout_Layout = 0x7f15002a
+com.dicoding.bahasain:id/tag_accessibility_actions = 0x7f090222
+com.dicoding.bahasain:dimen/m3_sys_elevation_level1 = 0x7f0601f3
+com.dicoding.bahasain:id/btn_continue = 0x7f09006a
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:layout/item_trivia_home = 0x7f0c0055
 com.dicoding.bahasain:styleable/ConstraintLayout_Layout = 0x7f15002a
@@ -807,9 +921,16 @@ com.dicoding.bahasain:drawable/material_ic_clear_black_24dp = 0x7f0700d1
 com.dicoding.bahasain:id/tv_signup_with = 0x7f090276
 com.dicoding.bahasain:style/Widget.Material3.ExtendedFloatingActionButton.Primary = 0x7f140390
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Base.V22.Theme.AppCompat.Light = 0x7f1400b1
 com.dicoding.bahasain:macro/m3_comp_navigation_rail_label_text_type = 0x7f0d009f
 com.dicoding.bahasain:id/match_constraint = 0x7f090139
+=======
+com.dicoding.bahasain:style/Base.Theme.MaterialComponents.Light.Bridge = 0x7f14006f
+com.dicoding.bahasain:style/Base.V22.Theme.AppCompat.Light = 0x7f1400b1
+com.dicoding.bahasain:macro/m3_comp_navigation_rail_label_text_type = 0x7f0d009f
+com.dicoding.bahasain:id/match_constraint = 0x7f09013f
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:style/Base.Theme.MaterialComponents.Light.Bridge = 0x7f14006f
 com.dicoding.bahasain:style/Base.V22.Theme.AppCompat.Light = 0x7f1400b1
@@ -875,9 +996,14 @@ com.dicoding.bahasain:style/ShapeAppearance.M3.Sys.Shape.Corner.ExtraLarge = 0x7
 com.dicoding.bahasain:dimen/tooltip_y_offset_touch = 0x7f06032c
 com.dicoding.bahasain:style/Widget.MaterialComponents.Button.Icon = 0x7f140409
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/Base.Theme.MaterialComponents.Light.Dialog.MinWidth = 0x7f140076
 com.dicoding.bahasain:string/invalid_email_format = 0x7f13004f
 com.dicoding.bahasain:id/month_title = 0x7f09015a
+=======
+com.dicoding.bahasain:string/invalid_email_format = 0x7f13004f
+com.dicoding.bahasain:id/month_title = 0x7f090160
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:string/invalid_email_format = 0x7f13004f
 com.dicoding.bahasain:id/month_title = 0x7f090160
@@ -1038,11 +1164,14 @@ com.dicoding.bahasain:style/TextAppearance.AppCompat.Tooltip = 0x7f1401b7
 com.dicoding.bahasain:layout/activity_splash = 0x7f0c002a
 com.dicoding.bahasain:style/TextAppearance.Material3.TitleSmall = 0x7f1401fe
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:string/mtrl_checkbox_button_icon_path_checked = 0x7f130078
 com.dicoding.bahasain:style/Widget.Material3.PopupMenu.ListPopupWindow = 0x7f1403cc
 com.dicoding.bahasain:dimen/mtrl_btn_snackbar_margin_horizontal = 0x7f06026c
 com.dicoding.bahasain:style/Widget.MaterialComponents.NavigationRailView = 0x7f140442
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:string/mtrl_checkbox_button_icon_path_checked = 0x7f130079
 com.dicoding.bahasain:style/Widget.Material3.PopupMenu.ListPopupWindow = 0x7f1403cc
 com.dicoding.bahasain:dimen/mtrl_btn_snackbar_margin_horizontal = 0x7f06026c
@@ -1054,6 +1183,9 @@ com.dicoding.bahasain:id/line1 = 0x7f090132
 com.dicoding.bahasain:drawable/icon_play = 0x7f0700b9
 com.dicoding.bahasain:style/Widget.Material3.MaterialCalendar.Year = 0x7f1403b7
 com.dicoding.bahasain:id/legacy = 0x7f090131
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:string/btn_back = 0x7f130024
 com.dicoding.bahasain:color/m3_card_ripple_color = 0x7f050073
@@ -1104,7 +1236,11 @@ com.dicoding.bahasain:dimen/material_emphasis_medium = 0x7f060238
 com.dicoding.bahasain:drawable/abc_list_longpressed_holo = 0x7f07004f
 com.dicoding.bahasain:dimen/m3_sys_motion_easing_standard_control_y2 = 0x7f060217
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:string/material_minute_selection = 0x7f130066
+=======
+com.dicoding.bahasain:string/material_minute_selection = 0x7f130067
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:string/material_minute_selection = 0x7f130067
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
@@ -1116,9 +1252,15 @@ com.dicoding.bahasain:style/RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGr
 com.dicoding.bahasain:macro/m3_comp_time_picker_time_selector_label_text_type = 0x7f0d015f
 com.dicoding.bahasain:color/mtrl_fab_ripple_color = 0x7f0502d4
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:drawable/notification_template_icon_low_bg = 0x7f070108
 com.dicoding.bahasain:id/accessibility_custom_action_23 = 0x7f090021
 com.dicoding.bahasain:string/title_intro_placement = 0x7f1300d2
+=======
+com.dicoding.bahasain:drawable/notification_template_icon_low_bg = 0x7f070109
+com.dicoding.bahasain:id/accessibility_custom_action_23 = 0x7f090021
+com.dicoding.bahasain:string/title_intro_placement = 0x7f1300d3
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:drawable/notification_template_icon_low_bg = 0x7f070109
 com.dicoding.bahasain:id/accessibility_custom_action_23 = 0x7f090021
@@ -1150,6 +1292,7 @@ com.dicoding.bahasain:id/mtrl_calendar_text_input_frame = 0x7f090169
 com.dicoding.bahasain:string/btn_placement_setLevel = 0x7f130029
 com.dicoding.bahasain:style/Theme.MaterialComponents.Light.Dialog.Alert = 0x7f140271
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:style/MaterialAlertDialog.Material3.Title.Panel = 0x7f14012f
 com.dicoding.bahasain:string/searchview_clear_text_content_description = 0x7f1300c4
 com.dicoding.bahasain:style/Widget.AppCompat.ActionMode = 0x7f1402fa
@@ -1161,11 +1304,23 @@ com.dicoding.bahasain:color/mtrl_btn_ripple_color = 0x7f0502bf
 com.dicoding.bahasain:style/MaterialAlertDialog.Material3.Title.Panel = 0x7f14012f
 com.dicoding.bahasain:string/searchview_clear_text_content_description = 0x7f1300c5
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
+com.dicoding.bahasain:color/material_dynamic_primary20 = 0x7f050246
+com.dicoding.bahasain:color/mtrl_btn_ripple_color = 0x7f0502bf
+com.dicoding.bahasain:style/MaterialAlertDialog.Material3.Title.Panel = 0x7f14012f
+com.dicoding.bahasain:string/searchview_clear_text_content_description = 0x7f1300c5
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:dimen/m3_comp_switch_selected_focus_state_layer_opacity = 0x7f060196
 com.dicoding.bahasain:color/switch_thumb_disabled_material_light = 0x7f05030a
 com.dicoding.bahasain:style/Widget.MaterialComponents.TabLayout.Colored = 0x7f140453
 com.dicoding.bahasain:dimen/m3_searchbar_text_size = 0x7f0601e3
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+com.dicoding.bahasain:macro/m3_comp_time_picker_time_selector_selected_container_color = 0x7f0d0160
+com.dicoding.bahasain:style/Widget.Material3.MaterialTimePicker.Display.Divider = 0x7f1403c1
+com.dicoding.bahasain:style/Widget.AppCompat.ActionMode = 0x7f1402fa
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:macro/m3_comp_time_picker_time_selector_selected_container_color = 0x7f0d0160
 com.dicoding.bahasain:style/Widget.Material3.MaterialTimePicker.Display.Divider = 0x7f1403c1
@@ -1510,6 +1665,7 @@ com.dicoding.bahasain:layout/design_layout_tab_text = 0x7f0c0033
 com.dicoding.bahasain:style/Widget.MaterialComponents.MaterialCalendar.MonthTextView = 0x7f14043c
 com.dicoding.bahasain:macro/m3_comp_primary_navigation_tab_active_pressed_state_layer_color = 0x7f0d00ca
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:layout/design_layout_tab_icon = 0x7f0c002e
 com.dicoding.bahasain:id/progress_horizontal = 0x7f0901b9
 com.dicoding.bahasain:id/spread_inside = 0x7f090204
@@ -1532,6 +1688,14 @@ com.dicoding.bahasain:id/spread_inside = 0x7f09020b
 com.dicoding.bahasain:id/iv_recipe = 0x7f090127
 com.dicoding.bahasain:layout/design_layout_snackbar = 0x7f0c0030
 com.dicoding.bahasain:style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu = 0x7f1403ee
+=======
+com.dicoding.bahasain:layout/design_layout_tab_icon = 0x7f0c0032
+com.dicoding.bahasain:id/progress_horizontal = 0x7f0901bf
+com.dicoding.bahasain:id/spread_inside = 0x7f09020b
+com.dicoding.bahasain:id/iv_recipe = 0x7f090127
+com.dicoding.bahasain:layout/design_layout_snackbar = 0x7f0c0030
+com.dicoding.bahasain:style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu = 0x7f1403ee
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Widget.Material3.LinearProgressIndicator.Legacy = 0x7f1403a2
 com.dicoding.bahasain:style/Widget.Material3.CompoundButton.MaterialSwitch = 0x7f140388
 com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.NavigationBar.ActiveIndicator.Shape = 0x7f140161
@@ -1541,6 +1705,9 @@ com.dicoding.bahasain:id/action_container = 0x7f09003b
 com.dicoding.bahasain:layout/custom_dialog = 0x7f0c002d
 com.dicoding.bahasain:drawable/mtrl_tabs_default_indicator = 0x7f0700fd
 com.dicoding.bahasain:layout/activity_word_category = 0x7f0c002c
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:style/Theme.SplashScreen = 0x7f14027d
 com.dicoding.bahasain:style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle = 0x7f1401bd
@@ -1620,6 +1787,7 @@ com.dicoding.bahasain:string/btn_logout = 0x7f130028
 com.dicoding.bahasain:style/Widget.Compat.NotificationActionText = 0x7f14033c
 com.dicoding.bahasain:dimen/m3_comp_switch_unselected_focus_state_layer_opacity = 0x7f06019b
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/scale = 0x7f0901d7
 com.dicoding.bahasain:id/splashscreen_icon_view = 0x7f090200
 com.dicoding.bahasain:layout/mtrl_picker_header_dialog = 0x7f0c007f
@@ -1628,6 +1796,8 @@ com.dicoding.bahasain:style/Base.V14.Theme.MaterialComponents.Light.DarkActionBa
 com.dicoding.bahasain:style/ThemeOverlay.AppCompat.DayNight.ActionBar = 0x7f140285
 com.dicoding.bahasain:drawable/tab_indicator = 0x7f070111
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:id/scale = 0x7f0901de
 com.dicoding.bahasain:id/splashscreen_icon_view = 0x7f090207
 com.dicoding.bahasain:layout/mtrl_picker_header_dialog = 0x7f0c0083
@@ -1635,6 +1805,9 @@ com.dicoding.bahasain:styleable/AnimatedStateListDrawableCompat = 0x7f15000a
 com.dicoding.bahasain:style/Base.V14.Theme.MaterialComponents.Light.DarkActionBar.Bridge = 0x7f14009a
 com.dicoding.bahasain:style/ThemeOverlay.AppCompat.DayNight.ActionBar = 0x7f140285
 com.dicoding.bahasain:drawable/tab_indicator = 0x7f070112
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:integer/m3_sys_motion_duration_long3 = 0x7f0a0017
 com.dicoding.bahasain:style/TextAppearance.Design.Hint = 0x7f1401d5
@@ -1845,6 +2018,7 @@ com.dicoding.bahasain:id/home = 0x7f09010a
 com.dicoding.bahasain:style/Widget.Material3.AutoCompleteTextView.OutlinedBox = 0x7f14034d
 com.dicoding.bahasain:interpolator/m3_sys_motion_easing_standard_accelerate = 0x7f0b000c
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/percent = 0x7f0901b1
 com.dicoding.bahasain:id/peekHeight = 0x7f0901b0
 com.dicoding.bahasain:drawable/abc_btn_radio_material_anim = 0x7f070032
@@ -1854,6 +2028,8 @@ com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.SearchBar.Avatar.Shape = 0x7
 com.dicoding.bahasain:id/pb_result_translate = 0x7f0901ad
 com.dicoding.bahasain:id/parent_matrix = 0x7f0901a9
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:id/percent = 0x7f0901b7
 com.dicoding.bahasain:id/peekHeight = 0x7f0901b6
 com.dicoding.bahasain:style/ShapeAppearance.M3.Comp.SearchBar.Avatar.Shape = 0x7f140166
@@ -1861,6 +2037,9 @@ com.dicoding.bahasain:integer/mtrl_badge_max_character_count = 0x7f0a002f
 com.dicoding.bahasain:style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked = 0x7f140138
 com.dicoding.bahasain:drawable/abc_btn_radio_material_anim = 0x7f070032
 com.dicoding.bahasain:id/pb_result_translate = 0x7f0901b3
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:string/call_notification_incoming_text = 0x7f130034
 com.dicoding.bahasain:id/parent_matrix = 0x7f0901af
@@ -1983,9 +2162,13 @@ com.dicoding.bahasain:dimen/mtrl_btn_padding_right = 0x7f060269
 com.dicoding.bahasain:color/material_personalized_color_primary_container = 0x7f050296
 com.dicoding.bahasain:macro/m3_comp_radio_button_unselected_focus_icon_color = 0x7f0d00df
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/textinput_placeholder = 0x7f090237
 com.dicoding.bahasain:attr/tabPaddingBottom = 0x7f03044e
 com.dicoding.bahasain:color/mtrl_switch_thumb_icon_tint = 0x7f0502e6
+=======
+com.dicoding.bahasain:id/clockwise = 0x7f090097
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:id/clockwise = 0x7f090097
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
@@ -2166,6 +2349,7 @@ com.dicoding.bahasain:style/Base.Widget.AppCompat.ListPopupWindow = 0x7f1400e9
 com.dicoding.bahasain:style/Widget.AppCompat.ProgressBar.Horizontal = 0x7f14032b
 com.dicoding.bahasain:id/btn_login = 0x7f090073
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/btn_forgot = 0x7f090070
 com.dicoding.bahasain:id/tv_title_trivia = 0x7f090272
 com.dicoding.bahasain:id/btn_folklore_show_all = 0x7f09006f
@@ -2173,6 +2357,8 @@ com.dicoding.bahasain:id/pb_wotd_home = 0x7f0901af
 com.dicoding.bahasain:id/btn_copy = 0x7f09006c
 com.dicoding.bahasain:id/btn_clear = 0x7f09006a
 =======
+=======
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:color/mtrl_switch_thumb_icon_tint = 0x7f0502e6
 com.dicoding.bahasain:id/textinput_placeholder = 0x7f09023e
 com.dicoding.bahasain:attr/tabPaddingBottom = 0x7f03044e
@@ -2184,6 +2370,9 @@ com.dicoding.bahasain:id/btn_folklore_show_all = 0x7f09006e
 com.dicoding.bahasain:id/pb_wotd_home = 0x7f0901b5
 com.dicoding.bahasain:id/btn_copy = 0x7f09006b
 com.dicoding.bahasain:id/btn_clear = 0x7f090069
+<<<<<<< HEAD
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
+=======
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 com.dicoding.bahasain:id/bounceStart = 0x7f090067
 com.dicoding.bahasain:id/bounceEnd = 0x7f090066
@@ -2748,8 +2937,12 @@ com.dicoding.bahasain:id/layout = 0x7f09012c
 com.dicoding.bahasain:color/black_transparent = 0x7f050022
 com.dicoding.bahasain:dimen/m3_searchview_divider_size = 0x7f0601e4
 <<<<<<< HEAD
+<<<<<<< HEAD
 com.dicoding.bahasain:id/iv_quiz = 0x7f09029f
 com.dicoding.bahasain:id/transition_position = 0x7f090255
+=======
+com.dicoding.bahasain:id/transition_position = 0x7f09025d
+>>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
 =======
 com.dicoding.bahasain:id/transition_position = 0x7f09025d
 >>>>>>> b54a10630529fd8ac91f0351be8af0e26de39951
