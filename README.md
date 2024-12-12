@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img align="center" src="images\logoBahasain.png"  width="250" height="250"></img>
+  <img align="center" src="Machine-Learning\images\logoBahasain.png"  width="250" height="250"></img>
 <br><br>
 </h1>
 # 📖BahasaIn
