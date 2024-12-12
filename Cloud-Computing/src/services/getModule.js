@@ -1,8 +1,10 @@
 const { UserProgress, Module, Level, } = require('../models');
 const { Op} = require('sequelize');
 
-const getAllModule = async (userId) => {
-    return await Module.findAll({
+const getAllModule = async (userId,transaction) => {
+    console.log('Fetching all modules for user:', userId);
+    
+    const modules=await Module.findAll({
         order: [['level', 'ASC']], // Urutkan berdasarkan level secara ascending
         where: {
             level: {
@@ -23,6 +25,17 @@ const getAllModule = async (userId) => {
                 ],
             },
         ],
+        transaction,
     });
+    console.log('Total modules:', modules.length);
+    
+
+    if (!modules) {
+        console.log('No modules found.');
+        return [];
+    }
+    
+    return modules
+    
 }
 module.exports={getAllModule}

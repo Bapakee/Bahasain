@@ -22,18 +22,15 @@ const getModules = async (req, res) => {
 
         // Transformasikan data ke format respons yang diinginkan
         let isPreviousModuleCompleted = true; // Status penyelesaian modul sebelumnya
-        let previusModuleScore = 200;
 
         const response = modules.map((module) => {
             const { Levels = [] } = module;
             let isPreviousLevelCompleted = true; // Status penyelesaian level sebelumnya dalam modul
-            let accessibleScore = previusModuleScore>=200
-            previusModuleScore = 0
 
             const levels = Levels.map((level) => {
                 const isLevelCompleted = !!level.UserProgresses?.[0]?.completed;
-                const isLevelAccessible = isPreviousLevelCompleted && user.userLevel >= module.level && isPreviousModuleCompleted && accessibleScore;
-                previusModuleScore += level.UserProgresses?.[0]?.score || 0;
+                const isLevelAccessible = isPreviousLevelCompleted && user.userLevel >= module.level && isPreviousModuleCompleted;
+
 
                 isPreviousLevelCompleted = isLevelCompleted;
 
@@ -49,7 +46,7 @@ const getModules = async (req, res) => {
             });
 
             const completedLevels = levels.filter((l) => l.isCompleted).length;
-            const isModuleAccessible = isPreviousModuleCompleted && user.userLevel >= module.level && accessibleScore;
+            const isModuleAccessible = isPreviousModuleCompleted && user.userLevel >= module.level;
 
             isPreviousModuleCompleted = completedLevels === Levels.length; // Perbarui status modul sebelumnya
 

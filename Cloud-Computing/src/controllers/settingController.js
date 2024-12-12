@@ -18,7 +18,7 @@ const setting = async (req, res) => {
             await setUserAvatar(userId, avatar);
         }
 
-        successResponse(res, null, 'Pengaturan pengguna berhasil diperbarui');
+        successResponse(res, {}, 'Pengaturan pengguna berhasil diperbarui');
     } catch (error) {
         console.error('Error in updating user settings:', error);
         errorResponse(res, error.message || 'Internal Server Error', 'Gagal memperbarui pengaturan pengguna', 500);

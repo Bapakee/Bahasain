@@ -33,8 +33,7 @@ const putUserProgress = async (req, res) => {
         const {userProgressReturn,message} = await updateOrCreateProgress({ user, moduleId, levelId, score }, transaction);
 
         // Check and update user level
-        const userProgressLevel = await UserProgress.findAll({ where: { userId, moduleId }, transaction });
-        const levelUp = await checkAndUpdateUserLevel(userId, moduleId, userProgressLevel, transaction);
+        const levelUp = await checkAndUpdateUserLevel(user,moduleId,levelId,transaction);
 
         // Update or create streak
         await updateOrCreateStreak(userId, transaction);

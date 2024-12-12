@@ -1,80 +1,70 @@
 const { Level, Module, User, UserProgress } = require('../../models');
+const { getAllModule } = require('../getModule');
 
 /**
  * Cek dan update level user jika semua level pada modul diselesaikan
  */
-const checkAndUpdateUserLevel = async (userId, moduleId, userProgressLevel, transaction) => {
-    
+const checkAndUpdateUserLevel = async (user,moduleId,levelId, transaction) => {
     try {
-        // Ambil semua level yang terkait dengan modul ini
-        const allLevels = await Level.findAll({
-            where: { moduleId },
-            attributes: ['id'],
-            transaction,
-        });
 
-        // Debug log untuk memeriksa level yang ada di modul
-        console.log('All Levels in module:', allLevels.map(level => level.id));
-
-        // Ambil level pengguna saat ini
-        const user = await User.findOne({
-            where: { id: userId },
-            transaction,
-        });
-
-        if (!user) {
-            throw new Error('User not found');
-        }
-
-        // Debug log untuk memeriksa level pengguna
         console.log('User level before update:', user.userLevel);
 
-        // Ambil level modul
-        const module = await Module.findOne({
-            where: { id: moduleId },
-            attributes: ['level'],
-            transaction,
-        });
+        // Ambil semua modul dan level berdasarkan userId
+        const modules = await getAllModule(user.id);
 
-        if (!module) {
-            throw new Error('Module not found');
+        // Filter modul yang berada di level pengguna saat ini
+        const modulesAtUserLevel = modules.filter(module => module.level === user.userLevel);
+
+        if (!modulesAtUserLevel.length) {
+            console.log('No modules found for the user level.');
+            return false;
         }
 
-        // Debug log untuk memeriksa level modul
-        console.log('Module level:', module.level);
+        // Cek apakah semua level dalam modul-modul tersebut selesai
+        let allModulesCompleted = true;
 
-        // Ambil level yang sudah diselesaikan oleh pengguna
-        const completedLevels = userProgressLevel
-            .filter((progress) => progress.completed)
-            .map((progress) => progress.levelId);
+        for (const module of modulesAtUserLevel) {
+            const { Levels = [] } = module;
 
-        // Debug log untuk memeriksa level yang diselesaikan
-        console.log('Completed levels by user:', completedLevels);
+            // Ambil ID semua level di modul ini
+            const levelIds = Levels.map(level => level.id);
 
-        // Cek jika semua level dalam modul telah selesai
-        const allCompleted = allLevels.every((level) => completedLevels.includes(level.id));
+            console.log(`Levels in module ${module.name}:`, levelIds);
 
-        // Debug log untuk memeriksa status selesai semua level
-        console.log('All levels completed:', allCompleted);
+            // Periksa apakah semua level di modul ini selesai
+            const completedLevels = Levels.filter(
+                level => level.UserProgresses?.[0]?.completed
+            ).map(level => level.id);
+            if(module.id===moduleId){
+                completedLevels.push(levelId)
+            }
+            
+            const allLevelsCompleted = levelIds.every(id => completedLevels.includes(id));
 
-        if (allCompleted) {
-            // Jika semua level sudah selesai, naikkan level user jika perlu
-            if (user.userLevel <= module.level) {
-                user.userLevel += 1; // Menaikkan level user
-                await user.save({ transaction }); // Simpan perubahan level user
-                console.log('User level after update:', user.userLevel);
-                return true
-            } else {
-                console.log('User level already at max level for this module');
-                return false
+            if (!allLevelsCompleted) {
+                allModulesCompleted = false;
+                console.log(`Not all levels completed in module ${module.name}`);
+                break;
             }
         }
-        return false
+
+        // Jika semua modul selesai, naikkan level pengguna
+        if (allModulesCompleted) {
+            user.userLevel += 1;
+            await user.save({ transaction });
+            console.log('User level after update:', user.userLevel);
+            return true;
+        }
+
+        console.log('Not all modules at this level are completed.');
+        return false;
 
     } catch (error) {
         console.error('Error in checkAndUpdateUserLevel:', error);
-        throw error; // Throw error untuk menangani kesalahan di luar fungsi ini
+        throw error;
     }
 };
+
+
 
 module.exports = { checkAndUpdateUserLevel };
