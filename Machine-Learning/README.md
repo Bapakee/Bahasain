@@ -7,7 +7,7 @@ Machine Learning Path
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="justify">
-Bahsain is an innovative project designed to help international students learn Bahasa Indonesia in an interactive and effective way. This project combines language learning technology with advanced Machine Learning models to create a personalized and efficient learning experience. Bahsain is specifically designed to simplify the process of understanding Bahasa Indonesia through a modern and data-driven approach.
+The machine learning workflow involves a series of steps to develop and deploy the models for word classification and translation. It begins with preparing datasets for POS tagging (from IndoNLU) and translation (from corpus), followed by data cleaning and augmentation to enhance dataset quality and diversity. The dataset is then split into training, development, and testing sets. The POS Tagging Model classifies words by their grammatical roles, while the Translation Model translates English sentences to Bahasa Indonesia using Encoder-Decoder architecture with embedding layers and LSTM units for processing input and output sequences. The models are trained and validated on respective datasets, tested for generalization, and saved in .h5 format. Finally, Flask is used to deploy the models as APIs, enabling real-time word classification and translation within the application.
 </p>
 
 <div align="center">
@@ -15,8 +15,14 @@ Bahsain is an innovative project designed to help international students learn B
 </div>
 
 ## 1. Word Classification
+<p align="justify">
+The Classification model uses a deep learning model using TensorFlow and Keras for sequence labeling tasks. It uses Bidirectional LSTMs and includes Dropout and Layer Normalization to improve training stability and reduce overfitting. The TimeDistributed Dense layer extracts features, and the final softmax layer predicts output classes. The model is optimized with Adam and trained using categorical cross-entropy loss.
+</p>
 
 ## 2. Translation (EN-ID)
+<p align="justify">
+The Translate model uses a sequence-to-sequence model using TensorFlow and Keras. It includes an Encoder-Decoder architecture with embedding layers and LSTM units for processing input and output sequences. The model is compiled with the RMSprop optimizer and categorical cross-entropy loss for training.
+</p>
 
 <!-- CONTACT -->
 ## Contact
