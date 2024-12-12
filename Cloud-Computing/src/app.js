@@ -24,6 +24,8 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api', routes);
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Handle reset-password
 app.get('/reset-password/:token', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/reset-password.html'));
