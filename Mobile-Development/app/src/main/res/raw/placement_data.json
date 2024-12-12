@@ -68,17 +68,17 @@
   },
   {
     "id" : 5,
-    "quizTitle": "Reading",
+    "quizTitle": "Reading (Select two answer)",
     "textReading": "Rina suka membaca buku di sore hari. Dia sering pergi ke perpustakaan untuk meminjam buku baru. Buku favoritnya adalah tentang sejarah Indonesia. Setelah membaca, Rina biasanya menulis catatan di buku kecilnya.",
-    "quiz": "Apa yang sering dilakukan Rina di perpustakaan?",
-    "quizType": "singleChoice",
+    "quiz": "Apa yang biasanya dilakukan Rina di sore hari?",
+    "quizType": "multipleChoice",
     "optionsQuiz": [
-      "Menulis catatan",
-      "Meminjam buku",
+      "Membaca buku tentang sejarah Indonesia.",
+      "Menulis catatan di buku kecil setelah membaca.",
       "Mengajar anak-anak",
-      "Membaca buku",
-      "I don’t Know"
+      "Pergi ke taman untuk bermain.",
+      "Membeli buku baru di toko buku."
     ],
-    "correctAnswer": 1
+    "correctAnswer": [0,1]
   }
 ]

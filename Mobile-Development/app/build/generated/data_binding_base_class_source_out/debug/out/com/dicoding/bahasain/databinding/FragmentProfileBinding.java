@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.widget.NestedScrollView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
@@ -19,7 +21,7 @@ import java.lang.String;
 
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
-  private final NestedScrollView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final Button btnLogout;
@@ -28,23 +30,55 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final ImageView ivProfile;
 
   @NonNull
+  public final ConstraintLayout profileLayout;
+
+  @NonNull
+  public final LinearLayout progressLayout;
+
+  @NonNull
+  public final RecyclerView rvCertivicate;
+
+  @NonNull
+  public final TextView titleCertificate;
+
+  @NonNull
+  public final TextView titlePage;
+
+  @NonNull
   public final TextView tvLevel;
 
   @NonNull
   public final TextView tvName;
 
-  private FragmentProfileBinding(@NonNull NestedScrollView rootView, @NonNull Button btnLogout,
-      @NonNull ImageView ivProfile, @NonNull TextView tvLevel, @NonNull TextView tvName) {
+  @NonNull
+  public final TextView tvProgress;
+
+  @NonNull
+  public final TextView tvProgressAchievementLayout;
+
+  private FragmentProfileBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogout,
+      @NonNull ImageView ivProfile, @NonNull ConstraintLayout profileLayout,
+      @NonNull LinearLayout progressLayout, @NonNull RecyclerView rvCertivicate,
+      @NonNull TextView titleCertificate, @NonNull TextView titlePage, @NonNull TextView tvLevel,
+      @NonNull TextView tvName, @NonNull TextView tvProgress,
+      @NonNull TextView tvProgressAchievementLayout) {
     this.rootView = rootView;
     this.btnLogout = btnLogout;
     this.ivProfile = ivProfile;
+    this.profileLayout = profileLayout;
+    this.progressLayout = progressLayout;
+    this.rvCertivicate = rvCertivicate;
+    this.titleCertificate = titleCertificate;
+    this.titlePage = titlePage;
     this.tvLevel = tvLevel;
     this.tvName = tvName;
+    this.tvProgress = tvProgress;
+    this.tvProgressAchievementLayout = tvProgressAchievementLayout;
   }
 
   @Override
   @NonNull
-  public NestedScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -81,6 +115,36 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profile_layout;
+      ConstraintLayout profileLayout = ViewBindings.findChildViewById(rootView, id);
+      if (profileLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.progress_layout;
+      LinearLayout progressLayout = ViewBindings.findChildViewById(rootView, id);
+      if (progressLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.rv_certivicate;
+      RecyclerView rvCertivicate = ViewBindings.findChildViewById(rootView, id);
+      if (rvCertivicate == null) {
+        break missingId;
+      }
+
+      id = R.id.title_certificate;
+      TextView titleCertificate = ViewBindings.findChildViewById(rootView, id);
+      if (titleCertificate == null) {
+        break missingId;
+      }
+
+      id = R.id.title_page;
+      TextView titlePage = ViewBindings.findChildViewById(rootView, id);
+      if (titlePage == null) {
+        break missingId;
+      }
+
       id = R.id.tv_level;
       TextView tvLevel = ViewBindings.findChildViewById(rootView, id);
       if (tvLevel == null) {
@@ -93,8 +157,21 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((NestedScrollView) rootView, btnLogout, ivProfile, tvLevel,
-          tvName);
+      id = R.id.tv_progress;
+      TextView tvProgress = ViewBindings.findChildViewById(rootView, id);
+      if (tvProgress == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_progressAchievement_layout;
+      TextView tvProgressAchievementLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tvProgressAchievementLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((ConstraintLayout) rootView, btnLogout, ivProfile,
+          profileLayout, progressLayout, rvCertivicate, titleCertificate, titlePage, tvLevel,
+          tvName, tvProgress, tvProgressAchievementLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

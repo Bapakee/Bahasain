@@ -15,6 +15,33 @@
         android:theme="@style/Theme.Bahasain"
         tools:targetApi="31">
         <activity
+            android:name="com.bahasain.ui.learn.quiz.QuizResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.recipe.DetailRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.recipe.RecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.learn.quiz.QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.folklore.DetailFolkloreActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.folklore.FolkloreActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.historical.DetailHistoricalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.cultural.historical.HistoricalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bahasain.ui.vocab.category.WordCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bahasain.ui.placement.PlacementResultActivity"
             android:exported="false" />
         <activity

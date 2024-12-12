@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
@@ -24,16 +25,29 @@ public final class ItemOnboardingBinding implements ViewBinding {
   public final TextView descriptionOnboarding;
 
   @NonNull
+  public final Guideline guideline;
+
+  @NonNull
+  public final Guideline guideline2;
+
+  @NonNull
+  public final Guideline guideline3;
+
+  @NonNull
   public final ImageView imageOnboarding;
 
   @NonNull
   public final TextView titleOnboarding;
 
   private ItemOnboardingBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView descriptionOnboarding, @NonNull ImageView imageOnboarding,
-      @NonNull TextView titleOnboarding) {
+      @NonNull TextView descriptionOnboarding, @NonNull Guideline guideline,
+      @NonNull Guideline guideline2, @NonNull Guideline guideline3,
+      @NonNull ImageView imageOnboarding, @NonNull TextView titleOnboarding) {
     this.rootView = rootView;
     this.descriptionOnboarding = descriptionOnboarding;
+    this.guideline = guideline;
+    this.guideline2 = guideline2;
+    this.guideline3 = guideline3;
     this.imageOnboarding = imageOnboarding;
     this.titleOnboarding = titleOnboarding;
   }
@@ -71,6 +85,24 @@ public final class ItemOnboardingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.guideline;
+      Guideline guideline = ViewBindings.findChildViewById(rootView, id);
+      if (guideline == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline2;
+      Guideline guideline2 = ViewBindings.findChildViewById(rootView, id);
+      if (guideline2 == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline3;
+      Guideline guideline3 = ViewBindings.findChildViewById(rootView, id);
+      if (guideline3 == null) {
+        break missingId;
+      }
+
       id = R.id.imageOnboarding;
       ImageView imageOnboarding = ViewBindings.findChildViewById(rootView, id);
       if (imageOnboarding == null) {
@@ -84,7 +116,7 @@ public final class ItemOnboardingBinding implements ViewBinding {
       }
 
       return new ItemOnboardingBinding((ConstraintLayout) rootView, descriptionOnboarding,
-          imageOnboarding, titleOnboarding);
+          guideline, guideline2, guideline3, imageOnboarding, titleOnboarding);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

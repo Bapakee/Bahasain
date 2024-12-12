@@ -45,4 +45,35 @@
     <string name="desc_intro">It takes approximately 5 minutes and will help place you at the right learning level, from Beginner to Proficient.</string>
     <string name="btn_placement_start">Start Placement Test</string>
     <string name="btn_placement_setLevel">Start from Level 1</string>
+    <string name="title_result_placement">You\'re All Set!</string>
+    <string name="title_desc_result_placement">Begin at %s Level</string>
+    <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
+    <string name="btn_start_result_placement">Start Learning</string>
+    <string name="title_page_dictionary">Dictionary</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="english">English</string>
+    <string name="word_of_the_day">Word of the Day</string>
+    <string name="btn_translate">Translate</string>
+    <string name="historical_exploration">Historical Exploration</string>
+    <string name="interactive_folklore">Interactive Folklore</string>
+    <string name="title_daily_trivia">Daily Trivia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_show_all">Show all</string>
+    <string name="historical">Historical</string>
+    <string name="lessons_completed">Lessons completed</string>
+    <string name="title_module">Module - %s</string>
+    <string name="traditional_recipes">Traditional Recipes</string>
+    <string name="btn_next_question">Next Question</string>
+    <string name="correct_answer">Correct</string>
+    <string name="incorrect_answer">Incorrect</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="btn_back_to_learn">Back To Learn</string>
+    <string name="great_job_you_did_it">Great job! You Did It</string>
+    <string name="your_score">Your Score</string>
+    <string name="progress_amp_achievement"><![CDATA[Progress & Achievement]]></string>
+    <string name="certificate">Certificate</string>
+    <string name="progress">%s%% %s Level</string>
+    <string name="drag_and_drop_to_rearrange">Drag and Drop To Rearrange</string>
+    <string name="btn_check">Check</string>
 </resources>

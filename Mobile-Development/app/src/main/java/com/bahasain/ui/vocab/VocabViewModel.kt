@@ -3,11 +3,21 @@ package com.bahasain.ui.vocab
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bahasain.data.Result
+import com.bahasain.data.repository.VocabRepository
+import com.bahasain.data.remote.request.TranslateRequest
+import com.bahasain.data.remote.response.vocab.DataItemWord
 
-class VocabViewModel : ViewModel() {
+class VocabViewModel(private val repository: VocabRepository) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val translateResult = MutableLiveData<String?>()
+    val posResult = MutableLiveData<String?>()
+
+    fun getWordCategories(categories: String): LiveData<Result<List<DataItemWord?>?>> {
+        return repository.getWordCategories(categories)
     }
-    val text: LiveData<String> = _text
+
+    fun translate(wordTranslate: String) = repository.translate(TranslateRequest(wordTranslate))
+
+    fun getWotd() = repository.getWotd()
 }

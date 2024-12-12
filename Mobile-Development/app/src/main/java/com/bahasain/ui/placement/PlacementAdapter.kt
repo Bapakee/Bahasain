@@ -129,6 +129,11 @@ class PlacementAdapter(
             binding.quizTitle.text = quiz.quizTitle
             binding.quiz.text = quiz.quiz
 
+            if (quiz.textReading.isNotEmpty()){
+                binding.tvReading.visibility = View.VISIBLE
+                binding.tvReading.text = quiz.textReading
+            }
+
             val selectedIndices = mutableListOf<Int>()
 
             quiz.optionsQuiz.forEachIndexed { index, option ->

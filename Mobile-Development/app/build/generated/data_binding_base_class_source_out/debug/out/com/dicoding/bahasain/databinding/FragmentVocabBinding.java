@@ -4,32 +4,123 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dicoding.bahasain.R;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentVocabBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
-  public final TextView textHome;
+  public final ImageButton btnClear;
 
-  private FragmentVocabBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textHome) {
+  @NonNull
+  public final ImageButton btnCopy;
+
+  @NonNull
+  public final Button btnTranslate;
+
+  @NonNull
+  public final ProgressBar pbResultTranslate;
+
+  @NonNull
+  public final TextView resultTitle;
+
+  @NonNull
+  public final ConstraintLayout resultTranslateLayout;
+
+  @NonNull
+  public final RecyclerView rvCategory;
+
+  @NonNull
+  public final TextView tEng;
+
+  @NonNull
+  public final TextView tInd;
+
+  @NonNull
+  public final TextInputEditText textInputTranslate;
+
+  @NonNull
+  public final TextView titleCategory;
+
+  @NonNull
+  public final TextView titleTranslate;
+
+  @NonNull
+  public final ConstraintLayout titleTranslateLayout;
+
+  @NonNull
+  public final ConstraintLayout tranlateLayout;
+
+  @NonNull
+  public final TextView tvEnglish;
+
+  @NonNull
+  public final TextView tvResultPos;
+
+  @NonNull
+  public final TextView tvResultTranslate;
+
+  @NonNull
+  public final TextView tvTitlePage;
+
+  @NonNull
+  public final View vResultPos;
+
+  @NonNull
+  public final View vResultTranslate;
+
+  private FragmentVocabBinding(@NonNull NestedScrollView rootView, @NonNull ImageButton btnClear,
+      @NonNull ImageButton btnCopy, @NonNull Button btnTranslate,
+      @NonNull ProgressBar pbResultTranslate, @NonNull TextView resultTitle,
+      @NonNull ConstraintLayout resultTranslateLayout, @NonNull RecyclerView rvCategory,
+      @NonNull TextView tEng, @NonNull TextView tInd, @NonNull TextInputEditText textInputTranslate,
+      @NonNull TextView titleCategory, @NonNull TextView titleTranslate,
+      @NonNull ConstraintLayout titleTranslateLayout, @NonNull ConstraintLayout tranlateLayout,
+      @NonNull TextView tvEnglish, @NonNull TextView tvResultPos,
+      @NonNull TextView tvResultTranslate, @NonNull TextView tvTitlePage, @NonNull View vResultPos,
+      @NonNull View vResultTranslate) {
     this.rootView = rootView;
-    this.textHome = textHome;
+    this.btnClear = btnClear;
+    this.btnCopy = btnCopy;
+    this.btnTranslate = btnTranslate;
+    this.pbResultTranslate = pbResultTranslate;
+    this.resultTitle = resultTitle;
+    this.resultTranslateLayout = resultTranslateLayout;
+    this.rvCategory = rvCategory;
+    this.tEng = tEng;
+    this.tInd = tInd;
+    this.textInputTranslate = textInputTranslate;
+    this.titleCategory = titleCategory;
+    this.titleTranslate = titleTranslate;
+    this.titleTranslateLayout = titleTranslateLayout;
+    this.tranlateLayout = tranlateLayout;
+    this.tvEnglish = tvEnglish;
+    this.tvResultPos = tvResultPos;
+    this.tvResultTranslate = tvResultTranslate;
+    this.tvTitlePage = tvTitlePage;
+    this.vResultPos = vResultPos;
+    this.vResultTranslate = vResultTranslate;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -54,13 +145,130 @@ public final class FragmentVocabBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_home;
-      TextView textHome = ViewBindings.findChildViewById(rootView, id);
-      if (textHome == null) {
+      id = R.id.btn_clear;
+      ImageButton btnClear = ViewBindings.findChildViewById(rootView, id);
+      if (btnClear == null) {
         break missingId;
       }
 
-      return new FragmentVocabBinding((ConstraintLayout) rootView, textHome);
+      id = R.id.btn_copy;
+      ImageButton btnCopy = ViewBindings.findChildViewById(rootView, id);
+      if (btnCopy == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_translate;
+      Button btnTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (btnTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.pb_result_translate;
+      ProgressBar pbResultTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (pbResultTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.result_title;
+      TextView resultTitle = ViewBindings.findChildViewById(rootView, id);
+      if (resultTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.result_translate_layout;
+      ConstraintLayout resultTranslateLayout = ViewBindings.findChildViewById(rootView, id);
+      if (resultTranslateLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.rv_category;
+      RecyclerView rvCategory = ViewBindings.findChildViewById(rootView, id);
+      if (rvCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.t_eng;
+      TextView tEng = ViewBindings.findChildViewById(rootView, id);
+      if (tEng == null) {
+        break missingId;
+      }
+
+      id = R.id.t_ind;
+      TextView tInd = ViewBindings.findChildViewById(rootView, id);
+      if (tInd == null) {
+        break missingId;
+      }
+
+      id = R.id.text_input_translate;
+      TextInputEditText textInputTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (textInputTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.title_category;
+      TextView titleCategory = ViewBindings.findChildViewById(rootView, id);
+      if (titleCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.title_translate;
+      TextView titleTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (titleTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.title_translate_layout;
+      ConstraintLayout titleTranslateLayout = ViewBindings.findChildViewById(rootView, id);
+      if (titleTranslateLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.tranlate_layout;
+      ConstraintLayout tranlateLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tranlateLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_english;
+      TextView tvEnglish = ViewBindings.findChildViewById(rootView, id);
+      if (tvEnglish == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_result_pos;
+      TextView tvResultPos = ViewBindings.findChildViewById(rootView, id);
+      if (tvResultPos == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_result_translate;
+      TextView tvResultTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (tvResultTranslate == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_title_page;
+      TextView tvTitlePage = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitlePage == null) {
+        break missingId;
+      }
+
+      id = R.id.v_result_pos;
+      View vResultPos = ViewBindings.findChildViewById(rootView, id);
+      if (vResultPos == null) {
+        break missingId;
+      }
+
+      id = R.id.v_result_translate;
+      View vResultTranslate = ViewBindings.findChildViewById(rootView, id);
+      if (vResultTranslate == null) {
+        break missingId;
+      }
+
+      return new FragmentVocabBinding((NestedScrollView) rootView, btnClear, btnCopy, btnTranslate,
+          pbResultTranslate, resultTitle, resultTranslateLayout, rvCategory, tEng, tInd,
+          textInputTranslate, titleCategory, titleTranslate, titleTranslateLayout, tranlateLayout,
+          tvEnglish, tvResultPos, tvResultTranslate, tvTitlePage, vResultPos, vResultTranslate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

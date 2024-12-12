@@ -28,12 +28,16 @@ public final class ItemMultipleChoiceBinding implements ViewBinding {
   @NonNull
   public final TextView quizTitle;
 
+  @NonNull
+  public final TextView tvReading;
+
   private ItemMultipleChoiceBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout llOptions,
-      @NonNull TextView quiz, @NonNull TextView quizTitle) {
+      @NonNull TextView quiz, @NonNull TextView quizTitle, @NonNull TextView tvReading) {
     this.rootView = rootView;
     this.llOptions = llOptions;
     this.quiz = quiz;
     this.quizTitle = quizTitle;
+    this.tvReading = tvReading;
   }
 
   @Override
@@ -63,7 +67,7 @@ public final class ItemMultipleChoiceBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.llOptions;
+      id = R.id.ll_options;
       LinearLayout llOptions = ViewBindings.findChildViewById(rootView, id);
       if (llOptions == null) {
         break missingId;
@@ -81,7 +85,14 @@ public final class ItemMultipleChoiceBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemMultipleChoiceBinding((LinearLayout) rootView, llOptions, quiz, quizTitle);
+      id = R.id.tv_reading;
+      TextView tvReading = ViewBindings.findChildViewById(rootView, id);
+      if (tvReading == null) {
+        break missingId;
+      }
+
+      return new ItemMultipleChoiceBinding((LinearLayout) rootView, llOptions, quiz, quizTitle,
+          tvReading);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

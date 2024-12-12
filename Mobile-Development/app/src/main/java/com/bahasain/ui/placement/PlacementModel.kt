@@ -22,6 +22,7 @@ sealed class Placement {
     data class MultipleChoice(
         val id: Int,
         val quizTitle: String,
+        val textReading : String,
         val quiz: String,
         val optionsQuiz: List<String>,
         val correctAnswers: List<Int>,

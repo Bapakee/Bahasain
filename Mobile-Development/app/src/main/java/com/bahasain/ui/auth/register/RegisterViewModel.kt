@@ -1,7 +1,7 @@
 package com.bahasain.ui.auth.register
 
 import androidx.lifecycle.ViewModel
-import com.bahasain.data.UserRepository
+import com.bahasain.data.repository.UserRepository
 import com.bahasain.data.remote.request.RegisterRequest
 
 class RegisterViewModel(private val repository: UserRepository) : ViewModel() {

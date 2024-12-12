@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -81,21 +82,20 @@ class LoginActivity : AppCompatActivity() {
                         val accessToken = result.data.data?.accessToken
                         val refreshToken = result.data.data?.refreshToken
 
+                        Log.d("token", "$accessToken")
+
                         val jwt = JWT(accessToken.toString())
 
-                        val name = jwt.getClaim("name").asString()
-                        val level = jwt.getClaim("level").asInt()
+                        val isNew = jwt.getClaim("isNew").asBoolean()
 
                         val userModel = UserModel(
                             accessToken.toString(),
-                            refreshToken.toString(),
-                            name.toString(),
-                            level ?: 0
+                            refreshToken.toString()
                         )
 
                         viewModel.saveSession(userModel)
 
-                        if(level == null){
+                        if(isNew == true){
                             val intent = Intent(this, SurveyActivity::class.java)
                             startActivity(intent)
                             finish()

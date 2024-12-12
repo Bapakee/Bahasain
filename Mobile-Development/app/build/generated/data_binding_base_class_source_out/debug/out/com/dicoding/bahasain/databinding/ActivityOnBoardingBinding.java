@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
@@ -25,15 +26,29 @@ public final class ActivityOnBoardingBinding implements ViewBinding {
   public final Button btnNext;
 
   @NonNull
+  public final Guideline guidelineHorizontal1;
+
+  @NonNull
+  public final Guideline guidelineVertical1;
+
+  @NonNull
+  public final Guideline guidelineVertical2;
+
+  @NonNull
   public final TabLayout indicator;
 
   @NonNull
   public final ViewPager2 viewPager;
 
   private ActivityOnBoardingBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnNext,
-      @NonNull TabLayout indicator, @NonNull ViewPager2 viewPager) {
+      @NonNull Guideline guidelineHorizontal1, @NonNull Guideline guidelineVertical1,
+      @NonNull Guideline guidelineVertical2, @NonNull TabLayout indicator,
+      @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.btnNext = btnNext;
+    this.guidelineHorizontal1 = guidelineHorizontal1;
+    this.guidelineVertical1 = guidelineVertical1;
+    this.guidelineVertical2 = guidelineVertical2;
     this.indicator = indicator;
     this.viewPager = viewPager;
   }
@@ -71,6 +86,24 @@ public final class ActivityOnBoardingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.guideline_horizontal1;
+      Guideline guidelineHorizontal1 = ViewBindings.findChildViewById(rootView, id);
+      if (guidelineHorizontal1 == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline_vertical1;
+      Guideline guidelineVertical1 = ViewBindings.findChildViewById(rootView, id);
+      if (guidelineVertical1 == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline_vertical2;
+      Guideline guidelineVertical2 = ViewBindings.findChildViewById(rootView, id);
+      if (guidelineVertical2 == null) {
+        break missingId;
+      }
+
       id = R.id.indicator;
       TabLayout indicator = ViewBindings.findChildViewById(rootView, id);
       if (indicator == null) {
@@ -83,8 +116,8 @@ public final class ActivityOnBoardingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityOnBoardingBinding((ConstraintLayout) rootView, btnNext, indicator,
-          viewPager);
+      return new ActivityOnBoardingBinding((ConstraintLayout) rootView, btnNext,
+          guidelineHorizontal1, guidelineVertical1, guidelineVertical2, indicator, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -7,12 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.dicoding.bahasain.R
-import com.dicoding.bahasain.databinding.ActivityOnBoardingBinding
-import com.bahasain.ui.MainActivity
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.auth.login.LoginActivity
 import com.bahasain.ui.splash.SplashViewModel
+import com.dicoding.bahasain.R
+import com.dicoding.bahasain.databinding.ActivityOnBoardingBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardingActivity : AppCompatActivity() {

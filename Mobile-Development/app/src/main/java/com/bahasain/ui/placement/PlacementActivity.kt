@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bahasain.data.Result
-import com.bahasain.ui.MainActivity
 import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.loadPlacementQuizFromJson
 import com.dicoding.bahasain.R
@@ -82,19 +81,19 @@ class PlacementActivity : AppCompatActivity() {
     }
 
     private fun updateContinueButtonState(position: Int, quizAnswers: Map<Int, List<Int>>) {
-        val currentSurveyId = position + 1
+        val currentPlacementId = position + 1
         val isAnswered = when (val currentQuiz = placementQuiz[position]) {
             is Placement.Matching -> {
                 currentQuiz.userMatches.size == currentQuiz.pairs.size
             }
 
             else -> {
-                val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+                val selectedOptions = quizAnswers[currentPlacementId] ?: emptyList()
                 selectedOptions.isNotEmpty()
             }
         }
 
-        val selectedOptions = quizAnswers[currentSurveyId] ?: emptyList()
+        val selectedOptions = quizAnswers[currentPlacementId] ?: emptyList()
         selectedOptions.isNotEmpty()
 
         binding.btnContinue.isEnabled = isAnswered
@@ -170,18 +169,8 @@ class PlacementActivity : AppCompatActivity() {
         } else {
             updateLevel()
 
-            viewModel.getSession().observe(this) { session ->
-                if (session != null) {
-                    val updatedSession = session.copy(userLevel = setLevel())
-                    viewModel.saveSession(updatedSession)
-                } else {
-                    Toast.makeText(this, "Gagal memuat sesi", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            Toast.makeText(this, "Skor Anda: ${setLevel()}/${placementQuiz.size}", Toast.LENGTH_LONG)
-                .show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, PlacementResultActivity::class.java)
+            intent.putExtra("LEVEL", setLevel())
             startActivity(intent)
             finish()
         }
@@ -216,6 +205,20 @@ class PlacementActivity : AppCompatActivity() {
                         quiz = item["quiz"] as String,
                         optionsQuiz = options,
                         correctAnswer = correctAnswer
+                    )
+                }
+
+                "multipleChoice" -> {
+                    val id = (item["id"] as Double).toInt()
+                    val options = item["optionsQuiz"] as List<String>
+                    val correctAnswer = item["correctAnswer"] as List<Int>
+                    Placement.MultipleChoice(
+                        id = id,
+                        quizTitle = item["quizTitle"] as String,
+                        textReading = item["textReading"] as String,
+                        quiz = item["quiz"] as String,
+                        optionsQuiz = options,
+                        correctAnswers = correctAnswer
                     )
                 }
 
