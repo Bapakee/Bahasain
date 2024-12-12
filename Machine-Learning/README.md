@@ -43,7 +43,7 @@ The Translate model uses a sequence-to-sequence model using TensorFlow and Keras
   * [Neulab Corpus Datasets](https://opus.nlpl.eu/NeuLab-TedTalks/en&id/v1/NeuLab-TedTalks)
   * [Tatoeba Corpus Datasets](https://opus.nlpl.eu/Tatoeba/en&id/v2023-04-12/Tatoeba)
 
-###  Tech stack
+###  Library
 * ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) 
 * ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) 
 * ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) 
