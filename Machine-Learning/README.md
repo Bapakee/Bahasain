@@ -17,8 +17,8 @@ The machine learning workflow involves a series of steps to develop and deploy t
 ## MODELS
 ### 1. Word Classification
 <div align="center">
-  <img align="center" src="images\classificationArchitechture.png"  width="400" height="400"></img>
-  <img align="center" src="images\classificationAccuracy.png"  width="400" height="400"></img>
+  <img align="center" src="images\classificationArchitechture.png"  width="500" height="400"></img>
+  <img align="center" src="images\classificationAccuracy.png"  width="500" height="400"></img>
 </div>
 <p align="justify">
 The Classification model uses a deep learning model using TensorFlow and Keras for sequence labeling tasks. It uses Bidirectional LSTMs and includes Dropout and Layer Normalization to improve training stability and reduce overfitting. The TimeDistributed Dense layer extracts features, and the final softmax layer predicts output classes. The model is optimized with Adam and trained using categorical cross-entropy loss.
@@ -26,8 +26,8 @@ The Classification model uses a deep learning model using TensorFlow and Keras f
 
 ### 2. Translation (EN-ID)
 <div align="center">
-  <img align="center" src="images\translateArchitechture.png"  width="400" height="400"></img>
-  <img align="center" src="images\translateAccuracy.png"  width="400" height="400"></img>
+  <img align="center" src="images\translateArchitechture.png"  width="500" height="400"></img>
+  <img align="center" src="images\translateaAccuracy.png"  width="500" height="400"></img>
 </div>
 <p align="justify">
 The Translate model uses a sequence-to-sequence model using TensorFlow and Keras. It includes an Encoder-Decoder architecture with embedding layers and LSTM units for processing input and output sequences. The model is compiled with the RMSprop optimizer and categorical cross-entropy loss for training.
