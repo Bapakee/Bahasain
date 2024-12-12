@@ -8,7 +8,7 @@ BahasaIn
 
 ---
 
-## **📃Description**
+## **Description**
 
 Indonesia is a culturally rich country with over 275 million people. Despite its vast cultural heritage and language, only a small fraction of international students study in Indonesia due to language barriers. BahasaIn aims to bridge this gap by offering a user-friendly app that not only teaches Bahasa Indonesia but also integrates Indonesian culture into the learning experience.
 
@@ -16,7 +16,7 @@ By providing tools for adaptive learning, cultural integration, and gamification
 
 ---
 
-## **📱Screenshots**
+## **Screenshots**
 
 Below are some screenshots of the BahasaIn application:
 <h1 align="center">
@@ -28,7 +28,7 @@ For more details, please explore the repository.
 
 ---
 
-## **🚀Demo Application**
+## **Demo Application**
 
 Experience how BahasaIn works by accessing our demo. Click the link below to try it out:
 
@@ -36,7 +36,7 @@ Experience how BahasaIn works by accessing our demo. Click the link below to try
 
 ---
 
-## **📥Installation**
+## **Installation**
 
 Our application is designed for Android OS. To install BahasaIn, you need an Android device running **Android OS Version 6.0 (Marshmallow)** or higher.
 
@@ -48,15 +48,15 @@ Our application is designed for Android OS. To install BahasaIn, you need an And
 
 ---
 
-## **🎨Prototype Design**
+## **Prototype Design**
 
 The prototype design of this application was created using Figma. If you are interested in exploring the design, please use the link below:
 
-[**BahasaIn Figma Prototype**](https://www.figma.com/proto/Og6W2yoHzeDcjnPw67bnyj/UI-Applications?node-id=839-678&t=KdWJnlwoWpSsdune-1)
+[**BahasaIn Figma Prototype**](https://www.figma.com/proto/Og6W2yoHzeDcjnPw67bnyj/UI-Applications?node-id=224-1379&t=KdWJnlwoWpSsdune-1&starting-point-node-id=224%3A1379)
 
 ---
 
-## **🌟Key Features**
+## **Key Features**
 
 1. **Language Learning Pathways**  
    - Adaptive modules tailored to Beginner, Intermediate, and Advanced levels.
@@ -78,7 +78,7 @@ The prototype design of this application was created using Figma. If you are int
 
 ---
 
-## **🔑Repositories**
+## **Repositories**
 
 1. **Machine Learning**
    - https://github.com/Bapakee/Bahasain/tree/main/Machine-Learning
