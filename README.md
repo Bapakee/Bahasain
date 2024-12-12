@@ -1,4 +1,4 @@
-<img align="center" src="images\logoBahasain.png"  width="250" height="250"></img>
+<img align="center" src="Machine-Learning\images\logoBahasain.png"  width="250" height="250"></img>
 ## 📖BahasaIn
 
 **BahasaIn** is an innovative mobile application designed to help international students learn Bahasa Indonesia and immerse themselves in Indonesian culture. By combining adaptive learning pathways with cultural integration, BahasaIn provides a comprehensive platform for language acquisition and cultural appreciation. 
