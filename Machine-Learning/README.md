@@ -10,9 +10,13 @@ Machine Learning Path
 Bahsain is an innovative project designed to help international students learn Bahasa Indonesia in an interactive and effective way. This project combines language learning technology with advanced Machine Learning models to create a personalized and efficient learning experience. Bahsain is specifically designed to simplify the process of understanding Bahasa Indonesia through a modern and data-driven approach.
 </p>
 
-<div>
-  <img align="center" src="images\feature.png"  width="300" height="300"></img>
+<div align="center">
+  <img align="center" src="images\feature.png"  width="400" height="400"></img>
 </div>
+
+## 1. Word Classification
+
+## 2. Translation (EN-ID)
 
 <!-- CONTACT -->
 ## Contact
