@@ -6,8 +6,9 @@ Machine Learning Workspace
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-
+<p align="justify">
+Bahsain is an innovative project designed to help international students learn Bahasa Indonesia in an interactive and effective way. This project combines language learning technology with advanced Machine Learning models to create a personalized and efficient learning experience. Bahsain is specifically designed to simplify the process of understanding Bahasa Indonesia through a modern and data-driven approach.
+</p>
 
 <!-- CONTACT -->
 ## Contact
