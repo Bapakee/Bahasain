@@ -22,7 +22,7 @@ const {getModules,getLevel} = require('../controllers/learnController')
  *             schema:
  *               type: object
  *               properties:
- *                 module:
+ *                 modules:
  *                   type: array
  *                   items:
  *                     type: object

@@ -212,6 +212,6 @@ router.post('/reset-password/:token', validateBody(['password', 'confirmPassword
  *       500:
  *         description: Internal server error
  */
-router.delete('/logout',auth, logout);
+router.delete('/logout', auth, logout);
 
 module.exports = router;
