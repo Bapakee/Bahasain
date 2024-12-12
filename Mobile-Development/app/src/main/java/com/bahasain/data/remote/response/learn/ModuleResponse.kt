@@ -46,6 +46,9 @@ data class LevelsItem(
 	@field:SerializedName("moduleId")
 	val moduleId: Int? = null,
 
+	@field:SerializedName("isAccessible")
+	val isAccessible: Boolean? = null,
+
 	@field:SerializedName("title")
 	val title: String? = null,
 

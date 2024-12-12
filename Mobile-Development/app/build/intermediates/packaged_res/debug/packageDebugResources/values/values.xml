@@ -21,6 +21,7 @@
     <string name="app_name">Bahasain</string>
     <string name="btn_back">btn_back</string>
     <string name="btn_back_to_learn">Back To Learn</string>
+    <string name="btn_check">Check</string>
     <string name="btn_continue">CONTINUE</string>
     <string name="btn_forgot_password">Forgot Password?</string>
     <string name="btn_login">Login</string>
@@ -41,6 +42,7 @@
     <string name="desc_result_placement">Based on your test results, your journey starts at the %s Level, perfectly tailored to help you progress further in your Bahasa Indonesia learning experience.</string>
     <string name="desc_signup">Already have an account ?</string>
     <string name="dont_have_account">Don\'t have an account ?</string>
+    <string name="drag_and_drop_to_rearrange">Drag and Drop To Rearrange</string>
     <string name="email_address">Email address</string>
     <string name="english">English</string>
     <string name="great_job_you_did_it">Great job! You Did It</string>

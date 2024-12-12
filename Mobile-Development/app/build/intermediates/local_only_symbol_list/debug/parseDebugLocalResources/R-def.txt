@@ -22,6 +22,7 @@ drawable baseline_arrow_right_alt_24
 drawable baseline_circle_black
 drawable baseline_circle_gray
 drawable baseline_image_24
+drawable baseline_lock_24
 drawable baseline_search_24
 drawable bg_button_continue
 drawable bg_button_disabled_sign
@@ -35,6 +36,7 @@ drawable bg_matching
 drawable bg_text_blur
 drawable bg_word
 drawable btn_show_all
+drawable check_done_circle
 drawable checkbox_background
 drawable checkbox_text_color
 drawable ic_launcher_foreground
@@ -81,6 +83,7 @@ id answerColumn
 id back
 id background_sign
 id btn_back
+id btn_check
 id btn_clear
 id btn_continue
 id btn_copy
@@ -311,6 +314,7 @@ raw placement_data
 string app_name
 string btn_back
 string btn_back_to_learn
+string btn_check
 string btn_continue
 string btn_forgot_password
 string btn_login
@@ -331,6 +335,7 @@ string desc_intro
 string desc_result_placement
 string desc_signup
 string dont_have_account
+string drag_and_drop_to_rearrange
 string email_address
 string english
 string great_job_you_did_it

@@ -3079,6 +3079,7 @@ drawable baseline_arrow_right_alt_24
 drawable baseline_circle_black
 drawable baseline_circle_gray
 drawable baseline_image_24
+drawable baseline_lock_24
 drawable baseline_search_24
 drawable bg_button_continue
 drawable bg_button_disabled_sign
@@ -3100,6 +3101,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable btn_show_all
+drawable check_done_circle
 drawable checkbox_background
 drawable checkbox_text_color
 drawable compat_splash_screen
@@ -3350,6 +3352,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_back
+id btn_check
 id btn_clear
 id btn_continue
 id btn_copy
@@ -4222,6 +4225,7 @@ string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string btn_back
 string btn_back_to_learn
+string btn_check
 string btn_continue
 string btn_forgot_password
 string btn_login
@@ -4254,6 +4258,7 @@ string desc_result_placement
 string desc_signup
 string dest_title
 string dont_have_account
+string drag_and_drop_to_rearrange
 string email_address
 string english
 string error_a11y_label

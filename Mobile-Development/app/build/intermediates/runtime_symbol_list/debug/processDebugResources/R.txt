@@ -3078,6 +3078,7 @@ int drawable baseline_arrow_right_alt_24 0x7f070079
 int drawable baseline_circle_black 0x7f07007a
 int drawable baseline_circle_gray 0x7f07007b
 int drawable baseline_image_24 0x7f07011d
+int drawable baseline_lock_24 0x7f07011f
 int drawable baseline_search_24 0x7f07007c
 int drawable bg_button_continue 0x7f07007d
 int drawable bg_button_disabled_sign 0x7f07007e
@@ -3099,6 +3100,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f07008a
 int drawable btn_radio_on_mtrl 0x7f07008b
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f07008c
 int drawable btn_show_all 0x7f07008d
+int drawable check_done_circle 0x7f07011e
 int drawable checkbox_background 0x7f07008e
 int drawable checkbox_text_color 0x7f07008f
 int drawable compat_splash_screen 0x7f070090
@@ -3349,6 +3351,7 @@ int id bounceBoth 0x7f090065
 int id bounceEnd 0x7f090066
 int id bounceStart 0x7f090067
 int id btn_back 0x7f090068
+int id btn_check 0x7f0902b3
 int id btn_clear 0x7f090069
 int id btn_continue 0x7f09006a
 int id btn_copy 0x7f09006b
@@ -4221,6 +4224,7 @@ int string bottomsheet_drag_handle_clicked 0x7f130022
 int string bottomsheet_drag_handle_content_description 0x7f130023
 int string btn_back 0x7f130024
 int string btn_back_to_learn 0x7f1300e7
+int string btn_check 0x7f1300ee
 int string btn_continue 0x7f130025
 int string btn_forgot_password 0x7f130026
 int string btn_login 0x7f130027
@@ -4253,6 +4257,7 @@ int string desc_result_placement 0x7f13003d
 int string desc_signup 0x7f13003e
 int string dest_title 0x7f13003f
 int string dont_have_account 0x7f130040
+int string drag_and_drop_to_rearrange 0x7f1300ef
 int string email_address 0x7f130041
 int string english 0x7f130042
 int string error_a11y_label 0x7f130043

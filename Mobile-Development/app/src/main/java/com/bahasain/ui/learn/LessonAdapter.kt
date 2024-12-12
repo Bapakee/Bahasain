@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bahasain.data.remote.response.learn.LevelsItem
 import com.bahasain.ui.learn.quiz.QuizActivity
+import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ItemLessonCardListBinding
 
 class LessonAdapter : ListAdapter<LevelsItem, LessonAdapter.LessonViewHolder>(DIFF_CALLBACK) {
@@ -15,6 +16,19 @@ class LessonAdapter : ListAdapter<LevelsItem, LessonAdapter.LessonViewHolder>(DI
     class LessonViewHolder(private val binding: ItemLessonCardListBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(lesson : LevelsItem){
             binding.tvLessonName.text = lesson.title
+
+            if (lesson.isCompleted == true){
+                binding.ivLessonImage.setImageResource(R.drawable.check_done_circle)
+            }
+
+            if (lesson.isAccessible == false) {
+                binding.root.alpha = 0.5f
+                binding.root.isEnabled = false
+                binding.ivLessonImage.setImageResource(R.drawable.baseline_lock_24)
+            } else {
+                binding.root.alpha = 1f
+                binding.root.isEnabled = true
+            }
         }
     }
 
@@ -28,15 +42,17 @@ class LessonAdapter : ListAdapter<LevelsItem, LessonAdapter.LessonViewHolder>(DI
         holder.bind(lesson)
 
         holder.itemView.setOnClickListener{
-            val moduleId = lesson.moduleId
-            val moduleLevel = lesson.id
+            if (lesson.isAccessible == true){
+                val moduleId = lesson.moduleId
+                val moduleLevel = lesson.id
 
-            val intent = Intent(holder.itemView.context, QuizActivity::class.java).apply {
-                putExtra("MODULE_ID", moduleId.toString())
-                putExtra("MODULE_LEVEL", moduleLevel.toString())
+                val intent = Intent(holder.itemView.context, QuizActivity::class.java).apply {
+                    putExtra("MODULE_ID", moduleId.toString())
+                    putExtra("MODULE_LEVEL", moduleLevel.toString())
+                }
+
+                holder.itemView.context.startActivity(intent)
             }
-
-            holder.itemView.context.startActivity(intent)
         }
     }
 

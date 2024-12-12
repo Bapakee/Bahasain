@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
 
                         val jwt = JWT(accessToken.toString())
 
-                        val level = jwt.getClaim("isNew").asBoolean()
+                        val isNew = jwt.getClaim("isNew").asBoolean()
 
                         val userModel = UserModel(
                             accessToken.toString(),
@@ -95,7 +95,7 @@ class LoginActivity : AppCompatActivity() {
 
                         viewModel.saveSession(userModel)
 
-                        if(level == false){
+                        if(isNew == true){
                             val intent = Intent(this, SurveyActivity::class.java)
                             startActivity(intent)
                             finish()

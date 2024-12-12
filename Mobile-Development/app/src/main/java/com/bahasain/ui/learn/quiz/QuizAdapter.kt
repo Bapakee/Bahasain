@@ -71,6 +71,12 @@ class QuizAdapter(
                 onRearrangeAnswerSubmitted(quiz.id, userOrder)
             }
 
+            binding.btnCheck.visibility = if (isAnswered) View.GONE else View.VISIBLE
+            binding.btnCheck.setOnClickListener {
+                val userOrder = rearrangeView.getUserOrder()
+                onRearrangeAnswerSubmitted(quiz.id, userOrder)
+            }
+
             binding.quiz.text = quiz.question
         }
     }
@@ -113,7 +119,6 @@ class QuizAdapter(
 
                         binding.rgQuiz.isEnabled = false
 
-                        // Disable all the RadioButtons
                         binding.rgQuiz.children.forEach { view ->
                             if (view is RadioButton) {
                                 view.isEnabled = false

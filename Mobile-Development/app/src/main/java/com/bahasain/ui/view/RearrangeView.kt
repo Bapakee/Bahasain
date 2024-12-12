@@ -24,6 +24,10 @@ class RearrangeView @JvmOverloads constructor(
         orientation = HORIZONTAL
     }
 
+    fun getUserOrder(): List<String> {
+        return words
+    }
+
     // Set the words to display in the view
     @RequiresApi(Build.VERSION_CODES.N)
     fun setWords(wordList: List<String>) {

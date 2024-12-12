@@ -4,12 +4,18 @@ import com.google.gson.annotations.SerializedName
 
 data class LevelResponse(
 
+	@field:SerializedName("data")
+	val data: DataLevel? = null,
+
 	@field:SerializedName("success")
 	val success: Boolean? = null,
 
 	@field:SerializedName("message")
-	val message: String? = null,
+	val message: String? = null
+)
 
-	@field:SerializedName("error")
-	val error: String? = null
+data class DataLevel(
+
+	@field:SerializedName("isNew")
+	val isNew: Boolean? = null
 )
