@@ -33,6 +33,16 @@ The Classification model uses a deep learning model using TensorFlow and Keras f
 The Translate model uses a sequence-to-sequence model using TensorFlow and Keras. It includes an Encoder-Decoder architecture with embedding layers and LSTM units for processing input and output sequences. The model is compiled with the RMSprop optimizer and categorical cross-entropy loss for training.
 </p>
 
+### Dataset
+**Our Dataset Link:**
+
+* Word Classification
+  * [POS TAGGING Datasets](https://github.com/IndoNLP/indonlu/tree/master/dataset/bapos_pos-idn)
+  
+* Translation (EN-ID)
+  * [Neulab Corpus Datasets](https://opus.nlpl.eu/NeuLab-TedTalks/en&id/v1/NeuLab-TedTalks)
+  * [Tatoeba Corpus Datasets](https://opus.nlpl.eu/Tatoeba/en&id/v2023-04-12/Tatoeba)
+
 <!-- CONTACT -->
 ## Contact
 
