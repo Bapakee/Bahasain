@@ -15,10 +15,6 @@ const getRecipe = async (req, res) => {
         });
 
         const result = RecipeData.map((item) => {
-            const plainTextContent = cheerio.load(item.content).text();
-
-            const words = plainTextContent.split(/\s+/);
-            const overview = words.slice(0, 30).join(' ');
             
             const imageName = item.title.replace(/\s+/g, '_');
 
