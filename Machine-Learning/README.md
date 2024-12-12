@@ -14,12 +14,13 @@ The machine learning workflow involves a series of steps to develop and deploy t
   <img align="center" src="images\feature.png"  width="400" height="400"></img>
 </div>
 
-## 1. Word Classification
+## MODELS
+### 1. Word Classification
 <p align="justify">
 The Classification model uses a deep learning model using TensorFlow and Keras for sequence labeling tasks. It uses Bidirectional LSTMs and includes Dropout and Layer Normalization to improve training stability and reduce overfitting. The TimeDistributed Dense layer extracts features, and the final softmax layer predicts output classes. The model is optimized with Adam and trained using categorical cross-entropy loss.
 </p>
 
-## 2. Translation (EN-ID)
+### 2. Translation (EN-ID)
 <p align="justify">
 The Translate model uses a sequence-to-sequence model using TensorFlow and Keras. It includes an Encoder-Decoder architecture with embedding layers and LSTM units for processing input and output sequences. The model is compiled with the RMSprop optimizer and categorical cross-entropy loss for training.
 </p>
