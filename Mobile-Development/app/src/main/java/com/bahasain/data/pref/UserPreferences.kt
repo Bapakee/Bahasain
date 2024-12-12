@@ -20,9 +20,6 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
         dataStore.edit { preferences ->
             preferences[ACCESS_TOKEN_KEY] = user.accessToken
             preferences[REFRESH_TOKEN_KEY] = user.refreshToken
-
-            preferences[NAME_KEY] = user.userName
-            preferences[LEVEL_KEY] = user.userLevel
         }
     }
 
@@ -31,9 +28,6 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
             UserModel(
                 preferences[ACCESS_TOKEN_KEY] ?: "",
                 preferences[REFRESH_TOKEN_KEY] ?: "",
-
-                preferences[NAME_KEY] ?: "",
-                preferences[LEVEL_KEY] ?: 0
             )
         }
     }
@@ -54,10 +48,7 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
 
         private val ACCESS_TOKEN_KEY = stringPreferencesKey("access_token")
         private val REFRESH_TOKEN_KEY = stringPreferencesKey("refresh_token")
-//
-//        private val ID_KEY = stringPreferencesKey("id")
-        private val NAME_KEY = stringPreferencesKey("name")
-        private val LEVEL_KEY = intPreferencesKey("level")
+
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreferences {
             return INSTANCE ?: synchronized(this) {

@@ -53,5 +53,4 @@ class LearnAdapter : ListAdapter<DataItemLearn, LearnAdapter.ModuleViewHolder>(D
             }
         }
     }
-
 }

@@ -15,6 +15,7 @@ import com.bahasain.data.remote.response.learn.LevelResponse
 import com.bahasain.data.remote.response.user.ProfileResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class UserRepository private constructor(
@@ -57,7 +58,7 @@ class UserRepository private constructor(
         }
     }
 
-    fun getProfile(): LiveData<Result<ProfileResponse?>?> = liveData {
+    fun getProfile(): Flow<Result<ProfileResponse?>?> = flow {
         emit(Result.Loading)
         try {
             val response = apiService.getProfile()

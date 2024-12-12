@@ -43,8 +43,6 @@ class PlacementIntroActivity : AppCompatActivity() {
             viewModel.getSession().observe(this) { session ->
                 if (session != null) {
                     setLevel()
-                    val updatedSession = session.copy(userLevel = 1)
-                    viewModel.saveSession(updatedSession)
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()

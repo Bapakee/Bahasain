@@ -63,5 +63,4 @@ class HistoricalAdapter :
             }
         }
     }
-
 }

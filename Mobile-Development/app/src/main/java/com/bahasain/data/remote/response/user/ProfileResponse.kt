@@ -32,5 +32,5 @@ data class DataProfile(
 	val percent: Int? = null,
 
 	@field:SerializedName("certiLink")
-	val certiLink: List<Any?>? = null
+	val certiLink: List<String?>? = null
 )

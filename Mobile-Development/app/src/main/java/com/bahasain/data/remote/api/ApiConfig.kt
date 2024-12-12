@@ -92,8 +92,6 @@ object ApiConfig {
         }
     }
 
-
-
     private fun getRefreshTokenService(): ApiService {
         val loggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_choice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/single_choice"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/quiz_title"
@@ -17,25 +17,25 @@
         android:id="@+id/tv_reading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/inter"
         android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/quiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:textSize="32sp"
         android:textStyle="bold"
-        tools:text="Apa arti ungkapan buah tangan?"
-        android:gravity="center"/>
+        tools:text="Apa arti ungkapan buah tangan?" />
 
     <RadioGroup
         android:id="@+id/rg_quiz"
-        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp" />
 
 </LinearLayout>

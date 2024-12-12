@@ -2,6 +2,7 @@ package com.bahasain.data.remote.api
 
 import com.bahasain.data.remote.request.LevelRequest
 import com.bahasain.data.remote.request.LoginRequest
+import com.bahasain.data.remote.request.ProgressRequest
 import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
 import com.bahasain.data.remote.request.TranslateRequest
@@ -16,7 +17,9 @@ import com.bahasain.data.remote.response.cultural.DetailFolkloreResponse
 import com.bahasain.data.remote.response.cultural.DetailHistoricalResponse
 import com.bahasain.data.remote.response.cultural.DetailRecipeResponse
 import com.bahasain.data.remote.response.cultural.RecipeResponse
+import com.bahasain.data.remote.response.learn.ProgressResponse
 import com.bahasain.data.remote.response.learn.QuizResponse
+import com.bahasain.data.remote.response.learn.ScoreResponse
 import com.bahasain.data.remote.response.user.ProfileResponse
 import com.bahasain.data.remote.response.vocab.TranslateResponse
 import com.bahasain.data.remote.response.vocab.TriviaResponse
@@ -26,6 +29,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.PATCH
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -57,6 +61,14 @@ interface ApiService {
     suspend fun setLevel(
         @Body level: LevelRequest
     ): LevelResponse
+
+    @PUT("progress")
+    suspend fun putProgress(
+        @Body progress: ProgressRequest
+    ): ProgressResponse
+
+    @GET("profile/head")
+    suspend fun getScore():ScoreResponse
 
     @GET("module")
     suspend fun getModule(): ModuleResponse

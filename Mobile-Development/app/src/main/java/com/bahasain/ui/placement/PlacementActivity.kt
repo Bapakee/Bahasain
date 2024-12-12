@@ -169,15 +169,6 @@ class PlacementActivity : AppCompatActivity() {
         } else {
             updateLevel()
 
-            viewModel.getSession().observe(this) { session ->
-                if (session != null) {
-                    val updatedSession = session.copy(userLevel = setLevel())
-                    viewModel.saveSession(updatedSession)
-                } else {
-                    Toast.makeText(this, "Gagal memuat sesi", Toast.LENGTH_SHORT).show()
-                }
-            }
-
             val intent = Intent(this, PlacementResultActivity::class.java)
             intent.putExtra("LEVEL", setLevel())
             startActivity(intent)
