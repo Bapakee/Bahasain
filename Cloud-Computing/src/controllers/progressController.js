@@ -76,7 +76,7 @@ const setUserLevel = async (req, res) => {
         user.userLevel = userLevel;
         await user.save();
 
-        successResponse(res, {}, 'User level successfully set.');
+        successResponse(res, {isNew:false}, 'User level successfully set.');
     } catch (error) {
         console.error('Error setting user level:', error);
         errorResponse(res, error.message, 'Error setting user level', 500);

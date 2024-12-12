@@ -1,4 +1,5 @@
 const { UserProgress, Module, Level, Quiz, QuizOption, Sequelize, User } = require('../models');
+const { all } = require('../routes/profile');
 const {getAllModule} = require('../services/getModule')
 const { successResponse, errorResponse } = require('../utils/responseConsistency');
 
@@ -13,44 +14,63 @@ const getModules = async (req, res) => {
             return errorResponse(res, 'User not found', 'User not found', 401);
         }
         if (!user.userLevel) {
-            return errorResponse(res,  'user level not set','Access denied', 403);
+            return errorResponse(res, 'User level not set', 'Access denied', 403);
         }
 
         // Ambil semua modul dari database
-        const modules = await getAllModule(userId)
+        const modules = await getAllModule(userId);
 
         // Transformasikan data ke format respons yang diinginkan
+        let isPreviousModuleCompleted = true; // Status penyelesaian modul sebelumnya
+        let previusModuleScore = 200;
+
         const response = modules.map((module) => {
-            // Hitung jumlah level dan level yang telah diselesaikan pengguna
-            const totalLevels = module.Levels.length;
-            const completedLevels = module.Levels.filter(
-                (level) => level.UserProgresses?.[0]?.completed
-            ).length;
+            const { Levels = [] } = module;
+            let isPreviousLevelCompleted = true; // Status penyelesaian level sebelumnya dalam modul
+            let accessibleScore = previusModuleScore>=200
+            previusModuleScore = 0
+
+            const levels = Levels.map((level) => {
+                const isLevelCompleted = !!level.UserProgresses?.[0]?.completed;
+                const isLevelAccessible = isPreviousLevelCompleted && user.userLevel >= module.level && isPreviousModuleCompleted && accessibleScore;
+                previusModuleScore += level.UserProgresses?.[0]?.score || 0;
+
+                isPreviousLevelCompleted = isLevelCompleted;
+
+                return {
+                    id: level.id,
+                    moduleId: module.id,
+                    isAccessible: isLevelAccessible,
+                    title: level.title,
+                    order: level.order,
+                    score: level.UserProgresses?.[0]?.score || null,
+                    isCompleted: isLevelCompleted,
+                };
+            });
+
+            const completedLevels = levels.filter((l) => l.isCompleted).length;
+            const isModuleAccessible = isPreviousModuleCompleted && user.userLevel >= module.level && accessibleScore;
+
+            isPreviousModuleCompleted = completedLevels === Levels.length; // Perbarui status modul sebelumnya
 
             return {
                 id: module.id,
                 name: module.name,
                 level: module.level,
-                isAccessible: user.userLevel >= module.level, // Cek apakah modul dapat diakses
-                lessonsCompleted: `${completedLevels}/${totalLevels}`, // Format penyelesaian modul
-                levels: module.Levels.map((level) => ({
-                    id: level.id,
-                    moduleId: module.id,
-                    title: level.title,
-                    order: level.order,
-                    score: level.UserProgresses?.[0]?.score || null, // Sertakan skor jika ada
-                    isCompleted: !!level.UserProgresses?.[0]?.completed, // Boolean status penyelesaian
-                })),
+                isAccessible: isModuleAccessible,
+                lessonsCompleted: `${completedLevels}/${Levels.length}`,
+                levels,
             };
         });
 
         // Kirim respons ke klien menggunakan successResponse
-        successResponse(res, response, 'Successful get module');
+        successResponse(res, response, 'Successfully retrieved modules');
     } catch (error) {
         console.error('Error fetching modules and levels:', error);
-        errorResponse(res, error, 'Gagal mengambil data modul dan level', 500);
+        errorResponse(res, error, 'Failed to fetch modules and levels', 500);
     }
 };
+
 
 
 

@@ -38,12 +38,15 @@ const getProfile = async (req, res) => {
         const user = await User.findByPk(userId);
         const { name, userLevel } = user.toJSON();
 
+
         // Ambil semua modul dengan level yang sama dengan userLevel
         const modules = await getAllModule(userId);
+        // console.log('All modules:', modules);
+
         const sameLevelModules = modules.filter((module) => module.level === userLevel);
 
         // Filter modul yang sudah selesai dengan level yang sama dengan userLevel
-        const completedModules = sameLevelModules.filter((module) => {
+        const completedModules = modules.filter((module) => {
             const totalLevels = module.Levels.length;
             const completedLevels = module.Levels.filter(
                 (level) => level.UserProgresses?.[0]?.completed
@@ -53,8 +56,10 @@ const getProfile = async (req, res) => {
             return completedLevels === totalLevels;
         });
 
+        const completedSameLevelModules = completedModules.filter((module) => module.level === userLevel);
+
         // Hitung jumlah modul yang selesai
-        const completedModulesCount = completedModules.length;
+        const completedModulesCount = completedSameLevelModules.length;
 
         // Hitung total modul dengan level yang sama
         const totalModulesSameLevel = sameLevelModules.length;
@@ -67,18 +72,21 @@ const getProfile = async (req, res) => {
 
         // Ambil sertifikat modul yang selesai
         const certiLink = completedModules.map(
-            (module) => `${process.env.BUCKET_URL}/Certificate/${encodeURIComponent(module.name)}.png`
+            (module) => {
+                const link = `${process.env.BUCKET_URL}/Certificate/${encodeURIComponent(module.name)}.png`;
+                return link;
+            }
         );
-        const avatarLink = `${process.env.BUCKET_URL}/Avatar/${user.avatar}.png`
 
+        const avatarLink = `${process.env.BUCKET_URL}/Avatar/${user.avatar}.png`;
 
         // Response
         const response = {
             name,
-            avatar:avatarLink,
+            avatar: avatarLink,
             level: userLevel,
-            notif:user.notificationPreference,
-            percent:parseFloat(percent), // Persentase modul yang selesai
+            notif: user.notificationPreference,
+            percent: parseFloat(percent), // Persentase modul yang selesai
             certiLink, // Link sertifikat untuk modul yang selesai
         };
 
@@ -88,10 +96,5 @@ const getProfile = async (req, res) => {
         errorResponse(res, error, 'Failed to fetch profile');
     }
 };
-
-
-
-
-
 
 module.exports = { getHead, getProfile }
