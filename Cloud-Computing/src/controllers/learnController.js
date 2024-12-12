@@ -126,6 +126,7 @@ const getLevel = async (req, res) => {
                 question: quiz.question,
                 answer: quiz.answer,
                 imageUrl: quiz.imageUrl,
+                voiceUrl: quiz.voiceUrl,
                 quizOptions: quiz.QuizOptions.map((quizOption) => ({
                     option: quizOption.option,
                 })),
