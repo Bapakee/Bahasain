@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bahasain.data.Result
+import com.bahasain.data.remote.response.learn.DataItemLearn
 import com.bahasain.ui.ViewModelFactory
 import com.dicoding.bahasain.databinding.FragmentLearnBinding
 
@@ -54,7 +55,8 @@ class LearnFragment : Fragment() {
 
                 is Result.Success -> {
                     showLoading(false)
-                    adapter.submitList(module.data)
+                    val groupedModules = groupModulesByLevel(module.data)
+                    adapter.submitList(groupedModules)
                 }
 
                 is Result.Error -> {
@@ -65,6 +67,17 @@ class LearnFragment : Fragment() {
             }
         }
     }
+
+    private fun groupModulesByLevel(modules: List<DataItemLearn?>?): List<LearnItem> {
+        val grouped = modules?.groupBy { it?.level }
+        val result = mutableListOf<LearnItem>()
+        grouped?.forEach { (level, items) ->
+            result.add(LearnItem.Heading(level ?: 0))
+            result.addAll(items.map { LearnItem.Module(it) })
+        }
+        return result
+    }
+
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE

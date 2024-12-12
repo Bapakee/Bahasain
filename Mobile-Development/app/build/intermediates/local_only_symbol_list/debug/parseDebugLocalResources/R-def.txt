@@ -110,7 +110,6 @@ id card
 id container
 id descSurvey
 id desc_intro
-id desc_learn
 id desc_result
 id desc_title
 id descriptionOnboarding
@@ -212,6 +211,7 @@ id title_translate_layout
 id tranlate_layout
 id trivia_layout
 id tvHeader
+id tvHeading
 id tvLeftText
 id tvWord
 id tv_chapter
@@ -280,6 +280,7 @@ layout item_certificate
 layout item_checkbox
 layout item_cultural_horizontal
 layout item_folklore_cultural
+layout item_heading_learn
 layout item_historical_cultural
 layout item_learn
 layout item_left_matching
