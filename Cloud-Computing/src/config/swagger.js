@@ -33,7 +33,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./src/routes/*.js'], // Path ke file dengan anotasi Swagger
+  apis: ['./src/routes/**/*.js'], // Path ke file dengan anotasi Swagger
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
