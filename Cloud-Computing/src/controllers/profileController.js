@@ -14,10 +14,12 @@ const getHead = async (req, res) => {
             ],
             attributes: ['point'],
         });
+        
         const response = {
             point: parseInt(user.point),
-            streak: user.Streak.streak
+            streak: user.Streak?.streak??0,
         }
+        
         successResponse(res, response, 'Head fetched successfully');
     } catch (error) {
         errorResponse(res, null, 'Failed to fetch head', 500);
