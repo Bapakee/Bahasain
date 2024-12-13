@@ -8,6 +8,21 @@ BahasaIn
 
 ---
 
+# Team Member - C242-PS200
+<div align="center">
+  
+| **Bangkit ID**   | **Name**                          | **Learning Path**     | **LinkedIn Profile**                                                                                                                                               | **Status** |
+|-------------------|-----------------------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| M320B4KY3779      | Reynald David Oenata             | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reynald-david-oenata-22b0922b2/) | Active     |
+| M320B4KY1257      | Emanuel Jordan Rafhaelino Sanjaya | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emanueljordann/)           | Active     |
+| M320B4KY4527      | Yehuda Phedra Sanjaya            | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yehuda-phedra-sanjaya-108353330/) | Active     |
+| C247B4KY2865      | Muhammad Hafi Mufaddhol          | Cloud Computing        | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-hafi-mufaddhol-720b521ba/) | Active     |
+| C247B4KY2864      | Muhammad Hafi                    | Cloud Computing        | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-hafi/)             | Active     |
+| A593B4KY0298      | Akmal Kafi Ar Ridho              | Mobile Development     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akmalkv)                   | Active     |
+| A284B4KX1963      | Imanuella Yesha Metanoia         | Mobile Development     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imanuellaym)                | Active     |
+
+</div>
+
 ## **Description**
 
 Indonesia is a culturally rich country with over 275 million people. Despite its vast cultural heritage and language, only a small fraction of international students study in Indonesia due to language barriers. BahasaIn aims to bridge this gap by offering a user-friendly app that not only teaches Bahasa Indonesia but also integrates Indonesian culture into the learning experience.
@@ -91,21 +106,6 @@ The prototype design of this application was created using Figma. If you are int
 
 
 ---
-
-# Team Member - C242-PS200
-<div align="center">
-  
-| **Bangkit ID**   | **Name**                          | **Learning Path**     | **LinkedIn Profile**                                                                                                                                               | **Status** |
-|-------------------|-----------------------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| M320B4KY3779      | Reynald David Oenata             | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reynald-david-oenata-22b0922b2/) | Active     |
-| M320B4KY1257      | Emanuel Jordan Rafhaelino Sanjaya | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emanueljordann/)           | Active     |
-| M320B4KY4527      | Yehuda Phedra Sanjaya            | Machine Learning       | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yehuda-phedra-sanjaya-108353330/) | Active     |
-| C247B4KY2865      | Muhammad Hafi Mufaddhol          | Cloud Computing        | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-hafi-mufaddhol-720b521ba/) | Active     |
-| C247B4KY2864      | Muhammad Hafi                    | Cloud Computing        | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-hafi/)             | Active     |
-| A593B4KY0298      | Akmal Kafi Ar Ridho              | Mobile Development     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akmalkv)                   | Active     |
-| A284B4KX1963      | Imanuella Yesha Metanoia         | Mobile Development     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imanuellaym)                | Active     |
-
-</div>
 
 ### Contact
 - BahasaIn - @BahasainApp - YOUTUBE CHANNEL
