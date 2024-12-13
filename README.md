@@ -8,6 +8,14 @@ BahasaIn
 
 ---
 
+## **Description**
+
+Indonesia is a culturally rich country with over 275 million people. Despite its vast cultural heritage and language, only a small fraction of international students study in Indonesia due to language barriers. BahasaIn aims to bridge this gap by offering a user-friendly app that not only teaches Bahasa Indonesia but also integrates Indonesian culture into the learning experience.
+
+By providing tools for adaptive learning, cultural integration, and gamification, BahasaIn seeks to make Indonesia a welcoming destination for global learners while promoting Bahasa Indonesia as a global language.
+
+---
+
 # Team Member - C242-PS200
 <div align="center">
   
@@ -23,13 +31,6 @@ BahasaIn
 
 </div>
 
-## **Description**
-
-Indonesia is a culturally rich country with over 275 million people. Despite its vast cultural heritage and language, only a small fraction of international students study in Indonesia due to language barriers. BahasaIn aims to bridge this gap by offering a user-friendly app that not only teaches Bahasa Indonesia but also integrates Indonesian culture into the learning experience.
-
-By providing tools for adaptive learning, cultural integration, and gamification, BahasaIn seeks to make Indonesia a welcoming destination for global learners while promoting Bahasa Indonesia as a global language.
-
----
 
 ## **Screenshots**
 
