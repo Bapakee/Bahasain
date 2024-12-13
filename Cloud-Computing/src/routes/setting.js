@@ -24,11 +24,13 @@ const { setting } = require('../controllers/settingController')
  *             type: object
  *             properties:
  *               notificationPreference:
- *                 type: string
+ *                 type: integer
+ *                 example: 1
  *                 description: User's notification preference
  *               avatar:
- *                 type: string
- *                 description: URL of the user's avatar
+ *                 type: integer
+ *                 example: 1
+ *                 description: user's avatar
  *     responses:
  *       200:
  *         description: Settings updated successfully

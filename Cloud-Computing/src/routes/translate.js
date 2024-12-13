@@ -4,7 +4,7 @@ const {getTranslate} = require('../controllers/translateController')
 const { validateBody } = require('../middleware/validateBody');
 /**
  * @swagger
- * /:
+ * /translate:
  *   post:
  *     summary: Translate text and get part of speech (POS) prediction
  *     description: This endpoint translates the given text and returns the translation along with the part of speech (POS) prediction.
@@ -22,7 +22,7 @@ const { validateBody } = require('../middleware/validateBody');
  *               text:
  *                 type: string
  *                 description: The text to be translated.
- *                 example: "Hello, world!"
+ *                 example: "i want to eat"
  *     responses:
  *       200:
  *         description: Successful response with translation and POS prediction.

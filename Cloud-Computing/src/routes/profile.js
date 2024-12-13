@@ -4,7 +4,7 @@ const router = express.Router();
 const {getHead,getProfile}=require('../controllers/profileController')
 /**
  * @swagger
- * /head:
+ * /profile/head:
  *   get:
  *     summary: Retrieve the head profile information
  *     description: Fetches the user's point and streak information.
@@ -35,7 +35,7 @@ router.get('/head',getHead)
 
 /**
  * @swagger
- * /:
+ * /profile:
  *   get:
  *     summary: Retrieve the user's profile information
  *     description: Fetches the user's profile including name, avatar, level, notification preferences, completion percentage, and certificate links.

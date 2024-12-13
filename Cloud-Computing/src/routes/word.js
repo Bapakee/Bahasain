@@ -20,7 +20,7 @@ const { getWord, getWordById }= require ('../controllers/wordController')
  *           example: 1
  *       - name: limit
  *         in: query
- *         description: The number of words per page (default is 10).
+ *         description: The number of words per page.
  *         required: false
  *         schema:
  *           type: integer
@@ -31,14 +31,13 @@ const { getWord, getWordById }= require ('../controllers/wordController')
  *         required: false
  *         schema:
  *           type: string
- *           example: "apple"
  *       - name: categories
  *         in: query
  *         description: Comma-separated list of categories to filter words by (optional).
  *         required: false
  *         schema:
  *           type: string
- *           example: "fruit,food"
+ *           example: "noun,verb"
  *     responses:
  *       200:
  *         description: A list of words matching the search and category filters.
@@ -105,8 +104,6 @@ router.get('/',getWord)
  *         description: The ID of the word to be fetched
  *         schema:
  *           type: integer
- *     security:
- *       - bearerAuth: []  # Assuming bearer authentication is used
  *     responses:
  *       200:
  *         description: Word fetched successfully
