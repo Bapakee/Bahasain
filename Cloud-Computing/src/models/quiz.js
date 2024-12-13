@@ -53,7 +53,11 @@ module.exports = (sequelize, DataTypes) => {
     imageUrl:{
       type : DataTypes.STRING,
       field : 'image_url'
-    }
+    },
+    voiceUrl:{
+      type : DataTypes.STRING,
+      field : 'voice_url'
+    },
   }, {
     sequelize,
     modelName: 'Quiz',

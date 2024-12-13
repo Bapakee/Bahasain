@@ -16,8 +16,8 @@ COPY dataset/ /app/dataset/
 # Copy critical files explicitly 
 COPY app.py /app/app.py
 COPY model_POS_v3.h5 /app/
-COPY /tokenizer/tokenizer.pickle /app/
-COPY /tokenizer/tag_tokenizer.pickle /app/
+COPY tokenizer /app/tokenizer
+
 
 
 # Expose the port on which the app runs

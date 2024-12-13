@@ -2,35 +2,30 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('images', {
+    await queryInterface.createTable('daily_trivia', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      entity_type: {
+      title: {
         type: Sequelize.STRING
       },
-      entity_id: {
-        type: Sequelize.INTEGER
-      },
-      file_name: {
-        type: Sequelize.STRING
+      description: {
+        type: Sequelize.TEXT
       },
       created_at: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW'),
+        type: Sequelize.DATE
       },
       updated_at: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW'),
+        type: Sequelize.DATE
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('images');
+    await queryInterface.dropTable('daily_trivia');
   }
 };

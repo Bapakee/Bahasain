@@ -35,18 +35,15 @@ Dockerfile.*
 docker-compose.yml
 
 # Ignore large datasets or model files (if not needed in the build context)
-*.h5
-*.pickle
 
 # Ignore Jupyter Notebook files
-Translate_v7.ipynb
+Model_POS.ipynb
 
 # Ignore everything except essential files
 !app.py
 !requirements.txt
 !english.txt
 !indonesian.txt
-!encoder_model.h5
-!decoder_model.h5
-!input_tokenizer.pickle
-!output_tokenizer.pickle
+!model_POS_v3.h5
+!tag_tokenizer.pickle
+!tokenizer.pickle
