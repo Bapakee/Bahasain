@@ -12,7 +12,7 @@ const { setting } = require('../controllers/settingController')
 
 /**
  * @swagger
- * /settings:
+ * /setting:
  *   post:
  *     summary: Update user settings
  *     tags: [Settings]
