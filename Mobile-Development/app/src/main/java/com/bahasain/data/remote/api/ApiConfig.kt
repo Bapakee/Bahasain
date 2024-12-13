@@ -1,10 +1,12 @@
 package com.bahasain.data.remote.api
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import com.bahasain.data.pref.UserPreferences
 import com.bahasain.data.pref.dataStore
 import com.bahasain.data.remote.request.RefreshRequest
+import com.bahasain.ui.auth.login.LoginActivity
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
@@ -30,7 +32,6 @@ object ApiConfig {
             var response = chain.proceed(requestWithToken)
 
             if (response.code == 401) {
-                response.close()
                 val refreshToken = runBlocking { userPreferences.getSession().firstOrNull()?.refreshToken }
 
                 synchronized(this) {
@@ -38,11 +39,16 @@ object ApiConfig {
                         refreshAccessToken(refreshToken, userPreferences)
                     }
 
-                    val newRequest = originalRequest.newBuilder()
-                        .header("Authorization", "Bearer $newAccessToken")
-                        .build()
+                    if (newAccessToken != null) {
+                        val newRequest = originalRequest.newBuilder()
+                            .header("Authorization", "Bearer $newAccessToken")
+                            .build()
 
-                    response = chain.proceed(newRequest)
+                        response.close()
+                        response = chain.proceed(newRequest)
+                    } else {
+                        runBlocking { logoutUser(userPreferences, context) }
+                    }
                 }
             }
             response
@@ -106,6 +112,15 @@ object ApiConfig {
             .build()
 
         return retrofit.create(ApiService::class.java)
+    }
+
+    private suspend fun logoutUser(userPreferences: UserPreferences, context: Context) {
+        userPreferences.logout()
+
+        val intent = Intent(context, LoginActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        context.startActivity(intent)
     }
 
 }

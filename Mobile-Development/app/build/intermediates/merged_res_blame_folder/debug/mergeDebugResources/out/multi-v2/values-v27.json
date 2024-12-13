@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dicoding.bahasain.app-mergeDebugResources-52:/values-v27/values-v27.xml",
+            "outputFile": "com.dicoding.bahasain.app-mergeDebugResources-53:/values-v27/values-v27.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-4\\324fb92370b678a13a7da8aded5e07f5\\transformed\\core-splashscreen-1.0.1\\res\\values-v27\\values-v27.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-4\\1b511687cb5f9d75ce5879b0410fefe8\\transformed\\core-splashscreen-1.0.1\\res\\values-v27\\values-v27.xml",
                     "from": {
                         "startLines": "2,3,4,7",
                         "startColumns": "4,4,4,4",

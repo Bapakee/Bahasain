@@ -168,7 +168,6 @@ class QuizActivity : AppCompatActivity() {
         }else{
             if (viewPager.currentItem == quizzes.size - 1) {
                 val score = calculateScore()
-                Toast.makeText(this, "Skor Anda: $score/${quizzes.size}", Toast.LENGTH_SHORT).show()
 
                 putProgress(moduleId.toInt(), moduleLevel.toInt(), score)
 
@@ -189,7 +188,7 @@ class QuizActivity : AppCompatActivity() {
                     }
 
                     is Result.Success -> {
-                        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+
                     }
 
                     is Result.Error -> {
@@ -208,7 +207,7 @@ class QuizActivity : AppCompatActivity() {
             val previousQuizId = quizzes[viewPager.currentItem].id
             val userAnswer = userAnswers[previousQuizId]
             if (userAnswer != null) {
-                val (answer, isCorrect) = userAnswer
+                val (_, isCorrect) = userAnswer
                 if (isCorrect != null) {
                     lastFeedbackStatus = isCorrect
                     lastQuizId = previousQuizId
@@ -224,13 +223,30 @@ class QuizActivity : AppCompatActivity() {
         if (isCorrect) {
             binding.feedbackContainer.setBackgroundResource(R.drawable.bg_correct)
             binding.feedbackText.setTextColor(ContextCompat.getColor(this, R.color.blue))
+            binding.iconCorrect.setImageResource(R.drawable.icon_check_circle)
+            binding.iconCorrect.setImageResource(R.drawable.icon_check_circle)
+            binding.iconCorrect.setColorFilter(ContextCompat.getColor(this, R.color.blue))
+            binding.answer.setTextColor(ContextCompat.getColor(this, R.color.blue))
             binding.feedbackText.text = getString(R.string.correct_answer)
             binding.btnContinue.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
         } else {
             binding.feedbackContainer.setBackgroundResource(R.drawable.bg_incorrect)
             binding.feedbackText.setTextColor(ContextCompat.getColor(this, R.color.orange))
+            binding.iconCorrect.setImageResource(R.drawable.icon_check_circle)
+            binding.iconCorrect.setColorFilter(ContextCompat.getColor(this, R.color.orange))
+            binding.answer.setTextColor(ContextCompat.getColor(this, R.color.orange))
             binding.feedbackText.text = getString(R.string.incorrect_answer)
             binding.btnContinue.setBackgroundColor(ContextCompat.getColor(this, R.color.orange))
+        }
+
+        when(quiz.type){
+            "option" -> binding.tvResultAnswer.text = quiz.correctOption?.let {
+                quiz.quizOptions.getOrNull(
+                    it
+                )
+            }
+
+            "rearrange" -> binding.tvResultAnswer.text = quiz.correctOrder.toString().replace("[\\[\\],]".toRegex(), "").trim()
         }
 
         binding.btnContinue.setOnClickListener { nextQuiz() }
@@ -238,7 +254,6 @@ class QuizActivity : AppCompatActivity() {
         lastFeedbackStatus = isCorrect
         lastQuizId = quiz.id
     }
-
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE

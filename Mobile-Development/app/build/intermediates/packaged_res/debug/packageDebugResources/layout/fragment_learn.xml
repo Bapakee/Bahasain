@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingHorizontal="32dp"
+    android:id="@+id/fragment_learn"
     tools:context="com.bahasain.ui.learn.LearnFragment">
 
     <TextView

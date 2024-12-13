@@ -4,7 +4,6 @@ package com.dicoding.bahasain.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,9 +21,6 @@ import java.lang.String;
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final Button btnLogout;
 
   @NonNull
   public final ImageView ivProfile;
@@ -56,14 +52,12 @@ public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
   public final TextView tvProgressAchievementLayout;
 
-  private FragmentProfileBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogout,
-      @NonNull ImageView ivProfile, @NonNull ConstraintLayout profileLayout,
-      @NonNull LinearLayout progressLayout, @NonNull RecyclerView rvCertivicate,
-      @NonNull TextView titleCertificate, @NonNull TextView titlePage, @NonNull TextView tvLevel,
-      @NonNull TextView tvName, @NonNull TextView tvProgress,
-      @NonNull TextView tvProgressAchievementLayout) {
+  private FragmentProfileBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView ivProfile,
+      @NonNull ConstraintLayout profileLayout, @NonNull LinearLayout progressLayout,
+      @NonNull RecyclerView rvCertivicate, @NonNull TextView titleCertificate,
+      @NonNull TextView titlePage, @NonNull TextView tvLevel, @NonNull TextView tvName,
+      @NonNull TextView tvProgress, @NonNull TextView tvProgressAchievementLayout) {
     this.rootView = rootView;
-    this.btnLogout = btnLogout;
     this.ivProfile = ivProfile;
     this.profileLayout = profileLayout;
     this.progressLayout = progressLayout;
@@ -103,12 +97,6 @@ public final class FragmentProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_logout;
-      Button btnLogout = ViewBindings.findChildViewById(rootView, id);
-      if (btnLogout == null) {
-        break missingId;
-      }
-
       id = R.id.iv_profile;
       ImageView ivProfile = ViewBindings.findChildViewById(rootView, id);
       if (ivProfile == null) {
@@ -169,9 +157,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((ConstraintLayout) rootView, btnLogout, ivProfile,
-          profileLayout, progressLayout, rvCertivicate, titleCertificate, titlePage, tvLevel,
-          tvName, tvProgress, tvProgressAchievementLayout);
+      return new FragmentProfileBinding((ConstraintLayout) rootView, ivProfile, profileLayout,
+          progressLayout, rvCertivicate, titleCertificate, titlePage, tvLevel, tvName, tvProgress,
+          tvProgressAchievementLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -6,6 +6,7 @@ sealed class WordCategoryModel {
     ) : WordCategoryModel()
 
     data class WordItem(
+        val id: String,
         val word: String
     ) : WordCategoryModel()
 }

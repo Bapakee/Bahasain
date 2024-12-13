@@ -75,39 +75,36 @@ class WordCategoryActivity : AppCompatActivity() {
             }
         })
 
-        binding.btnBack.setOnClickListener{ onBackPressed() }
+        binding.btnBack.setOnClickListener{ finish() }
     }
 
     private fun observeWordCategories(categories: String) {
         viewModel.getWordCategories(categories).observe(this) { result ->
             when (result) {
-                is Result.Loading -> {
-                    showLoading(true)
-                }
-
+                is Result.Loading -> showLoading(true)
                 is Result.Success -> {
                     showLoading(false)
-                    val word = result.data?.map { it?.word }
-                    val groupedData = groupWordsByAlphabet(word)
+                    val wordList = result.data?.map {
+                        Pair(it?.id?.toString() ?: "", it?.word ?: "")
+                    }
+                    val groupedData = groupWordsByAlphabet(wordList)
                     originalList = groupedData
                     adapter.submitList(groupedData)
                 }
-
-                is Result.Error -> {
-                    showLoading(false)
-                }
+                is Result.Error -> showLoading(false)
             }
         }
     }
 
-    private fun groupWordsByAlphabet(words: List<String?>?): List<WordCategoryModel> {
+    private fun groupWordsByAlphabet(words: List<Pair<String, String>?>?): List<WordCategoryModel> {
         val groupedData = mutableListOf<WordCategoryModel>()
 
-        words?.filterNotNull()?.sorted()?.groupBy { it.first().uppercaseChar() }
+        words?.filterNotNull()?.sortedBy { it.second } // Sortir berdasarkan `word`
+            ?.groupBy { it.second.first().uppercaseChar() } // Kelompokkan berdasarkan huruf pertama
             ?.forEach { (letter, wordList) ->
-                groupedData.add(WordCategoryModel.Header(letter.toString()))
-                wordList.forEach { word ->
-                    groupedData.add(WordCategoryModel.WordItem(word))
+                groupedData.add(WordCategoryModel.Header(letter.toString())) // Tambahkan header
+                wordList.forEach { (id, word) ->
+                    groupedData.add(WordCategoryModel.WordItem(id, word)) // Tambahkan item
                 }
             }
 

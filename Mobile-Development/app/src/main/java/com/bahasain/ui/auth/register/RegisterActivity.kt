@@ -74,9 +74,10 @@ class RegisterActivity : AppCompatActivity() {
                 if (result != null){
                     when(result){
                         is Result.Loading -> {
-
+                            showLoading(true)
                         }
                         is Result.Success -> {
+                            showLoading(false)
                             Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
 
                             val intent = Intent(this, LoginActivity::class.java)
@@ -84,6 +85,7 @@ class RegisterActivity : AppCompatActivity() {
                             finish()
                         }
                         is Result.Error -> {
+                            showLoading(false)
                             Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -117,7 +119,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val isEmailValid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
-        val isPasswordValid = password.length >= 8
+        val isPasswordValid = password.length >= 8 && password.any { it.isUpperCase() }
 
         btnSignUp.isEnabled = isPasswordValid && isEmailValid && isNameValid
     }

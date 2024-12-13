@@ -67,14 +67,14 @@ class QuizAdapter(
 
             rearrangeView.setWords(shuffledOptions)
             rearrangeView.isEnabled = !isAnswered
-            rearrangeView.setOnOrderChangedListener { userOrder ->
-                onRearrangeAnswerSubmitted(quiz.id, userOrder)
-            }
 
-            binding.btnCheck.visibility = if (isAnswered) View.GONE else View.VISIBLE
             binding.btnCheck.setOnClickListener {
                 val userOrder = rearrangeView.getUserOrder()
                 onRearrangeAnswerSubmitted(quiz.id, userOrder)
+
+                binding.rearrangeView.disableInteraction()
+                binding.btnCheck.visibility = View.GONE
+                binding.btnCheck.isEnabled = false
             }
 
             binding.quiz.text = quiz.question

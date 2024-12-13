@@ -28,10 +28,6 @@ class QuizResultActivity : AppCompatActivity() {
         val score = intent.getIntExtra("SCORE_QUIZ", 0)
 
         binding.tvScore.text = score.toString()
-        binding.back.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+        binding.back.setOnClickListener{ finish() }
     }
 }

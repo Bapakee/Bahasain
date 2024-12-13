@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bahasain.data.Result
 import com.bahasain.ui.ViewModelFactory
-import com.bahasain.ui.loadPlacementQuizFromJson
+import com.bahasain.utils.loadPlacementQuizFromJson
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivityPlacementBinding
 import com.google.android.material.tabs.TabLayoutMediator

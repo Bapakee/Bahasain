@@ -9,10 +9,12 @@ import com.bahasain.data.remote.api.ApiService
 import com.bahasain.data.remote.request.LevelRequest
 import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.RegisterRequest
+import com.bahasain.data.remote.request.SettingRequest
 import com.bahasain.data.remote.response.auth.LoginResponse
 import com.bahasain.data.remote.response.auth.RegisterResponse
 import com.bahasain.data.remote.response.learn.LevelResponse
 import com.bahasain.data.remote.response.user.ProfileResponse
+import com.bahasain.data.remote.response.user.SettingResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -70,6 +72,17 @@ class UserRepository private constructor(
         }
     }
 
+    fun setting(settingRequest: SettingRequest): LiveData<Result<SettingResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val response = apiService.setting(settingRequest)
+            emit(Result.Success(response))
+        }catch (e: HttpException){
+            val jsonString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonString, LevelResponse::class.java)
+            emit(Result.Error(errorBody.message.toString()))
+        }
+    }
     suspend fun saveSession(userModel: UserModel) {
         userPreferences.saveSession(userModel)
     }

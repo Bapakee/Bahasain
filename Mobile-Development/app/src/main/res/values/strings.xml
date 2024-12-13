@@ -76,4 +76,14 @@
     <string name="progress">%s%% %s Level</string>
     <string name="drag_and_drop_to_rearrange">Drag and Drop To Rearrange</string>
     <string name="btn_check">Check</string>
+    <string name="descriptions">Descriptions :</string>
+    <string name="what_it_means">What It Means</string>
+    <string name="answer">Answer :</string>
+    <string name="password_uppercase_warning">Password must contain at least one uppercase letter</string>
+    <string name="learning_progress">Learning Progress</string>
+    <string name="setting">Setting</string>
+    <string name="account">Account</string>
+    <string name="general_notification">General Notification</string>
+    <string name="email">Email</string>
+    <string name="Name">Name</string>
 </resources>
