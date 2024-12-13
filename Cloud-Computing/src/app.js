@@ -13,7 +13,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(helmet())
 app.use(express.static('src/public'));
+app.get('/api-docs/json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerDocs); // Send swaggerDocs object as JSON
+});
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
 
 // Logging middleware
 app.use((req, res, next) => {
