@@ -1,13 +1,13 @@
 <h1 align="center">
   <img align="center" src="https://storage.googleapis.com/bahasain-443714-resource-bucket/bahsain/logoBahasain.png"  width="250" height="250"></img>
 <br><br>
-Code Collaboration Path
+Cloud Computing Path
 </h1>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="justify">
-The Code Collaboration Path focuses on building a robust backend for collaborative programming applications. It leverages modern frameworks and libraries to ensure security, scalability, and efficiency. The workflow begins by designing APIs using Swagger, implementing authentication with JWT and bcrypt for security, and connecting to a MySQL database via Sequelize ORM. Middleware such as Helmet enhances application security, while Nodemailer is used for email notifications. The backend also incorporates data parsing, web scraping, and timezone handling for enriched user functionality. These elements are combined into a Node.js and Express.js framework, creating a versatile and efficient backend system for real-time collaborative programming.
+The Cloud Computing Path focuses on building a robust backend for collaborative programming applications. It leverages modern frameworks and libraries to ensure security, scalability, and efficiency. The workflow begins by designing APIs using Swagger, implementing authentication with JWT and bcrypt for security, and connecting to a MySQL database via Sequelize ORM. Middleware such as Helmet enhances application security, while Nodemailer is used for email notifications. The backend also incorporates data parsing, web scraping, and timezone handling for enriched user functionality. These elements are combined into a Node.js and Express.js framework, creating a versatile and efficient backend system for real-time collaborative programming.
 </p>
 
 <div align="center">
