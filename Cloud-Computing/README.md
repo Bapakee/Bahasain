@@ -10,10 +10,6 @@ Cloud Computing Path
 The Cloud Computing Path focuses on building a robust backend for collaborative programming applications. It leverages modern frameworks and libraries to ensure security, scalability, and efficiency. The workflow begins by designing APIs using Swagger, implementing authentication with JWT and bcrypt for security, and connecting to a MySQL database via Sequelize ORM. Middleware such as Helmet enhances application security, while Nodemailer is used for email notifications. The backend also incorporates data parsing, web scraping, and timezone handling for enriched user functionality. These elements are combined into a Node.js and Express.js framework, creating a versatile and efficient backend system for real-time collaborative programming.
 </p>
 
-<div align="center">
-  <img align="center" src="https://storage.googleapis.com/bahasain-443714-resource-bucket/bahsain/illustrasi.png"  max-width="600" height="400"></img>
-</div>
-
 ## Features
 ### 1. API Design & Authentication
 <p align="justify">
@@ -51,10 +47,6 @@ The backend makes use of the following libraries and frameworks:
 - ![Axios](https://img.shields.io/badge/axios-%23000000.svg?style=for-the-badge&logo=axios&logoColor=blue)
 - ![Moment](https://img.shields.io/badge/moment-%23000000.svg?style=for-the-badge&logo=moment&logoColor=yellow)
 - ![Swagger](https://img.shields.io/badge/swagger-%23000000.svg?style=for-the-badge&logo=swagger&logoColor=green)
-
-### Dependencies
-The project depends on the following packages:
-
 
 
 <!-- CONTACT -->
