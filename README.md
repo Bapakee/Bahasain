@@ -92,8 +92,6 @@ The prototype design of this application was created using Figma. If you are int
 
 ---
 
-## **Get Involved**
-
 # Team Member - C242-PS200
 <div align="center">
   
