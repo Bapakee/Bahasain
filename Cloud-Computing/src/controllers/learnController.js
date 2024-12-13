@@ -81,7 +81,7 @@ const getLevel = async (req, res) => {
             attributes: ['userLevel'],
         });
         if (!user) {
-            return errorResponse(res, 'User not found', 'Pengguna tidak ditemukan', 404);
+            return errorResponse(res, 'User not found', 'User not found', 404);
         }
         const { userLevel } = user;
 
@@ -90,7 +90,7 @@ const getLevel = async (req, res) => {
             attributes: ['level'],
         });
         if (!module) {
-            return errorResponse(res, 'Module not found', 'Modul tidak ditemukan', 404);
+            return errorResponse(res, 'Module not found', 'Module not found', 404);
         }
         const { level: moduleLevel } = module;
 
@@ -113,7 +113,7 @@ const getLevel = async (req, res) => {
 
         // Handle empty levels
         if (!levels || levels.length < 1) {
-            return errorResponse(res, 'Level not available', 'Level tidak tersedia', 404);
+            return errorResponse(res, 'Level not available', 'Level not available', 404);
         }
 
         // Transform levels data into a cleaner response format
