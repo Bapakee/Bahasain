@@ -34,7 +34,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageView ivLogo;
 
   @NonNull
-  public final LinearLayout nav;
+  public final ConstraintLayout nav;
 
   @NonNull
   public final BottomNavigationView navView;
@@ -55,7 +55,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvStreak;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnSetting,
-      @NonNull ConstraintLayout container, @NonNull ImageView ivLogo, @NonNull LinearLayout nav,
+      @NonNull ConstraintLayout container, @NonNull ImageView ivLogo, @NonNull ConstraintLayout nav,
       @NonNull BottomNavigationView navView, @NonNull LinearLayout point,
       @NonNull LinearLayout streak, @NonNull SwipeRefreshLayout swipeRefreshLayout,
       @NonNull TextView tvPoint, @NonNull TextView tvStreak) {
@@ -114,7 +114,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       id = R.id.nav;
-      LinearLayout nav = ViewBindings.findChildViewById(rootView, id);
+      ConstraintLayout nav = ViewBindings.findChildViewById(rootView, id);
       if (nav == null) {
         break missingId;
       }

@@ -96,6 +96,10 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\layout\\item_answer_matching.xml"
     },
     {
+        "merged": "com.dicoding.bahasain.app-mergeDebugResources-54:/layout/activity_main.xml",
+        "source": "com.dicoding.bahasain.app-main-57:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-54:\\layout\\activity_word_detail.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\layout\\activity_word_detail.xml"
     },
@@ -210,10 +214,6 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-54:\\layout\\activity_register.xml",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "com.dicoding.bahasain.app-mergeDebugResources-54:/layout/item_rearrange_word.xml",
-        "source": "com.dicoding.bahasain.app-main-57:/layout/item_rearrange_word.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-mergeDebugResources-54:\\layout\\item_survey.xml",

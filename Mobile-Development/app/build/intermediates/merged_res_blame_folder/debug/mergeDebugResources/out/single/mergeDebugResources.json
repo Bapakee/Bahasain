@@ -136,10 +136,6 @@
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.dicoding.bahasain.app-debug-55:/layout_item_rearrange_word.xml.flat",
-        "source": "com.dicoding.bahasain.app-main-57:/layout/item_rearrange_word.xml"
-    },
-    {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-55:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\layout\\activity_login.xml"
     },
@@ -262,6 +258,10 @@
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-55:\\layout_item_radio.xml.flat",
         "source": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-main-57:\\layout\\item_radio.xml"
+    },
+    {
+        "merged": "com.dicoding.bahasain.app-debug-55:/layout_activity_main.xml.flat",
+        "source": "com.dicoding.bahasain.app-main-57:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Lenovo\\.gradle\\daemon\\8.7\\com.dicoding.bahasain.app-debug-55:\\drawable_icon_result_score.xml.flat",

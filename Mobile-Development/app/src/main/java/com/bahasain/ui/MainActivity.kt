@@ -56,10 +56,8 @@ class MainActivity : AppCompatActivity() {
         getScore()
 
         binding.swipeRefreshLayout.setOnRefreshListener {
-            // Trigger the refresh logic here (e.g., reload data, getScore, etc.)
-            getScore()  // Assuming getScore() will update the score
+            getScore()
 
-            // Stop the refresh animation once data is refreshed
             binding.swipeRefreshLayout.isRefreshing = false
         }
 
