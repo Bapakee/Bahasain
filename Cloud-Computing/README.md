@@ -22,7 +22,7 @@ The backend uses Swagger for API documentation, ensuring clear and well-structur
   <a href="https://backend-app-238480322773.asia-southeast2.run.app">API Docs</a>
 
 <div align="center">
-  <img align="center" src="https://storage.googleapis.com/bahasain-443714-resource-bucket/bahsain/fiture.png"  max-width="600" height="400"></img>
+  <img align="center" src="https://storage.googleapis.com/bahasain-443714-resource-bucket/bahsain/auth.png"  max-width="600" height="400"></img>
 </div>
 
 ### 2. Database Management
