@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.bahasain.data.Result
 import com.bahasain.data.repository.UserRepository
 import com.bahasain.data.pref.UserModel
+import com.bahasain.data.remote.request.SettingRequest
 import com.bahasain.data.remote.response.learn.DataItemScore
 import com.bahasain.data.remote.response.user.ProfileResponse
 import kotlinx.coroutines.launch
@@ -18,6 +19,8 @@ class ProfileViewModel(
     fun getProfile(): LiveData<Result<ProfileResponse?>?> {
         return userRepository.getProfile().asLiveData()
     }
+
+    fun setting(avatar: Int, notification: Int) = userRepository.setting(SettingRequest(avatar, notification))
 
     fun getSession(): LiveData<UserModel> {
         return userRepository.getSession().asLiveData()

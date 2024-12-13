@@ -19,5 +19,7 @@ class VocabViewModel(private val repository: VocabRepository) : ViewModel() {
 
     fun translate(wordTranslate: String) = repository.translate(TranslateRequest(wordTranslate))
 
-    fun getWotd() = repository.getWotd()
+    fun getDetailWord(wordId: String) = repository.getDetailWord(wordId)
+
+    fun setWOrdId(wordId: String) = repository.getDetailWord(wordId)
 }

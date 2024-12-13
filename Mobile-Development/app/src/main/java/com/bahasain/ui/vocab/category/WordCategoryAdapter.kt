@@ -1,5 +1,6 @@
 package com.bahasain.ui.vocab.category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -32,7 +33,14 @@ class WordCategoryAdapter : ListAdapter<WordCategoryModel, RecyclerView.ViewHold
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (val item = getItem(position)) {
             is WordCategoryModel.Header -> (holder as HeaderViewHolder).bind(item)
-            is WordCategoryModel.WordItem -> (holder as WordItemViewHolder).bind(item)
+            is WordCategoryModel.WordItem -> {
+                (holder as WordItemViewHolder).bind(item)
+                holder.itemView.setOnClickListener {
+                    val intent = Intent(holder.itemView.context, WordDetailActivity::class.java)
+                    intent.putExtra("WORD_ID", item.id)
+                    holder.itemView.context.startActivity(intent)
+                }
+            }
         }
     }
 

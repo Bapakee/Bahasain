@@ -1,4 +1,4 @@
-package com.bahasain.ui
+package com.bahasain.utils
 
 fun setLevel(level: Int): String = when (level) {
     1 -> "Basic"

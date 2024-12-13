@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -31,16 +30,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final FrameLayout backgroundSign;
 
   @NonNull
-  public final ImageButton btnDiscord;
-
-  @NonNull
-  public final ImageButton btnFacebook;
-
-  @NonNull
   public final TextView btnForgot;
-
-  @NonNull
-  public final ImageButton btnGoogle;
 
   @NonNull
   public final ButtonSign btnSign;
@@ -64,9 +54,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final EditTextPassword edtTextPassword;
 
   @NonNull
-  public final LinearLayout iconSocial;
-
-  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
@@ -75,24 +62,16 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final LinearLayout textButton;
 
-  @NonNull
-  public final TextView tvSignupWith;
-
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FrameLayout backgroundSign, @NonNull ImageButton btnDiscord,
-      @NonNull ImageButton btnFacebook, @NonNull TextView btnForgot, @NonNull ImageButton btnGoogle,
-      @NonNull ButtonSign btnSign, @NonNull TextView btnSignup, @NonNull TextView dontHave,
+      @NonNull FrameLayout backgroundSign, @NonNull TextView btnForgot, @NonNull ButtonSign btnSign,
+      @NonNull TextView btnSignup, @NonNull TextView dontHave,
       @NonNull TextInputLayout edtEmailLayout, @NonNull TextInputLayout edtPasswordLayout,
       @NonNull EditTextEmail edtTextEmail, @NonNull EditTextPassword edtTextPassword,
-      @NonNull LinearLayout iconSocial, @NonNull ConstraintLayout main,
-      @NonNull ProgressBar progressBar, @NonNull LinearLayout textButton,
-      @NonNull TextView tvSignupWith) {
+      @NonNull ConstraintLayout main, @NonNull ProgressBar progressBar,
+      @NonNull LinearLayout textButton) {
     this.rootView = rootView;
     this.backgroundSign = backgroundSign;
-    this.btnDiscord = btnDiscord;
-    this.btnFacebook = btnFacebook;
     this.btnForgot = btnForgot;
-    this.btnGoogle = btnGoogle;
     this.btnSign = btnSign;
     this.btnSignup = btnSignup;
     this.dontHave = dontHave;
@@ -100,11 +79,9 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.edtPasswordLayout = edtPasswordLayout;
     this.edtTextEmail = edtTextEmail;
     this.edtTextPassword = edtTextPassword;
-    this.iconSocial = iconSocial;
     this.main = main;
     this.progressBar = progressBar;
     this.textButton = textButton;
-    this.tvSignupWith = tvSignupWith;
   }
 
   @Override
@@ -140,27 +117,9 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btn_discord;
-      ImageButton btnDiscord = ViewBindings.findChildViewById(rootView, id);
-      if (btnDiscord == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_facebook;
-      ImageButton btnFacebook = ViewBindings.findChildViewById(rootView, id);
-      if (btnFacebook == null) {
-        break missingId;
-      }
-
       id = R.id.btn_forgot;
       TextView btnForgot = ViewBindings.findChildViewById(rootView, id);
       if (btnForgot == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_google;
-      ImageButton btnGoogle = ViewBindings.findChildViewById(rootView, id);
-      if (btnGoogle == null) {
         break missingId;
       }
 
@@ -206,12 +165,6 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.icon_social;
-      LinearLayout iconSocial = ViewBindings.findChildViewById(rootView, id);
-      if (iconSocial == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.progressBar;
@@ -226,16 +179,9 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_signup_with;
-      TextView tvSignupWith = ViewBindings.findChildViewById(rootView, id);
-      if (tvSignupWith == null) {
-        break missingId;
-      }
-
-      return new ActivityLoginBinding((ConstraintLayout) rootView, backgroundSign, btnDiscord,
-          btnFacebook, btnForgot, btnGoogle, btnSign, btnSignup, dontHave, edtEmailLayout,
-          edtPasswordLayout, edtTextEmail, edtTextPassword, iconSocial, main, progressBar,
-          textButton, tvSignupWith);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, backgroundSign, btnForgot,
+          btnSign, btnSignup, dontHave, edtEmailLayout, edtPasswordLayout, edtTextEmail,
+          edtTextPassword, main, progressBar, textButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -27,7 +27,7 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
         return dataStore.data.map { preferences ->
             UserModel(
                 preferences[ACCESS_TOKEN_KEY] ?: "",
-                preferences[REFRESH_TOKEN_KEY] ?: "",
+                preferences[REFRESH_TOKEN_KEY] ?: ""
             )
         }
     }
@@ -48,7 +48,6 @@ class UserPreferences private constructor(private val dataStore: DataStore<Prefe
 
         private val ACCESS_TOKEN_KEY = stringPreferencesKey("access_token")
         private val REFRESH_TOKEN_KEY = stringPreferencesKey("refresh_token")
-
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreferences {
             return INSTANCE ?: synchronized(this) {

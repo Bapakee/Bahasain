@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bahasain.data.Result
 import com.bahasain.data.remote.response.learn.DataItemLearn
 import com.bahasain.ui.ViewModelFactory
+import com.bahasain.ui.profile.ProfileViewModel
 import com.dicoding.bahasain.databinding.FragmentLearnBinding
 
 class LearnFragment : Fragment() {
@@ -20,6 +21,10 @@ class LearnFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var adapter: LearnAdapter
+
+    private val viewModel: LearnViewModel by viewModels {
+        ViewModelFactory.getInstance(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,11 +44,6 @@ class LearnFragment : Fragment() {
 
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
-        val factory: ViewModelFactory = ViewModelFactory.getInstance(requireActivity())
-        val viewModel: LearnViewModel by viewModels {
-            factory
-        }
 
         binding.recyclerView.adapter = adapter
 
@@ -78,13 +78,13 @@ class LearnFragment : Fragment() {
         return result
     }
 
-
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+
         _binding = null
     }
 }

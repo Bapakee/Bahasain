@@ -137,7 +137,7 @@ class LoginActivity : AppCompatActivity() {
 
         val isEmailValid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
-        val isPasswordValid = password.length >= 8
+        val isPasswordValid = password.length >= 8 && password.any { it.isUpperCase() }
 
         btnSignIn.isEnabled = isPasswordValid && isEmailValid
     }

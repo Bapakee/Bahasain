@@ -20,7 +20,7 @@ By providing tools for adaptive learning, cultural integration, and gamification
 
 Below are some screenshots of the BahasaIn application:
 <h1 align="center">
-  <img align="center" src="Mobile-Development/images/BahasaInLogo.png" width="800" alt="BahasaIn Logo">
+  <img align="center" src="Mobile-Development/images/BahasaInn.png" width="800" alt="BahasaIn Logo">
   <br><br>
   BahasaIn
 </h1>

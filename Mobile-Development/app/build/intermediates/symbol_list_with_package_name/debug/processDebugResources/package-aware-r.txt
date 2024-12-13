@@ -1166,6 +1166,7 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -3090,6 +3091,7 @@ drawable bg_correct
 drawable bg_edit_text_sign
 drawable bg_incorrect
 drawable bg_matching
+drawable bg_progressbar
 drawable bg_text_blur
 drawable bg_word
 drawable btn_checkbox_checked_mtrl
@@ -3134,6 +3136,7 @@ drawable icon_back
 drawable icon_background
 drawable icon_bahasain
 drawable icon_category
+drawable icon_check_circle
 drawable icon_clear
 drawable icon_copy
 drawable icon_cultural
@@ -3151,6 +3154,7 @@ drawable icon_profile
 drawable icon_progres
 drawable icon_result_score
 drawable icon_search
+drawable icon_setting
 drawable icon_speaker
 drawable icon_streak
 drawable icon_trivia
@@ -3295,6 +3299,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id account
 id actionDown
 id actionDownUp
 id actionUp
@@ -3326,6 +3331,7 @@ id always
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
+id answer
 id answerColumn
 id antiClockwise
 id anticipate
@@ -3356,27 +3362,20 @@ id btn_check
 id btn_clear
 id btn_continue
 id btn_copy
-id btn_discord
-id btn_facebook
 id btn_folklore_show_all
 id btn_forgot
-id btn_google
 id btn_historical_show_all
-id btn_learn_show_all
 id btn_login
 id btn_logout
-id btn_nav
 id btn_next
-id btn_notification
-id btn_placement
 id btn_play
 id btn_recipe_show_all
 id btn_register
 id btn_setLevel
+id btn_setting
 id btn_sign
 id btn_signup
 id btn_start
-id btn_survey
 id btn_translate
 id buttonPanel
 id cache_measures
@@ -3480,7 +3479,6 @@ id expand_activities_button
 id expanded_menu
 id fade
 id feedbackContainer
-id feedbackDetail
 id feedbackText
 id fill
 id fill_horizontal
@@ -3496,6 +3494,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fragment_learn
 id frost
 id fullscreen_header
 id ghost_view
@@ -3522,9 +3521,9 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
+id icon_correct
 id icon_group
 id icon_location
-id icon_social
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3545,6 +3544,7 @@ id iv_folklore
 id iv_intro
 id iv_layout
 id iv_lesson_image
+id iv_logo
 id iv_profile
 id iv_quiz
 id iv_recipe
@@ -3632,6 +3632,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name_layout
 id nav
 id nav_controller_view_tag
 id nav_host_fragment_activity_main
@@ -3660,6 +3661,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notifications
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3801,6 +3803,8 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id survey
+id swipeRefreshLayout
+id switch_notif
 id t_eng
 id t_ind
 id tabMode
@@ -3871,11 +3875,13 @@ id trivia_layout
 id tvHeader
 id tvHeading
 id tvLeftText
+id tvProgressPercentage
 id tvWord
 id tv_chapter
 id tv_date
 id tv_desc_historical
 id tv_desc_trivia
+id tv_description
 id tv_dnd
 id tv_english
 id tv_example
@@ -3891,10 +3897,12 @@ id tv_progress
 id tv_progressAchievement_layout
 id tv_quiz
 id tv_reading
+id tv_result_answer
+id tv_result_description
+id tv_result_example
 id tv_result_pos
 id tv_result_translate
 id tv_score
-id tv_signup_with
 id tv_streak
 id tv_title
 id tv_title_module
@@ -3902,6 +3910,9 @@ id tv_title_page
 id tv_title_trivia
 id tv_title_word
 id tv_total
+id tv_translate
+id tv_type
+id tv_word
 id tv_word_type
 id unchecked
 id uniform
@@ -4063,9 +4074,11 @@ layout activity_quiz
 layout activity_quiz_result
 layout activity_recipe
 layout activity_register
+layout activity_setting
 layout activity_splash
 layout activity_survey
 layout activity_word_category
+layout activity_word_detail
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4187,6 +4200,7 @@ mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
 raw placement_data
+string Name
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4214,7 +4228,9 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string account
 string androidx_startup
+string answer
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -4256,9 +4272,11 @@ string correct_answer
 string desc_intro
 string desc_result_placement
 string desc_signup
+string descriptions
 string dest_title
 string dont_have_account
 string drag_and_drop_to_rearrange
+string email
 string email_address
 string english
 string error_a11y_label
@@ -4266,6 +4284,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string general_notification
 string great_job_you_did_it
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
@@ -4277,6 +4296,7 @@ string indonesia
 string interactive_folklore
 string invalid_email_format
 string item_view_role_description
+string learning_progress
 string lessons_completed
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
@@ -4386,6 +4406,7 @@ string password
 string password_length_warning
 string password_same_warning
 string password_toggle_content_description
+string password_uppercase_warning
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
@@ -4397,6 +4418,7 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string setting
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string signup_with
@@ -4425,6 +4447,7 @@ string txt_onboarding_1
 string txt_onboarding_2
 string txt_onboarding_3
 string vocab
+string what_it_means
 string word_of_the_day
 string your_score
 style AlertDialog_AppCompat
@@ -5715,6 +5738,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bahasain.data.remote.response.learn.DataItemLearn
-import com.bahasain.ui.setLevel
+import com.bahasain.utils.setLevel
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ItemLearnBinding
 

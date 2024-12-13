@@ -1,6 +1,5 @@
 package com.bahasain.ui.profile
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bahasain.data.Result
 import com.bahasain.ui.ViewModelFactory
-import com.bahasain.ui.auth.login.LoginActivity
-import com.bahasain.ui.setLevel
+import com.bahasain.utils.AlarmManagerSetup
+import com.bahasain.utils.setLevel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.bahasain.R
@@ -50,13 +49,6 @@ class ProfileFragment : Fragment() {
         binding.rvCertivicate.adapter = adapter
 
         getProfile()
-
-        binding.btnLogout.setOnClickListener{
-            viewModel.logout()
-            val intent = Intent(requireActivity(), LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
     }
 
     private fun getProfile(){
@@ -84,6 +76,9 @@ class ProfileFragment : Fragment() {
                         adapter.submitList(certificates)
 
                         binding.tvProgress.text = progress
+
+                        val notificationType = result.data?.data?.notif ?: 0
+                        AlarmManagerSetup.setDailyReminder(requireContext(), notificationType)
                     }
 
                     is Result.Error -> {

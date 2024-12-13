@@ -91,52 +91,6 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/btn_forgot" />
 
-    <TextView
-        android:id="@+id/tv_signup_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/inter_medium"
-        android:text="@string/signup_with"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_sign" />
-
-    <LinearLayout
-        android:id="@+id/icon_social"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tv_signup_with">
-
-        <ImageButton
-            android:id="@+id/btn_google"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@drawable/icon_google" />
-
-        <ImageButton
-            android:id="@+id/btn_discord"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/icon_discord" />
-
-        <ImageButton
-            android:id="@+id/btn_facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/icon_facebook" />
-
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/text_button"
         android:layout_width="match_parent"
@@ -144,7 +98,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/icon_social">
+        app:layout_constraintTop_toBottomOf="@id/btn_sign">
 
         <TextView
             android:id="@+id/dont_have"

@@ -5,11 +5,13 @@ import com.bahasain.data.remote.request.LoginRequest
 import com.bahasain.data.remote.request.ProgressRequest
 import com.bahasain.data.remote.request.RefreshRequest
 import com.bahasain.data.remote.request.RegisterRequest
+import com.bahasain.data.remote.request.SettingRequest
 import com.bahasain.data.remote.request.TranslateRequest
 import com.bahasain.data.remote.response.cultural.FolkloreResponse
 import com.bahasain.data.remote.response.cultural.HistoricalResponse
 import com.bahasain.data.remote.response.learn.LevelResponse
 import com.bahasain.data.remote.response.auth.LoginResponse
+import com.bahasain.data.remote.response.auth.LogoutResponse
 import com.bahasain.data.remote.response.auth.RefreshResponse
 import com.bahasain.data.remote.response.learn.ModuleResponse
 import com.bahasain.data.remote.response.auth.RegisterResponse
@@ -21,9 +23,11 @@ import com.bahasain.data.remote.response.learn.ProgressResponse
 import com.bahasain.data.remote.response.learn.QuizResponse
 import com.bahasain.data.remote.response.learn.ScoreResponse
 import com.bahasain.data.remote.response.user.ProfileResponse
+import com.bahasain.data.remote.response.user.SettingResponse
 import com.bahasain.data.remote.response.vocab.TranslateResponse
 import com.bahasain.data.remote.response.vocab.TriviaResponse
 import com.bahasain.data.remote.response.vocab.WordCategoriesResponse
+import com.bahasain.data.remote.response.vocab.WordDetailResponse
 import com.bahasain.data.remote.response.vocab.WotdResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -55,7 +59,7 @@ interface ApiService {
     @POST("auth/logout")
     suspend fun logout(
         @Body refreshToken: RefreshRequest
-    ): LoginResponse
+    ): LogoutResponse
 
     @POST("progress/level")
     suspend fun setLevel(
@@ -92,6 +96,11 @@ interface ApiService {
     @GET("word/0")
     suspend fun getWotd(): WotdResponse
 
+    @GET("word/{id}")
+    suspend fun getDetailWord(
+        @Path("id") wordId: String
+    ):WordDetailResponse
+
     @GET("trivia")
     suspend fun getTrivia(): TriviaResponse
 
@@ -118,4 +127,9 @@ interface ApiService {
     suspend fun getDetailRecipe(
         @Path("id") recipeId: String
     ): DetailRecipeResponse
+
+    @POST("setting")
+    suspend fun setting(
+        @Body settingRequest: SettingRequest
+    ): SettingResponse
 }

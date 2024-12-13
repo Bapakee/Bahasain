@@ -54,6 +54,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.core.splashscreen)
     implementation (libs.glide)
+    implementation (libs.androidx.swiperefreshlayout)
 
     implementation(libs.androidx.datastore.preferences)
 

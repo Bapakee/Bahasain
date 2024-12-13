@@ -22,6 +22,9 @@ public final class FragmentLearnBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout fragmentLearn;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
@@ -30,9 +33,11 @@ public final class FragmentLearnBinding implements ViewBinding {
   @NonNull
   public final TextView titlePage;
 
-  private FragmentLearnBinding(@NonNull ConstraintLayout rootView, @NonNull ProgressBar progressBar,
+  private FragmentLearnBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout fragmentLearn, @NonNull ProgressBar progressBar,
       @NonNull RecyclerView recyclerView, @NonNull TextView titlePage) {
     this.rootView = rootView;
+    this.fragmentLearn = fragmentLearn;
     this.progressBar = progressBar;
     this.recyclerView = recyclerView;
     this.titlePage = titlePage;
@@ -65,6 +70,8 @@ public final class FragmentLearnBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      ConstraintLayout fragmentLearn = (ConstraintLayout) rootView;
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -83,8 +90,8 @@ public final class FragmentLearnBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLearnBinding((ConstraintLayout) rootView, progressBar, recyclerView,
-          titlePage);
+      return new FragmentLearnBinding((ConstraintLayout) rootView, fragmentLearn, progressBar,
+          recyclerView, titlePage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

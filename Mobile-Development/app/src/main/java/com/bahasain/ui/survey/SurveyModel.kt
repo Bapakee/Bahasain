@@ -5,5 +5,6 @@ data class SurveyModel(
     val survey: String,
     val descSurvey: String,
     val optionsSurvey: List<String>,
-    val correctAnswer: List<Int>
+    val correctAnswer: List<Int>,
+    val isSingleChoice: Boolean = false
 )

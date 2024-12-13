@@ -4,12 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.bahasain.ui.ViewModelFactory
 import com.bahasain.ui.placement.PlacementActivity
 import com.bahasain.ui.placement.PlacementIntroActivity
+import com.bahasain.ui.profile.ProfileViewModel
 import com.dicoding.bahasain.R
 import com.dicoding.bahasain.databinding.ActivitySurveyBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -19,6 +22,12 @@ class SurveyActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySurveyBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: SurveyAdapter
+
+    private var optionsNotif: Int = -1
+
+    private val viewModel: ProfileViewModel by viewModels {
+        ViewModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +70,8 @@ class SurveyActivity : AppCompatActivity() {
                 survey = "When do you usually study?",
                 descSurvey = "Select all that apply",
                 optionsSurvey = listOf("Morning (08:00–11:00)", "Afternoon (12:00–15:00)", "Evening (18:00–21:00)", "No specific time, I’m flexible"),
-                correctAnswer = listOf(3,2)
+                correctAnswer = listOf(0),
+                isSingleChoice = true
             )
         )
 
@@ -69,6 +79,12 @@ class SurveyActivity : AppCompatActivity() {
 
         adapter = SurveyAdapter(survey) { surveyId, selectedOptions ->
             surveyAnswers[surveyId] = selectedOptions
+
+            if (surveyId == 4) {
+                optionsNotif = selectedOptions.firstOrNull() ?: -1
+            } else {
+                surveyAnswers[surveyId] = selectedOptions
+            }
 
             updateContinueButtonState(viewPager.currentItem, surveyAnswers)
         }
@@ -95,6 +111,9 @@ class SurveyActivity : AppCompatActivity() {
             if (viewPager.currentItem < survey.size - 1) {
                 viewPager.currentItem += 1
             } else {
+
+                viewModel.setting(0, optionsNotif)
+
                 startActivity(Intent(this, PlacementIntroActivity::class.java))
                 finish()
             }
@@ -104,7 +123,7 @@ class SurveyActivity : AppCompatActivity() {
     }
 
     private fun updateContinueButtonState(position: Int, surveyAnswers: Map<Int, List<Int>>) {
-        val currentSurveyId = position + 1 // Assuming survey IDs are sequential starting from 1
+        val currentSurveyId = position + 1
         val selectedOptions = surveyAnswers[currentSurveyId] ?: emptyList()
         binding.btnContinue.isEnabled = selectedOptions.isNotEmpty()
     }
